@@ -17,7 +17,7 @@
   tab-size: 4;
 }
 html {
-  background: url(image/background.webp) 0 0/cover;
+  background: url('image/background.webp') 0 0/cover;
   min-height: 100vh;
   /* 移除 max-height 和 scroll-snap-type */
 }
@@ -48,8 +48,16 @@ hr {
   border-top-width: 1px;
 }
 strong {
-  font-weight: bolder;
+  font-weight: bold; /* 或者设置为更大的值，比如 700 */
+  color: #a3c585; /* 设为抹茶绿色，确保对比度明显 */
 }
+.page main p strong {
+  font-weight: bold;
+  color: #ff0000; /* 红色，以确保可见性 */
+}
+/*strong 针对的是所有的 markdown 加粗语法，而 .page main p strong 则特异性针对段落内 <p> 加粗，
+优先级更高，因此应用之后可以发现，段落开头加粗字体为抹茶色，段落内为红色。   */
+/*首页内的加粗为粉色，是因为我特异性的定义了  .home.h1  等主页标题的加粗颜色*/
 code,
 pre {
   font-size: 1em;
@@ -100,6 +108,7 @@ button {
 summary {
   display: list-item;
 }
+
 blockquote,
 dd,
 dl,
@@ -375,6 +384,7 @@ body.page form button:focus {
 .icon-reader {
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-5 -5 113 113' ><rect x='-5' y='-5' width='115' height='115' rx='15' fill='rgba(17, 24, 39)'></rect><path fill='white' d='M86.84,12.89H13.16a8.16,8.16,0,0,0-6.59,3.37,7.8,7.8,0,0,0-.58.91,8.11,8.11,0,0,0-1,3.89V78.94a8.19,8.19,0,0,0,8.16,8.17H86.84A8.19,8.19,0,0,0,95,78.94V21.06A8.19,8.19,0,0,0,86.84,12.89ZM89,78.94a2.19,2.19,0,0,1-2.16,2.17H51.18V18.89H86.84A2.19,2.19,0,0,1,89,21.06Z'/><path fill='white'  d='M82.43,58.67H57.79a3.33,3.33,0,1,0,0,6.66H82.43a3.33,3.33,0,0,0,0-6.66Z'/><path fill='white'  d='M82.43,34.67H57.79a3.33,3.33,0,1,0,0,6.66H82.43a3.33,3.33,0,0,0,0-6.66Z'/><path fill='white'  d='M82.43,46.67H57.79a3.33,3.33,0,1,0,0,6.66H82.43a3.33,3.33,0,0,0,0-6.66Z'/></svg>") 50% no-repeat;
 }
+
 .posts {
   display: flex;
   flex-wrap: wrap;
@@ -614,43 +624,50 @@ header nav:hover>ul {
   margin-bottom: 0;
 }
 .page main {
-  width: 100%;
-  background-color: #fff;
-  border-radius: .5rem;
-  margin: 4rem;
-  padding: 1.25rem;
-  box-shadow: 0 0 transparent,0 0 transparent,0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
-}
-.page main h1 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.85); /* 半透明的白色背景，让内容与背景图片有对比感 */
+  border-radius: 15px; /* 边框圆角 */
+  padding: 40px; /* 内边距，保证内容不会贴边 */
+  max-width: 700px; /* 最大宽度，保证容器不会过于宽泛 */
+  margin: 80px auto; /* 垂直方向的间距，并将容器水平居中 */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* 添加阴影，使容器看起来浮动 */
   position: relative;
-  width: fit-content;
-  width: -moz-fit-content;
+  z-index: 10; /* 确保内容容器位于背景图之上 */
 }
-.home h1:after,
+
+.page main p {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  padding-top: .75rem;
+  padding-bottom: 1.25rem;
+}
+.page main h1, .page main h2, .page main h3 {
+  font-weight: 300;
+  font-size: 1.875rem; /* 例如标题的大小可以更突出 */
+  line-height: 2.25rem;
+}
+.page main ol {
+  list-style-type: decimal;
+  padding: 1.25rem 1.25rem 1.25rem 2rem;
+}
+.page main ul {
+  list-style-type: "→ ";
+  padding: 1.25rem 1.25rem 1.25rem 2rem;
+}
+.page main img {
+  border-radius: .25rem;
+  box-shadow: 0 0 transparent, 0 0 transparent, 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin: 20px 0;
+}
 .page main h1:after {
   content: "";
   height: 2px;
   width: 50%;
   background-color: rgb(var(--red), var(--green), var(--blue));
   position: absolute;
-  bottom: .5rem;
+  bottom: -10px;
   left: 25%;
 }
-.page main h2 {
-  font-weight: 300;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  padding-top: 1.5rem;
-  padding-bottom: .5rem;
-  color: #4b5563;
-}
+
 .home #description h1 strong,
 .home section:first-of-type h2 strong,
 .page main h2 strong {
@@ -691,17 +708,13 @@ header nav:hover>ul {
 .page main ul {
   padding: 1.25rem 1.25rem 1.25rem 2rem;
 }
-.page main ol {
-  list-style: upper-roman;
-}
-.page main ol ol {
-  list-style: lower-roman;
-}
+.page main ol, 
+.page main ol ol, 
 .page main ol ol ol {
-  list-style: lower-alpha;
+  list-style-type: decimal;
 }
 .page main ul {
-  list-style-type: "→ ";
+  list-style-type: "* ";
 }
 .page main ul ul {
   list-style: disc;
@@ -1003,7 +1016,7 @@ footer a:hover {
   float: right;
 }
 .home #menu {
-  background-color: #a3c585;
+  background-color: rgba(163, 197, 133, 0.7); /* 使用 RGBA 定义抹茶绿，透明度 0.7 */
   margin: 0;
   max-width: none;
   padding: 1.75rem 1.25rem;
@@ -1012,6 +1025,10 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: background-color 0.3s ease; /* 增加平滑过渡效果 */
+}
+#menu:hover {
+  background-color: rgba(163, 197, 133, 1); /* 鼠标悬停时背景色完全不透明 */
 }
 .home #menu h1 {
   text-align: center;
@@ -1073,121 +1090,8 @@ footer a:hover {
   padding-right: 1.25rem;
 }
 .home #blog h1 {
-  background-color: #fff;
+  background-color: transparent;
   text-align: center;
-}
-.home #testimonials {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-  background-color: rgba(var(--red), var(--green), var(--blue), .7);
-  margin: 0;
-  max-width: none;
-  color: #fff;
-  width: 100vw;
-}
-.home #testimonials h1 {
-  flex-grow: 0;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(30,29,39,19%),1px 2px 4px rgba(54,64,147,18%);
-}
-.home #testimonials > div {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: scroll;
-  scroll-snap-type: x mandatory;
-  width: 100vw;
-}
-.home #testimonials ol {
-  display: flex;
-  padding: .75rem;
-  width: fit-content;
-}
-.home #testimonials ol:hover li {
-  color: #000;
-}
-.home #testimonials li {
-  scroll-snap-align: center;
-  background-color: #fff;
-  border-radius: .125rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  padding: 1.5rem .75rem;
-  box-shadow: 0 0 transparent,0 0 transparent,0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
-  text-align: center;
-  color: #1f2937;
-  width: calc(100vw - 4rem);
-  margin: .5rem;
-}
-.home #testimonials li:hover {
-  box-shadow: 0 0 transparent,0 0 transparent,0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04);
-}
-.home #testimonials li > div {
-  margin-top: 2rem;
-}
-.home #testimonials li h2 {
-  display: block;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  text-align: left;
-}
-.home #testimonials li h2:before {
-  content: "-";
-  display: inline-block;
-  text-align: left;
-  width: .75rem;
-}
-.home #testimonials li h3 {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  padding-left: .75rem;
-  padding-right: .75rem;
-  text-align: left;
-}
-.home #testimonials li .twitter-tweet {
-  font-size: 0;
-  visibility: hidden;
-}
-.home #testimonials li .twitter-tweet p {
-  display: inline-block;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  visibility: visible;
-}
-.home #testimonials li .twitter-tweet p:before,
-.home #testimonials li > p:first-of-type:not(:empty):before {
-  content: " ";
-  background-position-y: top;
-  float: left;
-  height: 100%;
-  opacity: .5;
-  width: 1.5rem;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="rgb(79, 70, 229)" d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"></path></svg>') top no-repeat;
-  margin-top: -10px;
-  margin-bottom: 10px;
-  min-height: 30px;
-}
-@media (min-width:640px) {
-  .home #testimonials li .twitter-tweet p {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-  .home #testimonials > div {
-    max-width: 640px;
-    width: 612px;
-  }
-}
-.home #testimonials li:first-child {
-  margin-left: 1rem;
 }
 @media (min-width:768px) {
   .home header + section:first-of-type:not(:last-of-type) {
@@ -1541,5 +1445,10 @@ footer.dark a:focus {
 .transform {
   transform: translateX(0) translateY(0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
 }
+
+
+
+
+
 
 

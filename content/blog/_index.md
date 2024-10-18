@@ -7,8 +7,10 @@ menu:
   footer:
     name: Blog
     weight: 100
+
+
 ---
-The Acme Blog
-============
+
+# The library of reading notes
 
 Curated content about our teams and products.
