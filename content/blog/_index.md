@@ -7,10 +7,12 @@ menu:
   footer:
     name: Blog
     weight: 100
-
-
+layout: list
+title:  blog
+cascade:
+    type: modern
+    layout: single
 ---
 
 # The library of reading notes
 
-Curated content about our teams and products.

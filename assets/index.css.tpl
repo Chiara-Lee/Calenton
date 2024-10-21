@@ -385,6 +385,80 @@ body.page form button:focus {
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-5 -5 113 113' ><rect x='-5' y='-5' width='115' height='115' rx='15' fill='rgba(17, 24, 39)'></rect><path fill='white' d='M86.84,12.89H13.16a8.16,8.16,0,0,0-6.59,3.37,7.8,7.8,0,0,0-.58.91,8.11,8.11,0,0,0-1,3.89V78.94a8.19,8.19,0,0,0,8.16,8.17H86.84A8.19,8.19,0,0,0,95,78.94V21.06A8.19,8.19,0,0,0,86.84,12.89ZM89,78.94a2.19,2.19,0,0,1-2.16,2.17H51.18V18.89H86.84A2.19,2.19,0,0,1,89,21.06Z'/><path fill='white'  d='M82.43,58.67H57.79a3.33,3.33,0,1,0,0,6.66H82.43a3.33,3.33,0,0,0,0-6.66Z'/><path fill='white'  d='M82.43,34.67H57.79a3.33,3.33,0,1,0,0,6.66H82.43a3.33,3.33,0,0,0,0-6.66Z'/><path fill='white'  d='M82.43,46.67H57.79a3.33,3.33,0,1,0,0,6.66H82.43a3.33,3.33,0,0,0,0-6.66Z'/></svg>") 50% no-repeat;
 }
 
+
+
+body.page {
+  font-family: Arial, sans-serif;
+}
+
+.page-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#posts {
+  padding: 20px;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* 确保帖子从左侧对齐 */
+  padding: 20px;
+  width: 90%; /* 改为百分比宽度以适应不同屏幕 */
+  max-width: 100%;
+  margin: 0 auto; /* 居中显示容器 */
+  padding: 0;
+  width: 100%;
+}
+
+.post-item {
+  width: 100%; /* 设置宽度为100% */
+  max-width: 800px; /* 可根据需要调整最大宽度 */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff; /* 添加背景色使其更像卡片 */
+}
+
+.post-summary {
+    display: flex;
+    align-items: stretch; /* 使内容和封面高度一致 */
+    margin-bottom: 0;  /* 去除底部多余空隙 */
+}
+.post-wrapper {
+    display: flex;
+    align-items: flex-start; /* 确保封面和内容在顶部对齐 */
+}
+
+.post-cover {
+    float: left;
+    width: 150px; /* 根据需要调整宽度 */
+    height: auto; /* 让高度自适应 */
+    margin-right: 20px; /* 与文本间留出合适间隙 */
+}
+
+.post-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px; /* 添加一些间隙 */
+    color: #000; /* 确保标题颜色为黑色，而不是蓝色 */
+}
+
+.post-content {
+    flex: 1;  /* 使摘要内容填充剩余空间 */
+    text-align: left;  /* 摘要文字左对齐 */
+}
+.post-content h2 {
+    margin: 0 0 10px; /* 调整标题的边距 */
+}
+
+.post-content p {
+    margin: 0;
+    color: #333; /* 改变字体颜色使其更符合页面风格 */
+}
+
 .posts {
   display: flex;
   flex-wrap: wrap;
@@ -488,7 +562,7 @@ header:before {
   }
   .post {
     padding: .75rem;
-    width: 50%;
+
   }
   .post article,
   .text {
@@ -507,7 +581,6 @@ header:before {
   }
   .post {
     padding: 1rem;
-    width: 33.333333%;
   }
   .post article,
   .text {
@@ -628,10 +701,31 @@ header nav:hover>ul {
   border-radius: 15px; /* 边框圆角 */
   padding: 40px; /* 内边距，保证内容不会贴边 */
   max-width: 700px; /* 最大宽度，保证容器不会过于宽泛 */
-  margin: 80px auto; /* 垂直方向的间距，并将容器水平居中 */
+  margin: 0 auto; /* 保证主内容在页面中央 */
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* 添加阴影，使容器看起来浮动 */
   position: relative;
   z-index: 10; /* 确保内容容器位于背景图之上 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 子元素水平居中 align：支持，item：项目  */
+}
+
+.page main nav {
+  text-align: left; /* 将目录部分的对齐设置为左对齐 */
+  width: 100%; /* 确保目录占满父容器 */
+  padding-left: 20px; /* 如果需要，可以给一些左侧内边距，使其更美观 */
+}
+
+
+.page main h1 {
+  font-size: 3rem; /* 调整标题的大小 */
+  line-height: 3.5rem;
+  text-align: center; /* 标题居中对齐 */
+  margin-top: 0;     /* 与顶部无间隙 */
+  margin-bottom: 20px; /* 标题与正文之间添加间距 */
+  margin-left: auto;  /* 自动左边距 */
+  margin-right: auto;
+  width: 100%; /* 使得标题占满可用宽度，这样 text-align 会生效 */
 }
 
 .page main p {
@@ -640,7 +734,13 @@ header nav:hover>ul {
   padding-top: .75rem;
   padding-bottom: 1.25rem;
 }
-.page main h1, .page main h2, .page main h3 {
+.page main h2 {
+    text-align: left; /* 设置 h2 元素左对齐 */
+  margin-left: 0;   /* 取消任何可能使 h2 居中的边距 */
+  width: 100%;      /* 确保 h2 元素占满父容器的宽度 */
+}
+
+.page main h3 {
   font-weight: 300;
   font-size: 1.875rem; /* 例如标题的大小可以更突出 */
   line-height: 2.25rem;
@@ -1448,7 +1548,64 @@ footer.dark a:focus {
 
 
 
+{{ $color := site.Params.color | default "#4f46e5" }}
+{{ $b := substr $color -2 2 | print "0x" | int}} 
+{{ $g := substr $color -4 2 | print "0x" | int}}
+{{ $r := substr $color -6 2 | print "0x" | int}} 
+:root {
+  --red: {{$r}};
+  --green: {{$g}};
+  --blue: {{$b}};
+
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+#related .posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* 调整卡片之间的间距 */
+}
+
+#related .posts li {
+  flex: 1 1 300px; /* 限制卡片的最小和最大宽度 */
+  width: 80%; /* 让每个卡片占据整个容器的宽度 */
+}
+#related h2 {
+  text-align: center; /* 水平居中 */
+  font-size: 2em; /* 增大字体，使其更显眼 */
+  font-weight: bold; /* 加粗，确保标题突出 */
+  color: #333; /* 保持较深的颜色以确保对比 */
+  margin-top: 20px; /* 添加适当的上边距 */
+}
 
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
 
+.pagination a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #0000EE; /* 蓝色字体 */
+    border: 1px solid #ddd;
+    border-radius: 12px; /* 圆角效果 */
+    transition: all 0.3s ease; /* 平滑过渡效果 */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+    text-decoration: none !important; /* 使用 !important 来强制去除下划线 */
+}
 
+.pagination a.current {
+    font-weight: bold;
+    color: #fff;
+    background-color: #0073e6;
+}
+
+.pagination a:hover {
+    transform: translateY(-3px); /* 鼠标悬浮时向上移动一点 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 鼠标悬浮时加重阴影以达到凸出的效果 */
+    border-color: #0000EE; /* 鼠标悬浮时边框颜色变为蓝色 */
+}
