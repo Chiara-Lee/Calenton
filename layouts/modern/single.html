@@ -2,8 +2,8 @@
 {{define "body"}}
 <main>
   {{$img := .Resources.GetMatch "cover.*"}}
-  {{ if $img }}
-  <img alt="{{.Title}}" width="1920" height="400" loading="lazy" src="{{($img.Fill "1920x400").Permalink}}">
+  {{ if .Params.cover }}
+    <img alt="{{ .Title }}" width="1920" height="400" loading="lazy" src="{{ .Params.cover }}">
   {{ end }}
   {{with .Title}}
     <h1>

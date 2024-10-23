@@ -1,14 +1,6 @@
 ---
-menu:
-  main:
-    name: Blog
-    identifier: blog
-    weight: 110
-  footer:
-    name: Blog
-    weight: 100
 layout: list
-title:  blog
+title:  笔记
 cascade:
     type: modern
     layout: single

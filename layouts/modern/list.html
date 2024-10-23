@@ -32,13 +32,14 @@
             <a class="prev" href="{{ $paginator.Prev.URL }}">Previous</a>
         {{ end }}
         {{ range $paginator.Pagers }}
-            <a href="{{ .URL }}" class="{{ if eq . $paginator.PageNumber }}current{{ end }}">{{ .PageNumber }}</a>
+            <a href="{{ .URL }}" class="{{ if eq .PageNumber $paginator.PageNumber }}current{{ end }}">{{ .PageNumber }}</a>
         {{ end }}
         {{ if $paginator.HasNext }}
             <a class="next" href="{{ $paginator.Next.URL }}">Next</a>
         {{ end }}
     </nav>
     {{ end }}
+    
     
     
     

@@ -1,9 +1,26 @@
 main:
-  - identifier: about
-    name: About
-    url: /about
-    weight: 100
+  - identifier: resource
+    name: 资源分享
+    url: /resource
+    weight: 160
+  - identifier: blog
+    name: 笔记
+    url: /blog
+    weight: 110
+  - identifier: news
+    name: 思考碎片
+    url: /news
+    weight: 150
   - identifier: contact
-    name: Contact
+    name: 关于
     url: /contact
+    weight: 200
+footer:
+  - identifier: Categories
+    name: 目录
+    url: /categories
+    weight: 150
+  - identifier: reference
+    name: 引用资料列表
+    url: /reference
     weight: 200

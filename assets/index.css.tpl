@@ -352,7 +352,7 @@ body.page form button:focus {
   box-shadow: 0 0 0 0 #fff,0 0 0 calc(4px + 0px) rgba(59,130,246,.5),0 0 transparent;
 }
 .icon-blog {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 -10 32 50" enable-background="new 0 0 32 32" xml:space="preserve"><g fill="rgb(79, 70, 229)" stroke="rgb(79, 70, 229)"><path d="M23.8638,13.4961l-7-12c-0.3584-0.6143-1.3691-0.6143-1.7275,0l-7,12c-0.1396,0.2393-0.1738,0.5259-0.0942,0.791l2.8057,9.3521C9.7397,24.3513,9,25.5881,9,27v3c0,0.5522,0.4478,1,1,1h12c0.5522,0,1-0.4478,1-1v-3c0-1.4119-0.7397-2.6487-1.8477-3.3608l2.8057-9.3521C24.0376,14.022,24.0034,13.7354,23.8638,13.4961z M21,29H11v-2c0-1.103,0.897-2,2-2h6c1.103,0,2,0.897,2,2V29z M19.2559,23H19h-6h-0.2559l-2.6616-8.8711L15,5.6991v8.579 C14.4051,14.625,14,15.2629,14,16c0,1.103,0.897,2,2,2s2-0.897,2-2c0-0.7371-0.4051-1.375-1-1.7219v-8.579l4.9175,8.4298L19.2559,23z"/></g></svg>') 50% no-repeat;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="blue" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>') 50% no-repeat;
 }
 .icon-facebook {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 40 40"><rect x="-8" y="-8" width="40" height="40" rx="5" fill="rgba(17, 24, 39)"></rect><path fill="white" d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>') 50% no-repeat;
@@ -367,13 +367,13 @@ body.page form button:focus {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 40 40"><rect x="-8" y="-8" width="40" height="40" rx="5" fill="rgba(17, 24, 39)"></rect><path fill="white" d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>') 50% no-repeat;
 }
 .icon-news {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -9 23 40" version="1.1" x="0px" y="0px"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g fill="rgb(79, 70, 229)"><path d="M8,14 L10,14 L10,12 L8,12 L8,14 Z M5.5,2 C6.225,2 6.831,2.516 6.97,3.201 L6.97,3.201 C6.99,3.299 7,3.4 7,3.5 C7,4.327 6.327,5 5.5,5 C4.673,5 4,4.327 4,3.5 C4,3.4 4.01,3.299 4.03,3.201 L4.03,3.201 C4.169,2.516 4.775,2 5.5,2 L5.5,2 Z M12.5,2 C13.225,2 13.831,2.516 13.97,3.201 L13.97,3.201 C13.99,3.299 14,3.4 14,3.5 C14,4.327 13.327,5 12.5,5 C11.673,5 11,4.327 11,3.5 C11,3.4 11.01,3.299 11.03,3.201 L11.03,3.201 C11.169,2.516 11.775,2 12.5,2 L12.5,2 Z M22.493,3.13 C22.18,2.952 21.795,2.956 21.485,3.143 L18,5.234 L18,3 C18,2.448 17.553,2 17,2 L15.649,2 C15.085,0.822 13.891,0 12.5,0 C11.109,0 9.915,0.822 9.351,2 L8.649,2 C8.085,0.822 6.891,0 5.5,0 C4.109,0 2.915,0.822 2.351,2 L1,2 C0.447,2 0,2.448 0,3 L0,11 C0,11.552 0.447,12 1,12 L6,12 L6,15 C6,15.552 6.447,16 7,16 L7.196,16 L3.152,22.47 C2.859,22.938 3.002,23.555 3.47,23.848 C3.635,23.951 3.818,24 3.999,24 C4.332,24 4.658,23.833 4.848,23.53 L8,18.486 L8,23 C8,23.552 8.447,24 9,24 C9.553,24 10,23.552 10,23 L10,18.486 L13.152,23.53 C13.342,23.833 13.668,24 14.001,24 C14.182,24 14.365,23.951 14.53,23.848 C14.998,23.555 15.141,22.938 14.848,22.47 L10.804,16 L11,16 C11.553,16 12,15.552 12,15 L12,12 L17,12 C17.553,12 18,11.552 18,11 L18,8.766 L21.485,10.857 C21.644,10.953 21.822,11 22,11 C22.17,11 22.34,10.957 22.493,10.87 C22.807,10.693 23,10.36 23,10 L23,4 C23,3.64 22.807,3.307 22.493,3.13 L22.493,3.13 Z"/></g></g></svg>') 50% no-repeat;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="blue" d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>') 50% no-repeat;
 }
-.icon-about {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 -20 100 145" x="0px" y="0px"><g fill="rgb(79, 70, 229)"><path d="M46.26,100H39.75a1.55,1.55,0,0,0-.29-0.22c-4.12-1.88-6.1-5.66-5-10.07,2.95-12.16,6-24.3,9-36.45a38,38,0,0,0,.89-5.11,1.19,1.19,0,0,0-1.59-1.42,9.62,9.62,0,0,0-2,.69c-1.48.62-2.92,1.35-4.41,1.92A2.51,2.51,0,0,1,33,48.7V46.33a26.86,26.86,0,0,1,3.41-3.91c4.46-3.51,9-6.86,13.63-10.21a15.35,15.35,0,0,1,3.16-1.59,7.68,7.68,0,0,1,4.61-.48c5.79,1.17,8.79,5.81,7.38,11.52Q60.9,59.22,56.57,76.78a47,47,0,0,0-1,5.79,1.13,1.13,0,0,0,1.64,1.28c1.09-.33,2.12-0.86,3.18-1.29C61.67,82,63,81.49,64.29,81a1.88,1.88,0,0,1,2.14.62,2,2,0,0,1,.21,2.3,8.53,8.53,0,0,1-1.23,1.89,33.23,33.23,0,0,1-3.47,3.35C57,93.14,51.94,97.05,46.26,100Z"/><path d="M54.68,24.63A12.31,12.31,0,1,1,67,12.34,12.28,12.28,0,0,1,54.68,24.63Z"/></g></svg>') 50% no-repeat;
+.icon-resource {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="blue" d="M201 10.3c14.3-7.8 31.6-7.8 46 0L422.3 106c5.1 2.8 8.3 8.2 8.3 14s-3.2 11.2-8.3 14L231.7 238c-4.8 2.6-10.5 2.6-15.3 0L25.7 134c-5.1-2.8-8.3-8.2-8.3-14s3.2-11.2 8.3-14L201 10.3zM23.7 170l176 96c5.1 2.8 8.3 8.2 8.3 14l0 216c0 5.6-3 10.9-7.8 13.8s-10.9 3-15.8 .3L25 423.1C9.6 414.7 0 398.6 0 381L0 184c0-5.6 3-10.9 7.8-13.8s10.9-3 15.8-.3zm400.7 0c5-2.7 11-2.6 15.8 .3s7.8 8.1 7.8 13.8l0 197c0 17.6-9.6 33.7-25 42.1L263.7 510c-5 2.7-11 2.6-15.8-.3s-7.8-8.1-7.8-13.8l0-216c0-5.9 3.2-11.2 8.3-14l176-96z"/></svg>') 50% no-repeat;
 }
 .icon-contact {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 -20 110 145" x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd"><g fill="rgb(79, 70, 229)"><path d="M81.8794 81.9054l-8.89613 -15.4088c-1.35474,-2.34569 -4.57208,-3.04727 -7.14927,-1.55907l-7.8792 4.54964c-9.70638,-6.43588 -19.6159,-23.5951 -20.334,-35.2184l7.8792 -4.54964c2.57837,-1.4882 3.58113,-4.62287 2.22521,-6.97092l-8.89613 -15.4088c-1.35592,-2.34805 -4.57208,-3.04727 -7.14927,-1.55789l-8.23471 4.75397c-13.5946,7.84849 -0.421657,40.9137 5.95517,51.9583 6.378,11.0469 28.4258,38.985 42.0192,31.1365l8.23471 -4.75397c2.57837,-1.48938 3.57995,-4.62523 2.22521,-6.97092z"/></g></svg>') 50% no-repeat;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="blue" d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"/></svg>') 50% no-repeat;
 }
 .icon-editor {
   background: url("data:image/svg+xml;utf8,<svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 554.3 551.2' style='enable-background:new 0 0 554.3 551.2;' xml:space='preserve'><style type='text/css'> .st0{fill:rgb(79, 70, 229);stroke:rgb(79, 70, 229);stroke-width:22;stroke-miterlimit:10;}</style><path class='st0' d='M59.3,62.6v157.5h157.5V62.6H59.3z M59.3,23.3h157.5c21.8,0,39.4,17.6,39.4,39.4c0,0,0,0,0,0v157.5 c0,21.8-17.6,39.4-39.4,39.4c0,0,0,0,0,0H59.3c-21.8,0-39.4-17.6-39.4-39.4V62.6C19.9,40.9,37.5,23.3,59.3,23.3z M59.3,338.3v157.5 h157.5V338.3H59.3z M59.3,299h157.5c21.8,0,39.4,17.6,39.4,39.4v0v157.5c0,21.8-17.6,39.4-39.4,39.4c0,0,0,0,0,0H59.3 c-21.8,0-39.4-17.6-39.4-39.4l0,0V338.3C19.9,316.6,37.5,299,59.3,299C59.3,299,59.3,299,59.3,299z M413.8,62.6 c-43.5,0-78.8,35.3-78.8,78.8s35.3,78.8,78.8,78.8c43.5,0,78.8-35.3,78.7-78.8C492.5,97.9,457.2,62.7,413.8,62.6L413.8,62.6z M413.8,23.3c65.3,0,118.2,52.9,118.2,118.1c0,65.3-52.9,118.2-118.1,118.2c0,0,0,0-0.1,0c-65.3,0-118.1-52.9-118.1-118.2 C295.7,76.2,348.5,23.3,413.8,23.3z M335,338.3v157.5h157.5V338.3H335z M335,299h157.5c21.8,0,39.4,17.6,39.4,39.4v0v157.5 c0,21.8-17.6,39.4-39.4,39.4h0H335c-21.8,0-39.4-17.6-39.4-39.4v0V338.3C295.6,316.6,313.2,299,335,299L335,299z'/></svg>") 50% no-repeat;
@@ -416,10 +416,11 @@ body.page {
 .post-item {
   width: 100%; /* 设置宽度为100% */
   max-width: 800px; /* 可根据需要调整最大宽度 */
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  padding: 5px 0;
+  box-shadow: none;
+  border: none; /* 移除子项边框 */
   background-color: #fff; /* 添加背景色使其更像卡片 */
+  margin: 0; /* 取消子项外边距 */
 }
 
 .post-summary {
@@ -1599,9 +1600,10 @@ footer.dark a:focus {
 }
 
 .pagination a.current {
-    font-weight: bold;
-    color: #fff;
-    background-color: #0073e6;
+    color: #888; /* 当前页码变得暗淡 */
+    background-color: #f0f0f0; /* 设置一个浅色背景 */
+    cursor: default; /* 鼠标在当前页码上显示默认光标 */
+    pointer-events: none; /* 禁止点击 */
 }
 
 .pagination a:hover {
@@ -1609,3 +1611,94 @@ footer.dark a:focus {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 鼠标悬浮时加重阴影以达到凸出的效果 */
     border-color: #0000EE; /* 鼠标悬浮时边框颜色变为蓝色 */
 }
+
+
+
+/* 主体样式 */
+.categories-list {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* 每个分类卡片的样式 */
+.category-item {
+    background-color: #b4d39e;
+    color: white;
+    padding: 15px;/*高度*/
+    margin-bottom: 0; /* 卡片之间的间距 */
+    border-radius: 0; /* 圆角 */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 1100px;
+}
+
+/* 卡片标题部分 */
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 卡片的箭头图标 */
+.arrow {
+  font-size: 0.8em; /* 更小的箭头符号 */
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* 子内容列表默认隐藏 */
+.posts-list {
+    display: none; /* 默认隐藏 */
+    margin: 0; /* 去掉边距 */
+    border-radius: 0; /* 保持平直边缘以与父卡片无缝衔接 */
+    padding: 0; /* 去掉多余填充 */
+    width: 100%; /* 子卡片占满整个宽度 */
+    background-color: white; /* 白色背景 */
+    border-radius: 0 0 8px 8px; /* 让子卡片与父卡片圆角连接 */
+    overflow: hidden; /* 避免超出内容 */
+    margin-top: 15px; /* 在子卡片与父卡片标题之间增加空隙 */
+}
+
+/* 子内容项样式 */
+.post-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    border-radius: 0; /* 圆角 */
+    padding: 10px;
+    font-size: 13px;  /* 更小的字体 */
+    background-color: #fff;  /* 与卡片颜色区分开的浅色 */
+}
+
+/* 子内容项前的小圆圈 */
+.post-item .circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border: 1px solid black;  /* 黑色边框 */
+  border-radius: 50%;  /* 圆形 */
+  vertical-align: middle;  /* 与文字对齐 */
+}
+
+/* 子内容项链接样式 */
+.post-item a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.post-item a:hover {
+    color: #d1ecff; /* 悬浮时链接变为浅色 */
+}
+
+/* 展开状态箭头旋转 */
+.category-header.open .arrow {
+    transform: rotate(90deg);
+}
+
+

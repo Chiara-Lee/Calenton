@@ -1,7 +1,6 @@
 baseURL: https://chapter-04-07.hugoinaction.com
 languageCode: en-us
 title: Caleton Academy of Magic
-theme: Eclectic
 enableEmoji: true
 enableGitInfo: true
 Paginate: 3
