@@ -1,0 +1,48 @@
+{{define "bodyClass"}} page {{end}}
+{{ define "body" }}
+<main>
+    <h1 class="page-title">{{ .Title | default "Untitled Page" }}</h1>
+    
+    {{ $paginator := .Paginate .Pages }}
+    
+    <section id="posts">
+        <p class="post-count">Number of pages found: {{ $paginator.TotalPages }}</p>
+        <div class="post-container">
+            {{ range $paginator.Pages }}
+                <div class="post-summary">
+                    <div class="post-wrapper">
+                        {{ if .Params.cover }}
+                            <div class="post-cover">
+                                <img src="{{ .Params.cover }}" alt="Post cover image">
+                            </div>
+                        {{ end }}
+                        <div class="post-content">
+                            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                            <p>{{ .Summary }}</p>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    {{ if gt $paginator.TotalPages 1 }}
+    <nav class="pagination">
+        {{ if $paginator.HasPrev }}
+            <a class="prev" href="{{ $paginator.Prev.URL }}">Previous</a>
+        {{ end }}
+        {{ range $paginator.Pagers }}
+            <a href="{{ .URL }}" class="{{ if eq .PageNumber $paginator.PageNumber }}current{{ end }}">{{ .PageNumber }}</a>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+            <a class="next" href="{{ $paginator.Next.URL }}">Next</a>
+        {{ end }}
+    </nav>
+    {{ end }}
+    
+    
+    
+    
+</main>
+{{ end }}
+
