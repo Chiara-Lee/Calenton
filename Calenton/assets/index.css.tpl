@@ -30,6 +30,35 @@ html {
   /* background-attachment: fixed; // 移除以避免滚动卡顿 */
 }
 
+/* General paragraph and text spacing */
+p {
+  line-height: 1.75; /* Adjust line height for better readability */
+  margin-bottom: 1.5em; /* Adjust spacing between paragraphs */
+}
+
+/* For Chinese text, use a slightly tighter line height and larger font size */
+html[lang="zh"] p {
+  line-height: 1.6; /* Reduced line height for Chinese text */
+  font-size: 1.1em; /* Adjusted font size */
+}
+
+html[lang="zh"] h1, 
+html[lang="zh"] h2, 
+html[lang="zh"] h3, 
+html[lang="zh"] h4 {
+  margin-bottom: 0.75em; /* Adjust spacing for headings in Chinese */
+}
+/* Apply Noto Sans font to Chinese text */
+body {
+    font-family: 'Noto Sans SC', sans-serif; /* For Simplified Chinese */
+}
+
+html[lang="zh"] body {
+    font-family: 'Noto Sans SC', sans-serif; /* For pages with Chinese content */
+}
+
+
+
 body {
   margin: 0 auto;
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -1701,4 +1730,71 @@ footer.dark a:focus {
     transform: rotate(90deg);
 }
 
+
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between; /* 主内容和侧边栏分开排列 */
+  align-items: flex-start; /* 保持顶部对齐 */
+}
+
+.content {
+  flex: 1;
+  margin-right: 20px; /* 给内容和卡片留出间距 */
+}
+
+.sidebar {
+  width: 300px; /* 设置侧边栏的固定宽度 */
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;/*子元素分配方式，其保证第一个子元素在左侧，第二个在右侧，剩下的填满快白*/
+    align-items: flex-start;
+}
+
+.content {
+    width: 65%;
+}
+
+.sidebar {
+    width: 30%;
+    margin-left: 20px;
+}
+
+.card {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.card a {
+    display: inline-flex;
+    align-items: center; /* 确保图标和文字垂直居中 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.card a svg {
+    margin-right: 5px; /* 图标和文字之间的间距 */
+    width: 20px; /* 设置 SVG 图标的宽度 */
+    height: 20px; /* 设置 SVG 图标的高度 */
+    fill: #a3c585; /* 图标颜色，可以根据需要修改 */
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
 

@@ -1,5 +1,13 @@
-baseURL: https://chapter-04-07.hugoinaction.com
-languageCode: en-us
+baseURL: 
+languages:
+  zh:
+    languageCode: zh
+    languageName: 中文
+    weight: 1
+  en:
+    languageCode: en
+    languageName: English
+    weight: 2
 title: Caleton Academy of Magic
 enableEmoji: true
 enableGitInfo: true
