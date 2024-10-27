@@ -2,7 +2,7 @@
 layout: list
 title:  笔记
 cascade:
-    type: modern
+    type: blog
     layout: single
 ---
 

@@ -3,61 +3,29 @@
 <main>
   {{$img := .Resources.GetMatch "cover.*"}}
   {{ if .Params.cover }}
-    <img alt="{{ .Title }}" width="1920" height="400" loading="lazy" src="{{ .Params.cover }}">
+ <img alt="{{ .Title }}" width="1920" height="400" loading="lazy" src="{{ .Params.cover }}">
   {{ end }}
   {{with .Title}}
-    <h1>
+ <h1>
       {{.}}
-    </h1>
+ </h1>
   {{end}}
   {{if .Param "toc"}}
-    <h2>Table of Contents</h2>
+ <h2>Table of Contents</h2>
     {{.TableOfContents}}
   {{end}}
-<div class="content-wrapper">
-  <div class="content">
+ <div class="content">
     {{.Content}}
-  </div>
-      <!-- 新增的卡片布局 -->
-      <aside class="sidebar">
-        <div class="card">
-          <h2>摘要</h2>
-          <p>{{ .Summary | truncate 100 }}</p> <!-- 可以将这部分替换为您想要展示的信息 -->
-        </div>
-        <div class="card">
-          <h2>阅读时长</h2>
-          <p>{{.ReadingTime}} min</p> <!-- 使用 Hugo 内置的 ReadingTime 变量 -->
-        </div>
-        <div class="card">
-          <h2>总字数</h2>
-          <p>≈ {{ .WordCount }}</p> <!-- 使用 Hugo 内置的 WordCount 变量 -->
-        </div>
-        <div class="card">
-          <h2>标签</h2>
-          <p>
-            {{ range .Params.tags }}
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag" viewBox="0 0 16 16">
-                  <path d="M3 2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 8.586 2H3zm1 1h4.586L14 8.414l-4.586 4.586-6-6V3z"/>
-                  <path d="M5.5 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                </svg>
-                {{ . }}
-              </a>
-            {{ end }}
-          </p>
-        </div>
-      </aside>
-    </div>
-</div>
+ </div>
 </main>
 {{with site.RegularPages.Related .}}
 <div id="related">
-  <h2>Related Pages</h2>
-  <ul class="posts">
+ <h2>Related Pages</h2>
+ <ul class="posts">
     {{range first 2 .}}
      {{partialCached "card.html" . .Permalink}}
     {{end}}
-  </ul>
+ </ul>
 </div>
 {{end}}
 {{end}}

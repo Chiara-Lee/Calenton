@@ -1,13 +1,3 @@
-/**!
- * Not meant as a reference for good CSS practices. The goal of Hugo in Action
- * is for us to understand Hugo. The HTML/CSS/JS code has been intentionally
- * made complicated so that we can simplify the Go HTML Template pieces of Hugo. 
- * There are intentional cases where CSS selectors are used instead of class
- * parameters for targeting. Many of the targeting done in CSS is more
- * specific than it should be. Some of the decisions taken are sub-optimal.
- * You are free to use this code on your website but beware of caveats and
- * do understand that support may be lacking where expected.
- **/
 :root {
 	--red: 79;
 	--green: 70;
