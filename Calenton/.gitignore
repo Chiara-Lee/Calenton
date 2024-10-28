@@ -1,6 +1,0 @@
-# 忽略上层目录的文件和文件夹
-/Users/
-.VirtualBox/
-.anaconda/
-.bash_history
-/conda/
