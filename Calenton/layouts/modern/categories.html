@@ -1,0 +1,41 @@
+{{define "bodyClass"}} page {{end}}
+{{define "body"}}
+<main>
+  <h1>Categories</h1>
+  <p>The website has the following categories.</p>
+
+  <div class="categories-list">
+    {{ range .Pages }}
+    <div class="category-item">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <span class="category-title">{{ .Title }} ({{ len .Pages }} posts)</span>
+        <span class="arrow">></span>
+      </div>
+      <ul class="posts-list">
+        {{ range .Pages }}
+        <li class="post-item">
+          <span class="circle"></span>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+</main>
+<script>
+  function toggleCategory(element) {
+    const postsList = element.nextElementSibling;
+    const arrow = element.querySelector('.arrow');
+
+    if (postsList.style.display === "none" || postsList.style.display === "") {
+      postsList.style.display = "block";
+      arrow.style.transform = "rotate(90deg)"; // 展开时箭头向下
+    } else {
+      postsList.style.display = "none";
+      arrow.style.transform = "rotate(0deg)"; // 折叠时箭头恢复
+    }
+  }
+</script>
+
+{{ end }}
