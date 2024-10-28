@@ -1,5 +1,5 @@
 [build]
-  publish = "/"
+  publish = "public"
   command = "hugo  --baseURL $DEPLOY_PRIME_URL"
 
 # 可选：设置生产环境的环境变量
