@@ -1,14 +1,13 @@
 [build]
-  command = "./merge_configs.sh"
-  publish = "public"
+  command = "hugo --minify --baseURL $DEPLOY_PRIME_URL" # 直接使用 Hugo 构建命令
+  publish = "public" # 发布路径
 
 [context.production.environment]
-  HUGO_VERSION = "0.128.0"
+  HUGO_VERSION = "0.128.0" # 指定 Hugo 版本
 
 [context.deploy-preview]
-  command = "./merge_configs.sh"
+  command = "hugo --minify --baseURL $DEPLOY_PRIME_URL" # 预览部署时的构建命令
 
 [context.branch-deploy]
-  command = "./merge_configs.sh"
-
+  command = "hugo --minify --baseURL $DEPLOY_PRIME_URL" # 分支部署时的构建命令
 
