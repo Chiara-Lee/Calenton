@@ -1,2 +1,3 @@
-{{ $css := resources.GetMatch "index.css.tpl"| resources.ExecuteAsTemplate "index.css" "nothing"}}
-{{return $css.Permalink}}
+{{ $css := resources.GetMatch "index.css.tpl" | resources.ExecuteAsTemplate "css/index.css" . | resources.Minify }}
+<link rel="stylesheet" href="{{ $css.Permalink }}">
+
