@@ -1,13 +1,14 @@
 [build]
-  command = "hugo --gc --debug --baseURL $DEPLOY_PRIME_URL" # 构建命令，去掉 --minify 并添加 --debug 以获得更多调试信息
-  publish = "public" # 发布路径
+  command = "./merge_configs.sh"
+  publish = "public"
 
 [context.production.environment]
-  HUGO_VERSION = "0.128.0" # 指定 Hugo 版本
+  HUGO_VERSION = "0.128.0"
 
 [context.deploy-preview]
-  command = "hugo --gc --debug --baseURL $DEPLOY_PRIME_URL" # 预览部署时的构建命令
+  command = "./merge_configs.sh"
 
 [context.branch-deploy]
-  command = "hugo --gc --debug --baseURL $DEPLOY_PRIME_URL" # 分支部署时的构建命令
+  command = "./merge_configs.sh"
+
 
