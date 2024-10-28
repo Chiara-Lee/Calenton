@@ -6,11 +6,6 @@
 [context.production.environment]
   HUGO_ENV = "production"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-
 [build.environment]
   HUGO_VERSION = "0.128.0"
 
