@@ -1,12 +1,13 @@
 [build]
-  command = "hugo --minify --baseURL $DEPLOY_PRIME_URL" # 构建命令
+  command = "hugo --gc --debug --baseURL $DEPLOY_PRIME_URL" # 构建命令，去掉 --minify 并添加 --debug 以获得更多调试信息
   publish = "public" # 发布路径
 
 [context.production.environment]
-  HUGO_VERSION = "0.128.0" # 这里可以指定Hugo版本
+  HUGO_VERSION = "0.128.0" # 指定 Hugo 版本
 
 [context.deploy-preview]
-  command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL" # 预览部署时的构建命令
+  command = "hugo --gc --debug --baseURL $DEPLOY_PRIME_URL" # 预览部署时的构建命令
 
 [context.branch-deploy]
-  command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL" # 分支部署时的构建命令
+  command = "hugo --gc --debug --baseURL $DEPLOY_PRIME_URL" # 分支部署时的构建命令
+
