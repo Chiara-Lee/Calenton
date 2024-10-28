@@ -1,4 +1,4 @@
-baseURL: 
+baseURL:  "$DEPLOY_PRIME_URL"
 languages:
   zh:
     languageCode: zh
