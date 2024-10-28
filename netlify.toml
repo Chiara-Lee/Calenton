@@ -1,0 +1,16 @@
+[build]
+  publish = "public"
+  command = "hugo --minify --baseURL $DEPLOY_PRIME_URL"
+
+# 可选：设置生产环境的环境变量
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+
+[build.environment]
+  HUGO_VERSION = "0.128.0"
+
