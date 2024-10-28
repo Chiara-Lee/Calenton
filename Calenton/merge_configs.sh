@@ -1,10 +1,15 @@
-# 合并配置文件
+#!/bin/bash
+
+# Combine YAML files into one config.yaml
 echo "Merging configuration files..."
 
+# Initialize an empty config.yaml
 echo "" > config.yaml
+
+# Append each YAML file to config.yaml
 for file in author.yaml markup.yaml menu.yaml params.yaml related.yaml; do
     if [[ -f "$file" ]]; then
-        echo "---" >> config.yaml
+        echo "---" >> config.yaml  # Add YAML document separator for each file
         cat "$file" >> config.yaml
         echo "Merged $file"
     else
@@ -12,19 +17,22 @@ for file in author.yaml markup.yaml menu.yaml params.yaml related.yaml; do
     fi
 done
 
-# 确认 config.yaml 是否生成成功
-if [[ -f "config.yaml" ]]; then
-    echo "config.yaml successfully generated."
-else
-    echo "Error: config.yaml was not generated." >&2
+# Debug: Display the content of config.yaml to verify it was generated correctly
+echo "Generated config.yaml content:"
+cat config.yaml
+
+# Check if config.yaml was created successfully
+if [[ ! -s "config.yaml" ]]; then
+    echo "Error: config.yaml was not generated or is empty." >&2
     exit 1
 fi
 
-# 运行 Hugo 构建
+# Run Hugo build
 echo "Running Hugo build..."
 hugo --minify --baseURL $DEPLOY_PRIME_URL
 
-# 删除合并的 config.yaml 文件
+# Clean up config.yaml after build
 echo "Cleaning up merged config.yaml..."
 rm config.yaml
+
 
