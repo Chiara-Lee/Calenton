@@ -5,6 +5,6 @@ menu:
     parent: blog
 layout: list
 cascade:
-    type: modern
+    type: blog
     layout: single
 ---
