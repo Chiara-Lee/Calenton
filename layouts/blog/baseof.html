@@ -9,7 +9,7 @@
     <meta name="viewport" 
       content="width=device-width, initial-scale=1.0" />
       <link rel="icon" type="image/png" href="{{partialCached "favicon.png.html" $ "nothing"}}">
-      {{ partialCached "index.css.html" . "nothing" }}
+      {{ partial "index.css.html" . }}
     {{$title := default site.Title .Title}}
     {{with $title}}<title>{{.}}</title>{{end}}
   </head>
