@@ -2,26 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Acme  News on Caleton Academy of Magic</title>
-    <link>//localhost:1313/news/</link>
+    <link>http://localhost:1313/Calenton/news/</link>
     <description>Recent content in Acme  News on Caleton Academy of Magic</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <managingEditor>contact@example.org (Caleton Academy of Magic)</managingEditor>
-    <webMaster>contact@example.org (Caleton Academy of Magic)</webMaster>
-    <atom:link href="//localhost:1313/news/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Calenton/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shaper</title>
-      <link>//localhost:1313/news/shaper/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>contact@example.org (Caleton Academy of Magic)</author>
-      <guid>//localhost:1313/news/shaper/</guid>
-      <description>Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional medium. Instruments include graphite pencils, pen and ink, various kinds of paints, inked brushes, colored pencils, crayons, charcoal, chalk, pastels, various kinds of erasers, markers, styluses, and various metals (such as silverpoint). Digital drawing is the act of using a computer to draw. Common methods of digital drawing include a stylus or finger on a touchscreen device, stylus- or finger-to-touchpad, or in some cases, a mouse.</description>
+      <link>http://localhost:1313/Calenton/news/shaper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Calenton/news/shaper/</guid>
+      <description>&lt;p&gt;Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional medium. Instruments include graphite pencils, pen and ink, various kinds of paints, inked brushes, colored pencils, crayons, charcoal, chalk, pastels, various kinds of erasers, markers, styluses, and various metals (such as silverpoint). Digital drawing is the act of using a computer to draw. Common methods of digital drawing include a stylus or finger on a touchscreen device, stylus- or finger-to-touchpad, or in some cases, a mouse. There are many digital art programs and devices.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Square License</title>
-      <link>//localhost:1313/news/square-license/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>contact@example.org (Caleton Academy of Magic)</author>
-      <guid>//localhost:1313/news/square-license/</guid>
-      <description>A license (American English) or licence (British English) is an official permission or permit to do, use, or own something (as well as the document of that permission or permit).&#xA;A license can be granted by a party to another party as an element of an agreement between those parties. A shorthand definition of a license is &amp;ldquo;an authorization to use licensed material.&amp;rdquo;&#xA;In particular, a license may be issued by authorities, to allow an activity that would otherwise be forbidden.</description>
+      <link>http://localhost:1313/Calenton/news/square-license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Calenton/news/square-license/</guid>
+      <description>&lt;p&gt;A license (American English) or licence (British English) is an official permission or permit to do, use, or own something (as well as the document of that permission or permit).&lt;/p&gt;&#xA;&lt;p&gt;A license can be granted by a party to another party as an element of an agreement between those parties. A shorthand definition of a license is &amp;ldquo;an authorization to use licensed material.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;In particular, a license may be issued by authorities, to allow an activity that would otherwise be forbidden. It may require paying a fee or proving a capability. The requirement may also serve to keep the authorities informed on a type of activity, and to give them the opportunity to set conditions and limitations.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

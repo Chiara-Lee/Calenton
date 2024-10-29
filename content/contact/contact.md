@@ -2,22 +2,10 @@
 title:  关于
 type:  modern
 lang: zh
-avatarImage: /Calenton/contact/avatar.png
-avatarAlt: Chiara's web
-avatar-name: Chiara's web
-avatar-subtitle: peace and love
-actions:
-  - iconClass: "fa fa-envelope"
-    url: "mailto:example@example.com"
-  - iconClass: "fa fa-github"
-    url: https://github.com/Chiara-Lee
-  - iconClass: "fa fa-twitter"
-    url: "https://twitter.com/username"
 ---
 
 
 ##   1.关于这个网站的用途：
-{{< avatar-card >}}
 
 本网站为个人博客网站。主要的用途有三个部分：
 

@@ -2,57 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/zh/</loc>
-    <lastmod>2024-10-28T12:11:59+08:00</lastmod>
+    <loc>http://localhost:1313/Calenton/zh/</loc>
+    <lastmod>2024-10-29T08:05:47+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/"
+                href="http://localhost:1313/Calenton/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="//localhost:1313/zh/"
+                href="http://localhost:1313/Calenton/zh/"
                 />
   </url><url>
-    <loc>//localhost:1313/zh/categories/</loc>
+    <loc>http://localhost:1313/Calenton/zh/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/categories/"
+                href="http://localhost:1313/Calenton/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="//localhost:1313/zh/categories/"
+                href="http://localhost:1313/Calenton/zh/categories/"
                 />
   </url><url>
-    <loc>//localhost:1313/zh/contact/</loc>
-    <lastmod>2024-10-28T12:11:59+08:00</lastmod>
+    <loc>http://localhost:1313/Calenton/zh/contact/</loc>
+    <lastmod>2024-10-29T08:05:47+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/contact/"
+                href="http://localhost:1313/Calenton/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="//localhost:1313/zh/contact/"
+                href="http://localhost:1313/Calenton/zh/contact/"
                 />
   </url><url>
-    <loc>//localhost:1313/zh/tags/</loc>
+    <loc>http://localhost:1313/Calenton/zh/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/tags/"
+                href="http://localhost:1313/Calenton/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="//localhost:1313/zh/tags/"
+                href="http://localhost:1313/Calenton/zh/tags/"
                 />
   </url><url>
-    <loc>//localhost:1313/zh/contact/contact/</loc>
-    <lastmod>2024-10-28T12:11:59+08:00</lastmod>
+    <loc>http://localhost:1313/Calenton/zh/contact/contact/</loc>
+    <lastmod>2024-10-29T08:05:47+00:00</lastmod>
   </url>
 </urlset>

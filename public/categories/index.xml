@@ -2,67 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Caleton Academy of Magic</title>
-    <link>//localhost:1313/categories/</link>
+    <link>http://localhost:1313/Calenton/categories/</link>
     <description>Recent content in Categories on Caleton Academy of Magic</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <managingEditor>contact@example.org (Caleton Academy of Magic)</managingEditor>
-    <webMaster>contact@example.org (Caleton Academy of Magic)</webMaster>
-    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Calenton/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Circle</title>
-      <link>//localhost:1313/categories/circle/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>contact@example.org (Caleton Academy of Magic)</author>
-      <guid>//localhost:1313/categories/circle/</guid>
+      <link>http://localhost:1313/Calenton/categories/circle/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Calenton/categories/circle/</guid>
       <description></description>
     </item>
     <item>
       <title>Manufacturing</title>
-      <link>//localhost:1313/categories/manufacturing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>contact@example.org (Caleton Academy of Magic)</author>
-      <guid>//localhost:1313/categories/manufacturing/</guid>
+      <link>http://localhost:1313/Calenton/categories/manufacturing/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Calenton/categories/manufacturing/</guid>
       <description></description>
     </item>
     <item>
       <title>Square</title>
-      <link>//localhost:1313/categories/square/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>contact@example.org (Caleton Academy of Magic)</author>
-      <guid>//localhost:1313/categories/square/</guid>
+      <link>http://localhost:1313/Calenton/categories/square/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Calenton/categories/square/</guid>
       <description></description>
     </item>
     <item>
       <title>Line</title>
-      <link>//localhost:1313/categories/line/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>contact@example.org (Caleton Academy of Magic)</author>
-      <guid>//localhost:1313/categories/line/</guid>
+      <link>http://localhost:1313/Calenton/categories/line/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Calenton/categories/line/</guid>
       <description></description>
     </item>
     <item>
       <title>Design</title>
-      <link>//localhost:1313/categories/design/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>contact@example.org (Caleton Academy of Magic)</author>
-      <guid>//localhost:1313/categories/design/</guid>
+      <link>http://localhost:1313/Calenton/categories/design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Calenton/categories/design/</guid>
       <description></description>
     </item>
     <item>
       <title>General</title>
-      <link>//localhost:1313/categories/general/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>contact@example.org (Caleton Academy of Magic)</author>
-      <guid>//localhost:1313/categories/general/</guid>
+      <link>http://localhost:1313/Calenton/categories/general/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Calenton/categories/general/</guid>
       <description></description>
     </item>
     <item>
       <title>Public</title>
-      <link>//localhost:1313/categories/public/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>contact@example.org (Caleton Academy of Magic)</author>
-      <guid>//localhost:1313/categories/public/</guid>
+      <link>http://localhost:1313/Calenton/categories/public/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Calenton/categories/public/</guid>
       <description></description>
     </item>
     <item>
       <title>Shape</title>
-      <link>//localhost:1313/categories/shape/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>contact@example.org (Caleton Academy of Magic)</author>
-      <guid>//localhost:1313/categories/shape/</guid>
+      <link>http://localhost:1313/Calenton/categories/shape/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Calenton/categories/shape/</guid>
       <description></description>
     </item>
   </channel>
