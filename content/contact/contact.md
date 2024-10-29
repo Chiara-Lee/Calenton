@@ -14,9 +14,10 @@ actions:
   - iconClass: "fa fa-twitter"
     url: "https://twitter.com/username"
 ---
-{{< avatar-card >}}
+
 
 ##   1.关于这个网站的用途：
+{{< avatar-card >}}
 
 本网站为个人博客网站。主要的用途有三个部分：
 

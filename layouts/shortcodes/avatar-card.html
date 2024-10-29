@@ -1,10 +1,10 @@
 <div class="avatar-card">
   <div class="avatar-image">
-    <img src="{{ .Page.Params.avatarImage }}" alt="{{ .Page.Params.avatarAlt }}" />
+    <img src="{{ .Get "avatarImage" }}" alt="{{ .Get "avatarAlt" }}" />
   </div>
   <div class="avatar-info">
-    <h3 class="avatar-name">{{ .Page.Params.name }}</h3>
-    <p class="avatar-subtitle">{{ .Page.Params.subtitle }}</p>
+    <h3 class="avatar-name">{{ .Get "avatarName" }}</h3>
+    <p class="avatar-subtitle">{{ .Get "avatarSubtitle" }}</p>
   </div>
   <div class="action-icons">
     {{ range .Page.Params.actions }}
@@ -14,5 +14,7 @@
     {{ end }}
   </div>
 </div>
+
+
 
   
