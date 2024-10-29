@@ -1,22 +1,18 @@
 <div class="avatar-card">
-    <div class="avatar-image">
-      <img src="{{ .Params.avatarImage }}" alt="{{ .Params.avatarAlt }}" />
-    </div>
-    <div class="avatar-info">
-      <h3 class="avatar-name">{{ .Params.name }}</h3>
-      <p class="avatar-subtitle">{{ .Params.subtitle }}</p>
-    </div>
-    <div class="avatar-actions">
-      <!-- Social and action icons go here -->
-      {{ if .Params.actions }}
-        <div class="action-icons">
-          {{ range .Params.actions }}
-            <a href="{{ .url }}" target="_blank">
-              <i class="{{ .iconClass }}"></i>
-            </a>
-          {{ end }}
-        </div>
-      {{ end }}
-    </div>
+  <div class="avatar-image">
+    <img src="{{ .Page.Params.avatarImage }}" alt="{{ .Page.Params.avatarAlt }}" />
   </div>
+  <div class="avatar-info">
+    <h3 class="avatar-name">{{ .Page.Params.name }}</h3>
+    <p class="avatar-subtitle">{{ .Page.Params.subtitle }}</p>
+  </div>
+  <div class="action-icons">
+    {{ range .Page.Params.actions }}
+      <a href="{{ .url }}" target="_blank">
+        <i class="{{ .iconClass }}"></i>
+      </a>
+    {{ end }}
+  </div>
+</div>
+
   
