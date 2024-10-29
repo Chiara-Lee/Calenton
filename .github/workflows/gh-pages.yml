@@ -23,6 +23,8 @@ jobs:
 
       - name: Build
         run: hugo --minify --baseURL=https://chiara-lee.github.io/Calenton
+        env: 
+          COMMENT_TOKEN: ${{ secrets.COMMENT_TOKEN }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
