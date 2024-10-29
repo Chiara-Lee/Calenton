@@ -25,20 +25,16 @@
       <form action="https://formspree.io/f/{{.FormspreeCommentForm}}" method="post">
     {{ end }}
     <input type="hidden" name="url" value="{{.RelPermalink}}">
-      <div>
-        <label for="name">Name:</label>
-        <input id="name" name="name" type="text" required>
-      </div>
-      <div>
-        <label for="email">Email:</label>
-        <input id="email" name="email" type="email" required>
-      </div>
-      <div>
-        <label for="message">Comment:</label>
-        <textarea id="message" name="message" cols="50" rows="10" required></textarea>
-      </div>
-      <div>
-        <button type="submit">Send</button>
+    <label class="comment-label" for="name">Name:</label>
+    <input class="comment-input" type="text" id="name" name="name" required>
+  
+    <label class="comment-label" for="email">Email:</label>
+    <input class="comment-input" type="email" id="email" name="email" required>
+  
+    <label class="comment-label" for="comment">Comment:</label>
+    <textarea class="comment-textarea" id="comment" name="comment" rows="5" required></textarea>
+  
+    <button class="comment-button" type="submit">Send</button>
       </div>
     </form>
     {{end}}
