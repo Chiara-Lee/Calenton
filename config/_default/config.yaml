@@ -12,9 +12,3 @@ title: Caleton Academy of Magic
 enableEmoji: true
 enableGitInfo: true
 Paginate: 3
-security:
-  funcs:
-    getenv:
-      - '^HUGO_'
-      - '^NETLIFY$'
-      - 'USE_NETLIFY_FOR_COMMENTS'
