@@ -3,7 +3,6 @@
 
   {{$comments:= getJSON "https://api.netlify.com/api/v1/forms/" site.Params.NetlifyCommentForm "/submissions?access_token=" (getenv "COMMENTS_TOKEN")}} 
 
-
   {{ range (sort $comments "created_at" "asc") }}
     {{if not ($response.Get .data.url)}}
       {{$response.Set .data.url (slice )}}
