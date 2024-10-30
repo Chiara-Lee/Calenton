@@ -1858,7 +1858,8 @@ footer.dark a:focus {
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  max-width: 800px;
+  max-width: 100%;
+  width: 80%;
   margin: 2rem auto;
   font-family: 'Georgia', serif;
   color: #333;

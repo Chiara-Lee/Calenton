@@ -2,161 +2,161 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/Calenton/resource/</loc>
+    <loc>http://localhost:1313/resource/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/blog/process-4/</loc>
+    <loc>http://localhost:1313/blog/process-4/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/categories/circle/</loc>
+    <loc>http://localhost:1313/categories/circle/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/tags/manufacturing/</loc>
+    <loc>http://localhost:1313/tags/manufacturing/</loc>
     <lastmod>2024-10-29T04:09:16+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/categories/manufacturing/</loc>
+    <loc>http://localhost:1313/categories/manufacturing/</loc>
     <lastmod>2024-10-29T04:09:16+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/blog/process-3/</loc>
+    <loc>http://localhost:1313/blog/process-3/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-10-29T04:09:16+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/Calenton/zh/tags/"
+                href="http://localhost:1313/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/Calenton/tags/"
+                href="http://localhost:1313/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/Calenton/blog/process-2/</loc>
+    <loc>http://localhost:1313/blog/process-2/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/categories/square/</loc>
+    <loc>http://localhost:1313/categories/square/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/categories/line/</loc>
+    <loc>http://localhost:1313/categories/line/</loc>
     <lastmod>2024-10-29T04:09:16+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/blog/process-1/</loc>
+    <loc>http://localhost:1313/blog/process-1/</loc>
     <lastmod>2024-10-29T04:09:16+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/blog/community/</loc>
+    <loc>http://localhost:1313/blog/community/</loc>
     <lastmod>2024-10-29T04:09:16+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/credits/</loc>
+    <loc>http://localhost:1313/credits/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/markdown/</loc>
+    <loc>http://localhost:1313/markdown/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/reference/</loc>
+    <loc>http://localhost:1313/reference/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/terms/</loc>
+    <loc>http://localhost:1313/terms/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/news/</loc>
+    <loc>http://localhost:1313/news/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/blog/building-squares/</loc>
+    <loc>http://localhost:1313/blog/building-squares/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/Calenton/zh/"
+                href="http://localhost:1313/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/Calenton/"
+                href="http://localhost:1313/"
                 />
   </url><url>
-    <loc>http://localhost:1313/Calenton/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/Calenton/zh/categories/"
+                href="http://localhost:1313/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/Calenton/categories/"
+                href="http://localhost:1313/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/Calenton/tags/circle/</loc>
+    <loc>http://localhost:1313/tags/circle/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/blog/community/circle/</loc>
+    <loc>http://localhost:1313/blog/community/circle/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/blog/community/curve/</loc>
+    <loc>http://localhost:1313/blog/community/curve/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/categories/design/</loc>
+    <loc>http://localhost:1313/categories/design/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/categories/general/</loc>
+    <loc>http://localhost:1313/categories/general/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/tags/line/</loc>
+    <loc>http://localhost:1313/tags/line/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/tags/product/</loc>
+    <loc>http://localhost:1313/tags/product/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/categories/public/</loc>
+    <loc>http://localhost:1313/categories/public/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/data-driven/</loc>
+    <loc>http://localhost:1313/data-driven/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/tags/shape/</loc>
+    <loc>http://localhost:1313/tags/shape/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/categories/shape/</loc>
+    <loc>http://localhost:1313/categories/shape/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/news/shaper/</loc>
+    <loc>http://localhost:1313/news/shaper/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/tags/square/</loc>
+    <loc>http://localhost:1313/tags/square/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/news/square-license/</loc>
+    <loc>http://localhost:1313/news/square-license/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/tags/style/</loc>
+    <loc>http://localhost:1313/tags/style/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/tags/triangle/</loc>
+    <loc>http://localhost:1313/tags/triangle/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/blog/tropical-triangles/</loc>
+    <loc>http://localhost:1313/blog/tropical-triangles/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/Calenton/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/Calenton/zh/contact/"
+                href="http://localhost:1313/zh/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/Calenton/contact/"
+                href="http://localhost:1313/contact/"
                 />
   </url><url>
-    <loc>http://localhost:1313/Calenton/blog/</loc>
+    <loc>http://localhost:1313/blog/</loc>
     <lastmod>2024-10-28T04:58:57+00:00</lastmod>
   </url>
 </urlset>

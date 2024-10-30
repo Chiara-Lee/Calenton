@@ -2,129 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Caleton Academy of Magic</title>
-    <link>http://localhost:1313/Calenton/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Caleton Academy of Magic</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/Calenton/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Us</title>
-      <link>http://localhost:1313/Calenton/resource/</link>
+      <link>http://localhost:1313/resource/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/resource/</guid>
+      <guid>http://localhost:1313/resource/</guid>
       <description>&lt;p&gt;Acme Corporation™ is the world&amp;rsquo;s leading manufacturer of digital shapes. From squares and circles to triangles and hexagons, we have it all. Browse through our collection of various forms with different thicknesses and line styles.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;We shape the world. You live in it.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;We provide &amp;#x1f604; to hundreds of happy customers.&lt;/p&gt;&#xA;&lt;h2 id=&#34;manufacturing&#34;&gt;Manufacturing&lt;/h2&gt;&#xA;&lt;p&gt;At Acme Corporation, we take pride in what we create. Our manufacturing process goes through &lt;strong&gt;3 different&lt;/strong&gt; stages of fine workmanship to give you the best possible shapes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Manufacturing Process Part IV</title>
-      <link>http://localhost:1313/Calenton/blog/process-4/</link>
+      <link>http://localhost:1313/blog/process-4/</link>
       <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/blog/process-4/</guid>
+      <guid>http://localhost:1313/blog/process-4/</guid>
       <description>&lt;p&gt;A cutting tool has one or more sharp cutting edges and is made of a material that is harder than the work material. The cutting edge serves to separate chip from the parent work material. Connected to the cutting edge are the two surfaces of the tool:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The rake face; and&lt;/li&gt;&#xA;&lt;li&gt;The flank.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The rake face which directs the flow of newly formed chip, is oriented at a certain angle is called the rake angle &amp;ldquo;α&amp;rdquo;. It is measured relative to the plane perpendicular to the work surface. The rake angle can be positive or negative. The flank of the tool provides a clearance between the tool and the newly formed work surface, thus protecting the surface from abrasion, which would degrade the finish. This angle between the work surface and the flank surface is called the relief angle. There are two basic types of cutting tools:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Manufacturing Process Part III</title>
-      <link>http://localhost:1313/Calenton/blog/process-3/</link>
+      <link>http://localhost:1313/blog/process-3/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/blog/process-3/</guid>
+      <guid>http://localhost:1313/blog/process-3/</guid>
       <description>&lt;p&gt;Machining is any process in which a cutting tool is used to remove small chips of material from the workpiece (the workpiece is often called the &amp;ldquo;work&amp;rdquo;). To perform the operation, relative motion is required between the tool and the work. This relative motion is achieved in most machining operation by means of a primary motion, called &amp;ldquo;cutting speed&amp;rdquo; and a secondary motion called &amp;ldquo;feed&amp;rdquo;.[7] The shape of the tool and its penetration into the work surface, combined with these motions, produce the desired shape of the resulting work surface.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Manufacturing Process Part II</title>
-      <link>http://localhost:1313/Calenton/blog/process-2/</link>
+      <link>http://localhost:1313/blog/process-2/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/blog/process-2/</guid>
+      <guid>http://localhost:1313/blog/process-2/</guid>
       <description>&lt;p&gt;The three principal machining processes are classified as turning, drilling and milling. Other operations falling into miscellaneous categories include shaping, planing, boring, broaching and sawing.[5]&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Turning operations are operations that rotate the workpiece as the primary method of moving metal against the cutting tool. Lathes are the principal machine tool used in turning.&lt;/li&gt;&#xA;&lt;li&gt;Milling operations are operations in which the cutting tool rotates to bring cutting edges to bear against the workpiece. Milling machines are the principal machine tool used in milling.&lt;/li&gt;&#xA;&lt;li&gt;Drilling operations are operations in which holes are produced or refined by bringing a rotating cutter with cutting edges at the lower extremity into contact with the workpiece. Drilling operations are done primarily in drill presses but sometimes on lathes or mills.&lt;/li&gt;&#xA;&lt;li&gt;Miscellaneous operations are operations that strictly speaking may not be machining operations in that they may not be swarf producing operations but these operations are performed at a typical machine tool. Burnishing is an example of a miscellaneous operation. Burnishing produces no swarf but can be performed at a lathe, mill, or drill press.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;An unfinished workpiece requiring machining will need to have some material cut away to create a finished product. A finished product would be a workpiece that meets the specifications set out for that workpiece by engineering drawings or blueprints. For example, a workpiece may be required to have a specific outside diameter. A lathe is a machine tool that can be used to create that diameter by rotating a metal workpiece, so that a cutting tool can cut metal away, creating a smooth, round surface matching the required diameter and surface finish. A drill can be used to remove metal in the shape of a cylindrical hole. Other tools that may be used for various types of metal removal are milling machines, saws, and grinding machines. Many of these same techniques are used in woodworking.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Manufacturing Process Part I</title>
-      <link>http://localhost:1313/Calenton/blog/process-1/</link>
+      <link>http://localhost:1313/blog/process-1/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/blog/process-1/</guid>
+      <guid>http://localhost:1313/blog/process-1/</guid>
       <description>&lt;p&gt;Machining is any of various processes in which a piece of raw material is cut into a desired final shape and size by a controlled material-removal process. The processes that have this common theme, controlled material removal, are today collectively known as subtractive manufacturing,[1] in distinction from processes of controlled material addition, which are known as additive manufacturing. Exactly what the &amp;ldquo;controlled&amp;rdquo; part of the definition implies can vary, but it almost always implies the use of machine tools (in addition to just power tools and hand tools).&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/Calenton/credits/</link>
+      <link>http://localhost:1313/credits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/credits/</guid>
+      <guid>http://localhost:1313/credits/</guid>
       <description>&lt;h1 id=&#34;credits&#34;&gt;Credits&lt;/h1&gt;&#xA;&lt;p&gt;This website uses resources from a variety of places. Here is to all of them:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Built using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Styled using &lt;a href=&#34;https://tailwindcss.com/&#34;&gt;Tailwind CSS&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Using &lt;a href=&#34;https://owaiskhan.me/post/free-tailwindcss-react-ui-kit&#34;&gt;Treact UI Kit from Owais Khan&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Background based on am image &lt;a href=&#34;http://www.freepik.com&#34;&gt;designed by BiZkettE1 / Freepik&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Early code using &lt;a href=&#34;https://github.com/atishay/eclectic-hugo-theme&#34;&gt;Eclectic&lt;/a&gt; and &lt;a href=&#34;https://github.com/devcows/hugo-universal-theme&#34;&gt;Universal&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;About Us - Font &lt;a href=&#34;http://www.peax-webdesign.com/polices-de-caracteres-gratuites.html&#34;&gt;Cheveux d&amp;rsquo;ange&lt;/a&gt; on drawing from &lt;a href=&#34;https://pxhere.com/de/photo/1606921?utm_content=clipUser&amp;utm_medium=referral&amp;utm_source=pxhere&#34;&gt;PxHere&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;li&gt;The text for the news image using font Chomsky Regular by copypaste on &lt;a href=&#34;https://www.1001fonts.com/users/copypaste/&#34;&gt;1001fonts&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Cover Images:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Manufaturing I - Image by &lt;a href=&#34;https://pixabay.com/users/gefrorene_wand-73807/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1151323&#34;&gt;gefrorene_wand&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1151323&#34;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Manufacturing II - Image by &lt;a href=&#34;https://pixabay.com/users/blickpixel-52945/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=444504&#34;&gt;Michael Schwarzenberger&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=444504&#34;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Manufacturing III - Image by &lt;a href=&#34;https://pixabay.com/users/gefrorene_wand-73807/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1151344&#34;&gt;gefrorene_wand&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1151344&#34;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Manufacturig IV - Image by &lt;a href=&#34;https://pixabay.com/users/robbiewi-19234622/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5770326&#34;&gt;Robert Wilkos&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5770326&#34;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Squares - Image by &lt;a href=&#34;https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1867937&#34;&gt;Pexels&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1867937&#34;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Triangles - Image by &lt;a href=&#34;https://pixabay.com/users/sashanebesuyk-7028296/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3031607&#34;&gt;Alexandr Nebesyuk&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3031607&#34;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Circle - Image by &lt;a href=&#34;https://pixabay.com/users/publicdomainpictures-14/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2063&#34;&gt;PublicDomainPictures&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2063&#34;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Curve - Image by &lt;a href=&#34;https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209392&#34;&gt;Free-Photos&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209392&#34;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;News- Shaper - Image by &lt;a href=&#34;https://pixabay.com/users/tookapic-1386459/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=933150&#34;&gt;tookapic&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=933150&#34;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Square License - Image by &lt;a href=&#34;https://pixabay.com/users/ds_30-1795490/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5370033&#34;&gt;ds_30&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5370033&#34;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Shape Blog (French) - Image by &lt;a href=&#34;https://pixabay.com/users/piro4d-2707530/&#34;&gt;PIRO4D&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2803223&#34;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Home Page&#xA;&lt;ul&gt;&#xA;&lt;li&gt;About Image: Photo by &lt;a href=&#34;https://unsplash.com/@angelapencheva&#34;&gt;Angela Pencheva&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/photos/ktYfccpLuSk&#34;&gt;Unsplash&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Contact Image: Photo by &lt;a href=&#34;https://unsplash.com/@cristofer&#34;&gt;Cristofer Jeschke&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/photos/PP1yKpfA4HY&#34;&gt;Unsplash&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Blog icon: Pen by Icon Lauk from the &lt;a href=&#34;https://thenounproject.com/search/?q=pen&amp;i=2256440&#34;&gt;Noun Project&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;News icon: News Camera by Ben Davis from the &lt;a href=&#34;https://thenounproject.com/search/?q=news+camera&amp;i=829713&#34;&gt;Noun Project&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;About icon: Info by i cons from the &lt;a href=&#34;https://thenounproject.com/search/?q=info&amp;i=2442959&#34;&gt;Noun Project&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Contact icon: Phone by Aulia from the &lt;a href=&#34;https://thenounproject.com/search/?q=phone&amp;i=1778896&#34;&gt;Noun Project&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Facebook icon: from &lt;a href=&#34;https://iconmonstr.com/facebook-1-svg/&#34;&gt;iconmonstr&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;RSS icon: from &lt;a href=&#34;https://iconmonstr.com/rss-feed-1-svg/&#34;&gt;iconmonstr&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Twitter icon: from &lt;a href=&#34;https://iconmonstr.com/twitter-1-svg/&#34;&gt;iconmonstr&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Email icon: from &lt;a href=&#34;https://iconmonstr.com/email-3-svg/&#34;&gt;icomonstr&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Hero image (Instruction Manual) from &lt;a href=&#34;https://undraw.co/&#34;&gt;Undraw&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Plain text icon: Chrome Reader Mode by Justin Blake from the &lt;a href=&#34;https://thenounproject.com/search/?q=reader+mode&amp;i=3643822&#34;&gt;Noun Project&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Blog Page:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Tags icon: Tag by &lt;a href=&#34;https://thenounproject.com/factoricons&#34;&gt;Factoricons&lt;/a&gt; from the Noun Project&lt;/li&gt;&#xA;&lt;li&gt;Editor icon: App by &lt;a href=&#34;https://thenounproject.com/search/?q=app&amp;i=1935524&#34;&gt;Tienan&lt;/a&gt; from the Noun Project&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Contact Us:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Map from &lt;a href=&#34;https://opengeofiction.net/#map=15/-40.2657/159.8088&#34;&gt;OpenGeoFiction&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Store&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Add to Cart: &lt;a href=&#34;https://uxwing.com/add-to-cart-icon/&#34;&gt;https://uxwing.com/add-to-cart-icon/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Remove from cart: &lt;a href=&#34;https://uxwing.com/delete-cart-item-icon/&#34;&gt;https://uxwing.com/delete-cart-item-icon/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Shopping cart: &lt;a href=&#34;https://uxwing.com/delete-icon/&#34;&gt;https://uxwing.com/delete-icon/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Cross icon: &lt;a href=&#34;https://uxwing.com/remove-icon/&#34;&gt;https://uxwing.com/remove-icon/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/Calenton/markdown/</link>
+      <link>http://localhost:1313/markdown/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/markdown/</guid>
+      <guid>http://localhost:1313/markdown/</guid>
       <description>&lt;h1 id=&#34;markdown&#34;&gt;Markdown&lt;/h1&gt;&#xA;&lt;p&gt;I am a paragraph in markdown with line&#xA;wrapping so fit in this width.&#xA;I am a continuation of the first paragraph&#xA;as there is no empty line before me.&lt;/p&gt;&#xA;&lt;p&gt;I am in the second paragraph.&lt;/p&gt;&#xA;&lt;p&gt;I am the third one. Even though there are&#xA;two line breaks before me, this does not&#xA;create any newline characters. After me there&#xA;are two spaces before the newline character.&lt;br&gt;&#xA;I have a line break before me. Even though&#xA;I am not a new paragraph, I do start on a&#xA;new line due to the manual line break via&#xA;spaces before the newline character.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/Calenton/reference/</link>
+      <link>http://localhost:1313/reference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/reference/</guid>
+      <guid>http://localhost:1313/reference/</guid>
       <description>&lt;h1 id=&#34;privacy-policy&#34;&gt;Privacy Policy&lt;/h1&gt;&#xA;&lt;p&gt;Last updated &lt;strong&gt;August 19, 2019&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Thank you for choosing to be part of our community at &lt;em&gt;Acme Corporation™&lt;/em&gt; (&lt;em&gt;“Company”&lt;/em&gt;, &lt;em&gt;“we”&lt;/em&gt;, &lt;em&gt;“us”&lt;/em&gt;, or &lt;em&gt;“our”&lt;/em&gt;). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our notice or our practices with regard to your personal information, please contact us at &lt;a href=&#34;mailto:contact@example.org&#34;&gt;contact@example.org&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;When you visit our website &amp;ndash; &lt;a href=&#34;https://hugoinaction.com&#34;&gt;https://hugoinaction.com&lt;/a&gt; and use our services, you trust us with your personal information. We take your privacy very seriously. In this privacy notice, we describe our privacy notice. We seek to explain to you in the clearest way possible what information we collect, how we use it, and what rights you have in relation to it. We hope you take some time to read through it carefully, as it is important. If there are any terms in this privacy notice that you do not agree with, please discontinue the use of our Sites and our services.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/Calenton/terms/</link>
+      <link>http://localhost:1313/terms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/terms/</guid>
+      <guid>http://localhost:1313/terms/</guid>
       <description>&lt;h1 id=&#34;terms-of-use&#34;&gt;Terms of Use&lt;/h1&gt;&#xA;&lt;h2 id=&#34;terms&#34;&gt;Terms&lt;/h2&gt;&#xA;&lt;p&gt;By accessing the website for Acme Corporation, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building Squares</title>
-      <link>http://localhost:1313/Calenton/blog/building-squares/</link>
+      <link>http://localhost:1313/blog/building-squares/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/blog/building-squares/</guid>
+      <guid>http://localhost:1313/blog/building-squares/</guid>
       <description>&lt;p&gt;In geometry, a square is a regular quadrilateral, which means that it has four equal sides and four equal angles (90-degree angles, or (100-gradian angles or right angles). It can also be defined as a rectangle in which two adjacent sides have equal length. A square with vertices ABCD would be denoted ◻ ABCD.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Circle</title>
-      <link>http://localhost:1313/Calenton/blog/community/circle/</link>
+      <link>http://localhost:1313/blog/community/circle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/blog/community/circle/</guid>
+      <guid>http://localhost:1313/blog/community/circle/</guid>
       <description>&lt;p&gt;A circle is a simple closed shape. It is the set of all points in a plane that are at a given distance from a given point, the centre; equivalently it is the curve traced out by a point that moves in a plane so that its distance from a given point is constant. The distance between any of the points and the centre is called the radius. This article is about circles in Euclidean geometry, and, in particular, the Euclidean plane, except where otherwise noted.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Curve</title>
-      <link>http://localhost:1313/Calenton/blog/community/curve/</link>
+      <link>http://localhost:1313/blog/community/curve/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/blog/community/curve/</guid>
+      <guid>http://localhost:1313/blog/community/curve/</guid>
       <description>&lt;p&gt;In mathematics, a curve (also called a curved line in older texts) is, generally speaking, an object similar to a line but that need not be straight. Thus, a curve is a generalization of a line, in that it may be curved.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sample data driven page using eclectic.</title>
-      <link>http://localhost:1313/Calenton/data-driven/</link>
+      <link>http://localhost:1313/data-driven/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/data-driven/</guid>
+      <guid>http://localhost:1313/data-driven/</guid>
       <description></description>
     </item>
     <item>
       <title>Shaper</title>
-      <link>http://localhost:1313/Calenton/news/shaper/</link>
+      <link>http://localhost:1313/news/shaper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/news/shaper/</guid>
+      <guid>http://localhost:1313/news/shaper/</guid>
       <description>&lt;p&gt;Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional medium. Instruments include graphite pencils, pen and ink, various kinds of paints, inked brushes, colored pencils, crayons, charcoal, chalk, pastels, various kinds of erasers, markers, styluses, and various metals (such as silverpoint). Digital drawing is the act of using a computer to draw. Common methods of digital drawing include a stylus or finger on a touchscreen device, stylus- or finger-to-touchpad, or in some cases, a mouse. There are many digital art programs and devices.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Square License</title>
-      <link>http://localhost:1313/Calenton/news/square-license/</link>
+      <link>http://localhost:1313/news/square-license/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/news/square-license/</guid>
+      <guid>http://localhost:1313/news/square-license/</guid>
       <description>&lt;p&gt;A license (American English) or licence (British English) is an official permission or permit to do, use, or own something (as well as the document of that permission or permit).&lt;/p&gt;&#xA;&lt;p&gt;A license can be granted by a party to another party as an element of an agreement between those parties. A shorthand definition of a license is &amp;ldquo;an authorization to use licensed material.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;In particular, a license may be issued by authorities, to allow an activity that would otherwise be forbidden. It may require paying a fee or proving a capability. The requirement may also serve to keep the authorities informed on a type of activity, and to give them the opportunity to set conditions and limitations.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tropical triangles</title>
-      <link>http://localhost:1313/Calenton/blog/tropical-triangles/</link>
+      <link>http://localhost:1313/blog/tropical-triangles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/blog/tropical-triangles/</guid>
+      <guid>http://localhost:1313/blog/tropical-triangles/</guid>
       <description>&lt;p&gt;A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry. A triangle with vertices A, B, and C is denoted △ ABC.&lt;/p&gt;</description>
     </item>
     <item>
       <title>关于</title>
-      <link>http://localhost:1313/Calenton/contact/</link>
+      <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/contact/</guid>
-      <description>&lt;h2 id=&#34;1关于这个网站的用途&#34;&gt;1.关于这个网站的用途：&lt;/h2&gt;&#xA;&lt;p&gt;本网站为个人博客网站。主要的用途有三个部分：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;读书笔记的记录。&lt;/li&gt;&#xA;&lt;li&gt;学习过程中的思考记录&lt;/li&gt;&#xA;&lt;li&gt;资源的合法分享&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;由于本人能力不足，无法做到在教材的基础之上进行创新的讲述，因此，读书笔记的内容可能会与原文存在很大重合。&#xA;但为了保证对原教材的权益保护。本网站绝不会进行任何的盈利活动，读书笔记的分享也仅出于个人的记录需要和学习的分享需要。&#xA;如果您发现网站有任何事实不正确、侵犯版权或任何其他问题，请联系我，我会按照您的要求进行删改。对于任何此类错误，我提前表示歉意。&lt;/p&gt;&#xA;&lt;h2 id=&#34;2关于这个网站的目的&#34;&gt;2.关于这个网站的目的：&lt;/h2&gt;&#xA;&lt;p&gt;由于一些特殊的原因，我没有在学校进行学习。我所有的学习资源和途径均来自于互联网上秉持着开源精神的伟大的人们。&lt;/p&gt;&#xA;&lt;p&gt;为此，我也希望对互联网进行力所能及的微小回馈。我将在这个网站分享我所有的读书笔记，希望我的资料可以帮助到对相关领域同样感兴趣的朋友们。另外，欢迎您通过网站内所提供的任何途径联系我，希望我们之间可能存在的沟通能够为您带来一些帮助。&lt;/p&gt;&#xA;&lt;h2 id=&#34;3关于本人的联系方式&#34;&gt;3.关于本人的联系方式&lt;/h2&gt;&#xA;&lt;p&gt;您可以通过邮箱和知乎联系我：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;QQ mail: &lt;a href=&#34;mailto:chiaralee953@foxmail.com&#34;&gt;chiaralee953@foxmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Zhihu：&lt;a href=&#34;https://www.zhihu.com/people/wu-shang-27-29&#34;&gt;Chiara Lee&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;最后，希望您在我的网站玩的愉快。请尽情的享受探索知识的乐趣吧。&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;网页推荐浏览尺寸：edge 100%；google chrome:110%&#xA;&lt;img src=&#34;http://localhost:1313/Calenton/Calenton/contact/cover.png&#34; title=&#34;浏览器尺寸&#34;&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;h2 id=&#34;1关于这个网站的用途&#34;&gt;1.关于这个网站的用途：&lt;/h2&gt;&#xA;&lt;p&gt;本网站为个人博客网站。主要的用途有三个部分：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;读书笔记的记录。&lt;/li&gt;&#xA;&lt;li&gt;学习过程中的思考记录&lt;/li&gt;&#xA;&lt;li&gt;资源的合法分享&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;由于本人能力不足，无法做到在教材的基础之上进行创新的讲述，因此，读书笔记的内容可能会与原文存在很大重合。&#xA;但为了保证对原教材的权益保护。本网站绝不会进行任何的盈利活动，读书笔记的分享也仅出于个人的记录需要和学习的分享需要。&#xA;如果您发现网站有任何事实不正确、侵犯版权或任何其他问题，请联系我，我会按照您的要求进行删改。对于任何此类错误，我提前表示歉意。&lt;/p&gt;&#xA;&lt;h2 id=&#34;2关于这个网站的目的&#34;&gt;2.关于这个网站的目的：&lt;/h2&gt;&#xA;&lt;p&gt;由于一些特殊的原因，我没有在学校进行学习。我所有的学习资源和途径均来自于互联网上秉持着开源精神的伟大的人们。&lt;/p&gt;&#xA;&lt;p&gt;为此，我也希望对互联网进行力所能及的微小回馈。我将在这个网站分享我所有的读书笔记，希望我的资料可以帮助到对相关领域同样感兴趣的朋友们。另外，欢迎您通过网站内所提供的任何途径联系我，希望我们之间可能存在的沟通能够为您带来一些帮助。&lt;/p&gt;&#xA;&lt;h2 id=&#34;3关于本人的联系方式&#34;&gt;3.关于本人的联系方式&lt;/h2&gt;&#xA;&lt;p&gt;您可以通过邮箱和知乎联系我：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;QQ mail: &lt;a href=&#34;mailto:chiaralee953@foxmail.com&#34;&gt;chiaralee953@foxmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Zhihu：&lt;a href=&#34;https://www.zhihu.com/people/wu-shang-27-29&#34;&gt;Chiara Lee&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;最后，希望您在我的网站玩的愉快。请尽情的享受探索知识的乐趣吧。&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;网页推荐浏览尺寸：edge 100%；google chrome:110%&#xA;&lt;img src=&#34;http://localhost:1313/contact/cover.png&#34; title=&#34;浏览器尺寸&#34;&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
   </channel>
 </rss>

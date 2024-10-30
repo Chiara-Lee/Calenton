@@ -2,65 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Caleton Academy of Magic</title>
-    <link>http://localhost:1313/Calenton/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Caleton Academy of Magic</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/Calenton/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Circle</title>
-      <link>http://localhost:1313/Calenton/categories/circle/</link>
+      <link>http://localhost:1313/categories/circle/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/categories/circle/</guid>
+      <guid>http://localhost:1313/categories/circle/</guid>
       <description></description>
     </item>
     <item>
       <title>Manufacturing</title>
-      <link>http://localhost:1313/Calenton/categories/manufacturing/</link>
+      <link>http://localhost:1313/categories/manufacturing/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/categories/manufacturing/</guid>
+      <guid>http://localhost:1313/categories/manufacturing/</guid>
       <description></description>
     </item>
     <item>
       <title>Square</title>
-      <link>http://localhost:1313/Calenton/categories/square/</link>
+      <link>http://localhost:1313/categories/square/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/categories/square/</guid>
+      <guid>http://localhost:1313/categories/square/</guid>
       <description></description>
     </item>
     <item>
       <title>Line</title>
-      <link>http://localhost:1313/Calenton/categories/line/</link>
+      <link>http://localhost:1313/categories/line/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/categories/line/</guid>
+      <guid>http://localhost:1313/categories/line/</guid>
       <description></description>
     </item>
     <item>
       <title>Design</title>
-      <link>http://localhost:1313/Calenton/categories/design/</link>
+      <link>http://localhost:1313/categories/design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/categories/design/</guid>
+      <guid>http://localhost:1313/categories/design/</guid>
       <description></description>
     </item>
     <item>
       <title>General</title>
-      <link>http://localhost:1313/Calenton/categories/general/</link>
+      <link>http://localhost:1313/categories/general/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/categories/general/</guid>
+      <guid>http://localhost:1313/categories/general/</guid>
       <description></description>
     </item>
     <item>
       <title>Public</title>
-      <link>http://localhost:1313/Calenton/categories/public/</link>
+      <link>http://localhost:1313/categories/public/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/categories/public/</guid>
+      <guid>http://localhost:1313/categories/public/</guid>
       <description></description>
     </item>
     <item>
       <title>Shape</title>
-      <link>http://localhost:1313/Calenton/categories/shape/</link>
+      <link>http://localhost:1313/categories/shape/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Calenton/categories/shape/</guid>
+      <guid>http://localhost:1313/categories/shape/</guid>
       <description></description>
     </item>
   </channel>
