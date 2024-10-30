@@ -20,6 +20,8 @@
     </div>
   {{ else }}
     {{ if getenv "USE_NETLIFY_FOR_COMMENTS" }}
+    <p>USE_NETLIFY_FOR_COMMENTS: {{ getenv "USE_NETLIFY_FOR_COMMENTS" }}</p>
+
       <form netlify="true" name="Comments">
     {{ else }}
       <form action="https://formspree.io/f/" method="post">
