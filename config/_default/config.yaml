@@ -17,3 +17,4 @@ security:
     getenv:
       - '^HUGO_'
       - '^NETLIFY$'
+      - 'USE_NETLIFY_FOR_COMMENTS'
