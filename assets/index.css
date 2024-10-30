@@ -1788,7 +1788,7 @@ footer.dark a:focus {
     text-decoration: underline;
 }
 
-/*评论区样式*/
+
 /* 表单容器样式 */
 .comment-form {
   max-width: 600px !important;
@@ -1848,3 +1848,60 @@ footer.dark a:focus {
     color: rgba(50, 50, 50, 0.8) !important; /* 深色占位符，更加容易看见 */
     font-style: italic !important;
 }
+
+
+
+
+/* 评论区整体样式 */
+.comments {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+/* 单个评论样式 */
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px dashed #ccc;
+  transition: transform 0.3s;
+}
+
+.comment:hover {
+  transform: translateY(-5px);
+}
+
+/* 头像样式 */
+.comment img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 作者名称样式 */
+.comment .author {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+/* 评论内容样式 */
+.comment .message {
+  font-style: italic;
+  line-height: 1.6;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
