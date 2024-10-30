@@ -21,7 +21,7 @@
     </div>
   {{ else }}
     {{ if getenv "NETLIFY" }}
-      <form netlify="true" name="Comments">
+    <form netlify="true" name="Comments" action="/" method="post">
     {{ else }}
       <form action="https://formspree.io/f/{{ .FormspreeCommentForm }}" method="post">
     {{ end }}
