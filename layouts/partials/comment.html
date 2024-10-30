@@ -19,12 +19,9 @@
       Comments have been disabled by the website administrator.
     </div>
   {{ else }}
-  {{ if .Site.Params.useNetlifyForComments }}
-  <p>Using Netlify form for comments</p>
+  <div class="comments">
+    <p>Using Netlify form for comments</p>
       <form netlify="true" name="Comments">
-    {{ else }}
-      <form action="https://formspree.io/f/" method="post">
-    {{ end }}
     <input type="hidden" name="url" value="{{.RelPermalink}}">
     <label class="comment-label" for="name">Name:</label>
     <input class="comment-input" type="text" id="name" name="name" required>
@@ -38,5 +35,5 @@
     <button class="comment-button" type="submit">Send</button>
       </div>
     </form>
-    {{end}}
+  {{end}}
   </div>

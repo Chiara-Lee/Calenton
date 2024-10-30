@@ -12,5 +12,4 @@ style: blue
 recent_posts:
   enable: true
 NetlifyCommentForm: 6720c108558e590008ed7242
-formspreeFormID: mwpkvgag
 useNetlifyForComments: true
