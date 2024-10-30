@@ -27,13 +27,13 @@
     {{ end }}
       <input type="hidden" name="url" value="{{ .RelPermalink }}">
       <label class="comment-label" for="name">Name:</label>
-      <input class="comment-input" type="text" id="name" name="name" required>
+      <input class="comment-input" type="text" id="name" name="name" required autocomplete="name">
     
       <label class="comment-label" for="email">Email:</label>
-      <input class="comment-input" type="email" id="email" name="email" required>
+      <input class="comment-input" type="email" id="email" name="email" required autocomplete="email">
     
       <label class="comment-label" for="comment">Comment:</label>
-      <textarea class="comment-textarea" id="comment" name="comment" rows="5" required></textarea>
+      <textarea class="comment-textarea" id="comment" name="comment" rows="5" required autocomplete="off"></textarea>
     
       <button class="comment-button" type="submit">Send</button>
     </form>
