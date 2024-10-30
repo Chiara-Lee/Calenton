@@ -19,7 +19,7 @@
       Comments have been disabled by the website administrator.
     </div>
   {{ else }}
-  {{ if eq (getenv "USE_NETLIFY_FOR_COMMENTS") "true" }}
+  {{ if .Site.Params.useNetlifyForComments }}
   <p>Using Netlify form for comments</p>
       <form netlify="true" name="Comments">
     {{ else }}
