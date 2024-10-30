@@ -1791,51 +1791,60 @@ footer.dark a:focus {
 /*评论区样式*/
 /* 表单容器样式 */
 .comment-form {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
-  border-radius: 10px;
+  max-width: 600px !important;
+  margin: 20px auto !important;
+  padding: 20px !important;
+  background-color: rgba(50, 50, 50, 0.9) !important; /* 深灰色半透明背景 */
+  border-radius: 10px !important;
 }
 
 /* 标签样式 */
 .comment-label {
-  color: #FFFFFF; /* 使文本在复杂背景中更加明显 */
-  font-size: 16px;
-  margin-bottom: 5px;
-  display: block;
+  color: #FFFFFF  !important; /* 确保文本为纯白色 */
+  font-size: 18px !important; /* 增大字体 */
+  font-weight: bold !important; /* 加粗以增加可读性 */
 }
 
 /* 输入框和文本区域样式 */
 .comment-input,
 .comment-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #CCCCCC; /* 浅灰色边框 */
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.8); /* 半透明效果 */
+    width: 100% !important;
+    padding: 10px !important;
+    margin-bottom: 15px !important;
+    border: 2px solid #FFFFFF !important; /* 更粗的白色边框 */
+    border-radius: 5px !important;
+    background-color: rgba(255, 255, 255, 0.8) !important; /* 半透明效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* 轻微阴影，使输入框看起来有层次感 */
 }
+
 
 /* 输入框获取焦点时的样式 */
 .comment-input:focus,
 .comment-textarea:focus {
-  border-color: #AAAAAA; /* 聚焦时边框变暗 */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-color: #AAAAAA !important; /* 聚焦时边框变暗 */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* 按钮样式 */
 .comment-button {
-  background-color: #6a8eb1; /* 柔和的蓝色 */
-  color: #FFFFFF;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  background-color: #6a8eb1 !important; /* 柔和的蓝色 */
+  color: #FFFFFF !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  border-radius: 5px !important;
+  transition: background-color 0.3s ease !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* 按钮的阴影 */
 }
 
 .comment-button:hover {
-  background-color: #5b7ea0; /* 悬停时稍微变暗 */
+  background-color: #5b7ea0 !important; /* 悬停时稍微变暗 */
+  background: linear-gradient(45deg, #5b7ea0, #2e577d) !important; /* 悬停时稍微变暗 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important; /* 增加悬停时的阴影效果 */
+}
+.comment-input::placeholder,
+.comment-textarea::placeholder {
+    color: rgba(50, 50, 50, 0.8) !important; /* 深色占位符，更加容易看见 */
+    font-style: italic !important;
 }
