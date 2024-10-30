@@ -22,7 +22,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --baseURL=https://chiara-lee.github.io/Calenton
+        run: hugo --minify --baseURL=https://chiara-lee.netlify.app/
         env: 
           NETLIFY: true  # 设置 NETLIFY 环境变量
           COMMENTS_TOKEN: ${{ secrets.COMMENTS_TOKEN }}
