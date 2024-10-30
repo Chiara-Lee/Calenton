@@ -19,7 +19,7 @@
       Comments have been disabled by the website administrator.
     </div>
   {{ else }}
-    {{ if getenv "USE_NETLIFY_FOR_COMMENTS" }}
+    {{ if eq (getenv "USE_NETLIFY_FOR_COMMENTS") "true" }}
     <p>USE_NETLIFY_FOR_COMMENTS: {{ getenv "USE_NETLIFY_FOR_COMMENTS" }}</p>
 
       <form netlify="true" name="Comments">
