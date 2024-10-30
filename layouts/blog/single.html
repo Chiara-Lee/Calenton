@@ -49,6 +49,8 @@
       </aside>
     </div>
 </div>
+  <!-- 评论区 -->
+  <div id="comments-section"></div>
 </main>
 {{with site.RegularPages.Related .}}
 <div id="related">
@@ -65,4 +67,6 @@
   "RelPermalink" .Page.RelPermalink 
   "Disabled" ($.Param "CommentDisabled")
 ) }}
+<!-- 引入 JavaScript 文件，用于动态加载评论 -->
+<script src="/js/comment.js"></script>
 {{end}}
