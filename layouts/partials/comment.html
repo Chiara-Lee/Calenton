@@ -19,7 +19,7 @@
       Comments have been disabled by the website administrator.
     </div>
   {{ else }}
-    {{if getenv "NETLIFY" }}
+    {{ if getenv "USE_NETLIFY_FOR_COMMENTS" }}
       <form netlify="true" name="Comments">
     {{ else }}
       <form action="https://formspree.io/f/mwpkvgag" method="post">
