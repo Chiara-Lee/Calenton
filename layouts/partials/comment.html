@@ -1,46 +1,42 @@
 <div class="comments">
   <h2> Comments </h2>
   {{$comments := dict}}
-  {{if getenv "NETLIFY" }}
+  {{ if getenv "NETLIFY" }}
     {{$comments = partialCached "netlifyCommentList.html" .}}
-  {{else}}
+  {{ else }}
     {{$comments = partialCached "formspreeCommentList.html" .}}
-  {{end}}
+  {{ end }}
   
-  {{range (index $comments .RelPermalink)}}
+  {{ range (index $comments .RelPermalink) }}
   <div class="comment">
-    <img width="100" height="100" alt="{{.name}} Avatar" src="https://www.gravatar.com/avatar/{{ md5 .email }}?s=100&d=wavatar">
-    <div class="author">{{.name}}</div>
-    <div class="message">{{.message}}</div>
+    <img width="100" height="100" alt="{{ .name }} Avatar" src="https://www.gravatar.com/avatar/{{ md5 .email }}?s=100&d=wavatar">
+    <div class="author">{{ .name }}</div>
+    <div class="message">{{ .message }}</div>
   </div>
-  {{end}}
-  {{ if .Disabled  }}
+  {{ end }}
+  
+  {{ if .Disabled }}
     <div>
       Comments have been disabled by the website administrator.
     </div>
   {{ else }}
-  {{ if .Disabled  }}
-  <div>
-    Comments have been disabled by the website administrator.
-  </div>
-{{ else }}
-  {{if getenv "NETLIFY" }}
-    <form netlify="true" name="Comments">
-  {{ else }}
-    <form action="https://formspree.io/f/{{.FormspreeCommentForm}}" method="post">
-  {{ end }}
-    <input type="hidden" name="url" value="{{.RelPermalink}}">
-    <label class="comment-label" for="name">Name:</label>
-    <input class="comment-input" type="text" id="name" name="name" required>
-  
-    <label class="comment-label" for="email">Email:</label>
-    <input class="comment-input" type="email" id="email" name="email" required>
-  
-    <label class="comment-label" for="comment">Comment:</label>
-    <textarea class="comment-textarea" id="comment" name="comment" rows="5" required></textarea>
-  
-    <button class="comment-button" type="submit">Send</button>
-      </div>
+    {{ if getenv "NETLIFY" }}
+      <form netlify="true" name="Comments">
+    {{ else }}
+      <form action="https://formspree.io/f/{{ .FormspreeCommentForm }}" method="post">
+    {{ end }}
+      <input type="hidden" name="url" value="{{ .RelPermalink }}">
+      <label class="comment-label" for="name">Name:</label>
+      <input class="comment-input" type="text" id="name" name="name" required>
+    
+      <label class="comment-label" for="email">Email:</label>
+      <input class="comment-input" type="email" id="email" name="email" required>
+    
+      <label class="comment-label" for="comment">Comment:</label>
+      <textarea class="comment-textarea" id="comment" name="comment" rows="5" required></textarea>
+    
+      <button class="comment-button" type="submit">Send</button>
     </form>
-  {{end}}
-  </div>
+  {{ end }}
+</div>
+
