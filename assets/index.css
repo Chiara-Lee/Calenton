@@ -7,12 +7,12 @@
   tab-size: 4;
 }
 html {
-  background: url('/Calenton/image/background.webp') 0 0/cover;
+  background: url('/image/background.webp') 0 0/cover;
   min-height: 100vh;
   /* 移除 max-height 和 scroll-snap-type */
 }
 .home {
-  background-image: url('/Calenton/image/background.webp');
+  background-image: url('/image/background.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
