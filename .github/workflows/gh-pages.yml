@@ -24,7 +24,8 @@ jobs:
       - name: Build
         run: hugo --minify --baseURL=https://chiara-lee.github.io/Calenton
         env: 
-          COMMENT_TOKEN: ${{ secrets.COMMENT_TOKEN }}
+          NETLIFY: true  # 设置 NETLIFY 环境变量
+          COMMENTS_TOKEN: ${{ secrets.COMMENTS_TOKEN }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
