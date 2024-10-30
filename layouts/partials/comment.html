@@ -19,9 +19,16 @@
       Comments have been disabled by the website administrator.
     </div>
   {{ else }}
-  <div class="comments">
-    <p>Using Netlify form for comments.....</p>
-      <form netlify="true" name="Comments">
+  {{ if .Disabled  }}
+  <div>
+    Comments have been disabled by the website administrator.
+  </div>
+{{ else }}
+  {{if getenv "NETLIFY" }}
+    <form netlify="true" name="Comments">
+  {{ else }}
+    <form action="https://formspree.io/f/{{.FormspreeCommentForm}}" method="post">
+  {{ end }}
     <input type="hidden" name="url" value="{{.RelPermalink}}">
     <label class="comment-label" for="name">Name:</label>
     <input class="comment-input" type="text" id="name" name="name" required>

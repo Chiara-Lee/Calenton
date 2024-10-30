@@ -2,6 +2,5 @@ enableInlineShortcodes: true
 funcs:
   getenv:
     - ^HUGO_
-    - ^NETLIFY$
-    - USE_NETLIFY_FOR_COMMENTS
+    - NETLIFY
     - COMMENTS_TOKEN
