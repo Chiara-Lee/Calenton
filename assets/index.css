@@ -1907,3 +1907,51 @@ footer.dark a:focus {
   width: 100%;
 }
 
+
+/* 评论表单提交信息的通用模板样式 */
+.success, .error {
+  max-width: 600px; /* 最大宽度限制，保持统一的视觉效果 */
+  margin: 20px 0; /* 顶部和底部的留白，和页面其他内容保持一致 */
+  padding: 15px 20px; /* 内边距，保证内容不紧贴边框 */
+  border-radius: 10px; /* 边角圆润，符合现代风格 */
+  font-size: 16px; /* 字体大小适中，与评论保持一致 */
+  line-height: 1.5; /* 增加行高，使得文字更容易阅读 */
+  border-left: 4px solid; /* 添加左侧边框强调信息，符合页面风格 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 添加轻微阴影以增强层次感 */
+}
+
+/* 成功信息样式 */
+.success {
+  background-color: #f0f9f0; /* 非常浅的绿色背景，表示成功 */
+  color: #3c763d; /* 深绿色文本，搭配背景 */
+  border-left-color: #5cb85c; /* 左侧边框使用较深的绿色，和背景形成对比 */
+}
+
+/* 错误信息样式 */
+.error {
+  background-color: #fdf2f2; /* 浅红色背景，用于表示错误 */
+  color: #a94442; /* 深红色文本，提升对比度 */
+  border-left-color: #d9534f; /* 左侧边框使用较深的红色，和背景对比明显 */
+}
+
+/* 调整响应式显示 */
+@media (max-width: 768px) {
+  .success, .error {
+    max-width: 90%; /* 小屏幕下增加宽度比例以适应屏幕 */
+    font-size: 14px; /* 小屏幕下减小字体大小 */
+  }
+}
+
+/* 淡入动画效果 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.success, .error {
+  animation: fadeIn 1s ease-in-out; /* 淡入动画效果 */
+}
+
