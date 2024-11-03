@@ -3,7 +3,7 @@
   "comments": {
     "dependencies": {},
     "devDependencies": {
-      "fuse.js": "project"
+      "fuse.js": "github.com/Chiara-Lee/Calenton"
     }
   },
   "dependencies": {},
