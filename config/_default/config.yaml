@@ -12,3 +12,7 @@ title: Caleton Academy of Magic
 enableEmoji: true
 enableGitInfo: true
 Paginate: 3
+
+module:
+  imports:
+    - path: github.com/hugoinaction/AcmeSearchSupport

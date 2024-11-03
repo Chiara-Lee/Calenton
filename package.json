@@ -1,0 +1,21 @@
+{
+  "author": "",
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {
+      "fuse.js": "project"
+    }
+  },
+  "dependencies": {},
+  "description": "欢迎来到迦黎顿魔法学院",
+  "devDependencies": {
+    "fuse.js": "^6.6.2"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "calenton",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
