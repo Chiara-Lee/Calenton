@@ -11,7 +11,9 @@ languages:
 title: Caleton Academy of Magic
 enableEmoji: true
 enableGitInfo: true
-Paginate: 3
+pagination:
+  pagerSize: 3
+
 
 module:
   imports:
