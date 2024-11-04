@@ -20,6 +20,9 @@ The rake face which directs the flow of newly formed chip, is oriented at a cert
 
     
     <title>Our Manufacturing Process Part IV</title>
+    
+    
+    <script type="text/javascript" src="/index.js" defer></script>
   </head>
   <body class=" page ">
     
@@ -29,6 +32,10 @@ The rake face which directs the flow of newly formed chip, is oriented at a cert
       style="width: 180px;height:160px;" />
       Caleton Academy
       </a>
+      <span id="search">
+        <input type="search" placeholder="Search">
+      <div></div>
+      </span>
        
   <nav>
     
@@ -165,7 +172,7 @@ The rake face which directs the flow of newly formed chip, is oriented at a cert
 </div>
 
 <div class="comments">
-  <h2> Comments </h2>
+  <h2>Comments</h2>
   
   
     
@@ -174,23 +181,40 @@ The rake face which directs the flow of newly formed chip, is oriented at a cert
   
   
   
-    
-      <form action="https://formspree.io/f/" method="post">
-    
+
+    <template id="comment-success">
+      <div class="success">
+        您的评论已成功提交审核。(´｡• ᵕ •｡`)
+      </div>
+    </template>
+    <template id="comment-error">
+      <div class="error">
+        啊，好像出了些问题，请您调整后重试。(；′⌒`)
+      </div>
+    </template>
+
+    <form data-dynamic-form
+          data-success="#comment-success"
+          data-error="#comment-error"
+          
+            action="https://formspree.io/f/" method="post">
+          
+      
       <input type="hidden" name="url" value="/blog/process-4/">
       <label class="comment-label" for="name">Name:</label>
       <input class="comment-input" type="text" id="name" name="name" required autocomplete="name">
-    
+
       <label class="comment-label" for="email">Email:</label>
       <input class="comment-input" type="email" id="email" name="email" required autocomplete="email">
-    
+
       <label class="comment-label" for="comment">Comment:</label>
       <textarea class="comment-textarea" id="comment" name="comment" rows="5" required autocomplete="off"></textarea>
-    
+
       <button class="comment-button" type="submit">Send</button>
     </form>
   
 </div>
+
 
 
 

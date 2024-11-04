@@ -3,7 +3,6 @@ title: Caleton Academy of Magic
 description:
 subtitle: Spread **love** and **hope**
 explore: blog
-type: modern
 outputs: [html, json]
 ---
 

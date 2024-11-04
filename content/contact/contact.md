@@ -1,6 +1,5 @@
 ---
 title:  关于
-type:  modern
 lang: zh
 ---
 
