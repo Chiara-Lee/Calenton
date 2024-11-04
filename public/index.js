@@ -1,6 +1,6 @@
 (() => {
   // ns-hugo:/workspaces/Calenton/assets/formHandler.js
-  var formHandler_default = {
+  var FormHandlerModule = {
     init() {
       document.addEventListener("submit", async (event2) => {
         if (event2.target?.dataset?.dynamicForm === void 0) {
@@ -1397,7 +1397,7 @@
   // ns-hugo:/workspaces/Calenton/assets/search.js
   var index = null;
   var MAX_SEARCH_RESULTS = 5;
-  var search_default = {
+  var SearchModule = {
     async init() {
       try {
         const response = await window.fetch(BASE_URL + "/index.json");
@@ -1447,8 +1447,8 @@
 
   // <stdin>
   function init() {
-    formHandler_default.init();
-    search_default.init();
+    FormHandlerModule.init();
+    SearchModule.init();
   }
   init();
 })();
