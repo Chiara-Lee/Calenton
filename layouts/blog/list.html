@@ -3,8 +3,10 @@
 <main>
     <span id="search">
         <input type="search" placeholder="Search">
-      <div></div>
+        <div>Search Results:</div>
     </span>
+    <p>Debug: This is a test message to confirm rendering.</p>
+    
     <h1 class="page-title">{{ .Title | default "Untitled Page" }}</h1>
     
     {{ $paginator := .Paginate .Pages }}

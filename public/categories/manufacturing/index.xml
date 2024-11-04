@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Manufacturing on Caleton Academy of Magic</title>
-    <link>http://localhost:1313/categories/manufacturing/</link>
+    <link>http://localhost:36093/categories/manufacturing/</link>
     <description>Recent content in Manufacturing on Caleton Academy of Magic</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 29 Oct 2024 04:09:16 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/manufacturing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:36093/categories/manufacturing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Our Manufacturing Process Part III</title>
-      <link>http://localhost:1313/blog/process-3/</link>
+      <link>http://localhost:36093/blog/process-3/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/process-3/</guid>
+      <guid>http://localhost:36093/blog/process-3/</guid>
       <description>&lt;p&gt;Machining is any process in which a cutting tool is used to remove small chips of material from the workpiece (the workpiece is often called the &amp;ldquo;work&amp;rdquo;). To perform the operation, relative motion is required between the tool and the work. This relative motion is achieved in most machining operation by means of a primary motion, called &amp;ldquo;cutting speed&amp;rdquo; and a secondary motion called &amp;ldquo;feed&amp;rdquo;.[7] The shape of the tool and its penetration into the work surface, combined with these motions, produce the desired shape of the resulting work surface.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Manufacturing Process Part II</title>
-      <link>http://localhost:1313/blog/process-2/</link>
+      <link>http://localhost:36093/blog/process-2/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/process-2/</guid>
+      <guid>http://localhost:36093/blog/process-2/</guid>
       <description>&lt;p&gt;The three principal machining processes are classified as turning, drilling and milling. Other operations falling into miscellaneous categories include shaping, planing, boring, broaching and sawing.[5]&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Turning operations are operations that rotate the workpiece as the primary method of moving metal against the cutting tool. Lathes are the principal machine tool used in turning.&lt;/li&gt;&#xA;&lt;li&gt;Milling operations are operations in which the cutting tool rotates to bring cutting edges to bear against the workpiece. Milling machines are the principal machine tool used in milling.&lt;/li&gt;&#xA;&lt;li&gt;Drilling operations are operations in which holes are produced or refined by bringing a rotating cutter with cutting edges at the lower extremity into contact with the workpiece. Drilling operations are done primarily in drill presses but sometimes on lathes or mills.&lt;/li&gt;&#xA;&lt;li&gt;Miscellaneous operations are operations that strictly speaking may not be machining operations in that they may not be swarf producing operations but these operations are performed at a typical machine tool. Burnishing is an example of a miscellaneous operation. Burnishing produces no swarf but can be performed at a lathe, mill, or drill press.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;An unfinished workpiece requiring machining will need to have some material cut away to create a finished product. A finished product would be a workpiece that meets the specifications set out for that workpiece by engineering drawings or blueprints. For example, a workpiece may be required to have a specific outside diameter. A lathe is a machine tool that can be used to create that diameter by rotating a metal workpiece, so that a cutting tool can cut metal away, creating a smooth, round surface matching the required diameter and surface finish. A drill can be used to remove metal in the shape of a cylindrical hole. Other tools that may be used for various types of metal removal are milling machines, saws, and grinding machines. Many of these same techniques are used in woodworking.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Manufacturing Process Part I</title>
-      <link>http://localhost:1313/blog/process-1/</link>
+      <link>http://localhost:36093/blog/process-1/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/process-1/</guid>
+      <guid>http://localhost:36093/blog/process-1/</guid>
       <description>&lt;p&gt;Machining is any of various processes in which a piece of raw material is cut into a desired final shape and size by a controlled material-removal process. The processes that have this common theme, controlled material removal, are today collectively known as subtractive manufacturing,[1] in distinction from processes of controlled material addition, which are known as additive manufacturing. Exactly what the &amp;ldquo;controlled&amp;rdquo; part of the definition implies can vary, but it almost always implies the use of machine tools (in addition to just power tools and hand tools).&lt;/p&gt;</description>
     </item>
   </channel>
