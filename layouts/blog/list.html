@@ -1,12 +1,6 @@
 {{define "bodyClass"}} page {{end}}
 {{ define "body" }}
 <main>
-    <span id="search">
-        <input type="search" placeholder="Search">
-        <div>Search Results:</div>
-    </span>
-    
-    
     <h1 class="page-title">{{ .Title | default "Untitled Page" }}</h1>
     
     {{ $paginator := .Paginate .Pages }}
