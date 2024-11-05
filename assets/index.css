@@ -1990,7 +1990,7 @@ footer.dark a:focus {
   background-color: #ffffff !important;
   border-radius: 0 0 10px 10px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
-  z-index: 10 !important;
+  z-index: 1000 !important; /* 确保在内容上层显示 */
 }
 
 #search div a {
