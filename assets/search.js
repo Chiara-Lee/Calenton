@@ -1,4 +1,5 @@
-import Fuse from 'fuse.js'
+import Fuse from 'fuse.js';
+
 import AcmeSearchSupport from './searchsupport.js';
 
 let index = null;
