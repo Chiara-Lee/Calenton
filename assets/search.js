@@ -58,3 +58,5 @@ export const SearchModule = {
     document.querySelector("#search")?.remove();
   }
 }
+// 自动初始化搜索功能
+SearchModule.init();
