@@ -5,7 +5,7 @@
         <input type="search" placeholder="Search">
         <div>Search Results:</div>
     </span>
-    <p>Debug: This is a test message to confirm rendering.</p>
+    
     
     <h1 class="page-title">{{ .Title | default "Untitled Page" }}</h1>
     
@@ -50,5 +50,5 @@
     
     
 </main>
-<script type="module" src="{{ "/index.js" | absURL }}"></script>
+<script src="/assets/search.js"></script>
 {{ end }}    
