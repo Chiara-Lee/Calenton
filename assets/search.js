@@ -1,7 +1,5 @@
-import Fuse from 'fuse.js';
-
-import AcmeSearchSupport from './searchsupport.js';
-
+import Fuse from 'fuse.js'
+import AcmeSearchSupport from "SearchSupport"
 
 let index = null;
 const MAX_SEARCH_RESULTS = 5;
@@ -9,7 +7,6 @@ const MAX_SEARCH_RESULTS = 5;
 export const SearchModule = {
   async init() {
     try {
-      const BASE_URL = window.location.origin;  // 确保 BASE_URL 正确指向根目录
       const response = await window.fetch(BASE_URL + "/index.json");
       if (!response.ok) {
         this.removeSearch();
