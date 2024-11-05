@@ -1,5 +1,6 @@
 import Fuse from 'fuse.js'
-import AcmeSearchSupport from "SearchSupport"
+import AcmeSearchSupport from './searchsupport.js';
+
 
 let index = null;
 const MAX_SEARCH_RESULTS = 5;
