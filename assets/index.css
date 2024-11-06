@@ -1932,6 +1932,22 @@ footer.dark a:focus {
   background-color: #7d9e61; /* 深色抹茶绿色悬停效果 */
 }
 
+#reply-to {
+  display: none; /* 默认隐藏，JavaScript 控制显示 */
+  font-size: 0.9em; /* 略小的字体 */
+  color: #6c757d; /* 使用灰色，与整体风格匹配 */
+  margin-bottom: 10px; /* 在表单输入框之间增加间距 */
+  padding: 5px 10px; /* 内边距让内容显得更清晰 */
+  border-left: 3px solid #007bff; /* 左侧加一个蓝色边框，使其醒目 */
+  background-color: #f1f3f5; /* 浅灰色背景 */
+  border-radius: 5px; /* 添加圆角，使其更美观 */
+}
+
+/* 鼠标悬停在 “回复” 提示上时，稍微调整颜色 */
+#reply-to:hover {
+  background-color: #e9ecef;
+  border-left-color: #0056b3; /* 加深边框颜色 */
+}
 
 
 

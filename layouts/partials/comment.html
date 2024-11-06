@@ -29,24 +29,25 @@
       </div>
     </template>
 
-    <form id="comment-form"data-dynamic-form
-    data-success="#comment-success"
-    data-error="#comment-error"
-    netlify="true" name="Comments">
+    <form id="comment-form" data-dynamic-form data-success="#comment-success" data-error="#comment-error" netlify="true" name="Comments">
+  
+      <div id="reply-to" style="display: none; color: #6c757d; margin-bottom: 10px;"></div> <!-- 用于显示回复对象 -->
       
       <input type="hidden" name="url" value="{{ .RelPermalink }}">
       <input type="hidden" name="parent" id="parent" value="">
+      
       <label class="comment-label" for="name">Name:</label>
       <input class="comment-input" type="text" id="name" name="name" required autocomplete="name">
-
+      
       <label class="comment-label" for="email">Email:</label>
       <input class="comment-input" type="email" id="email" name="email" required autocomplete="email">
-
+      
       <label class="comment-label" for="comment">Comment:</label>
       <textarea class="comment-textarea" id="comment" name="comment" rows="5" required autocomplete="off"></textarea>
-
+      
       <button class="comment-button" type="submit">Send</button>
     </form>
+    
   {{ end }}
 </div>
 
