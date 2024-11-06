@@ -1,4 +1,6 @@
 <div class="comment" style="margin-left: {{ mul .Depth 20 }}px;">
+    <!-- 调试信息，打印出当前评论的完整结构 -->
+    {{ printf "%#v" .comment }}
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
   <div class="author">{{ .comment.name }}</div>
   <div class="message">{{ .comment.comment }}</div>
