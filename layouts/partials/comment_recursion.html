@@ -1,4 +1,4 @@
-<div class="comment">
+<div class="comment" style="margin-left: {{ mul .Depth 20 }}px;">
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
   <div class="author">{{ .comment.name }}</div>
   <div class="message">{{ .comment.comment }}</div>
@@ -7,13 +7,20 @@
   <span class="time">{{ .time }}</span>
 
   <!-- 递归渲染回复内容 -->
-  {{ if .replies }}
+  {{ if lt .Depth 3 }}
   <div class="replies">
     {{ range .replies }}
       {{ partial "comment_recursion.html" (dict "comment" . "Depth" (add $.Depth 1)) }}
     {{ end }}
   </div>
 {{ end }}
+
+
+<div class="comment-actions">
+  <span class="like">点赞</span>
+  <span class="reply" data-parent="{{ .comment.id }}">回复</span>
+  <span class="time">{{ .time }}</span>
+</div>
 
 </div>
 

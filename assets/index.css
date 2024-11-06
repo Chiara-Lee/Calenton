@@ -1876,6 +1876,7 @@ footer.dark a:focus {
   transition: transform 0.3s;
 }
 
+
 .comment:hover {
   transform: translateY(-5px);
 }
@@ -1936,10 +1937,37 @@ footer.dark a:focus {
   padding-left: 15px;
 }
 
-.time {
-  font-size: 0.8em;
-  color: #888;
+/*评论功能样式*/
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* 控制点赞、回复和时间之间的间距 */
+  font-size: 0.9em; /* 调整字体大小 */
+  color: #6c757d; /* 使用较暗的颜色 */
+  margin-top: 5px; /* 与评论内容之间稍作间隔 */
 }
+
+.comment-actions .like,
+.comment-actions .reply,
+.comment-actions .time {
+  cursor: pointer; /* 鼠标悬停显示为可点击 */
+  padding: 2px 8px; /* 添加内边距，增加可点击区域 */
+  border-radius: 4px; /* 圆角 */
+  transition: background-color 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+.comment-actions .like:hover,
+.comment-actions .reply:hover {
+  background-color: #e9ecef; /* 鼠标悬停时背景色 */
+  color: #495057; /* 鼠标悬停时字体颜色 */
+}
+
+.comment-actions .time {
+  font-size: 0.85em; /* 时间元素的字体稍微缩小 */
+  color: #adb5bd; /* 时间使用更淡的颜色 */
+  cursor: default; /* 时间不需要点击效果 */
+}
+
 
 
 
