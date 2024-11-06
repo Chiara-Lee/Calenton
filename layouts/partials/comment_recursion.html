@@ -1,19 +1,20 @@
 <div class="comment">
-  <pre>{{ printf "%#v" . }}</pre>
-  <img src="https://www.gravatar.com/avatar/{{ md5 .email }}?s=50&d=wavatar" alt="{{ .name }} Avatar">
-  <div class="author">{{ .name }}</div>
-  <div class="message">{{ .conmment }}</div>
-  <button class="reply-button" data-parent="{{ .id }}">Reply</button>
+  <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
+  <div class="author">{{ .comment.name }}</div>
+  <div class="message">{{ .comment.comment }}</div>
+  <button class="reply-button" data-parent="{{ .comment.id }}">Reply</button>
+  
   <span class="time">{{ .time }}</span>
 
   <!-- 递归渲染回复内容 -->
   {{ if .replies }}
-    <div class="replies">
-      {{ range .replies }}
-        {{ partial "comment_recursion.html" (dict "comment" . "Depth" (add .Depth 1)) }}
-      {{ end }}
-    </div>
-  {{ end }}
+  <div class="replies">
+    {{ range .replies }}
+      {{ partial "comment_recursion.html" (dict "comment" . "Depth" (add $.Depth 1)) }}
+    {{ end }}
+  </div>
+{{ end }}
+
 </div>
 
   

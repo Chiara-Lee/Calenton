@@ -6,8 +6,7 @@
   {{ else }}
     {{$comments = partialCached "formspreeCommentList.html" .}}
   {{ end }}
-  
-  <pre>{{ printf "%#v" $comments }}</pre>
+
   <!-- 递归显示评论结构 -->
   {{ range (index $comments .RelPermalink) }}
     {{ partial "comment_recursion.html" (dict "comment" . "Depth" 0) }}
