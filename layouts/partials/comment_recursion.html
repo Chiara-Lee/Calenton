@@ -1,7 +1,7 @@
 <div class="comment">
   <img src="https://www.gravatar.com/avatar/{{ md5 .email }}?s=50&d=wavatar" alt="{{ .name }} Avatar">
   <div class="author">{{ .name }}</div>
-  <div class="message">{{ .comment }}</div>
+  <div class="message">{{ .content }}</div>
   <button class="reply-button" data-parent="{{ .id }}">Reply</button>
   <span class="time">{{ .time }}</span>
 
