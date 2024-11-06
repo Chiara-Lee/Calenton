@@ -9,7 +9,7 @@
   
   <!-- 递归显示评论结构 -->
   {{ range (index $comments .RelPermalink) }}
-    {{ partial "comment_recursion.html" . }}
+    {{ partial "comment_recursion.html" (dict "comment" . "Depth" 0) }}
   {{ end }}
   
   {{ if .Disabled }}

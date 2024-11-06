@@ -1930,6 +1930,18 @@ footer.dark a:focus {
   background-color: #7d9e61; /* 深色抹茶绿色悬停效果 */
 }
 
+.replies {
+  margin-left: 20px; /* 每层嵌套增加缩进 */
+  border-left: 1px solid #e2e8f0; /* 左侧边框，增强层级视觉 */
+  padding-left: 15px;
+}
+
+.time {
+  font-size: 0.8em;
+  color: #888;
+}
+
+
 
 /* 评论表单提交信息的通用模板样式 */
 .success, .error {
