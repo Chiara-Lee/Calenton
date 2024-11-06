@@ -1345,7 +1345,7 @@
     register(ExtendedSearch);
   }
 
-  // ns-hugo:/home/codespace/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugoinaction/!acme!search!support@v0.0.0-20220705181021-73e7a1ec10ef/assets/SearchSupport/index.js
+  // ns-hugo:/workspaces/Calenton/assets/searchsupport.js
   var SearchSupport = () => {
     let selected = void 0;
     document.addEventListener("focusin", (e) => {
@@ -1392,7 +1392,7 @@
       }
     });
   };
-  var SearchSupport_default = SearchSupport;
+  var searchsupport_default = SearchSupport;
 
   // ns-hugo:/workspaces/Calenton/assets/search.js
   var index = null;
@@ -1400,6 +1400,7 @@
   var SearchModule = {
     async init() {
       try {
+        const BASE_URL = window.location.origin;
         const response = await window.fetch(BASE_URL + "/index.json");
         if (!response.ok) {
           this.removeSearch();
@@ -1418,7 +1419,7 @@
           }]
         });
         document.addEventListener("input", this.showResults);
-        SearchSupport_default();
+        searchsupport_default();
       } catch (e) {
         this.removeSearch();
       }
@@ -1444,6 +1445,7 @@
       document.querySelector("#search")?.remove();
     }
   };
+  SearchModule.init();
 
   // <stdin>
   function init() {

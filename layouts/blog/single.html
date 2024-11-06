@@ -65,4 +65,14 @@
   "RelPermalink" .Page.RelPermalink 
   "Disabled" ($.Param "CommentDisabled")
 ) }}
+<!-- 添加 JavaScript 脚本来处理回复按钮 -->
+<script>
+  document.querySelectorAll('.reply-button').forEach(button => {
+    button.addEventListener('click', function() {
+      const parentId = this.getAttribute('data-parent');
+      document.getElementById('parent').value = parentId;
+      document.getElementById('comment-form').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
 {{end}}

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=36093&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     
@@ -13,9 +13,9 @@ The rake face which directs the flow of newly formed chip, is oriented at a cert
     
     <meta name="viewport" 
       content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/png" href="http://localhost:36093/image/favicon_hu15807620146862010127.png">
+      <link rel="icon" type="image/png" href="http://localhost:1313/image/favicon_hu15807620146862010127.png">
       
-<link rel="stylesheet" href="http://localhost:36093/index.min.css">
+<link rel="stylesheet" href="http://localhost:1313/index.min.css">
 
 
     
@@ -28,7 +28,7 @@ The rake face which directs the flow of newly formed chip, is oriented at a cert
     
       <header>
       <a href="/">
-      <img src="http://localhost:36093//image/logo.png" alt="Calenton Logo" 
+      <img src="http://localhost:1313//image/logo.png" alt="Calenton Logo" 
       style="width: 180px;height:160px;" />
       Caleton Academy
       </a>
@@ -133,7 +133,7 @@ The rake face which directs the flow of newly formed chip, is oriented at a cert
     
       <li class="post">
   
-  <a href="http://localhost:36093/blog/process-3/">
+  <a href="http://localhost:1313/blog/process-3/">
     <h2>
       Our Manufacturing Process Part III
     </h2>
@@ -147,9 +147,9 @@ The rake face which directs the flow of newly formed chip, is oriented at a cert
     
       <li class="post">
   
-    <img alt="Our Manufacturing Process Part II" loading="lazy" src="http://localhost:36093/blog/process-2/cover_hu11906200495024910332.jpg" />
+    <img alt="Our Manufacturing Process Part II" loading="lazy" src="http://localhost:1313/blog/process-2/cover_hu11906200495024910332.jpg" />
   
-  <a href="http://localhost:36093/blog/process-2/">
+  <a href="http://localhost:1313/blog/process-2/">
     <h2>
       Our Manufacturing Process Part II
     </h2>
@@ -181,6 +181,7 @@ The rake face which directs the flow of newly formed chip, is oriented at a cert
   
   
   
+  
 
     <template id="comment-success">
       <div class="success">
@@ -194,13 +195,12 @@ The rake face which directs the flow of newly formed chip, is oriented at a cert
     </template>
 
     <form data-dynamic-form
-          data-success="#comment-success"
-          data-error="#comment-error"
-          
-            action="https://formspree.io/f/" method="post">
-          
+    data-success="#comment-success"
+    data-error="#comment-error"
+    netlify="true" name="Comments">
       
       <input type="hidden" name="url" value="/blog/process-4/">
+      <input type="hidden" name="parent" id="parent" value="">
       <label class="comment-label" for="name">Name:</label>
       <input class="comment-input" type="text" id="name" name="name" required autocomplete="name">
 
@@ -217,6 +217,16 @@ The rake face which directs the flow of newly formed chip, is oriented at a cert
 
 
 
+
+<script>
+  document.querySelectorAll('.reply-button').forEach(button => {
+    button.addEventListener('click', function() {
+      const parentId = this.getAttribute('data-parent');
+      document.getElementById('parent').value = parentId;
+      document.getElementById('comment-form').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
 
     
       <footer class="dark">

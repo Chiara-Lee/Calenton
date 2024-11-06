@@ -1906,6 +1906,29 @@ footer.dark a:focus {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
+/* 嵌套回复容器样式 */
+.replies {
+  margin-left: 20px;
+  border-left: 2px solid #d1d5db; /* 左边界区分层级 */
+  padding-left: 15px;
+}
+
+/* 回复按钮的样式 */
+.reply-button {
+  background-color: #a3c585; /* 抹茶绿色 */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+
+.reply-button:hover {
+  background-color: #7d9e61; /* 深色抹茶绿色悬停效果 */
+}
 
 
 /* 评论表单提交信息的通用模板样式 */
