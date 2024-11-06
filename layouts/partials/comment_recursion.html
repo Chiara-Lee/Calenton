@@ -1,4 +1,5 @@
 <div class="comment">
+  <pre>{{ printf "%#v" . }}</pre>
   <img src="https://www.gravatar.com/avatar/{{ md5 .email }}?s=50&d=wavatar" alt="{{ .name }} Avatar">
   <div class="author">{{ .name }}</div>
   <div class="message">{{ .conmment }}</div>
