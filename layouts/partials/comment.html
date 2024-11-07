@@ -11,10 +11,10 @@
  <!-- 确保每个评论对象都有所需的字段 s-->
  {{ $normalizedComments := slice }}
  {{ range $index, $comment := $comments }}
-   {{ $uniqueId := (printf "%d" (now.UnixNano)) }}
-   {{ $commentId := default "unknown" $comment.custom_id }}
+ {{ $uniqueId := (printf "%d" (now.UnixNano)) }}
+ {{ $commentId := default $uniqueId $comment.custom_id }}
    {{ $normalizedComment := dict 
-    "custom_id" $commentId
+    "custom_id" (default "unknown" $comment.custom_id)
      "parent" (default "" $comment.parent) 
      "name" (default "" $comment.name) 
      "email" (default "" $comment.email) 
