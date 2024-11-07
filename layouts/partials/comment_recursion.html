@@ -11,7 +11,7 @@
   <div class="replies">
       {{/* 遍历所有评论，寻找当前评论的子评论 */}}
       {{ range $index, $reply := .comments }}
-          {{ if eq $reply.parent $.comment.comment_id }} <!-- 匹配子评论的 parent ID -->
+      {{ if eq (default "" $reply.parent) $.comment.comment_id }} <!-- 使用默认值保护 parent 字段 --> <!-- 匹配子评论的 parent ID -->
               {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" (add $.Depth 1) "comments" $.comments) }}
           {{ end }}
       {{ end }}
