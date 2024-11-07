@@ -7,6 +7,13 @@
     {{$comments = partialCached "formspreeCommentList.html" .}}
   {{ end }}
 
+
+  <!-- 确保每个评论对象都有一个 parent 字段 -->
+  {{ $normalizedComments := slice }}
+  {{ range $index, $comment := $comments }}
+    {{ $normalizedComment := dict "comment_id" $comment.comment_id "parent" (default "" $comment.parent) "name" $comment.name "email" $comment.email "comment" $comment.comment "time" $comment.time }}
+    {{ $normalizedComments = $normalizedComments | append $normalizedComment }}
+  {{ end }}
 <!-- 渲染顶级评论 -->
 {{ range $index, $comment := $comments }}
     {{ $parentId := default "" $comment.parent }}
@@ -80,7 +87,7 @@
 
       // 获取并设置父评论的 ID
       const parentId = this.getAttribute("data-parent");
-      document.getElementById("parent").value = parentId;
+      document.getElementById("parent").value = parentId || ""; // 确保 parent 字段有值
     })
   });  
    
@@ -90,7 +97,7 @@
   button.addEventListener('click', function() {
     const parentId = this.getAttribute('data-parent');
     const parentName = this.getAttribute('data-name'); // 获取评论者的名字
-    document.getElementById('parent').value = parentId; // 为子评论添加父评论值
+    document.getElementById('parent').value = parentId || ""; // 为子评论添加父评论值，确保有值
     console.log("Parent ID set to:", parentId);  // 检查是否正确设置了 parent ID
     document.getElementById('reply-to').style.display = 'block'; // 显示回复对象的提示
     document.getElementById('reply-to').innerText = `回复 @${parentName}`; // 设置显示内容
@@ -104,14 +111,6 @@
     console.log("Form has been cleared after submission.");
   }
 
-    // 检查 parent ID 在表单提交前是否为空
-    document.getElementById("comment-form").addEventListener("submit", function(event) {
-    const parentId = document.getElementById("parent").value;
-    if (!parentId && document.querySelector("#reply-to").style.display !== "none") {
-      event.preventDefault();
-      alert("请确保已经选择回复的评论");
-    }
-  });
   </script>
 
 
