@@ -2,7 +2,7 @@
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
   <div class="author">{{ .comment.name }}</div>
   <div class="message">{{ .comment.comment }}</div>
-  <button class="reply-button" data-parent="{{ $commentId }}" data-name="{{ .comment.name }}">Reply (Parent ID: {{ .comment.custom_id }})</button>
+  <button class="reply-button" data-parent="{{ .comment.custom_id }}" data-name="{{ .comment.name }}">Reply (Parent ID: {{ .comment.custom_id }})</button>
 
 
   <span class="time">{{ .time }}</span>
