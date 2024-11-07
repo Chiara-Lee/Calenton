@@ -107,6 +107,11 @@
       const uniqueId = `${Date.now()}-${Math.floor(Math.random() * 1000)}`;
       commentIdField.value = uniqueId; // 为提交的评论分配唯一 ID
     }
+      // 调试输出表单数据
+  const formData = new FormData(this);
+  for (let [key, value] of formData.entries()) {
+    console.log(key, value);
+  }
   });
   function REMOVE_FORM_ON_SUBMISSION() {
     // 清除输入字段内容
