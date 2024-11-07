@@ -12,7 +12,7 @@
  {{ $normalizedComments := slice }}
  {{ range $index, $comment := $comments }}
    {{ $uniqueId := (printf "%d" (now.UnixNano)) }}
-   {{ $commentId := default $uniqueId $comment.custom_id }}
+   {{ $commentId := default "unknown" $comment.custom_id }}
    {{ $normalizedComment := dict 
     "custom_id" $commentId
      "parent" (default "" $comment.parent) 
