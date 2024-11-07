@@ -54,7 +54,7 @@
       <div id="reply-to" style="display: none; color: #6c757d; margin-bottom: 10px;"></div> <!-- 用于显示回复对象 -->
       
       <input type="hidden" name="url" value="{{ .RelPermalink }}">
-      <input type="hidden" name="comment_id" id="comment-id" value="{{ printf "%d-%d" (now.UnixNano)  }}">
+      <input type="hidden" name="comment_id" id="comment-id" value="{{ printf "%d" (now.UnixNano) }}">
       <input type="hidden" name="parent" id="parent" value="">
       
       <label class="comment-label" for="name">Name:</label>
