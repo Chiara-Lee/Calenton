@@ -65,18 +65,4 @@
   "RelPermalink" .Page.RelPermalink 
   "Disabled" ($.Param "CommentDisabled")
 ) }}
-<!-- 添加 JavaScript 脚本来处理回复按钮 -->
-<script>
-document.querySelectorAll('.reply-button').forEach(button => {
-  button.addEventListener('click', function() {
-    const parentId = this.getAttribute('data-parent');
-    const parentName = this.getAttribute('data-name'); // 获取评论者的名字
-    document.getElementById('parent').value = parentId; // 为子评论添加父评论值
-    console.log("Parent ID set to:", parentId);  // 检查是否正确设置了 parent ID
-    document.getElementById('reply-to').style.display = 'block'; // 显示回复对象的提示
-    document.getElementById('reply-to').innerText = `回复 @${parentName}`; // 设置显示内容
-    document.getElementById('comment-form').scrollIntoView({ behavior: 'smooth' }); // 平滑滚动至表单
-  });
-});
-</script>
 {{end}}

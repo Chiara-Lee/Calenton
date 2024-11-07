@@ -60,36 +60,54 @@
     return base64Id;
   }
   
-  // 页面加载时为评论生成唯一 ID
-  document.addEventListener("DOMContentLoaded", function() {
+    // 页面加载时为新评论生成唯一 ID
+    document.addEventListener("DOMContentLoaded", function() {
     const commentIdField = document.getElementById("comment-id");
-    if (commentIdField) {
-      const uniqueId = generateBase64Id();
-      commentIdField.value = uniqueId;  // 设置评论的唯一 ID
-      console.log("Generated Comment ID:", uniqueId);  // 输出生成的 ID
+    if (commentIdField && !commentIdField.value) {  // 仅在没有 ID 时生成
+      commentIdField.value = generateBase64Id();
     }
   });
   
-  // 回复按钮逻辑
+  // 点击 "Reply" 按钮时为子评论设置父评论的 ID
   document.querySelectorAll(".reply-button").forEach(button => {
     button.addEventListener("click", function() {
-    // 每次点击时生成新的 comment_id
-    const uniqueId = generateBase64Id();
-    document.getElementById("comment-id").value = uniqueId;
-    console.log("Generated Comment ID:", uniqueId);  // 输出生成的 ID
+      const uniqueId = generateBase64Id(); // 为新评论生成唯一 ID
+      document.getElementById("comment-id").value = uniqueId;
 
-    // 设置父评论的 ID
-    const parentId = this.getAttribute("data-parent");
-    document.getElementById("parent").value = parentId;
-    console.log("Setting Parent ID to:", parentId);  // 输出 parent ID
-    });
+      // 获取并设置父评论的 ID
+      const parentId = this.getAttribute("data-parent");
+      document.getElementById("parent").value = parentId;
+    })
+  });  
+   
+  
+  //添加 JavaScript 脚本来处理回复按钮
+  document.querySelectorAll('.reply-button').forEach(button => {
+  button.addEventListener('click', function() {
+    const parentId = this.getAttribute('data-parent');
+    const parentName = this.getAttribute('data-name'); // 获取评论者的名字
+    document.getElementById('parent').value = parentId; // 为子评论添加父评论值
+    console.log("Parent ID set to:", parentId);  // 检查是否正确设置了 parent ID
+    document.getElementById('reply-to').style.display = 'block'; // 显示回复对象的提示
+    document.getElementById('reply-to').innerText = `回复 @${parentName}`; // 设置显示内容
+    document.getElementById('comment-form').scrollIntoView({ behavior: 'smooth' }); // 平滑滚动至表单
   });
+});
 
   function REMOVE_FORM_ON_SUBMISSION() {
     // 清除输入字段内容
     document.getElementById("comment-form").reset();
     console.log("Form has been cleared after submission.");
   }
+
+    // 检查 parent ID 在表单提交前是否为空
+    document.getElementById("comment-form").addEventListener("submit", function(event) {
+    const parentId = document.getElementById("parent").value;
+    if (!parentId && document.querySelector("#reply-to").style.display !== "none") {
+      event.preventDefault();
+      alert("请确保已经选择回复的评论");
+    }
+  });
   </script>
 
 
