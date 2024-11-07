@@ -14,12 +14,12 @@
     {{ $normalizedComment := dict "comment_id" $comment.comment_id "parent" (default "" $comment.parent) "name" $comment.name "email" $comment.email "comment" $comment.comment "time" $comment.time }}
     {{ $normalizedComments = $normalizedComments | append $normalizedComment }}
   {{ end }}
-<!-- 渲染顶级评论 -->
-{{ range $index, $comment := $comments }}
-    {{ $parentId := default "" $comment.parent }}
-    {{ if eq $parentId "" }} <!-- 检查是否为顶级评论 -->
-        {{ partial "comment_recursion.html" (dict "comment" $comment "Depth" 0 "comments" $comments) }}
-    {{ end }}
+
+ <!-- 渲染顶级评论 -->
+ {{ range $index, $comment := $normalizedComments }}
+ {{ if eq $comment.parent "" }} <!-- 判断顶级评论，parent 为空字符串 -->
+   {{ partial "comment_recursion.html" (dict "comment" $comment "Depth" 0 "comments" $normalizedComments) }}
+ {{ end }}
 {{ end }}
 
   
@@ -63,12 +63,12 @@
   {{ end }}
 </div>
 <script>
-  // 生成 Base64 ID 的函数
-  function generateBase64Id() {
-    const timestamp = Date.now().toString();
-    const randomNum = Math.floor(Math.random() * 1000000).toString();
-    const base64Id = btoa(timestamp + randomNum);
-    return base64Id;
+  // 生成 UUID 的函数
+  function generateUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
   }
   
     // 页面加载时为新评论生成唯一 ID
