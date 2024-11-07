@@ -11,8 +11,9 @@
   <!-- 确保每个评论对象都有所需的字段 -->
   {{ $normalizedComments := slice }}
   {{ range $index, $comment := $comments }}
+    {{ $uniqueId := (printf "%d-%d" (now.UnixNano) $index) }}
     {{ $normalizedComment := dict 
-      "comment_id" (default (generateUUID) $comment.comment_id) 
+      "comment_id" (default $uniqueId $comment.comment_id) 
       "parent" (default "" $comment.parent) 
       "name" (default "" $comment.name) 
       "email" (default "" $comment.email) 
@@ -52,7 +53,7 @@
       <div id="reply-to" style="display: none; color: #6c757d; margin-bottom: 10px;"></div> <!-- 用于显示回复对象 -->
       
       <input type="hidden" name="url" value="{{ .RelPermalink }}">
-      <input type="hidden" name="comment_id" id="comment-id" value="">
+      <input type="hidden" name="comment_id" id="comment-id" value="{{ printf "%d-%d" (now.UnixNano) (add 1000 (randInt 1 1000)) }}">
       <input type="hidden" name="parent" id="parent" value="">
       
       <label class="comment-label" for="name">Name:</label>
@@ -70,21 +71,6 @@
   {{ end }}
 </div>
 <script>
-  // 生成 UUID 的函数
-  function generateUUID() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-      const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
-      return v.toString(16);
-    });
-  }
-  
-    // 页面加载时为新评论生成唯一 ID
-    document.addEventListener("DOMContentLoaded", function() {
-    const commentIdField = document.getElementById("comment-id");
-    if (commentIdField && !commentIdField.value) {  // 仅在没有 ID 时生成
-      commentIdField.value = generateUUID();
-    }
-  });
   
   // 点击 "Reply" 按钮时为子评论设置父评论的 ID
   document.querySelectorAll(".reply-button").forEach(button => {
@@ -112,14 +98,15 @@
   });
 });
 
-  // 在表单提交前为新评论生成唯一 ID
+  // 表单提交前为新评论生成唯一 ID
   document.getElementById("comment-form").addEventListener("submit", function(event) {
     const commentIdField = document.getElementById("comment-id");
-    if (commentIdField && !commentIdField.value) {
-      commentIdField.value = generateUUID(); // 确保在提交时生成唯一 ID
+    if (commentIdField) {
+      // 使用新的基于 Hugo 的生成逻辑
+      const uniqueId = `${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+      commentIdField.value = uniqueId; // 为提交的评论分配唯一 ID
     }
   });
-
   function REMOVE_FORM_ON_SUBMISSION() {
     // 清除输入字段内容
     document.getElementById("comment-form").reset();
