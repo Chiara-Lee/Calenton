@@ -11,6 +11,7 @@
   <div class="replies">
       {{/* 遍历所有评论，寻找与当前评论匹配的子评论 */}}
       {{ range $index, $reply := .comments }}
+      {{ $replyParentId := default "" $reply.parent }}
           {{ if eq $reply.comment_id $.comment.comment_id }} <!-- 使用comment_id 比较 -->
               {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" (add $.Depth 1) "comments" $.comments) }}
           {{ end }}

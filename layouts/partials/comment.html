@@ -9,7 +9,8 @@
 
 <!-- 渲染顶级评论 -->
 {{ range $index, $comment := $comments }}
-    {{ if not $comment.parent }} <!-- 假设无 parent 字段或 parent 为空的为顶级评论 -->
+    {{ $parentId := default "" $comment.parent }}
+    {{ if eq $parentId "" }} <!-- 检查是否为顶级评论 -->
         {{ partial "comment_recursion.html" (dict "comment" $comment "Depth" 0 "comments" $comments) }}
     {{ end }}
 {{ end }}
