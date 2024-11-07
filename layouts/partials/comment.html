@@ -8,10 +8,17 @@
   {{ end }}
 
 
-  <!-- 确保每个评论对象都有一个 parent 字段 -->
+  <!-- 确保每个评论对象都有所需的字段 -->
   {{ $normalizedComments := slice }}
   {{ range $index, $comment := $comments }}
-    {{ $normalizedComment := dict "comment_id" $comment.comment_id "parent" (default "" $comment.parent) "name" $comment.name "email" $comment.email "comment" $comment.comment "time" $comment.time }}
+    {{ $normalizedComment := dict 
+      "comment_id" (default (generateUUID) $comment.comment_id) 
+      "parent" (default "" $comment.parent) 
+      "name" (default "" $comment.name) 
+      "email" (default "" $comment.email) 
+      "comment" (default "" $comment.comment) 
+      "time" (default "" $comment.time) 
+    }}
     {{ $normalizedComments = $normalizedComments | append $normalizedComment }}
   {{ end }}
 
