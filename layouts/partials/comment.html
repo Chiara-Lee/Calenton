@@ -75,14 +75,14 @@
     document.addEventListener("DOMContentLoaded", function() {
     const commentIdField = document.getElementById("comment-id");
     if (commentIdField && !commentIdField.value) {  // 仅在没有 ID 时生成
-      commentIdField.value = generateBase64Id();
+      commentIdField.value = generateUUID();
     }
   });
   
   // 点击 "Reply" 按钮时为子评论设置父评论的 ID
   document.querySelectorAll(".reply-button").forEach(button => {
     button.addEventListener("click", function() {
-      const uniqueId = generateBase64Id(); // 为新评论生成唯一 ID
+      const uniqueId = generateUUID(); // 为新评论生成唯一 ID
       document.getElementById("comment-id").value = uniqueId;
 
       // 获取并设置父评论的 ID
@@ -104,6 +104,14 @@
     document.getElementById('comment-form').scrollIntoView({ behavior: 'smooth' }); // 平滑滚动至表单
   });
 });
+
+  // 在表单提交前为新评论生成唯一 ID
+  document.getElementById("comment-form").addEventListener("submit", function(event) {
+    const commentIdField = document.getElementById("comment-id");
+    if (commentIdField && !commentIdField.value) {
+      commentIdField.value = generateUUID(); // 确保在提交时生成唯一 ID
+    }
+  });
 
   function REMOVE_FORM_ON_SUBMISSION() {
     // 清除输入字段内容
