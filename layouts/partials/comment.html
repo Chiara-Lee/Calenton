@@ -53,7 +53,7 @@
       <div id="reply-to" style="display: none; color: #6c757d; margin-bottom: 10px;"></div> <!-- 用于显示回复对象 -->
       
       <input type="hidden" name="url" value="{{ .RelPermalink }}">
-      <input type="hidden" name="comment_id" id="comment-id" value="{{ printf "%d-%d" (now.UnixNano) (add 1000 (randInt 1 1000)) }}">
+      <input type="hidden" name="comment_id" id="comment-id" value="{{ printf "%d-%d" (now.UnixNano) (add 1000 $index) }}">
       <input type="hidden" name="parent" id="parent" value="">
       
       <label class="comment-label" for="name">Name:</label>
@@ -102,7 +102,7 @@
   document.getElementById("comment-form").addEventListener("submit", function(event) {
     const commentIdField = document.getElementById("comment-id");
     if (commentIdField) {
-      // 使用新的基于 Hugo 的生成逻辑
+      // 使用新的基于 Hugo 的生成逻辑,基于时间戳生成的唯一 ID
       const uniqueId = `${Date.now()}-${Math.floor(Math.random() * 1000)}`;
       commentIdField.value = uniqueId; // 为提交的评论分配唯一 ID
     }
