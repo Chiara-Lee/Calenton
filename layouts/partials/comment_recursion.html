@@ -5,8 +5,6 @@
   <button class="reply-button" data-parent="{{ .comment.comment_id }}" data-name="{{ .comment.name }}">Reply (Parent ID: {{ .comment.comment_id }})</button>
 
 
-
-  
   <span class="time">{{ .time }}</span>
 
   {{ if lt .Depth 2 }} <!-- 设置嵌套层级限制，2 表示最多嵌套 1 层子评论 -->
