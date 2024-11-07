@@ -34,6 +34,7 @@
       <div id="reply-to" style="display: none; color: #6c757d; margin-bottom: 10px;"></div> <!-- 用于显示回复对象 -->
       
       <input type="hidden" name="url" value="{{ .RelPermalink }}">
+      <input type="hidden" name="comment_id" id="comment-id" value="">
       <input type="hidden" name="parent" id="parent" value="">
       
       <label class="comment-label" for="name">Name:</label>
@@ -50,5 +51,30 @@
     
   {{ end }}
 </div>
+<script>
+  // 生成 Base64 ID 的函数
+  function generateBase64Id() {
+    const timestamp = Date.now().toString();
+    const randomNum = Math.floor(Math.random() * 1000000).toString();
+    const base64Id = btoa(timestamp + randomNum);
+    return base64Id;
+  }
+  
+  // 页面加载时为评论生成唯一 ID
+  document.addEventListener("DOMContentLoaded", function() {
+    const commentIdField = document.getElementById("comment-id");
+    if (commentIdField) {
+      commentIdField.value = generateBase64Id();  // 设置评论的唯一 ID
+    }
+  });
+  
+  // 回复按钮逻辑
+  document.querySelectorAll(".reply-button").forEach(button => {
+    button.addEventListener("click", function() {
+      const parentId = this.getAttribute("data-parent");
+      document.getElementById("parent").value = parentId;  // 设置 parent_id
+    });
+  });
+  </script>
 
 
