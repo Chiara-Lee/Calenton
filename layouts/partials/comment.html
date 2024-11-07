@@ -64,7 +64,9 @@
   document.addEventListener("DOMContentLoaded", function() {
     const commentIdField = document.getElementById("comment-id");
     if (commentIdField) {
-      commentIdField.value = generateBase64Id();  // 设置评论的唯一 ID
+      const uniqueId = generateBase64Id();
+      commentIdField.value = uniqueId;  // 设置评论的唯一 ID
+      console.log("Generated Comment ID:", uniqueId);  // 输出生成的 ID
     }
   });
   
@@ -73,6 +75,7 @@
     button.addEventListener("click", function() {
       const parentId = this.getAttribute("data-parent");
       document.getElementById("parent").value = parentId;  // 设置 parent_id
+      console.log("Setting Parent ID to:", parentId);  // 输出设置的 parent ID
     });
   });
   </script>
