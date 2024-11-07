@@ -25,9 +25,9 @@
  {{ end }}
 
  <!-- 渲染顶级评论 -->
- {{ range $index, $comment := $normalizedComments }}
- {{ if eq $comment.parent "" }} <!-- 判断顶级评论，parent 为空字符串 -->
-   {{ partial "comment_recursion.html" (dict "comment" $comment "Depth" 0 "comments" $normalizedComments) }}
+ {{ range $index, $allcomment := $normalizedComments }}
+ {{ if eq $allcomment.parent "" }} <!-- 判断顶级评论，parent 为空字符串 -->
+   {{ partial "comment_recursion.html" (dict "comment" $allcomment "Depth" 0 "comments" $normalizedComments) }}
  {{ end }}
 {{ end }}
 
