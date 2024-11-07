@@ -1,6 +1,4 @@
 <div class="comment" style="margin-left: {{ mul .Depth 20 }}px;">
-  <pre>{{ .comment | jsonify }}</pre>
-
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
   <div class="author">{{ .comment.name }}</div>
   <div class="message">{{ .comment.comment }}</div>
