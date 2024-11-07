@@ -11,7 +11,6 @@
  <!-- 确保每个评论对象都有所需的字段 s-->
  {{ $normalizedComments := slice }}
  {{ range $index, $comment := $comments }}
- {{ $uniqueId := (printf "%d" (now.UnixNano)) }}
    {{ $normalizedComment := dict 
     "custom_id" (default "unknown" $comment.custom_id)
      "parent" (default "" $comment.parent) 
@@ -53,7 +52,6 @@
       <div id="reply-to" style="display: none; color: #6c757d; margin-bottom: 10px;"></div> <!-- 用于显示回复对象 -->
       
       <input type="hidden" name="url" value="{{ .RelPermalink }}">
-      <input type="hidden" name="custom_id" id="custom-id" value="{{ printf "%d" (now.UnixNano) }}">
       <input type="hidden" name="parent" id="parent" value="">
       
       <label class="comment-label" for="name">Name:</label>
@@ -72,43 +70,52 @@
 </div>
 <script>
   
-  // 点击 "Reply" 按钮时为子评论设置父评论的 ID
-  document.querySelectorAll(".reply-button").forEach(button => {
-    button.addEventListener("click", function() {
-      const uniqueId = generateUUID(); // 为新评论生成唯一 ID
-      document.getElementById("custom-id").value = uniqueId;
+  // 生成唯一 ID 的函数
+  function generateUniqueId() {
+    return `${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+  }
 
-      // 获取并设置父评论的 ID
-      const parentId = this.getAttribute("data-parent");
-      document.getElementById("parent").value = parentId || ""; // 确保 parent 字段有值
-    })
-  });  
-   
-  
-  //添加 JavaScript 脚本来处理回复按钮
-  document.querySelectorAll('.reply-button').forEach(button => {
-  button.addEventListener('click', function() {
+
+// 点击 "Reply" 按钮时为子评论设置父评论的 ID
+document.querySelectorAll(".reply-button").forEach(button => {
+  button.addEventListener("click", function() {
+    // 获取当前评论的 custom_id 和评论者的名字
     const parentId = this.getAttribute('data-parent');
-    const parentName = this.getAttribute('data-name'); // 获取评论者的名字
-    document.getElementById('parent').value = parentId || ""; // 为子评论添加父评论值，确保有值
-    console.log("Parent ID set to:", parentId);  // 检查是否正确设置了 parent ID
-    document.getElementById('reply-to').style.display = 'block'; // 显示回复对象的提示
-    document.getElementById('reply-to').innerText = `回复 @${parentName}`; // 设置显示内容
-    document.getElementById('comment-form').scrollIntoView({ behavior: 'smooth' }); // 平滑滚动至表单
+    const parentName = this.getAttribute('data-name');
+
+    // 为子评论添加父评论值，确保有值
+    document.getElementById('parent').value = parentId || "";
+    console.log("Parent ID set to:", parentId); // 检查是否正确设置了 parent ID
+
+    // 显示回复对象的提示
+    const replyToElement = document.getElementById('reply-to');
+    replyToElement.style.display = 'block';
+    replyToElement.innerText = `回复 @${parentName}`;
+
+    // 平滑滚动至表单
+    document.getElementById('comment-form').scrollIntoView({ behavior: 'smooth' });
   });
 });
 
-  // 表单提交前为新评论生成唯一 ID
+  // 表单提交事件
   document.getElementById("comment-form").addEventListener("submit", function(event) {
-    const commentIdField = document.getElementById("custom-id");
-    if (commentIdField) {
-      // 使用新的基于 Hugo 的生成逻辑,基于时间戳生成的唯一 ID
-      const uniqueId = `${Date.now()}-${Math.floor(Math.random() * 1000)}`;
-      commentIdField.value = uniqueId; // 为提交的评论分配唯一 ID
-    }
+    event.preventDefault(); // 阻止默认提交
+
+    // 动态生成 custom_id
+    const customId = generateUniqueId();
+    console.log("Generated Comment ID:", customId);
+
+    // 将 custom_id 添加到表单数据中
+    const formData = new FormData(this);
+    formData.append("custom_id", customId);
+
+    // 隐藏回复提示并清空表单
+    document.getElementById('reply-to').style.display = 'none';
+    REMOVE_FORM_ON_SUBMISSION();
   });
+
+  // 清除输入字段内容的函数
   function REMOVE_FORM_ON_SUBMISSION() {
-    // 清除输入字段内容
     document.getElementById("comment-form").reset();
     console.log("Form has been cleared after submission.");
   }
