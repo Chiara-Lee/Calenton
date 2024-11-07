@@ -73,9 +73,15 @@
   // 回复按钮逻辑
   document.querySelectorAll(".reply-button").forEach(button => {
     button.addEventListener("click", function() {
-      const parentId = this.getAttribute("data-parent");
-      document.getElementById("parent").value = parentId;  // 设置 parent_id
-      console.log("Setting Parent ID to:", parentId);  // 输出设置的 parent ID
+    // 每次点击时生成新的 comment_id
+    const uniqueId = generateBase64Id();
+    document.getElementById("comment-id").value = uniqueId;
+    console.log("Generated Comment ID:", uniqueId);  // 输出生成的 ID
+
+    // 设置父评论的 ID
+    const parentId = this.getAttribute("data-parent");
+    document.getElementById("parent").value = parentId;
+    console.log("Setting Parent ID to:", parentId);  // 输出 parent ID
     });
   });
   </script>
