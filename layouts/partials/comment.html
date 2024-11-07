@@ -8,7 +8,7 @@
   {{ end }}
 
 
- <!-- 确保每个评论对象都有所需的字段 s-->
+ <!-- 确保每个评论对象都有所需的字段 -->
  {{ $normalizedComments := slice }}
  {{ range $index, $comment := $comments }}
    {{ $normalizedComment := dict 
