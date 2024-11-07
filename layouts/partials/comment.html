@@ -7,10 +7,12 @@
     {{$comments = partialCached "formspreeCommentList.html" .}}
   {{ end }}
 
-  <!-- 递归显示评论结构 -->
-  {{ range (index $comments .RelPermalink) }}
-    {{ partial "comment_recursion.html" (dict "comment" . "Depth" 0) }}
-  {{ end }}
+<!-- 渲染顶级评论 -->
+{{ range $index, $comment := $comments }}
+    {{ if eq $comment.parent "" }} <!-- 判断顶级评论，parent 为空字符串 -->
+        {{ partial "comment_recursion.html" (dict "comment" $comment "Depth" 0 "comments" $comments) }}
+    {{ end }}
+{{ end }}
   
   {{ if .Disabled }}
     <div>

@@ -9,17 +9,16 @@
   
   <span class="time">{{ .time }}</span>
 
-  <!-- 递归渲染回复内容 -->
-  {{ if lt .Depth 2 }}
-    <div class="replies">
-      {{ range .comment.replies }}
-        {{ partial "comment_recursion.html" (dict "comment" . "Depth" (add .Depth 1)) }}
+  {{ if lt .Depth 2 }} <!-- 设置嵌套层级限制，2 表示最多嵌套 1 层子评论 -->
+  <div class="replies">
+      {{/* 遍历所有评论，寻找当前评论的子评论 */}}
+      {{ range $index, $reply := .comments }}
+          {{ if eq $reply.parent $.comment.comment_id }} <!-- 匹配子评论的 parent ID -->
+              {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" (add $.Depth 1) "comments" $.comments) }}
+          {{ end }}
       {{ end }}
-    </div>
-  {{ end }}
-
-
-
+  </div>
+{{ end }}
 </div>
 
   
