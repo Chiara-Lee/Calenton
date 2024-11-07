@@ -2,7 +2,7 @@
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
   <div class="author">{{ .comment.name }}</div>
   <div class="message">{{ .comment.comment }}</div>
-  <button class="reply-button" data-parent="{{ .comment.comment_id }}" data-name="{{ .comment.name }}">Reply (Parent ID: {{ .comment.comment_id }})</button>
+  <button class="reply-button" data-parent="{{ .comment.custom_id }}" data-name="{{ .comment.name }}">Reply (Parent ID: {{ .comment.custom_id }})</button>
 
 
   <span class="time">{{ .time }}</span>
@@ -12,7 +12,7 @@
       {{/* 遍历所有评论，寻找与当前评论匹配的子评论 */}}
       {{ range $index, $reply := .comments }}
       {{ $replyParentId := default "" $reply.parent }}
-      {{ if eq $replyParentId $.comment.comment_id }} <!-- 使用 parent ID 比较 -->
+      {{ if eq $reply.custom_id $.comment.custom_id }} <!-- 使用 custom_id 比较 -->
               {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" (add $.Depth 1) "comments" $.comments) }}
           {{ end }}
       {{ end }}

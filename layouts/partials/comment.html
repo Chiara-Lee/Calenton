@@ -12,9 +12,9 @@
  {{ $normalizedComments := slice }}
  {{ range $index, $comment := $comments }}
    {{ $uniqueId := (printf "%d" (now.UnixNano)) }}
-   {{ $commentId := default $uniqueId $comment.comment_id }}
+   {{ $commentId := default $uniqueId $comment.custom_id }}
    {{ $normalizedComment := dict 
-     "comment_id" $commentId
+    "custom_id" $commentId
      "parent" (default "" $comment.parent) 
      "name" (default "" $comment.name) 
      "email" (default "" $comment.email) 
@@ -54,7 +54,7 @@
       <div id="reply-to" style="display: none; color: #6c757d; margin-bottom: 10px;"></div> <!-- 用于显示回复对象 -->
       
       <input type="hidden" name="url" value="{{ .RelPermalink }}">
-      <input type="hidden" name="comment_id" id="comment-id" value="{{ printf "%d" (now.UnixNano) }}">
+      <input type="hidden" name="custom_id" id="custom-id" value="{{ printf "%d" (now.UnixNano) }}">
       <input type="hidden" name="parent" id="parent" value="">
       
       <label class="comment-label" for="name">Name:</label>
@@ -77,7 +77,7 @@
   document.querySelectorAll(".reply-button").forEach(button => {
     button.addEventListener("click", function() {
       const uniqueId = generateUUID(); // 为新评论生成唯一 ID
-      document.getElementById("comment-id").value = uniqueId;
+      document.getElementById("custom-id").value = uniqueId;
 
       // 获取并设置父评论的 ID
       const parentId = this.getAttribute("data-parent");
@@ -101,17 +101,12 @@
 
   // 表单提交前为新评论生成唯一 ID
   document.getElementById("comment-form").addEventListener("submit", function(event) {
-    const commentIdField = document.getElementById("comment-id");
+    const commentIdField = document.getElementById("custom-id");
     if (commentIdField) {
       // 使用新的基于 Hugo 的生成逻辑,基于时间戳生成的唯一 ID
       const uniqueId = `${Date.now()}-${Math.floor(Math.random() * 1000)}`;
       commentIdField.value = uniqueId; // 为提交的评论分配唯一 ID
     }
-      // 调试输出表单数据
-  const formData = new FormData(this);
-  for (let [key, value] of formData.entries()) {
-    console.log(key, value);
-  }
   });
   function REMOVE_FORM_ON_SUBMISSION() {
     // 清除输入字段内容
