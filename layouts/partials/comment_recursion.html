@@ -13,15 +13,7 @@
       {{ range $index, $reply := .comments }}
       {{ $replyParentId := default "" $reply.parent }}
       {{ if eq $replyParentId .comment.custom }} <!-- 使用 custom 比较 -->
-      {{ partial "comment_recursion.html" (dict "comment" (dict
-      "custom" ($reply.custom | default (print "custom-" now.UnixNano))
-      "parent" ($reply.parent | default "")
-      "name" ($reply.name | default "")
-      "email" ($reply.email | default "")
-      "comment" ($reply.comment | default "")
-      "time" ($reply.time | default "")
-  ) "Depth" (add $.Depth 1) "comments" $.comments) }}
-  
+              {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" (add $.Depth 1) "comments" $.comments) }}
           {{ end }}
       {{ end }}
   </div>
