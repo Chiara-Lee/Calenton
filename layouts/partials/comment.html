@@ -97,22 +97,33 @@ document.querySelectorAll(".reply-button").forEach(button => {
   });
 });
 
-  // 表单提交事件
-  document.getElementById("comment-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // 阻止默认提交
+document.getElementById("comment-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // 阻止默认提交
 
-    // 动态生成 custom_id
-    const customId = generateUniqueId();
-    console.log("Generated Comment ID:", customId);
+  // 动态生成 custom_id
+  const customId = generateUniqueId();
 
-    // 将 custom_id 添加到表单数据中
-    const formData = new FormData(this);
-    formData.append("custom_id", customId);
+  // 检查表单中是否已有 custom_id 字段
+  let customIdField = document.getElementById("custom-id");
+  if (!customIdField) {
+    // 动态创建 custom_id 隐藏字段
+    customIdField = document.createElement("input");
+    customIdField.type = "hidden";
+    customIdField.name = "custom_id";
+    customIdField.id = "custom-id";
+    this.appendChild(customIdField); // 添加到表单
+  }
+  
+  // 设置或更新 custom_id 的值
+  customIdField.value = customId;
+  console.log("Generated Comment ID:", customId);
 
-    // 隐藏回复提示并清空表单
-    document.getElementById('reply-to').style.display = 'none';
-    REMOVE_FORM_ON_SUBMISSION();
-  });
+
+  // 隐藏回复提示并清空表单
+  document.getElementById('reply-to').style.display = 'none';
+  REMOVE_FORM_ON_SUBMISSION();
+});
+
 
   // 清除输入字段内容的函数
   function REMOVE_FORM_ON_SUBMISSION() {
