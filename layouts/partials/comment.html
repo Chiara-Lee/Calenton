@@ -47,7 +47,7 @@
       </div>
     </template>
 
-    <form id="comment-form" data-dynamic-form data-success="#comment-success" data-error="#comment-error" netlify="true" name="Comments">
+    <form id="comment-form" data-dynamic-form data-success="#comment-success" data-error="#comment-error" netlify="true" name="Comments" method="POST">
   
       <div id="reply-to" style="display: none; color: #6c757d; margin-bottom: 10px;"></div> <!-- 用于显示回复对象 -->
       
@@ -118,13 +118,6 @@ document.getElementById("comment-form").addEventListener("submit", function(even
   customIdField.value = customId;
   console.log("Generated Comment ID:", customId);
 });
-
-
-  // 清除输入字段内容的函数
-  function REMOVE_FORM_ON_SUBMISSION() {
-    document.getElementById("comment-form").reset();
-    console.log("Form has been cleared after submission.");
-  }
 
   </script>
 
