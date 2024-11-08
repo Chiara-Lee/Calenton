@@ -14,12 +14,14 @@
     {{ $comment := . }}
     
     <!-- 确保访问字段时字段存在 -->
-    {{ $custom := index $comment "custom" | default (print "custom-" now.UnixNano) }}
-    {{ $parent := index $comment "parent" | default "" }}
-    {{ $name := index $comment "name" | default "" }}
-    {{ $email := index $comment "email" | default "" }}
-    {{ $content := index $comment "comment" | default "" }}
-    {{ $time := index $comment "time" | default "" }}
+    {{ $comment = dict 
+      "custom" (index $comment "custom" | default (print "custom-" now.UnixNano))
+      "parent" (index $comment "parent" | default "")
+      "name" (index $comment "name" | default "")
+      "email" (index $comment "email" | default "")
+      "comment" (index $comment "comment" | default "")
+      "time" (index $comment "time" | default "")
+    }}
 
     <!-- 如果当前评论是顶级评论（parent 为空），渲染它 -->
     {{ if eq $comment.parent "" }}
