@@ -8,7 +8,7 @@
       {{$response.Set .url (slice )}}
     {{end}}
 
-    {{/* 标准化评论数据，确保每个评论都有相同的字段 */}}
+    {{/* 标准化评论数据，确保每个评论都有相同的字段. */}}
     {{$commentData := dict
       "custom" (default (print "custom-" now.UnixNano) .data.custom)
       "parent" (default "" .data.parent)
