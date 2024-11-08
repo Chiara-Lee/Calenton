@@ -1,15 +1,25 @@
 {{$response := newScratch}}
 {{if and site.Params.NetlifyCommentForm (getenv "COMMENTS_TOKEN")}}
 
-  {{$comments:= getJSON "https://api.netlify.com/api/v1/forms/" site.Params.NetlifyCommentForm "/submissions?access_token=" (getenv "COMMENTS_TOKEN")}} 
+  {{$comments := getJSON (printf "https://api.netlify.com/api/v1/forms/%s/submissions?access_token=%s" site.Params.NetlifyCommentForm (getenv "COMMENTS_TOKEN"))}} 
 
   {{ range (sort $comments "created_at" "asc") }}
-    {{if not ($response.Get .data.url)}}
-      {{$response.Set .data.url (slice )}}
-    {{end}}
+    {{ if not ($response.Get .data.url) }}
+      {{$response.Set .data.url (slice)}}
+    {{ end }}
 
-    {{$response.Add .data.url .data}}
+    {{/* 标准化评论数据，确保每个评论都有相同的字段 */}}
+    {{$commentData := dict
+      "custom" (default "" .data.custom)
+      "parent" (default "" .data.parent)
+      "name" (default "" .data.name)
+      "email" (default "" .data.email)
+      "comment" (default "" .data.comment)
+      "time" (default "" .data.created_at)
+    }}
+
+    {{$response.Add .data.url $commentData}}
   {{ end }}
 {{ end }}
 
-{{return $response.Values}}
+{{ return $response.Values }}
