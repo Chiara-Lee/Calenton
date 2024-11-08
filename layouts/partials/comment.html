@@ -13,15 +13,15 @@
     <!-- Hugo 的 Go 模板需要确保变量是正确类型 -->
     {{ $comment := . }}
     
-    <!-- 确保访问字段时字段存在 -->
     {{ $comment = dict 
-      "custom" (index $comment "custom" | default (print "custom-" now.UnixNano))
-      "parent" (index $comment "parent" | default "")
-      "name" (index $comment "name" | default "")
-      "email" (index $comment "email" | default "")
-      "comment" (index $comment "comment" | default "")
-      "time" (index $comment "time" | default "")
+      "custom" ($comment.custom | default (print "custom-" now.UnixNano))
+      "parent" ($comment.parent | default "")
+      "name" ($comment.name | default "")
+      "email" ($comment.email | default "")
+      "comment" ($comment.comment | default "")
+      "time" ($comment.time | default "")
     }}
+    
 
     <!-- 如果当前评论是顶级评论（parent 为空），渲染它 -->
     {{ if eq $comment.parent "" }}
