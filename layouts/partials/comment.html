@@ -9,14 +9,12 @@
   {{ end }}
 
   <!-- 渲染顶级评论 -->
-  {{ range $index, $comment := $comments }}
-    <!-- 确保每个 $comment 是字典类型 -->
-    {{ if not (reflect.IsMap $comment) }}
-      {{ errorf "Expected $comment to be a map, but got: %T" $comment }}
-    {{ end }}
-
+  {{ range $comments }}
+    <!-- Hugo 的 Go 模板需要确保变量是正确类型 -->
+    {{ $comment := . }}
+    
     <!-- 确保访问字段时字段存在 -->
-    {{ $custom := index $comment "custom" | default (print "custom-" $index) }}
+    {{ $custom := index $comment "custom" | default (print "custom-" now.UnixNano) }}
     {{ $parent := index $comment "parent" | default "" }}
     {{ $name := index $comment "name" | default "" }}
     {{ $email := index $comment "email" | default "" }}
