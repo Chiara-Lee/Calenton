@@ -1,31 +1,29 @@
 <div class="comments">
   <h2>Comments</h2>
+  
+  {{ $comments := slice }}
   {{ if getenv "NETLIFY" }}
     {{ $comments = partialCached "netlifyCommentList.html" . | default (slice) }}
   {{ else }}
     {{ $comments = partialCached "formspreeCommentList.html" . | default (slice) }}
   {{ end }}
-  
 
-
- <!-- 确保每个评论对象都有所需的字段 -->
- {{ $normalizedComments := slice }}
- {{ range $index, $comment := $comments }}
- {{ $customValue := or $comment.custom (print "custom-" $index) }}
-   {{ $normalizedComment := dict 
-    "custom" $customValue
-     "parent" (default "" $comment.parent) 
-     "name" (default "" $comment.name) 
-     "email" (default "" $comment.email) 
-     "comment" (default "" $comment.comment) 
-     "time" (default "" $comment.time) 
-   }}
-   {{ $normalizedComments = $normalizedComments | append $normalizedComment }}
- {{ end }}
+  <!-- 确保每个评论对象都有所需的字段 -->
+  {{ range $index, $comment := $comments }}
+    {{ $customValue := or $comment.custom (print "custom-" $index) }}
+    {{ $comments = $comments | append (dict 
+      "custom" $customValue
+      "parent" (default "" $comment.parent)
+      "name" (default "" $comment.name)
+      "email" (default "" $comment.email)
+      "comment" (default "" $comment.comment)
+      "time" (default "" $comment.time)
+    ) }}
+  {{ end }}
 
  <!-- 渲染顶级评论 -->
- {{ range $index, $allcomment := $normalizedComments }}
- {{ if eq $allcomment.parent "" }} <!-- 判断顶级评论，parent 为空字符串 -->
+ {{ range $index, $allcomment := $comment }}
+ {{ if eq $comment.parent "" }} <!-- 判断顶级评论，parent 为空字符串 -->
    {{ partial "comment_recursion.html" (dict "comment" $allcomment "Depth" 0 "comments" $normalizedComments) }}
  {{ end }}
 {{ end }}
