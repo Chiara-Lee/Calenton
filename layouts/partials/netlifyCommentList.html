@@ -1,11 +1,11 @@
 {{ $response := newScratch }}
 {{ if and site.Params.NetlifyCommentForm (getenv "COMMENTS_TOKEN") }}
-{{$comments:= getJSON "https://api.netlify.com/api/v1/forms/" site.Params.NetlifyCommentForm "/submissions?access_token=" (getenv "COMMENTS_TOKEN")}} 
+  {{ $comments := getJSON "https://api.netlify.com/api/v1/forms/" site.Params.NetlifyCommentForm "/submissions?access_token=" (getenv "COMMENTS_TOKEN") }}
   
-  {{ if $comments.submissions }}
-    {{ range sort $comments.submissions "_date" "ASC" }}
-      {{ if not ($response.Get .url) }}
-        {{ $response.Set .url (slice) }}
+  {{ if $comments }}
+    {{ range sort $comments "created_at" "asc" }}
+      {{ if not ($response.Get .data.url) }}
+        {{ $response.Set .data.url (slice) }}
       {{ end }}
       
       {{ $commentData := dict 
@@ -16,12 +16,13 @@
         "comment" (default "" .data.comment)
         "time" (default "" .data._date)
       }}
-      {{ $response.Add "comments" $commentData }}
+      {{ $response.Add .data.url $commentData }}
     {{ end }}
   {{ end }}
 {{ end }}
 
 {{ return $response.Values }}
+
 
 
 
