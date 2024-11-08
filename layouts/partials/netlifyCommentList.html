@@ -4,10 +4,6 @@
   
   {{ if $comments }}
     {{ range sort $comments "created_at" "asc" }}
-      {{ if not ($response.Get .data.url) }}
-        {{ $response.Set .data.url (slice) }}
-      {{ end }}
-      
       {{ $commentData := dict 
         "custom" (default (print "custom-" now.UnixNano) .data.custom)
         "parent" (default "" .data.parent)
@@ -16,12 +12,13 @@
         "comment" (default "" .data.comment)
         "time" (default "" .data._date)
       }}
-      {{ $response.Add .data.url $commentData }}
+      {{ $response.Add "comments" $commentData }}
     {{ end }}
   {{ end }}
 {{ end }}
 
-{{ return $response.Values }}
+{{ return $response.Get "comments" }}
+
 
 
 
