@@ -1,7 +1,11 @@
 {{ $response := newScratch }}
 {{ if and site.Params.NetlifyCommentForm (getenv "COMMENTS_TOKEN") }}
   {{ $comments := getJSON "https://api.netlify.com/api/submissions" (dict "Authorization" (printf "Bearer %s" (getenv "COMMENTS_TOKEN"))) }}
+  {{ if $comments.submissions }}
   {{ range sort $comments.submissions "_date" "ASC" }}
+    {{ if not ($response.Get .url) }}
+      {{ $response.Set .url (slice) }}
+    {{ end }}
     {{ $commentData := dict 
       "custom" (default (print "custom-" now.UnixNano) .data.custom)
       "parent" (default "" .data.parent)
