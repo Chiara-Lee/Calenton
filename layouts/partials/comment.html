@@ -53,6 +53,8 @@
       
       <input type="hidden" name="url" value="{{ .RelPermalink }}">
       <input type="hidden" name="parent" id="parent" value="">
+      <input type="hidden" name="custom_id" id="custom-id">
+
       
       <label class="comment-label" for="name">Name:</label>
       <input class="comment-input" type="text" id="name" name="name" required autocomplete="name">
@@ -100,25 +102,20 @@ document.querySelectorAll(".reply-button").forEach(button => {
 document.getElementById("comment-form").addEventListener("submit", function(event) {
   event.preventDefault(); // 阻止默认提交
 
-  // 动态生成 custom_id
-  const customId = generateUniqueId();
+  // 动态生成 custom_id 并设置其值
+  const customIdField = document.getElementById("custom-id");
+  customIdField.value = generateUniqueId();
 
-  // 检查表单中是否已有 custom_id 字段
-  let customIdField = document.getElementById("custom-id");
-  if (!customIdField) {
-    // 动态创建 custom_id 隐藏字段
-    customIdField = document.createElement("input");
-    customIdField.type = "hidden";
-    customIdField.name = "custom_id";
-    customIdField.id = "custom-id";
-    this.appendChild(customIdField); // 添加到表单
-  }
-  
-  // 设置或更新 custom_id 的值
-  customIdField.value = customId;
-  console.log("Generated Comment ID:", customId);
-});
+  // 使用 FormData 提交表单
+  const formData = new FormData(this);
+  formData.forEach((value, key) => console.log(key, value)); // 确认 custom_id 是否在 FormData 中
 
+  // 提交表单到 Netlify 或服务器
+  fetch("/", {
+    method: "POST",
+    body: formData,
+  })
+})
   </script>
 
 
