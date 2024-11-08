@@ -1,11 +1,12 @@
 <div class="comments">
   <h2>Comments</h2>
-  {{$comments := dict}}
+  {{ $comments := slice }}
   {{ if getenv "NETLIFY" }}
-    {{$comments = partialCached "netlifyCommentList.html" .}}
+    {{ $comments = partialCached "netlifyCommentList.html" . | default (slice) }}
   {{ else }}
-    {{$comments = partialCached "formspreeCommentList.html" .}}
+    {{ $comments = partialCached "formspreeCommentList.html" . | default (slice) }}
   {{ end }}
+  
 
 
  <!-- 确保每个评论对象都有所需的字段 -->
