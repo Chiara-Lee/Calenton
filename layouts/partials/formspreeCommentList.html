@@ -8,7 +8,17 @@
       {{$response.Set .url (slice )}}
     {{end}}
 
-    {{$response.Add .url .}}
+    {{/* 标准化评论数据，确保每个评论都有相同的字段 */}}
+    {{$commentData := dict
+      "custom" (default (print "custom-" now.UnixNano) .data.custom)
+      "parent" (default "" .data.parent)
+      "name" (default "" .data.name)
+      "email" (default "" .data.email)
+      "comment" (default "" .data.comment)
+      "time" (default "" .data._date)
+    }}
+
+    {{$response.Add .url $commentData}}
   {{ end }}
 {{ end }}
 
