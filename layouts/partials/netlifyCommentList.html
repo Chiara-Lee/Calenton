@@ -1,34 +1,6 @@
 {{ $response := newScratch }}
 {{ if and site.Params.NetlifyCommentForm (getenv "COMMENTS_TOKEN") }}
   {{ $comments := getJSON "https://api.netlify.com/api/submissions" (dict "Authorization" (printf "Bearer %s" (getenv "COMMENTS_TOKEN"))) }}
-  {{ if $comments.submissions }}
-  {{ range sort $comments.submissions "_date" "ASC" }}
-    {{ if not ($response.Get .url) }}
-      {{ $response.Set .url (slice) }}
-    {{ end }}
-    {{ $commentData := dict 
-      "custom" (default (print "custom-" now.UnixNano) .data.custom)
-      "parent" (default "" .data.parent)
-      "name" (default "" .data.name)
-      "email" (default "" .data.email)
-      "comment" (default "" .data.comment)
-      "time" (default "" .data._date)
-    }}
-    {{ $response.Add "comments" $commentData }}
-  {{ end }}
-{{ end }}
-
-在你提供的 netlifyCommentList.html 中，出现 unexpected EOF 的原因是因为缺少了 {{ end }} 来闭合某些块级语句，具体来说是：
-
-缺少 {{ end }} 来关闭 range。
-缺少 {{ end }} 来关闭外层的 if $comments.submissions。
-我已经为你修复了这些问题，以下是修改后的代码：
-
-go
-复制代码
-{{ $response := newScratch }}
-{{ if and site.Params.NetlifyCommentForm (getenv "COMMENTS_TOKEN") }}
-  {{ $comments := getJSON "https://api.netlify.com/api/submissions" (dict "Authorization" (printf "Bearer %s" (getenv "COMMENTS_TOKEN"))) }}
   
   {{ if $comments.submissions }}
     {{ range sort $comments.submissions "_date" "ASC" }}
@@ -48,6 +20,9 @@ go
     {{ end }}
   {{ end }}
 {{ end }}
+
 {{ return $response.Values }}
+
+
 
 
