@@ -11,8 +11,9 @@
  <!-- 确保每个评论对象都有所需的字段 -->
  {{ $normalizedComments := slice }}
  {{ range $index, $comment := $comments }}
+ {{ $customValue := or $comment.custom (print "custom-" $index) }}
    {{ $normalizedComment := dict 
-    "custom" (default "unknown" $comment.custom)
+    "custom" $customValue
      "parent" (default "" $comment.parent) 
      "name" (default "" $comment.name) 
      "email" (default "" $comment.email) 
@@ -94,17 +95,27 @@ document.querySelectorAll(".reply-button").forEach(button => {
     replyToElement.style.display = 'block';
     replyToElement.innerText = `回复 @${parentName}`;
 
+    // 高亮父评论
+    document.querySelectorAll('.comment').forEach(comment => {
+      comment.classList.remove('highlight');
+    });
+    this.closest('.comment').classList.add('highlight');
+  });
+
     // 平滑滚动至表单
     document.getElementById('comment-form').scrollIntoView({ behavior: 'smooth' });
   });
+
+
+  // 在表单提交时动态生成 custom 字段的值
+  document.getElementById("comment-form").addEventListener("submit", function(event) {
+    // 生成唯一 ID 赋值给 custom 字段
+    const customIdField = document.getElementById("custom");
+    if (!customIdField.value) {
+        customIdField.value = generateUniqueId();
+        console.log("Custom ID set to:", customIdField.value); // 确认是否正确设置了 custom ID
+    }
 });
-
-document.getElementById("comment-form").addEventListener("submit", function(event) {
-
-  // 动态生成 custom 并设置其值
-  const customIdField = document.getElementById("custom");
-  customIdField.value = generateUniqueId();
-})
   </script>
 
 
