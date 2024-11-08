@@ -8,15 +8,15 @@
     {{ $comments = partialCached "formspreeCommentList.html" . | default (slice) }}
   {{ end }}
 
-  <!-- 渲染评论 -->
+  <!-- 渲染顶级评论 -->
   {{ range $index, $comment := $comments }}
-    <!-- 确保每个字段都有默认值 -->
-    {{ $custom := or $comment.custom (print "custom-" $index) }}
-    {{ $parent := default "" $comment.parent }}
-    {{ $name := default "" $comment.name }}
-    {{ $email := default "" $comment.email }}
-    {{ $content := default "" $comment.comment }}
-    {{ $time := default "" $comment.time }}
+    <!-- 确保访问字段时字段存在 -->
+    {{ $custom := index $comment "custom" | default (print "custom-" $index) }}
+    {{ $parent := index $comment "parent" | default "" }}
+    {{ $name := index $comment "name" | default "" }}
+    {{ $email := index $comment "email" | default "" }}
+    {{ $content := index $comment "comment" | default "" }}
+    {{ $time := index $comment "time" | default "" }}
 
     <!-- 如果当前评论是顶级评论（parent 为空），渲染它 -->
     {{ if eq $comment.parent "" }}
