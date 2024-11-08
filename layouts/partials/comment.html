@@ -8,16 +8,15 @@
     {{ $comments = partialCached "formspreeCommentList.html" . | default (slice) }}
   {{ end }}
 
-  <!-- 确保每个评论对象都有所需的字段并渲染顶级评论 -->
+  <!-- 确保每个评论对象都有所需的字段 -->
   {{ range $index, $comment := $comments }}
-    {{ $comment = dict 
-      "custom" (or $comment.custom (print "custom-" $index))
-      "parent" (default "" $comment.parent)
-      "name" (default "" $comment.name)
-      "email" (default "" $comment.email)
-      "comment" (default "" $comment.comment)
-      "time" (default "" $comment.time)
-    }}
+    {{ $comment.custom = (or $comment.custom (print "custom-" $index)) }}
+    {{ $comment.parent = (default "" $comment.parent) }}
+    {{ $comment.name = (default "" $comment.name) }}
+    {{ $comment.email = (default "" $comment.email) }}
+    {{ $comment.comment = (default "" $comment.comment) }}
+    {{ $comment.time = (default "" $comment.time) }}
+  {{ end }}
 
     <!-- 如果当前评论是顶级评论（parent 为空），渲染它 -->
     {{ if eq $comment.parent "" }}
