@@ -8,26 +8,22 @@
     {{ $comments = partialCached "formspreeCommentList.html" . | default (slice) }}
   {{ end }}
 
-  <!-- 确保每个评论对象都有所需的字段 -->
+  <!-- 确保每个评论对象都有所需的字段并渲染顶级评论 -->
   {{ range $index, $comment := $comments }}
-    {{ $customValue := or $comment.custom (print "custom-" $index) }}
-    {{ $comments = $comments | append (dict 
-      "custom" $customValue
+    {{ $comment = dict 
+      "custom" (or $comment.custom (print "custom-" $index))
       "parent" (default "" $comment.parent)
       "name" (default "" $comment.name)
       "email" (default "" $comment.email)
       "comment" (default "" $comment.comment)
       "time" (default "" $comment.time)
-    ) }}
+    }}
+
+    <!-- 如果当前评论是顶级评论（parent 为空），渲染它 -->
+    {{ if eq $comment.parent "" }}
+      {{ partial "comment_recursion.html" (dict "comment" $comment "Depth" 0 "comments" $comments) }}
+    {{ end }}
   {{ end }}
-
- <!-- 渲染顶级评论 -->
- {{ range $index, $allcomment := $comment }}
- {{ if eq $comment.parent "" }} <!-- 判断顶级评论，parent 为空字符串 -->
-   {{ partial "comment_recursion.html" (dict "comment" $allcomment "Depth" 0 "comments" $normalizedComments) }}
- {{ end }}
-{{ end }}
-
   
   {{ if .Disabled }}
     <div>
