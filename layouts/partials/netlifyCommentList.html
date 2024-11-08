@@ -1,9 +1,10 @@
-{{ $response := newScratch }}
+{{ $comments := slice }}
 {{ if and site.Params.NetlifyCommentForm (getenv "COMMENTS_TOKEN") }}
-  {{ $comments := getJSON "https://api.netlify.com/api/v1/forms/" site.Params.NetlifyCommentForm "/submissions?access_token=" (getenv "COMMENTS_TOKEN") }}
+  {{ $apiUrl := (printf "https://api.netlify.com/api/v1/forms/%s/submissions?access_token=%s" site.Params.NetlifyCommentForm (getenv "COMMENTS_TOKEN")) }}
+  {{ $apiComments := getJSON $apiUrl }}
   
-  {{ if $comments }}
-    {{ range sort $comments "created_at" "asc" }}
+  {{ if $apiComments }}
+    {{ range sort $apiComments "created_at" "asc" }}
       {{ $commentData := dict 
         "custom" (default (print "custom-" now.UnixNano) .data.custom)
         "parent" (default "" .data.parent)
@@ -12,12 +13,12 @@
         "comment" (default "" .data.comment)
         "time" (default "" .data._date)
       }}
-      {{ $response.Add "comments" $commentData }}
+      {{ $comments = $comments | append $commentData }}
     {{ end }}
   {{ end }}
 {{ end }}
 
-{{ return $response.Get "comments" }}
+{{ return $comments }}
 
 
 
