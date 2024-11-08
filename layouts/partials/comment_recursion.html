@@ -12,10 +12,19 @@
       {{/* 遍历所有评论，寻找与当前评论匹配的子评论 */}}
       {{ range $index, $reply := .comments }}
       {{ $replyParentId := default "" $reply.parent }}
-      {{ if eq $replyParentId .comment.custom }} <!-- 使用 custom 比较 -->
-              {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" (add $.Depth 1) "comments" $.comments) }}
-          {{ end }}
+      {{ if eq $replyParentId .comment.custom }}
+        {{ $replyData := dict 
+          "custom" (default (print "custom-" now.UnixNano) $reply.custom)
+          "parent" (default "" $reply.parent)
+          "name" (default "" $reply.name)
+          "email" (default "" $reply.email)
+          "comment" (default "" $reply.comment)
+          "time" (default "" $reply.time)
+        }}
+        {{ partial "comment_recursion.html" (dict "comment" $replyData "Depth" (add $.Depth 1) "comments" $.comments) }}
       {{ end }}
+    {{ end }}
+    
   </div>
 {{ end }}
 </div>
