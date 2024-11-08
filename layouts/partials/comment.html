@@ -119,12 +119,6 @@ document.getElementById("comment-form").addEventListener("submit", function(even
   console.log("Generated Comment ID:", customId);
 
 
-  // 隐藏回复提示并清空表单
-  document.getElementById('reply-to').style.display = 'none';
-  REMOVE_FORM_ON_SUBMISSION();
-});
-
-
   // 清除输入字段内容的函数
   function REMOVE_FORM_ON_SUBMISSION() {
     document.getElementById("comment-form").reset();
