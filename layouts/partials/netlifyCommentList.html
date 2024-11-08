@@ -10,7 +10,7 @@
 
     {{/* 标准化评论数据，确保每个评论都有相同的字段 */}}
     {{$commentData := dict
-      "custom" (default "" .data.custom)
+      "custom" (default (print "custom-" now.UnixNano) .data.custom)
       "parent" (default "" .data.parent)
       "name" (default "" .data.name)
       "email" (default "" .data.email)
@@ -23,3 +23,4 @@
 {{ end }}
 
 {{ return $response.Values }}
+
