@@ -12,7 +12,7 @@
  {{ $normalizedComments := slice }}
  {{ range $index, $comment := $comments }}
    {{ $normalizedComment := dict 
-    "custom_id" (default "unknown" $comment.custom_id)
+    "custom" (default "unknown" $comment.custom)
      "parent" (default "" $comment.parent) 
      "name" (default "" $comment.name) 
      "email" (default "" $comment.email) 
@@ -53,7 +53,7 @@
       
       <input type="hidden" name="url" value="{{ .RelPermalink }}">
       <input type="hidden" name="parent" id="parent" value="">
-      <input type="hidden" name="custom_id" id="custom-id">
+      <input type="hidden" name="custom" id="custom">
 
       
       <label class="comment-label" for="name">Name:</label>
@@ -102,13 +102,13 @@ document.querySelectorAll(".reply-button").forEach(button => {
 document.getElementById("comment-form").addEventListener("submit", function(event) {
   event.preventDefault(); // 阻止默认提交
 
-  // 动态生成 custom_id 并设置其值
-  const customIdField = document.getElementById("custom-id");
+  // 动态生成 custom 并设置其值
+  const customIdField = document.getElementById("custom");
   customIdField.value = generateUniqueId();
 
   // 使用 FormData 提交表单
   const formData = new FormData(this);
-  formData.forEach((value, key) => console.log(key, value)); // 确认 custom_id 是否在 FormData 中
+  formData.forEach((value, key) => console.log(key, value)); // 确认 custom 是否在 FormData 中
 
   // 提交表单到 Netlify 或服务器
   fetch("/", {
