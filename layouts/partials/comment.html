@@ -1,6 +1,5 @@
 <div class="comments">
   <h2>Comments</h2>
-  {{ $comments := slice }}
   {{ if getenv "NETLIFY" }}
     {{ $comments = partialCached "netlifyCommentList.html" . | default (slice) }}
   {{ else }}
