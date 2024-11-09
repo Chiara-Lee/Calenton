@@ -1,4 +1,7 @@
 <div class="comment" style="margin-left: {{ mul .Depth 20 }}px;">
+    <div class="author">{{ .comment.name }} (Depth: {{ .Depth }})</div>
+    <div class="content">{{ .comment.comment }}</div>
+    <span class="time">{{ .comment.time }}</span>
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
   <div class="author">{{ .comment.name }}</div>
   <div class="message">{{ .comment.comment }}</div>
