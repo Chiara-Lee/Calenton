@@ -8,7 +8,7 @@
   {{ if lt .Depth 2 }} <!-- 设置嵌套层级限制 -->
   <div class="replies">
       <!-- 筛选属于当前评论的子评论 -->
-      {{ $currentReplies := where .comments "parent" .comment.custom }}
+      {{ $currentReplies := where $.comments "parent" .comment.custom }}
       
       {{ range $index, $reply := $currentReplies }}
           {{ $replyParentId := default "" $reply.data.parent }}
