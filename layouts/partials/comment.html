@@ -54,7 +54,7 @@
       <input type="hidden" name="url" value="{{ .RelPermalink }}">
       <input type="hidden" name="parent" id="parent" value="">
       <input type="hidden" name="custom" id="custom">
-      <input type="hidden" name="depth" id="depth" value="{{ .comment.Depth }}">
+      <input type="hidden" name="depth" id="depth" value="0">
 
       
       <label class="comment-label" for="name">Name:</label>
@@ -82,13 +82,25 @@
 // 点击 "Reply" 按钮时为子评论设置父评论的 ID
 document.querySelectorAll(".reply-button").forEach(button => {
   button.addEventListener("click", function() {
+    // 获取被点击的父评论元素
+    const parentComment = this.closest('.comment');
+
     // 获取按钮上的父评论 ID 和评论者名字
     const parentId = this.getAttribute('data-custom');
     const parentName = this.getAttribute('data-name');
 
+    // 获取父评论的深度（从父评论的 data-depth 属性中获取）
+    const parentDepth = parseInt(parentComment.getAttribute('data-depth')) || 0;
+
     // 为子评论添加父评论值，确保有值
     document.getElementById('parent').value = parentId || "";
     console.log("Parent ID set to:", parentId); // 检查是否正确设置了 parent ID
+
+    // 计算子评论的新深度：父评论深度 + 1
+    const newDepth = parentDepth + 1;
+
+    // 更新表单中的 depth 字段值
+    document.getElementById('depth').value = newDepth;
 
     // 显示回复对象的提示
     const replyToElement = document.getElementById('reply-to');
