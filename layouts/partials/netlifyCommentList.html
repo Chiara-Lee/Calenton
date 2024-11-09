@@ -12,7 +12,7 @@
         "email" (default "" .data.email)
         "comment" (default "" .data.comment)
         "time" (default "" .data._date)
-        "Depth" 0  
+        "Depth" (default 0 .data.depth)
       }}
       {{ $comments = $comments | append $commentData }}
     {{ end }}
