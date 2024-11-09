@@ -12,6 +12,7 @@
         "email" (default "" .data.email)
         "comment" (default "" .data.comment)
         "time" (default "" .data._date)
+        "Depth" 0  <!-- 初始化深度为 0 -->
       }}
       {{ $comments = $comments | append $commentData }}
     {{ end }}

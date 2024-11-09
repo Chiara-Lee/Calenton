@@ -13,19 +13,20 @@
     <!-- 需要确保变量是正确类型 -->
     {{ $comment := . }}
     
-    {{ $comment = dict 
-      "custom" ($comment.custom | default (print "custom-" now.UnixNano))
-      "parent" ($comment.parent | default "")
-      "name" ($comment.name | default "")
-      "email" ($comment.email | default "")
-      "comment" ($comment.comment | default "")
-      "time" ($comment.time | default "")
-    }}
+    {{ $commentData := dict 
+      "custom" (default (print "custom-" now.UnixNano) $comment.data.custom)
+      "parent" (default "" $comment.data.parent)
+      "name" (default "" $comment.data.name)
+      "email" (default "" $comment.data.email)
+      "comment" (default "" $comment.data.comment)
+      "time" (default "" $comment.data.time)
+      "Depth" 0  <!-- 初始化深度为 0 -->
+  }}
     
 
     {{ if eq (default "" $comment.data.parent) "" }}  <!-- 顶级评论的判断 -->
     <!-- 传递完整的字典数据 -->
-    {{ partial "comment_recursion.html" (dict "comment" $comment "Depth" 0 "comments" $.comments) }}
+    {{ partial "comment_recursion.html" (dict "comment" $commentData "comments" $.comments) }}
   {{ end }}
 {{ end }}
   
