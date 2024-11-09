@@ -28,7 +28,8 @@
                   "comment" (default "" $reply.data.comment)
                   "time" (default "" $reply.data.time)
               }}
-              {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" (add .Depth 1) "comments" $.comments) }}
+              {{ $newDepth := add .Depth 1 }}
+              {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" $newDepth "comments" $.comments) }}
           {{ end }}
   </div>
   {{ end }}
