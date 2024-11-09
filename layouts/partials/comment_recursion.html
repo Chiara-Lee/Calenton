@@ -1,5 +1,5 @@
 <div class="comment" style="margin-left: {{ mul (int (default 0 .comment.depth)) 20 }}px !important;">
-    {{ printf "Current Depth: %d" int(.comment.depth) }}
+    {{ printf "Current Depth: %d" (int(.comment.depth)) }}
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
   <div class="author">{{ .comment.name }}</div>
   <div class="message">{{ .comment.comment }}</div>
