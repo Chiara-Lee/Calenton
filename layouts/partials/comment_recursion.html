@@ -1,5 +1,5 @@
-<div class="comment" style="margin-left: {{ mul .comment.data.Depth 20 }}px !important;">
-    {{ printf "Current Depth: %d" .comment.Depth }}
+<div class="comment" style="margin-left: {{ mul .comment.data.depth 20 }}px !important;">
+    {{ printf "Current Depth: %d" .comment.data.depth }}
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.data.email }}?s=100&d=wavatar" alt="{{ .comment.data.name }} Avatar">
   <div class="author">{{ .comment.data.name }}</div>
   <div class="message">{{ .comment.data.comment }}</div>
@@ -16,11 +16,11 @@
           {{ end }}
       {{ end }}
       <!-- 筛选属于当前评论的子评论 -->
-      {{ $currentReplies := where $filteredComments "parent" .comment.custom }}
+      {{ $currentReplies := where $filteredComments "parent" .comment.data.custom }}
       
       {{ range $currentReplies }}
       {{ $reply := . }}
-              {{ $newDepth := add (int .comment.Depth) 1 }}
+              {{ $newDepth := add (int .comment.data.depth) 1 }}
 
               {{ $replyData := dict 
                 "custom" (default (print "custom-" now.UnixNano) $reply.data.custom)
