@@ -23,11 +23,11 @@
     }}
     
 
-    <!-- 如果当前评论是顶级评论（parent 为空），渲染它 -->
-    {{ if eq $comment.parent "" }}
-      {{ partial "comment_recursion.html" (dict "comment" $comment "Depth" 0 "comments" $comments) }}
-    {{ end }}
+    {{ if eq (default "" $comment.data.parent) "" }}  <!-- 顶级评论的判断 -->
+    <!-- 传递完整的字典数据 -->
+    {{ partial "comment_recursion.html" (dict "comment" $comment "Depth" 0 "comments" $.comments) }}
   {{ end }}
+{{ end }}
   
   {{ if .Disabled }}
     <div>
