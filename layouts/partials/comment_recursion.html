@@ -1,6 +1,11 @@
 <script>
-    console.log("Rendering comment:", "{{ .comment.custom }}", "with Parent ID:", "{{ .comment.parent }}", "at Depth:", {{ .Depth }});
+    console.log("Before recursion, Depth:", {{ .Depth }});
   </script>
+  {{ partial "comment_recursion.html" (dict "comment" $replyData "Depth" (add .Depth 1) "comments" $.comments) }}
+  <script>
+    console.log("After recursion, Depth:", {{ .Depth }});
+  </script>
+  
   
 
 <div class="comment" style="margin-left: {{ mul .Depth 20 }}px !important;">
@@ -12,7 +17,7 @@
 
   <span class="time">{{ .time }}</span>
 
-  {{ if lt .Depth 2 }} <!-- 设置嵌套层级限制，2 表示最多嵌套 1 层子评论 -->
+  {{ if lt .Depth 4 }} <!-- 设置嵌套层级限制，2 表示最多嵌套 1 层子评论 -->
   <div class="replies">
     {{/* 遍历所有评论，寻找与当前评论匹配的子评论 */}}
     {{ range $index, $reply := .comments }}
