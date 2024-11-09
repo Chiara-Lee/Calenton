@@ -14,17 +14,17 @@
     {{ $comment := . }}
     
     {{ $commentData := dict 
-      "custom" (default (print "custom-" now.UnixNano) $comment.data.custom)
-      "parent" (default "" $comment.data.parent)
-      "name" (default "" $comment.data.name)
-      "email" (default "" $comment.data.email)
-      "comment" (default "" $comment.data.comment)
-      "time" (default "" $comment.data.time)
-      "depth" (default 0 $comment.data.depth) 
+      "custom" (default (print "custom-" now.UnixNano) $comment.custom)
+      "parent" (default "" $comment.parent)
+      "name" (default "" $comment.name)
+      "email" (default "" $comment.email)
+      "comment" (default "" $comment.comment)
+      "time" (default "" $comment.time)
+      "depth" (default 0 $comment.depth) 
   }}
     
 
-    {{ if eq (default "" $comment.data.parent) "" }}  <!-- 顶级评论的判断 -->
+    {{ if eq (default "" $commentData.parent) "" }}  <!-- 顶级评论的判断 -->
     <!-- 传递完整的字典数据 -->
     {{ partial "comment_recursion.html" (dict "comment" $commentData "comments" $.comments) }}
   {{ end }}
