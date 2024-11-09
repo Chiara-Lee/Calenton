@@ -1,13 +1,3 @@
-<script>
-    console.log("Before recursion, Depth:", {{ .Depth }});
-  </script>
-  {{ partial "comment_recursion.html" (dict "comment" $replyData "Depth" (add .Depth 1) "comments" $.comments) }}
-  <script>
-    console.log("After recursion, Depth:", {{ .Depth }});
-  </script>
-  
-  
-
 <div class="comment" style="margin-left: {{ mul .Depth 20 }}px !important;">
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
   <div class="author">{{ .comment.name }}</div>
@@ -38,8 +28,15 @@
         {{ end }}
     {{ end }}
 </div>
-
 {{ end }}
+<script>
+    console.log("Before recursion, Depth:", {{ .Depth }});
+  </script>
+  {{ partial "comment_recursion.html" (dict "comment" $replyData "Depth" (add .Depth 1) "comments" $.comments) }}
+  <script>
+    console.log("After recursion, Depth:", {{ .Depth }});
+  </script>
+  
 </div>
 
   
