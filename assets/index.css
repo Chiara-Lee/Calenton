@@ -1948,6 +1948,11 @@ footer.dark a:focus {
   background-color: #e9ecef;
   border-left-color: #0056b3; /* 加深边框颜色 */
 }
+/*父评论高亮*/
+.comment.highlight {
+  background-color: yellow; /* 设置高亮背景色 */
+  border: 2px solid red;    /* 设置边框颜色 */
+}
 
 
 

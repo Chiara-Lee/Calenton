@@ -82,9 +82,9 @@
 // 点击 "Reply" 按钮时为子评论设置父评论的 ID
 document.querySelectorAll(".reply-button").forEach(button => {
   button.addEventListener("click", function() {
-    // 获取当前评论的 custom_id 和评论者的名字
-    const parentId = this.getAttribute('data-parent');
-    const parentName = this.getAttribute('data-name');
+    // 获取父评论的 ID 和评论者名字
+    const parentId = this.closest('.comment').getAttribute('data-id'); // 获取父评论的 ID，假设父评论有一个 data-id 属性
+    const parentName = this.closest('.comment').getAttribute('data-name'); // 获取父评论者的名字，假设父评论有一个 data-name 属性
 
     // 为子评论添加父评论值，确保有值
     document.getElementById('parent').value = parentId || "";
