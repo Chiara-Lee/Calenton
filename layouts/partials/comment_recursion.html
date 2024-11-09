@@ -5,28 +5,27 @@
   <button class="reply-button" data-parent="{{ .comment.parent }}" data-name="{{ .comment.name }}">Reply (Parent ID: {{ .comment.parent }})</button>
   <span class="time">{{ .time }}</span>
 
-  {{ if lt .Depth 2 }} <!-- 设置嵌套层级限制，2 表示最多嵌套 1 层子评论 -->
+  {{ if lt .Depth 2 }} <!-- 设置嵌套层级限制 -->
   <div class="replies">
-    {{/* 遍历所有评论，寻找与当前评论匹配的子评论 */}}
-    {{ range $index, $reply := .comments }}
-        {{/* 获取 reply 的 data 字段 */}}
-        {{ $replyDataField := $reply.data }}
-
-        {{ $replyParentId := default "" $replyDataField.parent }}
-        {{ if eq $replyParentId .comment.custom }}
-            {{ $replyData := dict 
-                "custom" (default (print "custom-" now.UnixNano) $replyDataField.custom)
-                "parent" (default "" $replyDataField.parent)
-                "name" (default "" $replyDataField.name)
-                "email" (default "" $replyDataField.email)
-                "comment" (default "" $replyDataField.comment)
-                "time" (default "" $replyDataField.time)
-            }}
-            {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" (add .Depth 1) "comments" $.comments) }}
-        {{ end }}
-    {{ end }}
-</div>
-{{ end }}
+      <!-- 筛选属于当前评论的子评论 -->
+      {{ $currentReplies := where .comments "parent" .comment.custom }}
+      
+      {{ range $index, $reply := $currentReplies }}
+          {{ $replyParentId := default "" $reply.data.parent }}
+              {{ $replyData := dict 
+                  "custom" (default (print "custom-" now.UnixNano) $reply.data.custom)
+                  "parent" (default "" $reply.data.parent)
+                  "name" (default "" $reply.data.name)
+                  "email" (default "" $reply.data.email)
+                  "comment" (default "" $reply.data.comment)
+                  "time" (default "" $reply.data.time)
+              }}
+              {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" (add .Depth 1) "comments" $.comments) }}
+          {{ end }}
+      {{ end }}
+  </div>
+  {{ end }}
+  
 </div>
 
   
