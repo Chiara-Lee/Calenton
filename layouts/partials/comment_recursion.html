@@ -1,4 +1,4 @@
-<div class="comment" style="margin-left: {{ mul .comment.data.depth 20 }}px !important;">
+<div class="comment" style="margin-left: {{ mul (int (default 0 .comment.depth)) 20 }}px !important;">
     {{ printf "Current Depth: %d" .comment.data.depth }}
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.data.email }}?s=100&d=wavatar" alt="{{ .comment.data.name }} Avatar">
   <div class="author">{{ .comment.data.name }}</div>
