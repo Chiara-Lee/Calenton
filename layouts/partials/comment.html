@@ -10,7 +10,7 @@
 
   <!-- 渲染顶级评论 -->
   {{ range $comments }}
-    <!-- Hugo 的 Go 模板需要确保变量是正确类型 -->
+    <!-- 需要确保变量是正确类型 -->
     {{ $comment := . }}
     
     {{ $comment = dict 
