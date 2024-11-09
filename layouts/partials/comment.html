@@ -26,7 +26,6 @@
     <!-- 渲染当前评论 -->
     {{ partial "comment_recursion.html" (dict "comment" $commentData "comments" $.comments) }}
   {{ end }}
-{{ end }}
   
   {{ if .Disabled }}
     <div>
