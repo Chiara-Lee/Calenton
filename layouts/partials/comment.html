@@ -3,9 +3,9 @@
   
   {{ $comments := slice }}
   {{ if getenv "NETLIFY" }}
-    {{ $comments = partialCached "netlifyCommentList.html" . | default (slice) }}
+    {{ $comments = partial "netlifyCommentList.html" . | default (slice) }}
   {{ else }}
-    {{ $comments = partialCached "formspreeCommentList.html" . | default (slice) }}
+    {{ $comments = partial "formspreeCommentList.html" . | default (slice) }}
   {{ end }}
 
   <!-- 渲染顶级评论 -->
