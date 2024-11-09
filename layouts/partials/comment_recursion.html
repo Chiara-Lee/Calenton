@@ -19,7 +19,8 @@
       
       {{ range $currentReplies }}
       {{ $reply := . }}
-              {{ $newDepth := add (int .comment.depth) 1 }}
+      {{ $replyDepth := add (default 0 .comment.depth) 1 }}
+
 
               {{ $replyData := dict 
                 "custom" (default (print "custom-" now.UnixNano) $reply.custom)
@@ -28,7 +29,7 @@
                 "email" (default "" $reply.email)
                 "comment" (default "" $reply.comment)
                 "time" (default "" $reply.time)
-                "Depth" $newDepth
+                "Depth" $replyDepth
             }}
               {{ partial "comment_recursion.html" (dict "comment" $replyData "comments" $.comments) }}
           {{ end }}
