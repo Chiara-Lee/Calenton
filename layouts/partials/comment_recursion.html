@@ -24,19 +24,11 @@
                 "comment" (default "" $replyDataField.comment)
                 "time" (default "" $replyDataField.time)
             }}
-            {{ partial "comment_recursion.html" (dict "comment" $replyData "Depth" (add .Depth 1) "comments" $.comments) }}
+            {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" (add .Depth 1) "comments" $.comments) }}
         {{ end }}
     {{ end }}
 </div>
 {{ end }}
-<script>
-    console.log("Before recursion, Depth:", {{ .Depth }});
-  </script>
-  {{ partial "comment_recursion.html" (dict "comment" $replyData "Depth" (add .Depth 1) "comments" $.comments) }}
-  <script>
-    console.log("After recursion, Depth:", {{ .Depth }});
-  </script>
-  
 </div>
 
   
