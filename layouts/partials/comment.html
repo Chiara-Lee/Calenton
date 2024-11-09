@@ -83,8 +83,8 @@
 document.querySelectorAll(".reply-button").forEach(button => {
   button.addEventListener("click", function() {
     // 获取父评论的 ID 和评论者名字
-    const parentId = this.closest('.comment').getAttribute('data-id'); // 获取父评论的 ID，假设父评论有一个 data-id 属性
-    const parentName = this.closest('.comment').getAttribute('data-name'); // 获取父评论者的名字，假设父评论有一个 data-name 属性
+    const parentId = this.closest('.comment').getAttribute('id'); // 获取父评论的 ID，假设父评论有一个 data-id 属性
+    const parentName = this.closest('.comment').getAttribute('name'); // 获取父评论者的名字，假设父评论有一个 data-name 属性
 
     // 为子评论添加父评论值，确保有值
     document.getElementById('parent').value = parentId || "";

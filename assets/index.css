@@ -1950,9 +1950,12 @@ footer.dark a:focus {
 }
 /*父评论高亮*/
 .comment.highlight {
-  background-color: yellow; /* 设置高亮背景色 */
-  border: 2px solid red;    /* 设置边框颜色 */
+  border: 2px solid #a3d3f5; /* 边框为淡蓝色，与页面整体的柔和风格相契合 */
+  background-color: #f9fafb; /* 轻微的淡灰色背景，使其与其他评论区分开来 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 轻微的阴影，使高亮的评论更有立体感 */
+  transition: all 0.3s ease-in-out; /* 添加过渡效果，使高亮看起来更平滑 */
 }
+
 
 
 
