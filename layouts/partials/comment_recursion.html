@@ -19,16 +19,7 @@
       
       {{ range $currentReplies }}
       {{ $reply := . }}
-          {{ $replyParentId := default "" $reply.data.parent }}
-              {{ $replyData := dict 
-                  "custom" (default (print "custom-" now.UnixNano) $reply.data.custom)
-                  "parent" (default "" $reply.data.parent)
-                  "name" (default "" $reply.data.name)
-                  "email" (default "" $reply.data.email)
-                  "comment" (default "" $reply.data.comment)
-                  "time" (default "" $reply.data.time)
-              }}
-              {{ $newDepth := add .Depth 1 }}
+              {{ $newDepth := add (int .Depth) 1 }}
               {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" $newDepth "comments" $.comments) }}
           {{ end }}
   </div>
