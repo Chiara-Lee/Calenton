@@ -17,7 +17,8 @@
       <!-- 筛选属于当前评论的子评论 -->
       {{ $currentReplies := where $filteredComments "parent" .comment.custom }}
       
-      {{ range $index, $reply := $currentReplies }}
+      {{ range $currentReplies }}
+      {{ $reply := . }}
           {{ $replyParentId := default "" $reply.data.parent }}
               {{ $replyData := dict 
                   "custom" (default (print "custom-" now.UnixNano) $reply.data.custom)
