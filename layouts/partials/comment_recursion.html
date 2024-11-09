@@ -22,7 +22,6 @@
               }}
               {{ partial "comment_recursion.html" (dict "comment" $reply "Depth" (add .Depth 1) "comments" $.comments) }}
           {{ end }}
-      {{ end }}
   </div>
   {{ end }}
   
