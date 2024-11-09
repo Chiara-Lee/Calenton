@@ -23,9 +23,7 @@
       "depth" (default 0 $comment.depth) 
   }}
     
-
-    {{ if eq (default "" $commentData.parent) "" }}  <!-- 顶级评论的判断 -->
-    <!-- 传递完整的字典数据 -->
+    <!-- 渲染当前评论 -->
     {{ partial "comment_recursion.html" (dict "comment" $commentData "comments" $.comments) }}
   {{ end }}
 {{ end }}
