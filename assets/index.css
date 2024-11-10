@@ -1876,7 +1876,15 @@ footer.dark a:focus {
   transition: transform 0.3s;
 }
 
-
+/* 子评论样式 */
+.child-comment {
+  margin-left: 40px; /* 调整缩进，突出嵌套效果 */
+  background: linear-gradient(135deg, #f7f7f7, #ffffff); /* 渐变背景 */
+  border-left: 4px solid #ccc; /* 左侧边框，强调嵌套 */
+  padding-left: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* 较浅的阴影 */
+}
 .comment:hover {
   transform: translateY(-5px);
 }
@@ -1908,30 +1916,36 @@ footer.dark a:focus {
   width: 100%;
 }
 
-/*回复容器*/
-.replies {
-  margin-left: 20px; /* 每层嵌套增加缩进 */
-  border-left: 1px solid #e2e8f0; /* 左侧边框，增强层级视觉 */
-  padding-left: 15px;
+.comment .time,
+.child-comment .time {
+    font-size: 0.9em;
+    color: #888;
 }
 
-/* 回复按钮的样式 */
+/* 回复按钮的现代化样式 */
 .reply-button {
-  background-color: #a3c585; /* 抹茶绿色 */
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
+  font-size: 0.85em;
+  color: #a3c585;
+  background-color: #e9f5ff;
+  padding: 5px 12px;
   border-radius: 5px;
-  font-size: 0.9em;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .reply-button:hover {
   background-color: #7d9e61; /* 深色抹茶绿色悬停效果 */
 }
 
+/* 添加一些过渡效果来提升用户体验 */
+.comment, .child-comment {
+  transition: all 0.3s ease-in-out;
+}
+
+/*回复对象提示*/
 #reply-to {
   display: none; /* 默认隐藏，JavaScript 控制显示 */
   font-size: 0.9em; /* 略小的字体 */
@@ -1955,7 +1969,6 @@ footer.dark a:focus {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 轻微的阴影，使高亮的评论更有立体感 */
   transition: all 0.3s ease-in-out; /* 添加过渡效果，使高亮看起来更平滑 */
 }
-
 
 
 

@@ -4,38 +4,13 @@
   <div class="message">{{ .comment.comment }}</div>
   <button class="reply-button" data-parent="{{ .comment.parent }}" data-name="{{ .comment.name }}" data-custom="{{ .comment.custom }}">Reply (Parent ID: {{ .comment.parent }})</button>
   <span class="time">{{ .comment.time }}</span>
-
-  {{ if lt .Depth 2 }} <!-- 设置嵌套层级限制 -->
-  <div class="replies">
-      <!-- 过滤掉顶级评论，创建一个只包含子评论的集合 -->
-      {{ $filteredComments := slice }}
-      {{ range $.comments }}
-          {{ if .parent }} <!-- 如果 parent 字段不为空 -->
-              {{ $filteredComments = $filteredComments | append . }}
-          {{ end }}
-      {{ end }}
-      <!-- 筛选属于当前评论的子评论 -->
-      {{ $currentReplies := where $filteredComments "parent" .comment.custom }}
-      
-      {{ range $currentReplies }}
-      {{ $reply := . }}
-      {{ $replyDepth := add (default 0 .comment.depth) 1 }}
-
-
-              {{ $replyData := dict 
-                "custom" (default (print "custom-" now.UnixNano) $reply.custom)
-                "parent" (default "" $reply.parent)
-                "name" (default "" $reply.name)
-                "email" (default "" $reply.email)
-                "comment" (default "" $reply.comment)
-                "time" (default "" $reply.time)
-                "Depth" $replyDepth
-            }}
-              {{ partial "comment_recursion.html" (dict "comment" $replyData "comments" $.comments) }}
-          {{ end }}
-  </div>
-  {{ end }}
-  
 </div>
+
+  <!-- 判断深度，添加对应的类 -->
+  <div class="comment {{ if gt $commentData.depth 0 }}child-comment{{ end }}" data-depth="{{ $commentData.depth }}">
+    {{ partial "comment_recursion.html" (dict "comment" $commentData "comments" $.comments) }}
+  </div>
+  
+
 
   
