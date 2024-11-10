@@ -1941,10 +1941,6 @@ footer.dark a:focus {
   background-color: #7d9e61; /* 深色抹茶绿色悬停效果 */
 }
 
-/* 添加一些过渡效果来提升用户体验 */
-.comment, .child-comment {
-  transition: all 0.3s ease-in-out;
-}
 
 /*回复对象提示*/
 #reply-to {
