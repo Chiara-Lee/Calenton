@@ -1885,7 +1885,7 @@ footer.dark a:focus {
   border-radius: 10px;
   border: none !important; /* 强制去除边框 */
   border-radius: 0 !important; /* 强制去除圆角 */
-  background-color: transparent!important; /* 使背景透明 */
+  background-color: transparent !important; /* 使背景透明 */
 }
 .comment:hover {
   transform: translateY(-5px);
