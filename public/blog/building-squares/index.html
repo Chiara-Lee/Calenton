@@ -8,7 +8,7 @@
     
     <meta name="viewport" 
       content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/png" href="http://localhost:1313/image/favicon_hu15807620146862010127.png">
+      <link rel="icon" type="image/png" href="http://localhost:1313/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png">
       
 <link rel="stylesheet" href="http://localhost:1313/index.min.css">
 
@@ -184,7 +184,7 @@
     
       <li class="post">
   
-    <img alt="Circle" loading="lazy" src="http://localhost:1313/blog/community/circle/cover_hu12161304980726392006.jpg" />
+    <img alt="Circle" loading="lazy" src="http://localhost:1313/blog/community/circle/cover_hu970919c39417967ec24caa24affdbeb1_560968_1000x0_resize_q75_box.jpg" />
   
   <a href="http://localhost:1313/blog/community/circle/">
     <h2>
@@ -200,7 +200,7 @@
     
       <li class="post">
   
-    <img alt="Curve" loading="lazy" src="http://localhost:1313/blog/community/curve/cover_hu16644596965312757794.jpg" />
+    <img alt="Curve" loading="lazy" src="http://localhost:1313/blog/community/curve/cover_hub232108180ab9296cad5fd6dfec6d589_270243_1000x0_resize_q75_box.jpg" />
   
   <a href="http://localhost:1313/blog/community/curve/">
     <h2>
@@ -221,10 +221,10 @@
   <h2>Comments</h2>
   
   
+  
     
   
-  
-  <pre>map[string]interface {}{}</pre>
+
   
   
   
@@ -241,39 +241,91 @@
       </div>
     </template>
 
-    <form id="comment-form"data-dynamic-form
-    data-success="#comment-success"
-    data-error="#comment-error"
-    netlify="true" name="Comments">
+    <form id="comment-form" data-dynamic-form data-success="#comment-success" data-error="#comment-error" netlify="true" name="Comments" method="POST">
+  
+      <div id="reply-to" style="display: none; color: #6c757d; margin-bottom: 10px;"></div> 
       
       <input type="hidden" name="url" value="/blog/building-squares/">
       <input type="hidden" name="parent" id="parent" value="">
+      <input type="hidden" name="custom" id="custom">
+      <input type="hidden" name="depth" id="depth" value="0">
+
+      
       <label class="comment-label" for="name">Name:</label>
       <input class="comment-input" type="text" id="name" name="name" required autocomplete="name">
-
+      
       <label class="comment-label" for="email">Email:</label>
       <input class="comment-input" type="email" id="email" name="email" required autocomplete="email">
-
+      
       <label class="comment-label" for="comment">Comment:</label>
       <textarea class="comment-textarea" id="comment" name="comment" rows="5" required autocomplete="off"></textarea>
-
+      
       <button class="comment-button" type="submit">Send</button>
     </form>
+    
   
 </div>
-
-
-
-
 <script>
-  document.querySelectorAll('.reply-button').forEach(button => {
-    button.addEventListener('click', function() {
-      const parentId = this.getAttribute('data-parent');
-      document.getElementById('parent').value = parentId;
-      document.getElementById('comment-form').scrollIntoView({ behavior: 'smooth' });
+  
+  
+  function generateUniqueId() {
+    return `${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+  }
+
+
+
+document.querySelectorAll(".reply-button").forEach(button => {
+  button.addEventListener("click", function() {
+    
+    const parentComment = this.closest('.comment');
+
+    
+    const parentId = this.getAttribute('data-custom');
+    const parentName = this.getAttribute('data-name');
+
+    
+    const parentDepth = parseInt(parentComment.getAttribute('data-depth')) || 0;
+
+    
+    document.getElementById('parent').value = parentId || "";
+    console.log("Parent ID set to:", parentId); 
+
+    
+    const newDepth = parentDepth + 1;
+
+    
+    document.getElementById('depth').value = newDepth;
+
+    
+    const replyToElement = document.getElementById('reply-to');
+    replyToElement.style.display = 'block';
+    replyToElement.innerText = `回复 @${parentName}`;
+
+    
+    document.querySelectorAll('.comment').forEach(comment => {
+      comment.classList.remove('highlight');
     });
+    this.closest('.comment').classList.add('highlight');
   });
-</script>
+
+    
+    document.getElementById('comment-form').scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  
+  document.getElementById("comment-form").addEventListener("submit", function(event) {
+    
+    const customIdField = document.getElementById("custom");
+    if (!customIdField.value) {
+        customIdField.value = generateUniqueId();
+        console.log("Custom ID set to:", customIdField.value); 
+    }
+});
+  </script>
+
+
+
 
     
       <footer class="dark">

@@ -1,5 +1,5 @@
 (() => {
-  // ns-hugo:/workspaces/Calenton/assets/formHandler.js
+  // ns-hugo:C:\Users\19362\Calenton\assets\formHandler.js
   var FormHandlerModule = {
     init() {
       document.addEventListener("submit", async (event2) => {
@@ -1345,7 +1345,7 @@
     register(ExtendedSearch);
   }
 
-  // ns-hugo:/workspaces/Calenton/assets/searchsupport.js
+  // ns-hugo:C:\Users\19362\Calenton\assets\searchsupport.js
   var SearchSupport = () => {
     let selected = void 0;
     document.addEventListener("focusin", (e) => {
@@ -1394,7 +1394,7 @@
   };
   var searchsupport_default = SearchSupport;
 
-  // ns-hugo:/workspaces/Calenton/assets/search.js
+  // ns-hugo:C:\Users\19362\Calenton\assets\search.js
   var index = null;
   var MAX_SEARCH_RESULTS = 5;
   var SearchModule = {
