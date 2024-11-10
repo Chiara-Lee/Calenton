@@ -1867,6 +1867,15 @@ footer.dark a:focus {
 
 /* 单个评论样式 */
 .comment {
+  background: linear-gradient(135deg, #f7f7f7, #ffffff); /* 渐变背景 */
+  border-left: 4px solid #ccc; /* 左侧边框，强调嵌套 */
+  padding-left: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* 较浅的阴影 */
+}
+
+/* 子评论样式 */
+.child-comment {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
@@ -1874,15 +1883,6 @@ footer.dark a:focus {
   margin-bottom: 1.5rem;
   border-bottom: 1px dashed #ccc;
   transition: transform 0.3s;
-}
-
-/* 子评论样式 */
-.child-comment {
-  background: linear-gradient(135deg, #f7f7f7, #ffffff); /* 渐变背景 */
-  border-left: 4px solid #ccc; /* 左侧边框，强调嵌套 */
-  padding-left: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* 较浅的阴影 */
 }
 .comment:hover {
   transform: translateY(-5px);
