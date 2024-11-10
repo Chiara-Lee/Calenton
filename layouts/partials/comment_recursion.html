@@ -1,4 +1,4 @@
-<div class="comment" data-depth="{{ .comment.depth }}" style="margin-left: {{ mul (int (default 0 .comment.depth)) 20 }}px !important;">
+<div class="comment" data-depth="{{ .comment.depth }}" >
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
   <div class="author">{{ .comment.name }}</div>
   <div class="message">{{ .comment.comment }}</div>
@@ -6,10 +6,14 @@
   <span class="time">{{ .comment.time }}</span>
 </div>
 
-
+{{ if le .comment.depth 2 }} <!-- 判断深度是否小于或等于 2 -->
 <!-- 判断深度，添加对应的类 -->
-<div class="comment {{ if gt .comment.depth 0 }}child-comment{{ end }}" data-depth="{{ .comment.depth }}">
-{{ partial "comment_recursion.html" (dict "comment" .comment "comments" $.comments) }}
+<div class="comment {{ if gt .comment.depth 0 }}child-comment{{ end }}" data-depth="{{ .comment.depth }}"style="margin-left: {{ mul (int (default 0 .comment.depth)) 20 }}px !important;">
+  <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
+  <div class="author">{{ .comment.name }}</div>
+  <div class="message">{{ .comment.comment }}</div>
+  <button class="reply-button" data-parent="{{ .comment.parent }}" data-name="{{ .comment.name }}" data-custom="{{ .comment.custom }}">Reply (Parent ID: {{ .comment.parent }})</button>
+  <span class="time">{{ .comment.time }}</span>
 </div>
     
 
