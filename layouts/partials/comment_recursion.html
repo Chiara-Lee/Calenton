@@ -11,7 +11,7 @@
 {{ else if and (gt (int .comment.depth) 0) (le (int .comment.depth) 2) }}
   <!-- 深度大于 0 且小于等于 2 的评论 -->
 <!-- 判断深度，添加对应的类 -->
-<div class="comment {{ if gt .comment.depth 0 }}child-comment{{ end }}" data-depth="{{ .comment.depth }}"style="margin-left: {{ mul (int (default 0 .comment.depth)) 20 }}px !important;">
+<div class="comment {{ if gt .comment.depth 0 }}child-comment{{ end }}" data-depth="{{ .comment.depth }}"style="margin-left: {{ mul (int (default 0 .comment.depth)) 30 }}px !important;">
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
   <div class="author">{{ .comment.name }}</div>
   <div class="message">{{ .comment.comment }}</div>

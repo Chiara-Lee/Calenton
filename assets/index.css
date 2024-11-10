@@ -1878,7 +1878,6 @@ footer.dark a:focus {
 
 /* 子评论样式 */
 .child-comment {
-  margin-left: 40px; /* 调整缩进，突出嵌套效果 */
   background: linear-gradient(135deg, #f7f7f7, #ffffff); /* 渐变背景 */
   border-left: 4px solid #ccc; /* 左侧边框，强调嵌套 */
   padding-left: 20px;
