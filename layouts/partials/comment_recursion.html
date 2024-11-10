@@ -6,11 +6,7 @@
   <span class="time">{{ .comment.time }}</span>
 </div>
 
-  <!-- 判断深度，添加对应的类 -->
-  <div class="comment {{ if gt $commentData.depth 0 }}child-comment{{ end }}" data-depth="{{ $commentData.depth }}">
-    {{ partial "comment_recursion.html" (dict "comment" $commentData "comments" $.comments) }}
-  </div>
-  
+
 
 
   
