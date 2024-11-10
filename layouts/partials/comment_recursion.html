@@ -1,3 +1,5 @@
+<!-- 判断深度 -->
+{{ if eq .comment.depth 0 }}
 <div class="comment" data-depth="{{ .comment.depth }}" >
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
   <div class="author">{{ .comment.name }}</div>
@@ -6,7 +8,8 @@
   <span class="time">{{ .comment.time }}</span>
 </div>
 
-{{ if le .comment.depth 2 }} <!-- 判断深度是否小于或等于 2 -->
+{{ else if and (gt .comment.depth 0) (le .comment.depth 2) }}
+  <!-- 深度大于 0 且小于等于 2 的评论 -->
 <!-- 判断深度，添加对应的类 -->
 <div class="comment {{ if gt .comment.depth 0 }}child-comment{{ end }}" data-depth="{{ .comment.depth }}"style="margin-left: {{ mul (int (default 0 .comment.depth)) 20 }}px !important;">
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
