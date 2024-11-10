@@ -7,6 +7,11 @@
 </div>
 
 
+<!-- 判断深度，添加对应的类 -->
+<div class="comment {{ if gt .comment.depth 0 }}child-comment{{ end }}" data-depth="{{ .comment.depth }}">
+{{ partial "comment_recursion.html" (dict "comment" .comment "comments" $.comments) }}
+</div>
+    
 
 
   
