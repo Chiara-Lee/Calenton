@@ -1867,28 +1867,31 @@ footer.dark a:focus {
 
 /* 单个评论样式 */
 .comment {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px dashed #ccc;
-  transition: transform 0.3s;
-  background: linear-gradient(135deg, #f7f7f7, #ffffff); /* 渐变背景 */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* 较浅的阴影 */
-  border-left: 4px solid #ccc; /* 为父评论添加左侧边框，强调嵌套 */
+  margin-bottom: 20px;
+}
+
+.comment-content {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* 子评论样式 */
 .child-comment {
-  padding-left: 20px;
-  border-radius: 10px;
-  border: none !important; /* 强制去除边框 */
-  border-radius: 0 !important; /* 强制去除圆角 */
-  background-color: transparent !important; /* 使背景透明 */
+  position: relative;
+
 }
 .comment:hover {
   transform: translateY(-5px);
+}
+
+.connector {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: #e0e0e0;
+  left: -25px;
+  top: 20px;
 }
 
 /* 头像样式 */
