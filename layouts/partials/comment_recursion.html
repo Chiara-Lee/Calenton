@@ -5,7 +5,7 @@
   <div class="author">{{ .comment.name }}</div>
   <div class="message">{{ .comment.comment }}</div>
   <button class="reply-button" data-parent="{{ .comment.parent }}" data-name="{{ .comment.name }}" data-custom="{{ .comment.custom }}">Reply</button>
-  <span class="time">{{ .comment.time }}</span>
+  <span class="time">{{ .comment.time | time.Format "2006-01-02 15:04:05" }}</span>
 </div>
 
 {{ else if and (gt (int .comment.depth) 0) (le (int .comment.depth) 2) }}
@@ -16,7 +16,7 @@
   <div class="author">{{ .comment.name }}</div>
   <div class="message">{{ .comment.comment }}</div>
   <button class="reply-button" data-parent="{{ .comment.parent }}" data-name="{{ .comment.name }}" data-custom="{{ .comment.custom }}">Reply</button>
-  <span class="time">{{ .comment.time }}</span>
+  <span class="time">{{ .comment.time | time.Format "2006-01-02 15:04:05" }}</span>
 </div>
 {{ end }}
 
