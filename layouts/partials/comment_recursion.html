@@ -3,11 +3,10 @@
 <div class="comment" data-depth="{{ .comment.depth }}" >
   <div class="comment-content" style="background: white; border-radius: 10px; padding: 10px;">
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
-  <div class="comment-text" style="flex: 1;">
-    <div style="display: flex; align-items: center;">
-      <div class="author" style="font-weight: bold;">{{ .comment.name }}</div>
-      <span class="time" style="margin-left: 10px; color: #888;">{{ .comment.time | time.Format "2006-01-02 15:04:05" }}</span>
-    </div>
+  <div class="author-time">
+    <div class="author">{{ .comment.name }}</div>
+    <span class="time" style="margin-left: 10px; color: #888;">{{ .comment.time | time.Format "2006-01-02 15:04:05" }}</span>
+  </div>
   <div class="message">{{ .comment.comment }}</div>
   <button class="reply-button" data-parent="{{ .comment.parent }}" data-name="{{ .comment.name }}" data-custom="{{ .comment.custom }}">Reply</button>
   </div>
@@ -15,20 +14,19 @@
 
 {{ else if and (gt (int .comment.depth) 0) (le (int .comment.depth) 2) }}
   <!-- 深度大于 0 且小于等于 2 的评论 -->
+  <div class="connector" style="position: absolute; left: -25px; top: 25px; height: 100%; width: 1px; background: #ccc;"></div>
 <!-- 判断深度，添加对应的类 -->
 <div class="comment {{ if gt .comment.depth 0 }}child-comment{{ end }}" data-depth="{{ .comment.depth }}"style="margin-left: {{ mul (int (default 0 .comment.depth)) 50 }}px !important;">
   <div class="comment-content" style="background: white; border-radius: 10px; padding: 10px;">
   <img src="https://www.gravatar.com/avatar/{{ md5 .comment.email }}?s=100&d=wavatar" alt="{{ .comment.name }} Avatar">
-  <div class="comment-text" style="flex: 1;">
-    <div style="display: flex; align-items: center;">
-      <div class="author" style="font-weight: bold;">{{ .comment.name }}</div>
-      <span class="time" style="margin-left: 10px; color: #888;">{{ .comment.time | time.Format "2006-01-02 15:04:05" }}</span>
-    </div>
+  <div class="author-time">
+    <div class="author">{{ .comment.name }}</div>
+    <span class="time" style="margin-left: 10px; color: #888;">{{ .comment.time | time.Format "2006-01-02 15:04:05" }}</span>
+  </div>
   <div class="message">{{ .comment.comment }}</div>
   <button class="reply-button" data-parent="{{ .comment.parent }}" data-name="{{ .comment.name }}" data-custom="{{ .comment.custom }}">Reply</button>
 </div>
 </div>
 {{ end }}
-
 
   
