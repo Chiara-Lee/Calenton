@@ -1883,6 +1883,8 @@ footer.dark a:focus {
 .child-comment {
   padding-left: 20px;
   border-radius: 10px;
+  border: none !important; /* 强制去除边框 */
+  border-radius: 0 !important; /* 强制去除圆角 */
 }
 .comment:hover {
   transform: translateY(-5px);
@@ -1969,11 +1971,6 @@ footer.dark a:focus {
   transition: all 0.3s ease-in-out; /* 添加过渡效果，使高亮看起来更平滑 */
 }
 
-
-
-
-
-
 /* 评论表单提交信息的通用模板样式 */
 .success, .error {
   max-width: 600px; /* 最大宽度限制，保持统一的视觉效果 */
@@ -2020,6 +2017,10 @@ footer.dark a:focus {
 .success, .error {
   animation: fadeIn 1s ease-in-out; /* 淡入动画效果 */
 }
+
+
+
+
 
 
 /* 搜索栏样式 */
