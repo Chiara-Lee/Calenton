@@ -1885,6 +1885,7 @@ footer.dark a:focus {
   border-radius: 10px;
   border: none !important; /* 强制去除边框 */
   border-radius: 0 !important; /* 强制去除圆角 */
+  background-color: transparent; /* 使背景透明 */
 }
 .comment:hover {
   transform: translateY(-5px);
@@ -1958,6 +1959,7 @@ footer.dark a:focus {
 #reply-to:hover {
   background-color: #e9ecef;
   border-left-color: #0056b3; /* 加深边框颜色 */
+
 }
 /*父评论高亮*/
 .comment.highlight {
