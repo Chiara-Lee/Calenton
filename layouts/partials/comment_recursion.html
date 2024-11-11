@@ -1,3 +1,4 @@
+{{ if le (int .comment.depth) 2 }} <!-- 限制最大深度 -->
 <!-- 判断深度 -->
 {{ if eq (int .comment.depth) 0 }}
 <div class="comment" data-depth="{{ .comment.depth }}" style="margin-left: 0px !important;">
@@ -13,7 +14,7 @@
   </div>
 </div>
 
-{{ else if and (gt (int .comment.depth) 0) (le (int .comment.depth) 2) }}
+{{ else }}
   <!-- 深度大于 0 且小于等于 2 的评论 -->
 <!-- 判断深度，添加对应的类 -->
 <div class="child-comment" data-depth="{{ .comment.depth }}"style="margin-left: {{ mul (int (default 0 .comment.depth)) 50 }}px !important;">
