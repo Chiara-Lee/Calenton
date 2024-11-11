@@ -1880,7 +1880,8 @@ footer.dark a:focus {
   display: flex;
   align-items: flex-start;
   background-color: transparent;
-  border: none;
+  border: none;/*移除边框*/
+  box-shadow: none; /* 如果有阴影也可以移除 */
 }
 
 /* 子评论样式 */
