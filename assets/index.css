@@ -1469,6 +1469,8 @@ body.page form textarea:focus {
 footer {
   text-align: center;
   vertical-align: bottom;
+  width: 100% !important;
+  box-sizing: border-box;
 }
 footer a {
   display: inline-block;
@@ -1875,6 +1877,10 @@ footer.dark a:focus {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  background: transparent;
+  border: none;
 }
 
 /* 子评论样式 */
@@ -1901,6 +1907,7 @@ footer.dark a:focus {
   width: 80px;
   height: 80px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
 }
 
 /* 作者名称样式 */
