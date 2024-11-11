@@ -1,4 +1,3 @@
-{{ printf "%+v" $comments }}
 {{ if le (int .comment.depth) 2 }} <!-- 限制最大深度 -->
 <!-- 判断深度 -->
 {{ if eq (int .comment.depth) 0 }}
