@@ -1883,7 +1883,6 @@ footer.dark a:focus {
   border: none;/*移除边框*/
   box-shadow: none; /* 如果有阴影也可以移除 */
 }
-
 /* 子评论样式 */
 .child-comment {
   position: relative;
