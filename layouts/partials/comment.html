@@ -142,10 +142,17 @@ window.onload = function() {
     });
 };
 window.onload = function() {
-    document.querySelectorAll('.comment[data-depth="0"]').forEach((comment, index) => {
-        const rect = comment.getBoundingClientRect();
-        console.log(`Comment ${index}:`, rect);
-    });
+    const commentsContainer = document.querySelector('.comments');
+    if (commentsContainer) {
+        const observer = new MutationObserver(() => {
+            document.querySelectorAll('.comment[data-depth="0"]').forEach((comment, index) => {
+                const rect = comment.getBoundingClientRect();
+                console.log(`Comment ${index}:`, rect);
+            });
+        });
+
+        observer.observe(commentsContainer, { childList: true, subtree: true });
+    }
 };
 
 
