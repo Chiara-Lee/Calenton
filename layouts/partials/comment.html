@@ -135,23 +135,13 @@ window.onload = function() {
 
 
 window.onload = function() {
-    const commentsContainer = document.querySelector('.comments');
-    const comments = Array.from(commentsContainer.children);
-
-    comments.forEach((comment, index) => {
-        // 如果发现一个顶级评论（data-depth="0"），确保将其和后续所有子评论一起重排
-        if (comment.classList.contains('comment') && comment.getAttribute('data-depth') === "0") {
-            let nextIndex = index + 1;
-            while (nextIndex < comments.length &&
-                   comments[nextIndex].classList.contains('child-comment')) {
-                // 将子评论和顶级评论一起重排，以确保视觉效果不被破坏
-                commentsContainer.removeChild(comments[nextIndex]);
-                commentsContainer.insertBefore(comments[nextIndex], comment.nextSibling);
-                nextIndex++;
-            }
-        }
+    document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
+        comment.style.marginLeft = '0px';
+        // 强制 GPU 渲染该元素
+        comment.style.transform = 'translateZ(0)';
     });
 };
+
 
 
   </script>
