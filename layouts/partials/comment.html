@@ -127,17 +127,16 @@ document.querySelectorAll(".reply-button").forEach(button => {
 });
 
 window.onload = function() {
-    const commentsContainer = document.querySelector('.comments');
-    if (commentsContainer) {
-        // 获取所有评论节点
-        const comments = Array.from(commentsContainer.children);
-        // 清空容器
-        commentsContainer.innerHTML = '';
-        // 重新插入评论节点
-        comments.forEach((comment) => {
-            commentsContainer.appendChild(comment);
-        });
-    }
+    setTimeout(() => {
+        const commentsContainer = document.querySelector('.comments');
+        if (commentsContainer) {
+            const comments = Array.from(commentsContainer.children);
+            commentsContainer.innerHTML = '';
+            comments.forEach((comment) => {
+                commentsContainer.appendChild(comment);
+            });
+        }
+    }, 500); // 延迟 500 毫秒后执行，确保页面完全加载
 };
 
   </script>
