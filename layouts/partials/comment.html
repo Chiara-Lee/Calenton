@@ -135,6 +135,30 @@ window.onload = function() {
     });
 };
 
+    // 创建一个MutationObserver实例，用于监听DOM中元素的变化
+    const observer = new MutationObserver((mutations) => {
+        // 遍历所有被监听到的变动
+        mutations.forEach((mutation) => {
+            // 如果有新节点被添加到DOM中
+            if (mutation.addedNodes.length > 0) {
+                // 查找所有具有类名 'comment' 且 'data-depth' 属性为 '0' 的元素（顶级评论）
+                document.querySelectorAll('.comment[data-depth="0"]').forEach((comment) => {
+                    // 强制将顶级评论的左边距设置为0，确保它们对齐
+                    comment.style.marginLeft = '0px';
+                });
+            }
+        });
+    });
+
+    // 确保评论容器存在后开始观察
+    window.onload = function() {
+        // 选择评论容器（父元素，包含所有评论的容器）
+        const commentsContainer = document.querySelector('.comments');
+        // 如果评论容器存在，则开始观察该容器的子节点和子树的变动
+        if (commentsContainer) {
+            observer.observe(commentsContainer, { childList: true, subtree: true });
+        }
+    };
   </script>
 
 
