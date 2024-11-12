@@ -127,16 +127,15 @@ document.querySelectorAll(".reply-button").forEach(button => {
 });
 
 window.onload = function() {
-    setTimeout(() => {
-        const commentsContainer = document.querySelector('.comments');
-        if (commentsContainer) {
-            const comments = Array.from(commentsContainer.children);
-            commentsContainer.innerHTML = '';
-            comments.forEach((comment) => {
-                commentsContainer.appendChild(comment);
-            });
+    document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
+        comment.style.marginLeft = '0px';
+        // 获取前一个元素的类型，如果是 .child-comment 则调整偏移
+        const prevElement = comment.previousElementSibling;
+        if (prevElement && prevElement.classList.contains('child-comment')) {
+            comment.style.marginLeft = '0px';
+            comment.style.position = 'relative'; // 强制创建一个独立布局上下文
         }
-    }, 500); // 延迟 500 毫秒后执行，确保页面完全加载
+    });
 };
 
   </script>
