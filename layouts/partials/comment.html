@@ -133,15 +133,14 @@ window.onload = function() {
     });
 };
 
-
 window.onload = function() {
-    document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
-        comment.style.marginLeft = '0px';
-        // 强制 GPU 渲染该元素
-        comment.style.transform = 'translateZ(0)';
+    const comments = document.querySelectorAll('.comment');
+    comments.forEach(comment => {
+        const parent = comment.parentNode;
+        parent.removeChild(comment);
+        parent.appendChild(comment.cloneNode(true));
     });
 };
-
 
 
   </script>
