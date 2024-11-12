@@ -168,6 +168,14 @@ window.onload = function() {
         comment.style.display = '';      // 重绘
     });
 };
+
+window.onload = function() {
+    document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
+        const clone = comment.cloneNode(true);
+        comment.parentNode.replaceChild(clone, comment);
+    });
+};
+
   </script>
 
 
