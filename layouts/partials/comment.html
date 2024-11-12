@@ -128,7 +128,9 @@ document.querySelectorAll(".reply-button").forEach(button => {
 
 window.onload = function() {
     document.querySelectorAll('.comment[data-depth="0"]').forEach((comment, index) => {
-        console.log(`Comment ${index} computed margin-left:`, window.getComputedStyle(comment).marginLeft);
+        if (index === 1) { // 假设异常的是第二个顶级评论
+            comment.style.marginLeft = '-40px';
+        }
     });
 };
 
