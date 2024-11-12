@@ -141,6 +141,12 @@ window.onload = function() {
         parent.appendChild(comment.cloneNode(true));
     });
 };
+window.onload = function() {
+    document.querySelectorAll('.comment[data-depth="0"]').forEach((comment, index) => {
+        const rect = comment.getBoundingClientRect();
+        console.log(`Comment ${index}:`, rect);
+    });
+};
 
 
   </script>
