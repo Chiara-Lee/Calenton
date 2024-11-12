@@ -166,6 +166,13 @@ window.onload = function() {
     commentsContainer.style.display = '';
 };
 
+window.onload = function() {
+    document.querySelectorAll('.comment .message').forEach(message => {
+        message.style.display = 'none';
+        message.offsetHeight; // 触发重绘
+        message.style.display = '';
+    });
+};
 
 
   </script>
