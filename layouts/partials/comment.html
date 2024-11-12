@@ -126,35 +126,6 @@ document.querySelectorAll(".reply-button").forEach(button => {
     }
 });
 
-window.onload = function() {
-    document.querySelectorAll('.comment').forEach(comment => {
-        const clonedComment = comment.cloneNode(true); // 深度克隆
-        comment.parentNode.replaceChild(clonedComment, comment);
-    });
-};
-
-window.onload = function() {
-    const comments = document.querySelectorAll('.comment');
-    comments.forEach(comment => {
-        const parent = comment.parentNode;
-        parent.removeChild(comment);
-        parent.appendChild(comment.cloneNode(true));
-    });
-};
-window.onload = function() {
-    const commentsContainer = document.querySelector('.comments');
-    if (commentsContainer) {
-        const observer = new MutationObserver(() => {
-            document.querySelectorAll('.comment[data-depth="0"]').forEach((comment, index) => {
-                const rect = comment.getBoundingClientRect();
-                console.log(`Comment ${index}:`, rect);
-            });
-        });
-
-        observer.observe(commentsContainer, { childList: true, subtree: true });
-    }
-};
-
 
   </script>
 
