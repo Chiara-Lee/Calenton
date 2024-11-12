@@ -137,6 +137,7 @@ window.onload = function() {
 window.onload = function() {
     const commentsContainer = document.querySelector('.comments');
     const comments = Array.from(document.querySelectorAll('.comment, .child-comment'));
+    const commentForm = document.querySelector('#comment-form'); // 假设表单有这个 ID
 
     // 清空现有的评论容器
     commentsContainer.innerHTML = '';
@@ -149,10 +150,22 @@ window.onload = function() {
         // 查找并附加与该顶级评论相关的所有子评论
         const childComments = comments.filter(comment => comment.dataset.parent === topLevelComment.dataset.custom);
         childComments.forEach(childComment => {
+            childComment.classList.add('child-comment'); // 确保子评论应用了 'child-comment' 样式类
             commentsContainer.appendChild(childComment);
         });
     });
+
+    // 重新添加评论表单到容器的末尾
+    commentsContainer.appendChild(commentForm);
+
+    // 强制重排，确保样式应用正确
+    commentsContainer.style.display = 'none';
+    commentsContainer.offsetHeight; // 强制重排
+    commentsContainer.style.display = '';
 };
+
+
+
   </script>
 
 
