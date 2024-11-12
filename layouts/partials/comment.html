@@ -138,6 +138,27 @@ window.onload = function() {
     });
 };
 
+document.querySelectorAll('.comment').forEach((comment) => {
+    comment.childNodes.forEach(node => {
+        if (node.nodeType === 3 && !/\S/.test(node.nodeValue)) {
+            // 删除空白文本节点
+            comment.removeChild(node);
+        }
+    });
+});
+
+window.onload = function() {
+    let maxHeight = 0;
+    document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
+        if (comment.clientHeight > maxHeight) {
+            maxHeight = comment.clientHeight; // 找到最高的评论
+        }
+    });
+    document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
+        comment.style.height = `${maxHeight}px`; // 强制所有评论高度一致
+    });
+};
+
   </script>
 
 
