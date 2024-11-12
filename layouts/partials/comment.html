@@ -159,15 +159,6 @@ window.onload = function() {
             observer.observe(commentsContainer, { childList: true, subtree: true });
         }
     };
-
-    window.onload = function() {
-    setTimeout(() => {
-        document.querySelectorAll('.comment[data-depth="0"]').forEach((comment) => {
-            comment.style.marginLeft = '0px';
-        });
-    }, 1000); // 延迟 1 秒，确保所有内容已加载
-};
-
   </script>
 
 

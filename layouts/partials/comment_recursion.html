@@ -29,6 +29,9 @@
   <button class="reply-button" data-parent="{{ .comment.parent }}" data-name="{{ .comment.name }}" data-custom="{{ .comment.custom }}">Reply</button>
 </div>
 </div>
+
+<!-- 添加清除浮动的元素，防止子评论影响后续的顶级评论 -->
+<div style="clear: both;"></div>
 {{ end }}
 {{ end }}
   
