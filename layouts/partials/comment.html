@@ -127,22 +127,12 @@ document.querySelectorAll(".reply-button").forEach(button => {
 });
 
 window.onload = function() {
-    // 找到所有的顶级评论（data-depth="0"）
-    document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
-        // 强制将评论移除再插入一次，确保重新渲染
-        const parent = comment.parentNode;
-        parent.removeChild(comment);
-        parent.appendChild(comment);
-
-        // 清除之前元素的影响
-        const prevElement = comment.previousElementSibling;
-        if (prevElement && prevElement.classList.contains('child-comment')) {
-            const clearDiv = document.createElement('div');
-            clearDiv.style.clear = 'both';
-            parent.insertBefore(clearDiv, comment);
-        }
+    document.querySelectorAll('.comment').forEach(comment => {
+        const clonedComment = comment.cloneNode(true); // 深度克隆
+        comment.parentNode.replaceChild(clonedComment, comment);
     });
 };
+
 
 window.onload = function() {
     const commentsContainer = document.querySelector('.comments');
