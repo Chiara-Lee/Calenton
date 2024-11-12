@@ -127,11 +127,14 @@ document.querySelectorAll(".reply-button").forEach(button => {
 });
 
 // 强制重排/重绘的代码
-document.querySelectorAll('.comment').forEach((comment) => {
-    comment.style.display = 'none';
-    comment.offsetHeight; // 强制重排
-    comment.style.display = '';
-});
+window.onload = function() {
+    document.querySelectorAll('.comment').forEach((comment) => {
+        comment.style.display = 'none';
+        comment.offsetHeight; // 强制重排
+        comment.style.display = '';
+    });
+};
+
   </script>
 
 
