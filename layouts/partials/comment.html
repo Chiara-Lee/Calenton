@@ -138,8 +138,9 @@ window.onload = function() {
     const commentsContainer = document.querySelector('.comments');
     const comments = Array.from(document.querySelectorAll('.comment, .child-comment'));
     const commentForm = document.querySelector('#comment-form'); // 假设表单有这个 ID
+    const footer = document.querySelector('footer'); // 假设页脚的标签为 <footer>
 
-    // 清空现有的评论容器
+    // 清空现有的评论容器，保留表单和页脚
     commentsContainer.innerHTML = '';
 
     // 将顶级评论和子评论按层级重新组织
@@ -155,8 +156,9 @@ window.onload = function() {
         });
     });
 
-    // 重新添加评论表单到容器的末尾
+    // 重新添加评论表单和页脚到容器的末尾
     commentsContainer.appendChild(commentForm);
+    commentsContainer.appendChild(footer);
 
     // 强制重排，确保样式应用正确
     commentsContainer.style.display = 'none';
