@@ -159,6 +159,15 @@ window.onload = function() {
     });
 };
 
+
+window.onload = function() {
+    document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
+        comment.style.marginLeft = '0px';
+        comment.style.display = 'none';  // 强制重排
+        comment.offsetHeight;            // 触发重排
+        comment.style.display = '';      // 重绘
+    });
+};
   </script>
 
 
