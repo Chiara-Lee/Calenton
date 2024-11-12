@@ -127,42 +127,42 @@ document.querySelectorAll(".reply-button").forEach(button => {
 });
 
 window.onload = function() {
+    // 找到所有的顶级评论（data-depth="0"）
     document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
-        comment.style.marginLeft = '0px';
-        // 获取前一个元素的类型，如果是 .child-comment 则调整偏移
+        // 强制将评论移除再插入一次，确保重新渲染
+        const parent = comment.parentNode;
+        parent.removeChild(comment);
+        parent.appendChild(comment);
+
+        // 清除之前元素的影响
         const prevElement = comment.previousElementSibling;
         if (prevElement && prevElement.classList.contains('child-comment')) {
-            comment.style.marginLeft = '0px';
-            comment.style.position = 'relative'; // 强制创建一个独立布局上下文
+            const clearDiv = document.createElement('div');
+            clearDiv.style.clear = 'both';
+            parent.insertBefore(clearDiv, comment);
         }
     });
 };
 
-document.querySelectorAll('.comment').forEach((comment) => {
-    comment.childNodes.forEach(node => {
-        if (node.nodeType === 3 && !/\S/.test(node.nodeValue)) {
-            // 删除空白文本节点
-            comment.removeChild(node);
+window.onload = function() {
+    const commentsContainer = document.querySelector('.comments');
+    const comments = Array.from(commentsContainer.children);
+
+    comments.forEach((comment, index) => {
+        // 如果发现一个顶级评论（data-depth="0"），确保将其和后续所有子评论一起重排
+        if (comment.classList.contains('comment') && comment.getAttribute('data-depth') === "0") {
+            let nextIndex = index + 1;
+            while (nextIndex < comments.length &&
+                   comments[nextIndex].classList.contains('child-comment')) {
+                // 将子评论和顶级评论一起重排，以确保视觉效果不被破坏
+                commentsContainer.removeChild(comments[nextIndex]);
+                commentsContainer.insertBefore(comments[nextIndex], comment.nextSibling);
+                nextIndex++;
+            }
         }
     });
-});
-
-
-window.onload = function() {
-    document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
-        comment.style.marginLeft = '0px';
-        comment.style.display = 'none';  // 强制重排
-        comment.offsetHeight;            // 触发重排
-        comment.style.display = '';      // 重绘
-    });
 };
 
-window.onload = function() {
-    document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
-        const clone = comment.cloneNode(true);
-        comment.parentNode.replaceChild(clone, comment);
-    });
-};
 
   </script>
 
