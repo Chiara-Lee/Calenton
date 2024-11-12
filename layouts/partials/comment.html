@@ -139,6 +139,14 @@ window.onload = function() {
     }, 500); // 延迟 500 毫秒后执行，确保页面完全加载
 };
 
+document.querySelectorAll('.comment[data-depth="0"]').forEach(comment => {
+    const rect = comment.getBoundingClientRect();
+    if (rect.left !== 0) {  // 如果元素的左偏移不为 0
+        comment.style.position = 'relative';
+        comment.style.left = `${-rect.left}px`;  // 直接通过 JavaScript 调整位置
+    }
+});
+
   </script>
 
 
