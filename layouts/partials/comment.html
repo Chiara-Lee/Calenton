@@ -125,6 +125,13 @@ document.querySelectorAll(".reply-button").forEach(button => {
         console.log("Custom ID set to:", customIdField.value); // 确认是否正确设置了 custom ID
     }
 });
+
+// 强制重排/重绘的代码
+document.querySelectorAll('.comment').forEach((comment) => {
+    comment.style.display = 'none';
+    comment.offsetHeight; // 强制重排
+    comment.style.display = '';
+});
   </script>
 
 
