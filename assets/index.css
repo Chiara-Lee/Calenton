@@ -1920,13 +1920,13 @@ footer.dark a:focus {
 
 /* 评论内容样式 */
 .comment .message {
-  font-style: italic;
-  line-height: 1.6;
-  background: #f9f9f9;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  font-style: italic !important;
+  line-height: 1.6 !important;
+  background: #f9f9f9 !important;
+  padding: 1rem !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+  width: 100% !important;
 }
 
 .comment .time,
