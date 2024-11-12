@@ -126,6 +126,11 @@ document.querySelectorAll(".reply-button").forEach(button => {
     }
 });
 
+window.onload = function() {
+    document.querySelectorAll('.comment[data-depth="0"]').forEach((comment, index) => {
+        console.log(`Comment ${index} computed margin-left:`, window.getComputedStyle(comment).marginLeft);
+    });
+};
 
   </script>
 
