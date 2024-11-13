@@ -2110,7 +2110,7 @@ footer.dark a:focus {
   gap: 16px;
 }
 
-.card {
+.card-avatar {
   background-color: transparent;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
