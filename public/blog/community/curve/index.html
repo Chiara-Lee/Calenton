@@ -177,7 +177,7 @@
   </ul>
 </div>
 
-<div class="comments">
+<div class="comments" data-articleurl="/blog/community/curve/">
   <h2>Comments</h2>
   
   
@@ -201,7 +201,7 @@
       </div>
     </template>
 
-    <form id="comment-form" data-dynamic-form data-success="#comment-success" data-error="#comment-error" netlify="true" name="Comments" method="POST">
+    <form id="comment-form" data-dynamic-form data-success="#comment-success" data-error="#comment-error" netlify="true" name="Comments" method="POST" style="margin-top: 20px;">
   
       <div id="reply-to" style="display: none; color: #6c757d; margin-bottom: 10px;"></div> 
       
@@ -209,6 +209,7 @@
       <input type="hidden" name="parent" id="parent" value="">
       <input type="hidden" name="custom" id="custom">
       <input type="hidden" name="depth" id="depth" value="0">
+      <input type="hidden" name="articleurl" value="/blog/community/curve/">
 
       
       <label class="comment-label" for="name">Name:</label>
@@ -282,6 +283,52 @@ document.querySelectorAll(".reply-button").forEach(button => {
         console.log("Custom ID set to:", customIdField.value); 
     }
 });
+
+window.onload = function() {
+    
+    const commentsContainer = document.querySelector('.comments'); 
+    const articleurl = commentsContainer.dataset.articleurl.replace(/\/$/, '').toLowerCase(); 
+    const commentForm = document.querySelector('#comment-form'); 
+    const footer = document.querySelector('footer'); 
+
+    
+    const allComments = Array.from(document.querySelectorAll('.comment, .child-comment'));
+
+    
+    const filteredComments = allComments.filter(comment => {
+    const commentArticleUrl = comment.dataset.articleurl.replace(/\/$/, '').toLowerCase();
+    return commentArticleUrl === articleurl;
+});
+
+    
+    commentsContainer.innerHTML = '';
+
+    
+    const topLevelComments = filteredComments.filter(comment => comment.dataset.depth === '0');
+    topLevelComments.forEach(topLevelComment => {
+        commentsContainer.appendChild(topLevelComment);
+
+        
+        const childComments = filteredComments.filter(comment => comment.dataset.parent === topLevelComment.dataset.custom);
+        childComments.forEach(childComment => {
+            childComment.classList.add('child-comment'); 
+            commentsContainer.appendChild(childComment);
+        });
+    });
+
+    
+    commentsContainer.appendChild(commentForm);
+    commentsContainer.appendChild(footer);
+
+    
+    commentsContainer.style.display = 'none';
+    commentsContainer.offsetHeight; 
+    commentsContainer.style.display = '';
+
+    
+    
+};
+
   </script>
 
 

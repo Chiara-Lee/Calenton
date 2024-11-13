@@ -2098,3 +2098,58 @@ footer.dark a:focus {
   color: #888 !important;
 }
 
+
+
+.profile-card {
+  position: absolute; /* 让卡片相对于父容器定位 */
+  right: 20px; /* 距离右侧固定距离 */
+  top: 150px; /* 距离顶部的距离，您可以根据需要进行调整 */
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+}
+
+.profile-image {
+  width: 100%;
+  height: 150px; /* 控制头像区域的高度 */
+  background-color: #ccc; /* 背景颜色可以替换为图片加载失败时的颜色 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.card h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0 -10px !important; /* 缩小标题和副标题之间的间距 */
+}
+
+.subtitle {
+  font-size: 14px;
+  color: gray;
+  margin: 0;
+  margin: 0 0 -10px; /* 缩小副标题和描述之间的间距 */
+}
+
+.description {
+  font-size: 12px;
+  color: #666;
+  margin: 10px 0 0;
+  margin: 0 !important; /* 去除描述文字的下方额外间距 */
+}

@@ -29,5 +29,10 @@ type:  modern
 2.  Zhihu：[Chiara Lee](https://www.zhihu.com/people/wu-shang-27-29)
 
 最后，希望您在我的网站玩的愉快。请尽情的享受探索知识的乐趣吧。
->网页推荐浏览尺寸：edge 100%；google chrome:110%
-![](cover.png "浏览器尺寸")
+
+{{< card 
+    image="/image/avatar.png" 
+    name="Chiara Lee" 
+    subtitle="清璃" 
+    description="以理性赋予世界，凭理想创造世界。" 
+>}}

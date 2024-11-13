@@ -3,7 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/zh/</loc>
-    <lastmod>2024-11-04T04:51:26+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -27,19 +26,6 @@
                 href="http://localhost:1313/zh/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/contact/</loc>
-    <lastmod>2024-11-04T04:51:26+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/contact/"
-                />
-  </url><url>
     <loc>http://localhost:1313/zh/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -51,8 +37,5 @@
                 hreflang="zh"
                 href="http://localhost:1313/zh/tags/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/zh/contact/contact/</loc>
-    <lastmod>2024-11-04T04:51:26+00:00</lastmod>
   </url>
 </urlset>
