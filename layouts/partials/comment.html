@@ -131,7 +131,7 @@ document.querySelectorAll(".reply-button").forEach(button => {
 window.onload = function() {
     // 获取包含所有评论的容器
     const commentsContainer = document.querySelector('.comments'); // 选择存放所有评论的容器
-    const articleUrl = commentsContainer.dataset.articleurl.replace(/\/$/, '').toLowerCase(); // 获取当前文章的唯一标识符（URL 或 ID）
+    const articleurl = commentsContainer.dataset.articleurl.replace(/\/$/, '').toLowerCase(); // 获取当前文章的唯一标识符（URL 或 ID）
     const commentForm = document.querySelector('#comment-form'); // 评论表单
     const footer = document.querySelector('footer'); // 页脚
 
