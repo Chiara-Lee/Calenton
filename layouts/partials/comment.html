@@ -1,4 +1,4 @@
-<div class="comments" data-articleUrl="{{ .RelPermalink }}">
+<div class="comments" data-articleurl="{{ .RelPermalink }}">
   <h2>Comments</h2>
   
   {{ $comments := slice }}
@@ -21,7 +21,7 @@
       "comment" (default "" $comment.comment)
       "time" (default "" $comment.time)
       "depth" (default 0 $comment.depth) 
-      "articleUrl" (default "" $comment.articleUrl)
+      "articleurl" (default "" $comment.articleurl)
   }}
     
     <!-- 渲染当前评论 -->
@@ -53,7 +53,7 @@
       <input type="hidden" name="parent" id="parent" value="">
       <input type="hidden" name="custom" id="custom">
       <input type="hidden" name="depth" id="depth" value="0">
-      <input type="hidden" name="article_url" value="{{ .RelPermalink }}">
+      <input type="hidden" name="articleurl" value="{{ .RelPermalink }}">
 
       
       <label class="comment-label" for="name">Name:</label>
@@ -131,7 +131,7 @@ document.querySelectorAll(".reply-button").forEach(button => {
 window.onload = function() {
     // 获取包含所有评论的容器
     const commentsContainer = document.querySelector('.comments'); // 选择存放所有评论的容器
-    const articleUrl = commentsContainer.dataset.articleUrl.replace(/\/$/, '').toLowerCase(); // 获取当前文章的唯一标识符（URL 或 ID）
+    const articleUrl = commentsContainer.dataset.articleurl.replace(/\/$/, '').toLowerCase(); // 获取当前文章的唯一标识符（URL 或 ID）
     const commentForm = document.querySelector('#comment-form'); // 评论表单
     const footer = document.querySelector('footer'); // 页脚
 
@@ -140,8 +140,8 @@ window.onload = function() {
 
     // 过滤出与当前文章相关的评论
     const filteredComments = allComments.filter(comment => {
-    const commentArticleUrl = comment.dataset.articleUrl.replace(/\/$/, '').toLowerCase();
-    return commentArticleUrl === articleUrl;
+    const commentArticleUrl = comment.dataset.articleurl.replace(/\/$/, '').toLowerCase();
+    return commentArticleUrl === articleurl;
 });
 
     // 清空现有的评论容器
