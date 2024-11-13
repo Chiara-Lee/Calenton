@@ -1,4 +1,4 @@
-<div class="comments">
+<div class="comments" data-articleUrl="{{ .RelPermalink }}">
   <h2>Comments</h2>
   
   {{ $comments := slice }}
@@ -21,6 +21,7 @@
       "comment" (default "" $comment.comment)
       "time" (default "" $comment.time)
       "depth" (default 0 $comment.depth) 
+      "articleUrl"(default "" $comment.articleUrl)
   }}
     
     <!-- 渲染当前评论 -->
@@ -52,6 +53,7 @@
       <input type="hidden" name="parent" id="parent" value="">
       <input type="hidden" name="custom" id="custom">
       <input type="hidden" name="depth" id="depth" value="0">
+      <input type="hidden" name="article_url" value="{{ .RelPermalink }}">
 
       
       <label class="comment-label" for="name">Name:</label>
@@ -127,29 +129,28 @@ document.querySelectorAll(".reply-button").forEach(button => {
 });
 
 window.onload = function() {
-    document.querySelectorAll('.comment[data-depth="0"]').forEach((comment, index) => {
-        if (index === 1) { // 假设异常的是第二个顶级评论
-            comment.style.marginLeft = '-40px';
-        }
-    });
-};
+    // 获取包含所有评论的容器
+    const commentsContainer = document.querySelector('.comments'); // 选择存放所有评论的容器
+    const articleUrl = commentsContainer.dataset.articleUrl; // 获取当前文章的唯一标识符（URL 或 ID）
+    const commentForm = document.querySelector('#comment-form'); // 评论表单
+    const footer = document.querySelector('footer'); // 页脚
 
-window.onload = function() {
-    const commentsContainer = document.querySelector('.comments');
-    const comments = Array.from(document.querySelectorAll('.comment, .child-comment'));
-    const commentForm = document.querySelector('#comment-form'); // 假设表单有这个 ID
-    const footer = document.querySelector('footer'); // 假设页脚的标签为 <footer>
+    // 获取所有评论元素
+    const allComments = Array.from(document.querySelectorAll('.comment, .child-comment'));
 
-    // 清空现有的评论容器，保留表单和页脚
+    // 过滤出与当前文章相关的评论
+    const filteredComments = allComments.filter(comment => comment.dataset.articleUrl === articleUrl);
+
+    // 清空现有的评论容器
     commentsContainer.innerHTML = '';
 
     // 将顶级评论和子评论按层级重新组织
-    const topLevelComments = comments.filter(comment => comment.dataset.depth === '0');
+    const topLevelComments = filteredComments.filter(comment => comment.dataset.depth === '0');
     topLevelComments.forEach(topLevelComment => {
         commentsContainer.appendChild(topLevelComment);
 
         // 查找并附加与该顶级评论相关的所有子评论
-        const childComments = comments.filter(comment => comment.dataset.parent === topLevelComment.dataset.custom);
+        const childComments = filteredComments.filter(comment => comment.dataset.parent === topLevelComment.dataset.custom);
         childComments.forEach(childComment => {
             childComment.classList.add('child-comment'); // 确保子评论应用了 'child-comment' 样式类
             commentsContainer.appendChild(childComment);
@@ -164,7 +165,15 @@ window.onload = function() {
     commentsContainer.style.display = 'none';
     commentsContainer.offsetHeight; // 强制重排
     commentsContainer.style.display = '';
+
+    // 设置异常评论的缩进（如果有特定的异常评论需要调整）
+    document.querySelectorAll('.comment[data-depth="0"]').forEach((comment, index) => {
+        if (index === 1) { // 假设异常的是第二个顶级评论
+            comment.style.marginLeft = '-40px';
+        }
+    });
 };
+
   </script>
 
 

@@ -13,6 +13,7 @@
         "comment" (default "" .data.comment)
         "time" (default "" .created_at)
         "depth" (default 0 .data.depth)
+        "articleUrl"(default "" .data.articleUrl)
       }}
       {{ $comments = $comments | append $commentData }}
     {{ end }}
