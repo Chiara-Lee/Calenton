@@ -131,7 +131,7 @@ document.querySelectorAll(".reply-button").forEach(button => {
 window.onload = function() {
     // 获取包含所有评论的容器
     const commentsContainer = document.querySelector('.comments'); // 选择存放所有评论的容器
-    const articleUrl = commentsContainer.dataset.articleUrl; // 获取当前文章的唯一标识符（URL 或 ID）
+    const articleUrl = commentsContainer.dataset.articleUrl.replace(/\/$/, '').toLowerCase(); // 获取当前文章的唯一标识符（URL 或 ID）
     const commentForm = document.querySelector('#comment-form'); // 评论表单
     const footer = document.querySelector('footer'); // 页脚
 
@@ -139,7 +139,10 @@ window.onload = function() {
     const allComments = Array.from(document.querySelectorAll('.comment, .child-comment'));
 
     // 过滤出与当前文章相关的评论
-    const filteredComments = allComments.filter(comment => comment.dataset.articleUrl === articleUrl);
+    const filteredComments = allComments.filter(comment => {
+    const commentArticleUrl = comment.dataset.articleUrl.replace(/\/$/, '').toLowerCase();
+    return commentArticleUrl === articleUrl;
+});
 
     // 清空现有的评论容器
     commentsContainer.innerHTML = '';
