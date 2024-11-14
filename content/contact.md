@@ -34,5 +34,5 @@ type:  modern
     image="/image/avatar.png" 
     name="Chiara Lee" 
     subtitle="清璃" 
-    description="以理性赋予世界，凭理想创造世界。" 
+    description="以理性审视世界，凭理想创造世界。" 
 >}}
