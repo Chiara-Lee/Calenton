@@ -2159,3 +2159,47 @@ footer.dark a:focus {
   margin: 10px 0 0;
   margin: 0 !important; /* 去除描述文字的下方额外间距 */
 }
+
+
+
+
+.social-links {
+  font-family: 'Georgia', serif; /* 更换为喜欢的字体 */
+  margin-top: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.social-links p {
+  font-size: 20px !important;/*标题字体大小*/
+  font-weight: bold;
+  margin-bottom: 5px; /* 调整 p 标签与下方链接之间的间距 */
+  color: #333;
+}
+
+.social-item {
+  font-size: 16px; /* 设置每个社交链接项的字体大小 */
+  color: #333 !important; /* 设置链接颜色 */
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  text-decoration-color: #333;       /* 自定义下划线颜色 */
+  text-decoration-thickness: 1px;    /* 自定义下划线厚度 */
+  text-underline-offset: 2px;        /* 调整下划线与文字的距离 */
+  display: inline-block; /* 使元素变成块级元素，以便控制下划线长度 */
+  border-bottom: 1px solid #333; /* 设置下划线的颜色和厚度 */ /*solid 表示“实线”边框，即边框为一个连续的实线。只有一个参数，意味着只有下划线*/
+  text-decoration: none !important; /* 去掉默认下划线 */
+  display: block;
+  transition: transform 0.3s ease, color 0.3s ease; /* 控制移动和平滑效果 */
+}
+
+.social-item:last-child {
+  border-bottom: none;
+}
+
+.social-item:hover {
+  transform: translateX(20px); /* 向右移动20px */
+  color: #333 !important; /* 悬停时改变颜色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 悬浮时增加阴影 */
+  background-color: #fff; /* 悬停时设置背景为白色 */
+  border-bottom: none; /* 悬浮时去掉下划线 */
+}
