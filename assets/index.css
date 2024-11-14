@@ -2102,12 +2102,13 @@ footer.dark a:focus {
 /*个人卡片*/
 .profile-card {
   position: absolute; /* 让卡片相对于父容器定位 */
-  right: 20px; /* 距离右侧固定距离 */
+  right: 10px; /* 距离右侧固定距离 */
   top: 150px; /* 距离顶部的距离，您可以根据需要进行调整 */
   width: 200px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 260px; /* 将宽度调整为更宽的值 */
 }
 
 .card-avatar {
