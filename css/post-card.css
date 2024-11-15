@@ -56,14 +56,23 @@
 }
 
 .tags {
+    width: 100%; /* 占据卡片宽度 */
+    padding: 10px 0; /* 上下内边距 */
     margin-top: 10px;
+    background-color: #f1f1f1; /* 可选的背景色，便于视觉分隔 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* 标签靠左对齐 */
+    border-radius: 12px 0 12px 12px; /* 使标签区域与卡片的圆角匹配 */
+    box-sizing: border-box;
 }
 
 .tag {
-    background-color: #e0e7ff; /* 柔和的标签背景 */
     color: #333;
     padding: 5px 10px;
     border-radius: 6px;
     font-size: 0.85em;
     margin-right: 5px;
+    margin-bottom: 5px;
 }
+
