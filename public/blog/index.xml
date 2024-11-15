@@ -10,11 +10,11 @@
     <webMaster>chiaralee953@foxmail.com (Caleton Academy of Magic)</webMaster>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Our Manufacturing Process Part IV</title>
+      <title>测试专用页</title>
       <link>http://localhost:1313/blog/process-4/</link>
-      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
       <guid>http://localhost:1313/blog/process-4/</guid>
-      <description>A cutting tool has one or more sharp cutting edges and is made of a material that is harder than the work material. The cutting edge serves to separate chip from the parent work material. Connected to the cutting edge are the two surfaces of the tool:&#xA;The rake face; and The flank. The rake face which directs the flow of newly formed chip, is oriented at a certain angle is called the rake angle &amp;ldquo;α&amp;rdquo;.</description>
+      <description>1.Markdown 语法 元素 Markdown 语法 标题 (Heading) # H1 ## H2 ### H3 粗体 (Bold) bold text 斜体 (Italic) italicized text 引用块 (Blockquote) &amp;gt; blockquote 有序列表 (Ordered List) 1. First item 2. Second item 3. Third item 无序列表 (Unordered List) - First item - Second item - Third item 代码 (Code) code 分隔线 (Horizontal Rule) &amp;mdash; 链接 (Link) title 一级列表项 1 二级列表项 1.1 三级列表项 1.1.1 二级列表项 1.2 一级列表项 2 元素 Markdown 语法 表格 (Table) | Syntax | Description | | &amp;mdash;&amp;mdash;&amp;ndash; | &amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; | | Header | Title | | Paragraph | Text | 代码块 (Fenced Code Block) &amp;lt;br&amp;gt; { &amp;lt;br&amp;gt; &amp;quot;firstName&amp;quot;: &amp;quot;John&amp;quot;, &amp;lt;br&amp;gt; &amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;, &amp;lt;br&amp;gt; &amp;quot;age&amp;quot;: 25 &amp;lt;br&amp;gt; } &amp;lt;br&amp;gt; 脚注 (Footnote) Here&amp;rsquo;s a sentence with a footnote.</description>
     </item>
     <item>
       <title>Our Manufacturing Process Part III</title>

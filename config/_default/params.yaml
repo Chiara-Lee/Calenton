@@ -24,3 +24,5 @@ css_files:
   - "/css/relative.css"
   - "/css/search.css"
   - "/css/about.css"
+  - "/css/.post-card {.css"
+  - "/css/markdown.css"

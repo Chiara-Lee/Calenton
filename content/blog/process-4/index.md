@@ -1,20 +1,47 @@
 ---
-title: Our Manufacturing Process Part IV
-date: "2019-01-04T00:00:00Z"
+title: 测试专用页
+date: 2024-01-01
+lastmod: 2024-01-15
+toc: true
 ---
 
-A cutting tool has one or more sharp cutting edges and is made of a material that is harder than the work material. The cutting edge serves to separate chip from the parent work material. Connected to the cutting edge are the two surfaces of the tool:
+##  1.Markdown 语法
 
-* The rake face; and
-* The flank.
+<div class="wide-table">
+<!-- 这是一个注释，此处要使得 markdown 表格显示，必须在 html 下空一行 -->
 
-The rake face which directs the flow of newly formed chip, is oriented at a certain angle is called the rake angle "α". It is measured relative to the plane perpendicular to the work surface. The rake angle can be positive or negative. The flank of the tool provides a clearance between the tool and the newly formed work surface, thus protecting the surface from abrasion, which would degrade the finish. This angle between the work surface and the flank surface is called the relief angle. There are two basic types of cutting tools:
+| 元素           | Markdown 语法             |
+| -------------- | ------------------------- |
+| 标题 (Heading) | # H1 <br> ## H2 <br> ### H3 |
+| 粗体 (Bold)    | **bold text**             |
+| 斜体 (Italic)  | *italicized text*         |
+| 引用块 (Blockquote) | > blockquote           |
+| 有序列表 (Ordered List) | 1. First item <br> 2. Second item <br> 3. Third item |
+| 无序列表 (Unordered List) | - First item <br> - Second item <br> - Third item |
+| 代码 (Code)    | `code`                    |
+| 分隔线 (Horizontal Rule) | ---               |
+| 链接 (Link)    | [title](https://www.example.com) |
 
-* Single point tool; and
-* Multiple-cutting-edge tool
+</div>
 
-A single point tool has one cutting edge and is used for turning, boring and planing. During machining, the point of the tool penetrates below the original work surface of the workpart. The point is sometimes rounded to a certain radius, called the nose radius.
+- 一级列表项 1
+  - 二级列表项 1.1
+    - 三级列表项 1.1.1
+  - 二级列表项 1.2
+- 一级列表项 2
 
-Multiple-cutting-edge tools have more than one cutting edge and usually achieve their motion relative to the workpart by rotating. Drilling and milling uses rotating multiple-cutting-edge tools. Although the shapes of these tools are different from a single-point tool, many elements of tool geometry are similar.
+<div class="wide-table">
 
-Content from [wikipedia](https://en.wikipedia.org/wiki/Machining).
+| 元素                     | Markdown 语法                                  |
+| ------------------------ | ---------------------------------------------- |
+| 表格 (Table)             | \| Syntax \| Description \| <br> \| -------- \| ----------- \| <br> \| Header \| Title \| <br> \| Paragraph \| Text \| |
+| 代码块 (Fenced Code Block) | ``` <br> { <br> "firstName": "John", <br> "lastName": "Smith", <br> "age": 25 <br> } <br> ``` |
+| 脚注 (Footnote)          | Here's a sentence with a footnote. [^1] <br> [^1]: This is the footnote. |
+| 标题编号 (Heading ID)    | ### My Great Heading {#custom-id}             |
+| 定义列表 (Definition List) | term <br> : definition                       |
+| 删除线 (Strikethrough)   | ~~The world is flat.~~                        |
+| 任务列表 (Task List)     | - [x] Write the press release <br> - [ ] Update the website <br> - [ ] Contact the media |
+
+</div>
+
+**以上内容来自 [Markdown 语法官方中文教程](https://markdown.com.cn/basic-syntax/links.html)**

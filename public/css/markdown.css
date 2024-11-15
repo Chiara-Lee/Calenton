@@ -1,0 +1,83 @@
+.wide-table {
+  width: 100%;
+}
+
+.wide-table table {
+  width: 100%;
+}
+/*有序列表和无序列表的样式：*/
+.page main ol {
+    list-style-type: decimal;
+    padding: 1.25rem 1.25rem 1.25rem 2rem;
+  }
+  .page main ul {
+    list-style-type: "→ ";
+    padding: 1.25rem 1.25rem 1.25rem 2rem;
+  }
+  .page main ol,
+  .page main ul {
+    padding: 1.25rem 1.25rem 1.25rem 2rem;
+  }
+  .page main ol, 
+  .page main ol ol, 
+  .page main ol ol ol {
+    list-style-type: decimal;/*阿拉伯数字*/
+  }
+  .page main ul {
+    list-style-type: circle;
+  }
+  .page main ul ul {  /*内嵌的二级无序列表*/
+    list-style: disc;/*实心圆*/
+  }
+  .page main ul ul ul {
+    list-style-type: square; /* 三级：方块 */
+  }
+/*添加了背景色、圆角和内边距，让块引用更有视觉区分度：*/
+  .page main blockquote {
+    background-color: #f3f4f6;
+    border-radius: .25rem;
+    padding: .75rem;
+    box-shadow: 0 0 transparent,0 0 transparent,inset 0 2px 4px 0 rgba(0,0,0,.06);
+  }
+/*为行内代码和预格式文本（如代码块）设置了背景色、圆角和字体：*/
+  .page main code {
+    background-color: #272822;
+    border-radius: .25rem;
+    padding: .25rem;
+    color: #f3f4f6;
+  }
+  .page main pre {
+    display: block;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+/*表格及其单元格的样式设置：*/
+  .page main table {
+    border-color: #e5e7eb;
+    border-width: 2px;
+  }
+  .page main td,
+  .page main th {
+    padding: .5rem .75rem;
+  }
+  .page main thead {
+    background-color: #e5e7eb;
+  }
+  .home #menu h1:after,
+  .home #testimonials h1:after,
+  .page main tr:nth-child(2) {
+    background-color: #f3f4f6;
+  }
+/*定义列表（<dl>）的样式设置：*/
+  .page main dl {
+    border-color: #f3f4f6;
+    border-width: 2px;
+  }
+  .page main dl dt {
+    border-left-width: 8px;
+    font-weight: 700;
+    padding-left: 1rem;
+  }
+  .page main dl dd {
+    padding-left: 6rem;
+  }

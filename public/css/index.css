@@ -764,14 +764,7 @@ header nav:hover>ul {
   font-size: 1.875rem; /* 例如标题的大小可以更突出 */
   line-height: 2.25rem;
 }
-.page main ol {
-  list-style-type: decimal;
-  padding: 1.25rem 1.25rem 1.25rem 2rem;
-}
-.page main ul {
-  list-style-type: "→ ";
-  padding: 1.25rem 1.25rem 1.25rem 2rem;
-}
+
 .page main img {
   border-radius: .25rem;
   box-shadow: 0 0 transparent, 0 0 transparent, 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -823,75 +816,14 @@ header nav:hover>ul {
   padding-top: .75rem;
   padding-bottom: 1.25rem;
 }
-.page main ol,
-.page main ul {
-  padding: 1.25rem 1.25rem 1.25rem 2rem;
-}
-.page main ol, 
-.page main ol ol, 
-.page main ol ol ol {
-  list-style-type: decimal;
-}
-.page main ul {
-  list-style-type: "* ";
-}
-.page main ul ul {
-  list-style: disc;
-}
-.page main ul ul ul {
-  list-style: circle;
-}
-.page main blockquote {
-  background-color: #f3f4f6;
-  border-radius: .25rem;
-  padding: .75rem;
-  box-shadow: 0 0 transparent,0 0 transparent,inset 0 2px 4px 0 rgba(0,0,0,.06);
-}
-.page main code {
-  background-color: #272822;
-  border-radius: .25rem;
-  padding: .25rem;
-  color: #f3f4f6;
-}
-.page main pre {
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
+
 .home #intro nav li a:hover,
 .page main a,
 footer a:hover {
   color: rgb(var(--red), var(--green), var(--blue));
   text-decoration: underline;
 }
-.page main table {
-  border-color: #e5e7eb;
-  border-width: 2px;
-}
-.page main td,
-.page main th {
-  padding: .5rem .75rem;
-}
-.page main thead {
-  background-color: #e5e7eb;
-}
-.home #menu h1:after,
-.home #testimonials h1:after,
-.page main tr:nth-child(2) {
-  background-color: #f3f4f6;
-}
-.page main dl {
-  border-color: #f3f4f6;
-  border-width: 2px;
-}
-.page main dl dt {
-  border-left-width: 8px;
-  font-weight: 700;
-  padding-left: 1rem;
-}
-.page main dl dd {
-  padding-left: 6rem;
-}
+
 @media (min-width:640px) {
   .page main {
     max-width: 640px;
