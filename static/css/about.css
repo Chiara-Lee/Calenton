@@ -1,0 +1,189 @@
+.page main h2 strong {
+  font-weight: 700;
+  color: #ff69b4; /* 粉色 */
+  text-shadow: 0 0 1px rgba(0,0,0,20%), 0 0 1px rgba(1,0,5,10%);
+}
+.page main h3 {
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+.page main h4 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding-top: .75rem;
+  padding-bottom: .5rem;
+}
+.page main h5 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding-top: .5rem;
+  padding-bottom: .25rem;
+}
+.page main h6 {
+  font-weight: 700;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+.page main p {
+  padding-top: .75rem;
+  padding-bottom: 1.25rem;
+}
+.page main ol,
+.page main ul {
+  padding: 1.25rem 1.25rem 1.25rem 2rem;
+}
+.page main ol, 
+.page main ol ol, 
+.page main ol ol ol {
+  list-style-type: decimal;
+}
+.page main ul {
+  list-style-type: "* ";
+}
+.page main ul ul {
+  list-style: disc;
+}
+.page main ul ul ul {
+  list-style: circle;
+}
+.page main blockquote {
+  background-color: #f3f4f6;
+  border-radius: .25rem;
+  padding: .75rem;
+  box-shadow: 0 0 transparent,0 0 transparent,inset 0 2px 4px 0 rgba(0,0,0,.06);
+}
+.page main code {
+  background-color: #272822;
+  border-radius: .25rem;
+  padding: .25rem;
+  color: #f3f4f6;
+}
+.page main pre {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.home #intro nav li a:hover,
+.page main a,
+footer a:hover {
+  color: rgb(var(--red), var(--green), var(--blue));
+  text-decoration: underline;
+}
+.page main table {
+  border-color: #e5e7eb;
+  border-width: 2px;
+}
+.page main td,
+.page main th {
+  padding: .5rem .75rem;
+}
+.page main thead {
+  background-color: #e5e7eb;
+}
+.home #menu h1:after,
+.home #testimonials h1:after,
+.page main tr:nth-child(2) {
+  background-color: #f3f4f6;
+}
+.page main dl {
+  border-color: #f3f4f6;
+  border-width: 2px;
+}
+.page main dl dt {
+  border-left-width: 8px;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+.page main dl dd {
+  padding-left: 6rem;
+}
+@media (min-width:640px) {
+  .page main {
+    max-width: 640px;
+  }
+}
+@media (min-width:768px) {
+  .page main h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .page main {
+    max-width: 768px;
+  }
+}
+@media (min-width:1024px) {
+  header nav li a {
+    border-top-width: 0;
+    width: auto;
+  }
+  header nav ul > li ul {
+    background-color: #e5e7eb;
+    display: none;
+    position: absolute;
+    top: 2rem;
+  }
+  header nav ul > li:hover ul {
+    display: block;
+    visibility: visible;
+  }
+  header nav:hover > ul {
+    display: inline-block;
+  }
+  header nav li {
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: auto;
+  }
+  header nav ul {
+    background-color: transparent;
+    display: inline-block;
+    box-shadow: 0 0 transparent,0 0 transparent,0 0 transparent;
+    width: auto;
+  }
+  header .hamburger {
+    display: none;
+  }
+  .page main h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    padding-top: 2.5rem;
+  }
+  .page main h2,
+  .page main h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .page main {
+    max-width: 1024px;
+  }
+
+  @media (min-width:1280px) {
+    .home #intro nav,
+    .home #testimonials>div,
+    .page main,
+    body>*,
+    header {
+      max-width: 1280px;
+    }
+  }
+  @media (min-width:1536px) {
+    .home #intro nav,
+    .home #testimonials>div,
+    .page main,
+    body>*,
+    header {
+      max-width: 1536px;
+    }
+  }
+
+  .about-content {
+    flex: 1;
+    margin-right: 20px;
+    width: 65%;
+    margin-left: -300px;
+  }

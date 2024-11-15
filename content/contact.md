@@ -1,6 +1,6 @@
 ---
 title:  关于
-type:  modern
+type:  about
 
 ---
 ##   1.关于这个网站的用途：
