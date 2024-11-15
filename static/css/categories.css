@@ -1,0 +1,87 @@
+
+/* 主体样式 */
+.categories-list {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* 每个分类卡片的样式 */
+.category-item {
+    background-color: #b4d39e;
+    color: white;
+    padding: 15px;/*高度*/
+    margin-bottom: 0; /* 卡片之间的间距 */
+    border-radius: 0; /* 圆角 */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 1100px;
+}
+
+/* 卡片标题部分 */
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 卡片的箭头图标 */
+.arrow {
+  font-size: 0.8em; /* 更小的箭头符号 */
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* 子内容列表默认隐藏 */
+.posts-list {
+    display: none; /* 默认隐藏 */
+    margin: 0; /* 去掉边距 */
+    border-radius: 0; /* 保持平直边缘以与父卡片无缝衔接 */
+    padding: 0; /* 去掉多余填充 */
+    width: 100%; /* 子卡片占满整个宽度 */
+    background-color: white; /* 白色背景 */
+    border-radius: 0 0 8px 8px; /* 让子卡片与父卡片圆角连接 */
+    overflow: hidden; /* 避免超出内容 */
+    margin-top: 15px; /* 在子卡片与父卡片标题之间增加空隙 */
+}
+
+/* 子内容项样式 */
+.post-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    border-radius: 0; /* 圆角 */
+    padding: 10px;
+    font-size: 13px;  /* 更小的字体 */
+    background-color: #fff;  /* 与卡片颜色区分开的浅色 */
+}
+
+/* 子内容项前的小圆圈 */
+.post-item .circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border: 1px solid black;  /* 黑色边框 */
+  border-radius: 50%;  /* 圆形 */
+  vertical-align: middle;  /* 与文字对齐 */
+}
+
+/* 子内容项链接样式 */
+.post-item a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.post-item a:hover {
+    color: #d1ecff; /* 悬浮时链接变为浅色 */
+}
+
+/* 展开状态箭头旋转 */
+.category-header.open .arrow {
+    transform: rotate(90deg);
+}

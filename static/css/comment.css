@@ -1,0 +1,239 @@
+/* 表单容器样式 */
+.comment-form {
+  max-width: 600px !important;
+  margin: 20px auto !important;
+  padding: 20px !important;
+  background-color: rgba(50, 50, 50, 0.9) !important; /* 深灰色半透明背景 */
+  border-radius: 10px !important;
+}
+
+/* 标签样式 */
+.comment-label {
+  color: #FFFFFF  !important; /* 确保文本为纯白色 */
+  font-size: 18px !important; /* 增大字体 */
+  font-weight: bold !important; /* 加粗以增加可读性 */
+}
+
+/* 输入框和文本区域样式 */
+.comment-input,
+.comment-textarea {
+    width: 100% !important;
+    padding: 10px !important;
+    margin-bottom: 15px !important;
+    border: 2px solid #FFFFFF !important; /* 更粗的白色边框 */
+    border-radius: 5px !important;
+    background-color: rgba(255, 255, 255, 0.8) !important; /* 半透明效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* 轻微阴影，使输入框看起来有层次感 */
+}
+
+
+/* 输入框获取焦点时的样式 */
+.comment-input:focus,
+.comment-textarea:focus {
+  border-color: #AAAAAA !important; /* 聚焦时边框变暗 */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 按钮样式 */
+.comment-button {
+  background-color: #6a8eb1 !important; /* 柔和的蓝色 */
+  color: #FFFFFF !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  border-radius: 5px !important;
+  transition: background-color 0.3s ease !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* 按钮的阴影 */
+}
+
+.comment-button:hover {
+  background-color: #5b7ea0 !important; /* 悬停时稍微变暗 */
+  background: linear-gradient(45deg, #5b7ea0, #2e577d) !important; /* 悬停时稍微变暗 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important; /* 增加悬停时的阴影效果 */
+}
+.comment-input::placeholder,
+.comment-textarea::placeholder {
+    color: rgba(50, 50, 50, 0.8) !important; /* 深色占位符，更加容易看见 */
+    font-style: italic !important;
+}
+
+
+
+
+/* 评论区整体样式 */
+.comments {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  width: 90%;
+  margin: 2rem auto;
+  font-family: 'Georgia', serif;
+  color: #333;
+  min-height: 400px; /* 根据需要调整适当的高度 */
+}
+
+/* 单个评论样式 */
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment-content {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  background-color: transparent;
+  border: none;/*移除边框*/
+  box-shadow: none; /* 如果有阴影也可以移除 */
+}
+/* 子评论样式 */
+.child-comment {
+  position: relative;
+
+}
+.comment:hover {
+  transform: translateY(-5px);
+}
+
+/* 头像样式 */
+.comment img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* 作者名称样式 */
+.comment .author {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+/* 评论内容样式 */
+.comment .message {
+  font-style: italic;
+  line-height: 1.6;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.child-comment .message {
+  font-style: italic;
+  line-height: 1.6;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+
+.comment .time,
+.child-comment .time {
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* 回复按钮的现代化样式 */
+.reply-button {
+  font-size: 0.85em;
+  color: #a3c585;
+  background-color: #e9f5ff;
+  padding: 5px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reply-button:hover {
+  background-color: #7d9e61; /* 深色抹茶绿色悬停效果 */
+}
+
+
+/*回复对象提示*/
+#reply-to {
+  display: none; /* 默认隐藏，JavaScript 控制显示 */
+  font-size: 0.9em; /* 略小的字体 */
+  color: #6c757d; /* 使用灰色，与整体风格匹配 */
+  margin-bottom: 10px; /* 在表单输入框之间增加间距 */
+  padding: 5px 10px; /* 内边距让内容显得更清晰 */
+  border-left: 3px solid #007bff; /* 左侧加一个蓝色边框，使其醒目 */
+  background-color: #f1f3f5; /* 浅灰色背景 */
+  border-radius: 5px; /* 添加圆角，使其更美观 */
+}
+
+/* 鼠标悬停在 “回复” 提示上时，稍微调整颜色 */
+#reply-to:hover {
+  background-color: #e9ecef;
+  border-left-color: #0056b3; /* 加深边框颜色 */
+
+}
+/*父评论高亮*/
+.comment.highlight {
+  border: 2px solid #a3d3f5; /* 边框为淡蓝色，与页面整体的柔和风格相契合 */
+  background-color: #f9fafb; /* 轻微的淡灰色背景，使其与其他评论区分开来 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 轻微的阴影，使高亮的评论更有立体感 */
+  transition: all 0.3s ease-in-out; /* 添加过渡效果，使高亮看起来更平滑 */
+}
+
+/* 评论表单提交信息的通用模板样式 */
+.success, .error {
+  max-width: 600px; /* 最大宽度限制，保持统一的视觉效果 */
+  margin: 20px 0; /* 顶部和底部的留白，和页面其他内容保持一致 */
+  padding: 15px 20px; /* 内边距，保证内容不紧贴边框 */
+  border-radius: 10px; /* 边角圆润，符合现代风格 */
+  font-size: 16px; /* 字体大小适中，与评论保持一致 */
+  line-height: 1.5; /* 增加行高，使得文字更容易阅读 */
+  border-left: 4px solid; /* 添加左侧边框强调信息，符合页面风格 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 添加轻微阴影以增强层次感 */
+}
+
+/* 成功信息样式 */
+.success {
+  background-color: #f0f9f0; /* 非常浅的绿色背景，表示成功 */
+  color: #3c763d; /* 深绿色文本，搭配背景 */
+  border-left-color: #5cb85c; /* 左侧边框使用较深的绿色，和背景形成对比 */
+}
+
+/* 错误信息样式 */
+.error {
+  background-color: #fdf2f2; /* 浅红色背景，用于表示错误 */
+  color: #a94442; /* 深红色文本，提升对比度 */
+  border-left-color: #d9534f; /* 左侧边框使用较深的红色，和背景对比明显 */
+}
+
+/* 调整响应式显示 */
+@media (max-width: 768px) {
+  .success, .error {
+    max-width: 90%; /* 小屏幕下增加宽度比例以适应屏幕 */
+    font-size: 14px; /* 小屏幕下减小字体大小 */
+  }
+}
+
+/* 淡入动画效果 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.success, .error {
+  animation: fadeIn 1s ease-in-out; /* 淡入动画效果 */
+}
+
+

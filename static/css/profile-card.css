@@ -1,0 +1,105 @@
+/*个人卡片*/
+.profile-card {
+  position: absolute; /* 让卡片相对于父容器定位 */
+  right: 10px; /* 距离右侧固定距离 */
+  top: 150px; /* 距离顶部的距离，您可以根据需要进行调整 */
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 260px; /* 将宽度调整为更宽的值 */
+}
+
+.card-avatar {
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+}
+/*这个容器负责定义头像区域的整体布局，例如宽度、高度比例*/
+.profile-image {
+  width: 100%;
+  height: 150px; /* 控制头像区域的高度 */
+  background-color: #ccc; /* 背景颜色可以替换为图片加载失败时的颜色 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*这个选择器专门用于调整图片在容器内的显示方式,确保图片填充容器，并保持图片的纵横比。*/
+.profile-image img {
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.card-avatar p {
+  font-size: 1em;
+  color: #555;
+}
+
+.card-avatar h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0 -10px !important; /* 缩小标题和副标题之间的间距 */
+}
+
+.subtitle {
+  font-size: 14px;
+  color: gray;
+  margin: 0;
+  margin: 0 0 -10px; /* 缩小副标题和描述之间的间距 */
+}
+
+.description {
+  font-size: 12px;
+  color: #666;
+  margin: 10px 0 0;
+  margin: 0 !important; /* 去除描述文字的下方额外间距 */
+}
+
+
+
+
+.social-links {
+  font-family: 'Georgia', serif; /* 更换为喜欢的字体 */
+  margin-top: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.social-links p {
+  font-size: 20px !important;/*标题字体大小*/
+  font-weight: bold;
+  margin-bottom: 5px; /* 调整 p 标签与下方链接之间的间距 */
+  color: #333;
+}
+
+.social-item {
+  font-size: 16px; /* 设置每个社交链接项的字体大小 */
+  color: #333 !important; /* 设置链接颜色 */
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  text-decoration-color: #333;       /* 自定义下划线颜色 */
+  text-decoration-thickness: 1px;    /* 自定义下划线厚度 */
+  text-underline-offset: 2px;        /* 调整下划线与文字的距离 */
+  display: inline-block; /* 使元素变成块级元素，以便控制下划线长度 */
+  border-bottom: 1px solid #333; /* 设置下划线的颜色和厚度 */ /*solid 表示“实线”边框，即边框为一个连续的实线。只有一个参数，意味着只有下划线*/
+  text-decoration: none !important; /* 去掉默认下划线 */
+  display: block;
+  transition: transform 0.3s ease, color 0.3s ease; /* 控制移动和平滑效果 */
+}
+
+.social-item:last-child {
+  border-bottom: none;
+}
+
+.social-item:hover {
+  transform: translateX(20px); /* 向右移动20px */
+  color: #333 !important; /* 悬停时改变颜色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 悬浮时增加阴影 */
+  background-color: #fff; /* 悬停时设置背景为白色 */
+  border-bottom: none; /* 悬浮时去掉下划线 */
+}

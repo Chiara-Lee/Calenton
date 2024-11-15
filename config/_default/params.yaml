@@ -14,3 +14,12 @@ recent_posts:
 NetlifyCommentForm: 6720c108558e590008ed7242
 useNetlifyForComments: true
 RemoveFormOnSubmission: true
+css_files:
+  - "/css/index.css"
+  - "/css/categories.css"
+  - "/css/comment.css"
+  - "/css/page-main.css"
+  - "/css/pagination.css"
+  - "/css/profile-card.css"
+  - "/css/relative.css"
+  - "/css/search.css"

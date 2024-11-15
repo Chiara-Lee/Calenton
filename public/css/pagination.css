@@ -1,0 +1,31 @@
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #0000EE; /* 蓝色字体 */
+    border: 1px solid #ddd;
+    border-radius: 12px; /* 圆角效果 */
+    transition: all 0.3s ease; /* 平滑过渡效果 */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+    text-decoration: none !important; /* 使用 !important 来强制去除下划线 */
+}
+
+.pagination a.current {
+    color: #888; /* 当前页码变得暗淡 */
+    background-color: #f0f0f0; /* 设置一个浅色背景 */
+    cursor: default; /* 鼠标在当前页码上显示默认光标 */
+    pointer-events: none; /* 禁止点击 */
+}
+
+.pagination a:hover {
+    transform: translateY(-3px); /* 鼠标悬浮时向上移动一点 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 鼠标悬浮时加重阴影以达到凸出的效果 */
+    border-color: #0000EE; /* 鼠标悬浮时边框颜色变为蓝色 */
+}

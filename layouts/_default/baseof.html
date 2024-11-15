@@ -10,7 +10,11 @@
     <meta name="viewport" 
       content="width=device-width, initial-scale=1.0" />
       <link rel="icon" type="image/png" href="{{partialCached "favicon.png.html" $ "nothing"}}">
-      {{ partialCached "index.css.html" . "nothing" }}
+
+      {{ range .Site.Params.css_files }}
+      <link rel="stylesheet" href="{{ . }}">
+      {{ end }}
+      
     {{$title := default site.Title .Title}}
     {{with $title}}<title>{{.}}</title>{{end}}
     {{ $js := resources.Get "index.js" | js.Build (dict "minify" hugo.IsProduction) }}
