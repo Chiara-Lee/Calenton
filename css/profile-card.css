@@ -8,6 +8,7 @@
   flex-direction: column;
   gap: 16px;
   width: 260px; /* 将宽度调整为更宽的值 */
+  margin-right: 30px !important;
 }
 
 .card-avatar {
@@ -103,3 +104,4 @@
   background-color: #fff; /* 悬停时设置背景为白色 */
   border-bottom: none; /* 悬浮时去掉下划线 */
 }
+
