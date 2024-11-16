@@ -16,7 +16,7 @@ main:
     url: /about
     weight: 200
   - identifier: friends
-    name: 友链
+    name: 友人帐
     url: /friends
     weight: 160
 
