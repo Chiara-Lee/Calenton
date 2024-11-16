@@ -31,8 +31,8 @@ type:  about
 最后，希望您在我的网站玩的愉快。请尽情的享受探索知识的乐趣吧。
 
 {{< card 
-    image="/image/avatar.png" 
+    image="/image/Vertin.png" 
     name="Chiara Lee" 
-    subtitle="清璃" 
+    subtitle="Chiara Lee" 
     description="以理性审视世界，凭理想创造世界。" 
 >}}
