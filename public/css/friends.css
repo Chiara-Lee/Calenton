@@ -1,0 +1,84 @@
+.page-friends.main {
+    background-image: url('/image/cover/our-w.png'); /* 替换为实际图片路径 */
+    background-size: cover; /* 确保背景图覆盖整个容器 */
+    background-position: center; /* 背景图居中 */
+    background-repeat: no-repeat; /* 防止重复 */
+    padding: 60px 20px; /* 调整内容上下间距 */
+}
+
+.friends-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+    color: #fff; /* 设置标题文字颜色为白色，便于在背景图上显示 */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* 提高标题可读性 */
+}
+
+.friends-header h1 {
+    font-size: 2.5rem; /* 放大标题字体 */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.friends-list {
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: center; /* 水平居中对齐 */
+    gap: 20px; /* 卡片之间的间距 */
+    padding: 20px; /* 容器的内边距 */
+}
+
+.friend-card {
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直居中 */
+    width: 300px; /* 卡片的宽度 */
+    text-align: left; /* 内容左对齐 */
+    background: #fff; /* 卡片背景颜色 */
+    border-radius: 10px; /* 卡片圆角 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+    padding: 15px; /* 卡片的内边距 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 添加动态效果 */
+}
+
+.friend-card:hover {
+    transform: translateY(-5px); /* 鼠标悬停时向上浮动 */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* 鼠标悬停时增加阴影 */
+}
+
+.friend-avatar {
+    flex-shrink: 0; /* 防止头像被压缩 */
+    width: 80px; /* 设置头像宽度 */
+    height: 80px; /* 设置头像高度 */
+    border-radius: 50% !important; /* 圆形头像 */
+    object-fit: cover; /* 保持头像比例 */
+    margin-right: 15px; /* 头像与文字内容的间距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 头像阴影效果 */
+}
+
+.friend-info {
+    display: flex; /* 使用 Flexbox 垂直排列文字 */
+    flex-direction: column; /* 文字竖直排列 */
+    justify-content: center; /* 文字内容垂直居中 */
+    margin-left: 20px;
+}
+
+.friend-info h2 {
+    font-size: 1.2rem; /* 名字字体大小 */
+    color: #333; /* 名字颜色 */
+    margin: 0 0 5px; /* 与描述之间的间距 */
+    margin-bottom: -5px !important;
+}
+
+.friend-info p {
+    font-size: 0.9rem; /* 描述字体大小 */
+    color: #666; /* 描述颜色 */
+    margin: 0; /* 清除默认外边距 */
+}

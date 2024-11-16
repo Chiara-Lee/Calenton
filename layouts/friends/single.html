@@ -1,0 +1,25 @@
+{{define "bodyClass"}} page {{end}}
+{{define "body"}}
+<main class="page-friends main" style="background-image: url('/image/cover/our-w.png');">
+    <!-- 顶部标题和插图 -->
+    <header class="friends-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.header_image }}
+        <img src="{{ . | relURL }}" alt="插图" class="header-image">
+        {{ end }}
+    </header>
+
+    <!-- 友链列表 -->
+    <section class="friends-list">
+        {{ range site.Data.friends }}
+        <div class="friend-card">
+            <img src="{{ .avatar | relURL }}" alt="{{ .name }}头像" class="friend-avatar">
+            <div class="friend-info">
+            <h2>{{ .name }}</h2>
+            <p>{{ .description }}</p>
+            </div>
+        </div>
+        {{ end }}
+    </section>
+</main>
+{{ end }}

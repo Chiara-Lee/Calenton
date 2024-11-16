@@ -11,9 +11,9 @@
     <atom:link href="http://localhost:1313/tags/square/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Squares</title>
-      <link>http://localhost:1313/blog/building-squares/</link>
+      <link>http://localhost:1313/notes/building-squares/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
-      <guid>http://localhost:1313/blog/building-squares/</guid>
+      <guid>http://localhost:1313/notes/building-squares/</guid>
       <description>&lt;p&gt;In geometry, a square is a regular quadrilateral, which means that it has four equal sides and four equal angles (90-degree angles, or (100-gradian angles or right angles). It can also be defined as a rectangle in which two adjacent sides have equal length. A square with vertices ABCD would be denoted ◻ ABCD.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,7 +2,7 @@
 menu:
   main:
     name: Community
-    parent: blog
+    parent: notes
 layout: list
 cascade:
     type: blog

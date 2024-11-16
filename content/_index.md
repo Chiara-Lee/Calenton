@@ -2,7 +2,7 @@
 title: Caleton Academy of Magic
 description:
 subtitle: Spread **love** and **hope**
-explore: blog
+explore: notes
 outputs: [html, json]
 ---
 
@@ -18,7 +18,7 @@ Physics is the scientific study of matter, its fundamental constituents, its mot
 
 ----from  Wiki
 
-[Physics](./about)
+[Physics](/notes)
 
 * * *
 
@@ -31,4 +31,4 @@ Mathematics is a field of study that discovers and organizes methods, theories a
 
 ----from  Wiki
 
-[Mathematics](./contact)
+[Mathematics](/notes)

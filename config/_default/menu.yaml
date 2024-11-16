@@ -3,18 +3,23 @@ main:
     name: 资源分享
     url: /resource
     weight: 160
-  - identifier: blog
+  - identifier: notes
     name: 笔记
-    url: /blog
+    url: /notes
     weight: 110
-  - identifier: news
+  - identifier: thoughts
     name: 思考碎片
-    url: /news
+    url: /thoughts
     weight: 150
-  - identifier: contact
+  - identifier: about
     name: 关于
-    url: /contact
+    url: /about
     weight: 200
+  - identifier: friends
+    name: 友链
+    url: /friends
+    weight: 160
+
 footer:
   - identifier: Categories
     name: 目录

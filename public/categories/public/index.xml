@@ -11,23 +11,23 @@
     <atom:link href="http://localhost:1313/categories/public/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Circle</title>
-      <link>http://localhost:1313/blog/community/circle/</link>
+      <link>http://localhost:1313/notes/community/circle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
-      <guid>http://localhost:1313/blog/community/circle/</guid>
+      <guid>http://localhost:1313/notes/community/circle/</guid>
       <description>&lt;p&gt;A circle is a simple closed shape. It is the set of all points in a plane that are at a given distance from a given point, the centre; equivalently it is the curve traced out by a point that moves in a plane so that its distance from a given point is constant. The distance between any of the points and the centre is called the radius. This article is about circles in Euclidean geometry, and, in particular, the Euclidean plane, except where otherwise noted.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Curve</title>
-      <link>http://localhost:1313/blog/community/curve/</link>
+      <link>http://localhost:1313/notes/community/curve/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
-      <guid>http://localhost:1313/blog/community/curve/</guid>
+      <guid>http://localhost:1313/notes/community/curve/</guid>
       <description>&lt;p&gt;In mathematics, a curve (also called a curved line in older texts) is, generally speaking, an object similar to a line but that need not be straight. Thus, a curve is a generalization of a line, in that it may be curved.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Shaper</title>
-      <link>http://localhost:1313/news/shaper/</link>
+      <link>http://localhost:1313/thoughts/shaper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
-      <guid>http://localhost:1313/news/shaper/</guid>
+      <guid>http://localhost:1313/thoughts/shaper/</guid>
       <description>Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional medium. Instruments include graphite pencils, pen and ink, various kinds of paints, inked brushes, colored pencils, crayons, charcoal, chalk, pastels, various kinds of erasers, markers, styluses, and various metals (such as silverpoint). Digital drawing is the act of using a computer to draw. Common methods of digital drawing include a stylus or finger on a touchscreen device, stylus- or finger-to-touchpad, or in some cases, a mouse.</description>
     </item>
   </channel>
