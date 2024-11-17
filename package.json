@@ -1,25 +1,25 @@
 {
   "author": "",
   "comments": {
-    "dependencies": {},
+    "dependencies": {
+      "mathjax": "project"
+    },
     "devDependencies": {
-      "fuse.js": "github.com/Chiara-Lee/Calenton"
+      "fuse.js": "project"
     }
+  },
+  "dependencies": {
+    "mathjax": "3.2.0"
   },
   "description": "欢迎来到迦黎顿魔法学院",
   "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
-    "babel-loader": "^9.2.1",
-    "fuse.js": "^6.6.2",
-    "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4"
+    "fuse.js": "^6.6.2"
   },
   "license": "ISC",
-  "main": "index.js",
+  "main": "api.js",
   "name": "calenton",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node api.js"
   },
   "version": "1.0.0"
 }
