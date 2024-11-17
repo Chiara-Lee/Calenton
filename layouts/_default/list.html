@@ -18,7 +18,7 @@
                         {{ end }}
                         <div class="post-content">
                             <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                            <p>{{ .Summary | truncate 100 "..." }}</p>
+                            {{ .Summary | plainify | truncate 100 "..." }}
                         </div>
                     </div>
                 </div>

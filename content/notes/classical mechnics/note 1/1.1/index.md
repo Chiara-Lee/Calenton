@@ -9,7 +9,7 @@ lastmod: 2024-11-17
 
 函数是一个具体的映射关系，给定两个集合 {{<latex display="false">}} X {{</latex>}}和{{<latex display="false">}} Y {{</latex>}}，在两个集合的元素 {{<latex display="false">}} x\in X {{</latex>}}和 {{<latex display="false">}} y\in Y {{</latex>}}之间建立的一个对应关系即为映射。
 
-{{<latex display="false">}} f:x\rightarrow y=f(x) \\{{</latex>}}
+{{<latex display="true">}} f:x\rightarrow y=f(x) \\{{</latex>}}
 
 ![](/1.png)
 
@@ -25,7 +25,7 @@ lastmod: 2024-11-17
 
 至此，**"泛函"**的概念已经呼之欲出了。用数学语言来说，泛函就是函数到数的映射。两个集合之间的映射有很多种，也就是，存在很多的函数{{<latex display="false">}} f_1(x),f_2(x),\cdots,f_n(x){{</latex>}}，所有这些函数自然也构成集合{{<latex display="false">}} \mathcal{F}=\{f_1,f_2,\cdots,f_n\}{{</latex>}},把函数{{<latex display="false">}} f{{</latex>}}的泛函记为{{<latex display="false">}} s[f] {{</latex>}}，即
 
-{{<latex display="false">}} S:f\longmapsto S=S[f],\quad\mathcal{F}\longmapsto \mathcal{C}\\{{</latex>}}
+{{<latex display="true">}} S:f\longmapsto S=S[f],\quad\mathcal{F}\longmapsto \mathcal{C}\\{{</latex>}}
 
 其中，{{<latex display="false">}} \mathcal{C}{{</latex>}}代表复数集合。
 
@@ -37,19 +37,19 @@ lastmod: 2024-11-17
 
 平面上曲线方程记为 {{<latex display="false">}} y=f(x){{</latex>}}，则两点之间的曲线长度{{<latex display="false">}}S{{</latex>}}为曲线方程{{<latex display="false">}}f(x){{</latex>}}的泛函
 
-{{<latex display="false">}}S(曲线长度)=S[f](曲线方程f的泛函)=\int\limits_{曲线}dx\sqrt{1+(f'(x))^2}\\{{</latex>}}
+{{<latex display="true">}}S(曲线长度)=S[f](曲线方程f的泛函)=\int\limits_{曲线}dx\sqrt{1+(f'(x))^2}\\{{</latex>}}
 
 理想气体准静态过程对外做功 {{<latex display="false">}}W{{</latex>}}即是过程方程{{<latex display="false">}}p=p(V){{</latex>}}的泛函
 
-{{<latex display="false">}}W=W[p]=\int\limits_{过程}p(V)dV\\{{</latex>}}
+{{<latex display="true">}}W=W[p]=\int\limits_{过程}p(V)dV\\{{</latex>}}
 
 三维空间曲线方程记为{{<latex display="false">}}z=\phi(x,y){{</latex>}}，则曲面面积 A 为二元函数{{<latex display="false">}}z=\phi(x,y){{</latex>}}的泛函
 
-{{<latex display="false">}}A=A[\phi]=\iint_{\text {区域 }} \mathrm{d} x \mathrm{~d} y \sqrt{1+\left(\frac{\partial \phi}{\partial x}\right)^{2}+\left(\frac{\partial \phi}{\partial y}\right)^{2}} \\{{</latex>}}
+{{<latex display="true">}}A=A[\phi]=\iint_{\text {区域 }} \mathrm{d} x \mathrm{~d} y \sqrt{1+\left(\frac{\partial \phi}{\partial x}\right)^{2}+\left(\frac{\partial \phi}{\partial y}\right)^{2}} \\{{</latex>}}
 
 经典力学中的遇见的泛函，通常为以下形式
 
-{{<latex display="false">}}S[f]=\int_{t_{1}}^{t_{2}} \mathrm{~d} t L\left(t, f(t), f^{\prime}(t), f^{\prime \prime}(t), \cdots\right)\\{{</latex>}}
+{{<latex display="true">}}S[f]=\int_{t_{1}}^{t_{2}} \mathrm{~d} t L\left(t, f(t), f^{\prime}(t), f^{\prime \prime}(t), \cdots\right)\\{{</latex>}}
 
 此处的被积函数{{<latex display="false">}}L=L\left(t, f(t), f^{\prime}(t), f^{\prime \prime}(t), \cdots\right){{</latex>}}是函数 f(t) 及其导数的一般函数。
 
