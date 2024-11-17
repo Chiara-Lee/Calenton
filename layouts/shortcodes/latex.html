@@ -6,8 +6,9 @@
      {{ end }}
      
      {{ if (and site.Params.Latex2Svg (getenv "LATEX2SVG_PASSWORD")) }}
+       {{ $tex := .Inner | plainify }} <!-- 将 .Inner 转换为纯文本 -->
        {{ $json := getJSON site.Params.Latex2Svg "?" 
-          (querify "tex" .Inner) 
+          (querify "tex" $tex) 
           "&password=" (getenv "LATEX2SVG_PASSWORD") 
           "&display=" $display }}
        {{ with $json.data }}
@@ -17,7 +18,8 @@
        {{ end }}
      {{ else }}
        <span class="fallback-latex">
-         {{ .Inner | safeHTML }}
+         {{ .Inner | plainify | safeHTML }}
        </span>
      {{ end }}
+     
      
