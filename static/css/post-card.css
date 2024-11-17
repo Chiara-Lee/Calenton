@@ -22,22 +22,6 @@
 .post-card h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    line-height: 1.2; /* 控制标题行高 */
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; /* 如果标题过长则显示省略号 */
-}
-
-.post-card p {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    -webkit-line-clamp: 2; /* 限制文字最多显示 2 行 */
-    text-overflow: ellipsis;
-    margin: 10px 0;
-    line-height: 1.6; /* 控制行间距 */
-    color: #555; /* 调整文本颜色 */
-    font-size: 0.9em;
 }
 
 .post-meta {
@@ -60,7 +44,7 @@
 .read-more {
     display: inline-block;
     padding: 10px 20px;
-    margin-top: auto; /* 将按钮放置在卡片底部 */
+    margin-top: 10px;
     background-color: #e0e7ff; /* 稍深的蓝色 */
     color: #fff;
     text-decoration: none;
