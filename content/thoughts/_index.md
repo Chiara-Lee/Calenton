@@ -1,6 +1,6 @@
 ---
-title:  Acme  News
+title:  思考碎片
 ---
-# Acme  News
+
 
 
