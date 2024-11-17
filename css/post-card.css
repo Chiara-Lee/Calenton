@@ -11,7 +11,8 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 更柔和的阴影 */
     width: 100%;
     margin: 0 auto 20px;
-    height: auto;
+    height: 200px;/*固定了卡片高度，确保所有卡片大小一致。*/
+    overflow: hidden; /* 内容超出时隐藏 */
     display: block;
     overflow: visible;
     box-sizing: border-box;
