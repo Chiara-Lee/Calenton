@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Design on Caleton Academy of Magic</title><link>https://chiara-lee.netlify.app/categories/design/</link><description>Recent content in Design on Caleton Academy of Magic</description><generator>Hugo</generator><language>en</language><managingEditor>chiaralee953@foxmail.com (Caleton Academy of Magic)</managingEditor><webMaster>chiaralee953@foxmail.com (Caleton Academy of Magic)</webMaster><atom:link href="https://chiara-lee.netlify.app/categories/design/index.xml" rel="self" type="application/rss+xml"/><item><title>Building Squares</title><link>https://chiara-lee.netlify.app/notes/building-squares/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author><guid>https://chiara-lee.netlify.app/notes/building-squares/</guid><description>&lt;p>In geometry, a square is a regular quadrilateral, which means that it has four equal sides and four equal angles (90-degree angles, or (100-gradian angles or right angles). It can also be defined as a rectangle in which two adjacent sides have equal length. A square with vertices ABCD would be denoted ◻ ABCD.&lt;/p></description></item><item><title>Tropical triangles</title><link>https://chiara-lee.netlify.app/notes/tropical-triangles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author><guid>https://chiara-lee.netlify.app/notes/tropical-triangles/</guid><description>&lt;p>A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry. A triangle with vertices A, B, and C is denoted △ ABC.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Caleton Academy of Magic</title>
+    <link>http://localhost:1313/categories/design/</link>
+    <description>Recent content in Design on Caleton Academy of Magic</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>chiaralee953@foxmail.com (Caleton Academy of Magic)</managingEditor>
+    <webMaster>chiaralee953@foxmail.com (Caleton Academy of Magic)</webMaster>
+    <atom:link href="http://localhost:1313/categories/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Squares</title>
+      <link>http://localhost:1313/notes/building-squares/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
+      <guid>http://localhost:1313/notes/building-squares/</guid>
+      <description>&lt;p&gt;In geometry, a square is a regular quadrilateral, which means that it has four equal sides and four equal angles (90-degree angles, or (100-gradian angles or right angles). It can also be defined as a rectangle in which two adjacent sides have equal length. A square with vertices ABCD would be denoted ◻ ABCD.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tropical triangles</title>
+      <link>http://localhost:1313/notes/tropical-triangles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
+      <guid>http://localhost:1313/notes/tropical-triangles/</guid>
+      <description>&lt;p&gt;A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry. A triangle with vertices A, B, and C is denoted △ ABC.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
