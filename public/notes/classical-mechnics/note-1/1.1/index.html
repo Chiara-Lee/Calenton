@@ -4,7 +4,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     
-      <meta name="description" content="1.Markdown 语法 元素 Markdown 语法 标题 (Heading) # H1 ## H2 ### H3 粗体 (Bold) bold text 斜体 (Italic) italicized text 引用块 (Blockquote) &gt; blockquote 有序列表 (Ordered List) 1. First item 2. Second item 3. Third item 无序列表 (Unordered List) - First item - Second item - Third item 代码 (Code) code 分隔线 (Horizontal Rule) &mdash; 链接 (Link) title 一级列表项 1 二级列表项 1.1 三级列表项 1.1.1 二级列表项 1.2 一级列表项 2 元素 Markdown 语法 表格 (Table) | Syntax | Description | | &mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&ndash; | | Header | Title | | Paragraph | Text | 代码块 (Fenced Code Block) &lt;br&gt; { &lt;br&gt; &quot;firstName&quot;: &quot;John&quot;, &lt;br&gt; &quot;lastName&quot;: &quot;Smith&quot;, &lt;br&gt; &quot;age&quot;: 25 &lt;br&gt; } &lt;br&gt; 脚注 (Footnote) Here&rsquo;s a sentence with a footnote.">
+      <meta name="description" content="我们首先来回顾一下函数的概念。
+一个形象的解释是，函数是一个机器，我们把一个数输入到函数中，函数就会按照其描述来给出一个数。换成一个稍微数学的点的说法就是：
+函数是一个具体的映射关系，给定两个集合 和 ，在两个集合的元素 和 之间建立的一个对应关系即为映射。
+1.1.1 泛函的概念 从映射的角度，很多时候普通函数的概念显的不太够用。
+例如，空间（平面、球面等）中两点用任一曲线连接，给定曲线的形状，就可以计算出曲线的长度，又比如，平面上的封闭曲线和空间中的封闭曲面，给定曲线和曲面的形状，就可以计算出所包围的面积和体积。
+上面的例子有个共同的特点，“输入”——曲线的形状、曲面的形状等等，不是一般意义上的数。而”输出“却都是数。由此可见，为了描述并解决这些问题，普通函数的概念需要被推广，需要引入新的数学概念来描述这种”不是数的输入“。
+这些例子还有一个共同的特点，这些输入都可以用”函数“来刻画。
+至此，**&ldquo;泛函&rdquo;**的概念已经呼之欲出了。用数学语言来说，泛函就是函数到数的映射。两个集合之间的映射有很多种，也就是，存在很多的函数 ，所有这些函数自然也构成集合 ,把函数 的泛函记为 ，即
+其中， 代表复数集合。
+泛函既然也是一种映射，那么如果把泛函输入的函数当成是某种”广义的数“，则泛函也可以视为是一种函数。只不过函数是数的函数，泛函是函数的函数。
+1.1.2 泛函的具体形式 根据泛函的定义——输入函数，输出数。我们可以举出很多泛函的例子，比如
+平面上曲线方程记为 ，则两点之间的曲线长度 为曲线方程 的泛函
+理想气体准静态过程对外做功 即是过程方程 的泛函
+三维空间曲线方程记为 ，则曲面面积 A 为二元函数 的泛函
+经典力学中的遇见的泛函，通常为以下形式
+此处的被积函数 是函数 f(t) 及其导数的一般函数。
+可以再次看到，泛函的结果或者说输出 是一个数，但是 描述的对象是函数的函数，也就是函数所遵循的具体的对应关系，在上式中，它是 f(t) 遵循 。
+我们称数 是 f 的泛函，其实是&quot; 所描述的函数的函数是函数 f 的泛函&quot;的简洁说法，因为 的结果是数，所以简称数 是 f 的泛函。">
     
     <meta name="viewport" 
       content="width=device-width, initial-scale=1.0" />
@@ -35,7 +52,7 @@
       <link rel="stylesheet" href="/css/friends.css">
       
     
-    <title>测试专用页</title>
+    <title>1.1 泛函</title>
     
     
     <script type="text/javascript" src="/index.js" defer></script>
@@ -102,144 +119,168 @@
   
   
     <h1>
-      测试专用页
+      1.1 泛函
     </h1>
   
   
-    <h2>Table of Contents</h2>
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#1markdown-语法">1.Markdown 语法</a></li>
-    <li><a href="#2latex渲染测试">2.LaTex渲染测试</a></li>
-    <li><a href="#equation">Equation</a></li>
-  </ul>
-</nav>
-  
 <div class="content-wrapper">
   <div class="content">
-    <h2 id="1markdown-语法">1.Markdown 语法</h2>
-<div class="wide-table">
-<!-- 这是一个注释，此处要使得 markdown 表格显示，必须在 html 下空一行 -->
-<table>
-<thead>
-<tr>
-<th>元素</th>
-<th>Markdown 语法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>标题 (Heading)</td>
-<td># H1 <br> ## H2 <br> ### H3</td>
-</tr>
-<tr>
-<td>粗体 (Bold)</td>
-<td><strong>bold text</strong></td>
-</tr>
-<tr>
-<td>斜体 (Italic)</td>
-<td><em>italicized text</em></td>
-</tr>
-<tr>
-<td>引用块 (Blockquote)</td>
-<td>&gt; blockquote</td>
-</tr>
-<tr>
-<td>有序列表 (Ordered List)</td>
-<td>1. First item <br> 2. Second item <br> 3. Third item</td>
-</tr>
-<tr>
-<td>无序列表 (Unordered List)</td>
-<td>- First item <br> - Second item <br> - Third item</td>
-</tr>
-<tr>
-<td>代码 (Code)</td>
-<td><code>code</code></td>
-</tr>
-<tr>
-<td>分隔线 (Horizontal Rule)</td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>链接 (Link)</td>
-<td><a href="https://www.example.com">title</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<ul>
-<li>一级列表项 1
-<ul>
-<li>二级列表项 1.1
-<ul>
-<li>三级列表项 1.1.1</li>
-</ul>
-</li>
-<li>二级列表项 1.2</li>
-</ul>
-</li>
-<li>一级列表项 2</li>
-</ul>
-<div class="wide-table">
-<table>
-<thead>
-<tr>
-<th>元素</th>
-<th>Markdown 语法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>表格 (Table)</td>
-<td>| Syntax | Description | <br> | &mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&ndash; | <br> | Header | Title | <br> | Paragraph | Text |</td>
-</tr>
-<tr>
-<td>代码块 (Fenced Code Block)</td>
-<td><code>&lt;br&gt; { &lt;br&gt; &quot;firstName&quot;: &quot;John&quot;, &lt;br&gt; &quot;lastName&quot;: &quot;Smith&quot;, &lt;br&gt; &quot;age&quot;: 25 &lt;br&gt; } &lt;br&gt;</code></td>
-</tr>
-<tr>
-<td>脚注 (Footnote)</td>
-<td>Here&rsquo;s a sentence with a footnote. [^1] <br> [^1]: This is the footnote.</td>
-</tr>
-<tr>
-<td>标题编号 (Heading ID)</td>
-<td>### My Great Heading {#custom-id}</td>
-</tr>
-<tr>
-<td>定义列表 (Definition List)</td>
-<td>term <br> : definition</td>
-</tr>
-<tr>
-<td>删除线 (Strikethrough)</td>
-<td><del>The world is flat.</del></td>
-</tr>
-<tr>
-<td>任务列表 (Task List)</td>
-<td>- [x] Write the press release <br> - [ ] Update the website <br> - [ ] Contact the media</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>以上内容来自 <a href="https://markdown.com.cn/basic-syntax/links.html">Markdown 语法官方中文教程</a></strong></p>
-<h2 id="2latex渲染测试">2.LaTex渲染测试</h2>
+    <p>我们首先来回顾一下函数的概念。</p>
+<p>一个形象的解释是，函数是一个机器，我们把一个数输入到函数中，函数就会按照其描述来给出一个数。换成一个稍微数学的点的说法就是：</p>
+<p>函数是一个具体的映射关系，给定两个集合 
+
+
+
+和
+
+
+
+，在两个集合的元素 
+
+
+
+和 
+
+
+
+之间建立的一个对应关系即为映射。</p>
 
 
 
 
 
-<h2 id="equation">Equation</h2>
+<p><img src="/notes/classical-mechnics/note-1/1.1/1.png"></p>
+<h2 id="111-泛函的概念">1.1.1 泛函的概念</h2>
+<p>从映射的角度，很多时候普通函数的概念显的不太够用。</p>
+<p>例如，空间（平面、球面等）中两点用任一曲线连接，给定曲线的形状，就可以计算出曲线的长度，又比如，平面上的封闭曲线和空间中的封闭曲面，给定曲线和曲面的形状，就可以计算出所包围的面积和体积。</p>
+<p>上面的例子有个共同的特点，“输入”——曲线的形状、曲面的形状等等，不是一般意义上的数。而”输出“却都是数。由此可见，为了描述并解决这些问题，普通函数的概念需要被推广，需要引入新的数学概念来描述这种”不是数的输入“。</p>
+<p>这些例子还有一个共同的特点，这些输入都可以用”函数“来刻画。</p>
+<p>至此，**&ldquo;泛函&rdquo;**的概念已经呼之欲出了。用数学语言来说，泛函就是函数到数的映射。两个集合之间的映射有很多种，也就是，存在很多的函数
+
+
+
+，所有这些函数自然也构成集合
+
+
+
+,把函数
+
+
+
+的泛函记为
+
+
+
+，即</p>
 
 
 
 
 
+<p>其中，
+
+
+
+代表复数集合。</p>
+<p>泛函既然也是一种映射，那么如果把泛函输入的函数当成是某种”广义的数“，则泛函也可以视为是一种函数。只不过函数是数的函数，泛函是函数的函数。</p>
+<h2 id="112-泛函的具体形式">1.1.2 泛函的具体形式</h2>
+<p>根据泛函的定义——输入函数，输出数。我们可以举出很多泛函的例子，比如</p>
+<p>平面上曲线方程记为 
+
+
+
+，则两点之间的曲线长度
+
+
+
+为曲线方程
+
+
+
+的泛函</p>
+
+
+
+
+
+<p>理想气体准静态过程对外做功 
+
+
+
+即是过程方程
+
+
+
+的泛函</p>
+
+
+
+
+
+<p>三维空间曲线方程记为
+
+
+
+，则曲面面积 A 为二元函数
+
+
+
+的泛函</p>
+
+
+
+
+
+<p>经典力学中的遇见的泛函，通常为以下形式</p>
+
+
+
+
+
+<p>此处的被积函数
+
+
+
+是函数 f(t) 及其导数的一般函数。</p>
+<p>可以再次看到，泛函的结果或者说输出
+
+
+
+是一个数，但是
+
+
+
+描述的对象是函数的函数，也就是函数所遵循的具体的对应关系，在上式中，它是 f(t) 遵循
+
+
+
+。</p>
+<p>我们称数
+
+
+
+是 f 的泛函，其实是&quot;
+
+
+
+所描述的函数的函数是函数 f 的泛函&quot;的简洁说法，因为
+
+
+
+的结果是数，所以简称数
+
+
+
+是 f 的泛函。</p>
 
   </div>
       
       <aside class="sidebar">
         <div class="card">
           <h2>摘要</h2>
-          <p>1.Markdown 语法 元素 Markdown 语法 标题 (Heading) # H1 ## H2 ### H3 粗体 (Bold) bold text 斜体 (Italic) …</p> 
+          <p>我们首先来回顾一下函数的概念。
+一个形象的解释是，函数是一个机器，我们把一个数输入到函数中，函数就会按照其描述来给出一个数。换成一个稍微数学的点的说法就是：
+函数是一个具体的映射关系， …</p> 
         </div>
         <div class="card">
           <h2>阅读时长</h2>
@@ -247,7 +288,7 @@
         </div>
         <div class="card">
           <h2>总字数</h2>
-          <p>≈ 172</p> 
+          <p>≈ 58</p> 
         </div>
         <div class="card">
           <h2>标签</h2>
@@ -266,29 +307,14 @@
     
       <li class="post">
   
-  <a href="http://localhost:1313/notes/classical-mechnics/note-1/1.1/">
+    <img alt="测试专用页" loading="lazy" src="http://localhost:1313/notes/test-page/cover_hud9949164f33296b940c3365d1d09af90_3836494_1000x0_resize_q75_box.jpg" />
+  
+  <a href="http://localhost:1313/notes/test-page/">
     <h2>
-      1.1 泛函
+      测试专用页
     </h2>
     <article>
-      我们首先来回顾一下函数的概念。
-一个形象的解释是，函数是一个机器，我们把一个数输入到函数中，函数就会按照其描述来给出一个数。换成一个稍微数学的点的说法就是：
-函数是一个具体的映射关系，给定两个集合 和 ，在两个集合的元素 和 之间建立的一个对应关系即为映射。
-1.1.1 泛函的概念 从映射的角度，很多时候普通函数的概念显的不太够用。
-例如，空间（平面、球面等）中两点用任一曲线连接，给定曲线的形状，就可以计算出曲线的长度，又比如，平面上的封闭曲线和空间中的封闭曲面，给定曲线和曲面的形状，就可以计算出所包围的面积和体积。
-上面的例子有个共同的特点，“输入”——曲线的形状、曲面的形状等等，不是一般意义上的数。而”输出“却都是数。由此可见，为了描述并解决这些问题，普通函数的概念需要被推广，需要引入新的数学概念来描述这种”不是数的输入“。
-这些例子还有一个共同的特点，这些输入都可以用”函数“来刻画。
-至此，**&ldquo;泛函&rdquo;**的概念已经呼之欲出了。用数学语言来说，泛函就是函数到数的映射。两个集合之间的映射有很多种，也就是，存在很多的函数 ，所有这些函数自然也构成集合 ,把函数 的泛函记为 ，即
-其中， 代表复数集合。
-泛函既然也是一种映射，那么如果把泛函输入的函数当成是某种”广义的数“，则泛函也可以视为是一种函数。只不过函数是数的函数，泛函是函数的函数。
-1.1.2 泛函的具体形式 根据泛函的定义——输入函数，输出数。我们可以举出很多泛函的例子，比如
-平面上曲线方程记为 ，则两点之间的曲线长度 为曲线方程 的泛函
-理想气体准静态过程对外做功 即是过程方程 的泛函
-三维空间曲线方程记为 ，则曲面面积 A 为二元函数 的泛函
-经典力学中的遇见的泛函，通常为以下形式
-此处的被积函数 是函数 f(t) 及其导数的一般函数。
-可以再次看到，泛函的结果或者说输出 是一个数，但是 描述的对象是函数的函数，也就是函数所遵循的具体的对应关系，在上式中，它是 f(t) 遵循 。
-我们称数 是 f 的泛函，其实是&quot; 所描述的函数的函数是函数 f 的泛函&quot;的简洁说法，因为 的结果是数，所以简称数 是 f 的泛函。 
+      1.Markdown 语法 元素 Markdown 语法 标题 (Heading) # H1 ## H2 ### H3 粗体 (Bold) bold text 斜体 (Italic) italicized text 引用块 (Blockquote) &gt; blockquote 有序列表 (Ordered List) 1. First item 2. Second item 3. Third item 无序列表 (Unordered List) - First item - Second item - Third item 代码 (Code) code 分隔线 (Horizontal Rule) &mdash; 链接 (Link) title 一级列表项 1 二级列表项 1.1 三级列表项 1.1.1 二级列表项 1.2 一级列表项 2 元素 Markdown 语法 表格 (Table) | Syntax | Description | | &mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&ndash; | | Header | Title | | Paragraph | Text | 代码块 (Fenced Code Block) &lt;br&gt; { &lt;br&gt; &quot;firstName&quot;: &quot;John&quot;, &lt;br&gt; &quot;lastName&quot;: &quot;Smith&quot;, &lt;br&gt; &quot;age&quot;: 25 &lt;br&gt; } &lt;br&gt; 脚注 (Footnote) Here&rsquo;s a sentence with a footnote. 
     </article>
     <div>Read More</div>
   </a>
@@ -298,7 +324,7 @@
   </ul>
 </div>
 
-<div class="comments" data-articleurl="/notes/test-page/">
+<div class="comments" data-articleurl="/notes/classical-mechnics/note-1/1.1/">
   <h2>Comments</h2>
   
   
@@ -326,11 +352,11 @@
   
       <div id="reply-to" style="display: none; color: #6c757d; margin-bottom: 10px;"></div> 
       
-      <input type="hidden" name="url" value="/notes/test-page/">
+      <input type="hidden" name="url" value="/notes/classical-mechnics/note-1/1.1/">
       <input type="hidden" name="parent" id="parent" value="">
       <input type="hidden" name="custom" id="custom">
       <input type="hidden" name="depth" id="depth" value="0">
-      <input type="hidden" name="articleurl" value="/notes/test-page/">
+      <input type="hidden" name="articleurl" value="/notes/classical-mechnics/note-1/1.1/">
 
       
       <label class="comment-label" for="name">Name:</label>

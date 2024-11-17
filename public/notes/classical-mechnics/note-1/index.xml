@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>《经典力学|高显》 on Caleton Academy of Magic</title>
+    <link>http://localhost:1313/notes/classical-mechnics/note-1/</link>
+    <description>Recent content in 《经典力学|高显》 on Caleton Academy of Magic</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>chiaralee953@foxmail.com (Caleton Academy of Magic)</managingEditor>
+    <webMaster>chiaralee953@foxmail.com (Caleton Academy of Magic)</webMaster>
+    <lastBuildDate>Sun, 17 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/notes/classical-mechnics/note-1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.1 泛函</title>
+      <link>http://localhost:1313/notes/classical-mechnics/note-1/1.1/</link>
+      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
+      <guid>http://localhost:1313/notes/classical-mechnics/note-1/1.1/</guid>
+      <description>我们首先来回顾一下函数的概念。&#xA;一个形象的解释是，函数是一个机器，我们把一个数输入到函数中，函数就会按照其描述来给出一个数。换成一个稍微数学的点的说法就是：&#xA;函数是一个具体的映射关系，给定两个集合 和 ，在两个集合的元素 和 之间建立的一个对应关系即为映射。&#xA;1.1.1 泛函的概念 从映射的角度，很多时候普通函数的概念显的不太够用。&#xA;例如，空间（平面、球面等）中两点用任一曲线连接，给定曲线的形状，就可以计算出曲线的长度，又比如，平面上的封闭曲线和空间中的封闭曲面，给定曲线和曲面的形状，就可以计算出所包围的面积和体积。&#xA;上面的例子有个共同的特点，“输入”——曲线的形状、曲面的形状等等，不是一般意义上的数。而”输出“却都是数。由此可见，为了描述并解决这些问题，普通函数的概念需要被推广，需要引入新的数学概念来描述这种”不是数的输入“。&#xA;这些例子还有一个共同的特点，这些输入都可以用”函数“来刻画。&#xA;至此，**&amp;ldquo;泛函&amp;rdquo;**的概念已经呼之欲出了。用数学语言来说，泛函就是函数到数的映射。两个集合之间的映射有很多种，也就是，存在很多的函数 ，所有这些函数自然也构成集合 ,把函数 的泛函记为 ，即&#xA;其中， 代表复数集合。&#xA;泛函既然也是一种映射，那么如果把泛函输入的函数当成是某种”广义的数“，则泛函也可以视为是一种函数。只不过函数是数的函数，泛函是函数的函数。&#xA;1.1.2 泛函的具体形式 根据泛函的定义——输入函数，输出数。我们可以举出很多泛函的例子，比如&#xA;平面上曲线方程记为 ，则两点之间的曲线长度 为曲线方程 的泛函&#xA;理想气体准静态过程对外做功 即是过程方程 的泛函&#xA;三维空间曲线方程记为 ，则曲面面积 A 为二元函数 的泛函&#xA;经典力学中的遇见的泛函，通常为以下形式&#xA;此处的被积函数 是函数 f(t) 及其导数的一般函数。&#xA;可以再次看到，泛函的结果或者说输出 是一个数，但是 描述的对象是函数的函数，也就是函数所遵循的具体的对应关系，在上式中，它是 f(t) 遵循 。&#xA;我们称数 是 f 的泛函，其实是&amp;quot; 所描述的函数的函数是函数 f 的泛函&amp;quot;的简洁说法，因为 的结果是数，所以简称数 是 f 的泛函。</description>
+    </item>
+  </channel>
+</rss>
