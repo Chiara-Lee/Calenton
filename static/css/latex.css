@@ -1,0 +1,10 @@
+svg[display="true"] {
+    display: block;
+    margin: 1em auto; /* 居中显示 */
+}
+
+svg[display="false"] {
+    display: inline;
+    vertical-align: middle; /* 对齐文本基线 */
+    max-height: 1em; /* 确保公式与文本一致大小 */
+}

@@ -20,6 +20,7 @@ css_files:
   - "/css/post-card.css"
   - "/css/markdown.css"
   - "/css/friends.css"
+  - "/css/latex.css"
 
 permalinks:
   notes: "/:year/:month/:title/"
