@@ -34,9 +34,11 @@ module.exports = {
       });
     }
 
+    const isDisplay = event.queryStringParameters.display === "true";
     const svg = MathJax.tex2svg(event.queryStringParameters.tex, {
-      display: event.queryStringParameters.display
+      display: isDisplay
     });
+    
 
     return {
       statusCode: 200,
