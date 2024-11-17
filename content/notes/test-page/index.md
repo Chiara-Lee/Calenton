@@ -45,3 +45,7 @@ toc: true
 </div>
 
 **以上内容来自 [Markdown 语法官方中文教程](https://markdown.com.cn/basic-syntax/links.html)**
+
+##  2.LaTex渲染测试
+
+{{<latex display="false">}} S[x^A(t)]=\int dtL(x^A(t),\dot{x}^A(t))\tag{1.0} {{</latex>}}
