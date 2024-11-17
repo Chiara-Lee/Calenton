@@ -6,6 +6,7 @@ recent_posts:
 NetlifyCommentForm: 6720c108558e590008ed7242
 useNetlifyForComments: true
 RemoveFormOnSubmission: true
+Latex2Svg: https://chiara-lee.netlify.app/.netlify/functions/latex2svg
 css_files:
   - "/css/index.css"
   - "/css/categories.css"
@@ -24,3 +25,4 @@ permalinks:
   notes: "/:year/:month/:title/"
   resource: "/:year/:month/:title/"
   thoughts: "/:year/:month/:title/"
+

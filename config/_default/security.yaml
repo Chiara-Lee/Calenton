@@ -4,3 +4,4 @@ funcs:
     - ^HUGO_
     - NETLIFY
     - COMMENTS_TOKEN
+    - LATEX2SVG_PASSWORD
