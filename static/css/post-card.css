@@ -11,11 +11,9 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 更柔和的阴影 */
     width: 100%;
     margin: 0 auto 20px;
-    height: 200px; /* 固定卡片高度 */
-    overflow: hidden; /* 确保内容不会超出卡片范围 */
-    display: flex; /* 使用 flex 布局 */
-    flex-direction: column; /* 内容垂直排列 */
-    justify-content: space-between; /* 内容上下均匀分布 */
+    height: auto;
+    display: block;
+    overflow: visible;
     box-sizing: border-box;
 }
 
