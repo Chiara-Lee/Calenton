@@ -1,7 +1,9 @@
 {{/*  a Boolean specifying whether the math is in 
      display-mode or inline mode */}}
 {{ $display := true }}
-{{ with .Get "display" }}{{ $display = . }}{{ end }}
+{{ with .Get "display" }}
+  {{ if eq . "false" }}{{ $display = false }}{{ else if eq . "true" }}{{ $display = true }}{{ end }}
+{{ end }}
 
 {{ if (and site.Params.Latex2Svg 
            (getenv "LATEX2SVG_PASSWORD") ) }}
