@@ -11,16 +11,33 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 更柔和的阴影 */
     width: 100%;
     margin: 0 auto 20px;
-    height: 200px;/*固定了卡片高度，确保所有卡片大小一致。*/
-    overflow: hidden; /* 内容超出时隐藏 */
-    display: block;
-    overflow: visible;
+    height: 200px; /* 固定卡片高度 */
+    overflow: hidden; /* 确保内容不会超出卡片范围 */
+    display: flex; /* 使用 flex 布局 */
+    flex-direction: column; /* 内容垂直排列 */
+    justify-content: space-between; /* 内容上下均匀分布 */
     box-sizing: border-box;
 }
 
 .post-card h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    line-height: 1.2; /* 控制标题行高 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* 如果标题过长则显示省略号 */
+}
+
+.post-card p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2; /* 限制文字最多显示 2 行 */
+    text-overflow: ellipsis;
+    margin: 10px 0;
+    line-height: 1.6; /* 控制行间距 */
+    color: #555; /* 调整文本颜色 */
+    font-size: 0.9em;
 }
 
 .post-meta {
@@ -43,7 +60,7 @@
 .read-more {
     display: inline-block;
     padding: 10px 20px;
-    margin-top: 10px;
+    margin-top: auto; /* 将按钮放置在卡片底部 */
     background-color: #e0e7ff; /* 稍深的蓝色 */
     color: #fff;
     text-decoration: none;
