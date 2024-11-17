@@ -49,3 +49,8 @@ toc: true
 ##  2.LaTex渲染测试
 
 {{<latex display="false">}} S[x^A(t)]=\int dtL(x^A(t),\dot{x}^A(t))\tag{1.0} {{</latex>}}
+
+Equation
+--------
+
+{{<latex>}}d \mathord{ \buildrel{ \lower3pt \hbox{$ \scriptscriptstyle \rightharpoonup$}} \over B} = \frac{{{ \mu _0}}}{{4 \pi }} \frac{{Idl \times \mathord{ \buildrel{ \lower3pt \hbox{$ \scriptscriptstyle \rightharpoonup$}} \over r} }}{{{r^3}}} =  \frac{{{ \mu _0}}}{{4 \pi }} \frac{{Idl \sin \theta }}{{{r^2}}} {{</latex>}}
