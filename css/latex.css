@@ -2,7 +2,7 @@
 .inline-math svg {
     display: inline;            /* 确保行内公式与文本在一行 */
     vertical-align: middle;     /* 与文本基线对齐 */
-    max-height: 1em;            /* 防止公式高度过大 */
+    max-height: 2em;            /* 防止公式高度过大 */
     margin: 0;                  /* 清除不必要的边距 */
 }
 
