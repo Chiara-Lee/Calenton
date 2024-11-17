@@ -1,20 +1,23 @@
 {{/*  a Boolean specifying whether the math is in 
      display-mode or inline mode */}}
-{{ $display := true }}
-<span>
-   {{ $display := true }}
-   {{ with .Get "display" }}{{ $display = . }}{{ end }}
-   <svg display="{{ $display }}">{{ . | safeHTML }}</svg>
-</span>
-
-
-{{ if (and site.Params.Latex2Svg 
-           (getenv "LATEX2SVG_PASSWORD") ) }}
-  {{ $json := getJSON site.Params.Latex2Svg "?" 
-     (querify "tex" .Inner) 
-     "&password=" (getenv "LATEX2SVG_PASSWORD") 
-     "&display=" $display}}
-  {{ with $json.data }}
-  {{. | safeHTML}}
-{{ end }}
-{{ end }}
+     {{ $display := true }}
+     {{ with .Get "display" }}
+       {{ if eq . "false" }}{{ $display = false }}{{ end }}
+     {{ end }}
+     
+     {{ if (and site.Params.Latex2Svg (getenv "LATEX2SVG_PASSWORD")) }}
+       {{ $json := getJSON site.Params.Latex2Svg "?" 
+          (querify "tex" .Inner) 
+          "&password=" (getenv "LATEX2SVG_PASSWORD") 
+          "&display=" $display }}
+       {{ with $json.data }}
+         <span class="{{ if $display }}display-math{{ else }}inline-math{{ end }}">
+           {{ . | safeHTML }}
+         </span>
+       {{ end }}
+     {{ else }}
+       <span class="fallback-latex">
+         {{ .Inner | safeHTML }}
+       </span>
+     {{ end }}
+     
