@@ -17,7 +17,7 @@
                     <span><i class="icon-time"></i> 预计阅读{{ .ReadingTime }}分钟</span>
                     <span><i class="icon-text-width"></i> 全文约{{ .WordCount }}字</span>
                 </div>
-                <p>{{ .Summary }}</p>
+                <p>{{ .Summary | plainify | truncate 100 "..." }}</p>
                 <a href="{{ .Permalink }}" class="read-more">→ 进来看看</a>
                 <div class="tags">
                     {{ range .Params.tags }}
