@@ -11,7 +11,7 @@
 4.符号" \vee "用以表征“析取”“或者”：析取词将两个命题以“至少其中之一”这样的选择析取方式关联起来。也就是自然语言中的“要么，要么”
 5.符号" \wedge "用以表征“合取”“并且”：合取词将两个命题以“两者都成立”的方式联结起来。也就是自然语言中的“不仅，而且”
 基本语句的真假判定 在判断基本语句的真假之前，我们首先要明确被判定真假的基本语句是关于哪个线性代数学对象的断言。同一个基本语句，在不同的线性代数学对象之中计算出来的结果可以不同。以下述两个基本语句为例：
-\begin{array}{l} 5\cdot7+2\cdot3=41\\ 5\cdot3=11 \end{array} 在自然数范围内，或者在整数范围内，第一个基本语句为真，第二个为假。但如果是在只有两个元素的域 {0,1} 上，第二个语句就是真的。因而在线性代数学里，关于语句的真假判定都是在相对于给定的具体的线性代数模型之中实现的。真，是相当于具体对象为真；假，是相对于具体对象为假。 在一个固定的线性代数对象中，一个给定的基本等式的两边事实上就给出了在这个对象（模型）之中分别计算出两个值的计算过程。若在给定的具体线性代数对象中按照等式两边所描述的计算结果来看，两边结果一致，则认为所给等式为真；否则，所给等式就为假。'><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>1.1 逻辑基础</title>
+\begin{array}{l} 5\cdot7+2\cdot3=41\\ 5\cdot3=11 \end{array} 在自然数范围内，或者在整数范围内，第一个基本语句为真，第二个为假。但如果是在只有两个元素的域 \{0,1\} 上，第二个语句就是真的。因而在线性代数学里，关于语句的真假判定都是在相对于给定的具体的线性代数模型之中实现的。真，是相当于具体对象为真；假，是相对于具体对象为假。 在一个固定的线性代数对象中，一个给定的基本等式的两边事实上就给出了在这个对象（模型）之中分别计算出两个值的计算过程。若在给定的具体线性代数对象中按照等式两边所描述的计算结果来看，两边结果一致，则认为所给等式为真；否则，所给等式就为假。'><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>1.1 逻辑基础</title>
 <script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
 Caleton Academy
 </a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/resource>资源分享</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>1.1 逻辑基础</h1><h2>Table of Contents</h2><nav id=TableOfContents><ul><li><a href=#111-语句真假判定>1.1.1 语句真假判定</a><ul><li><a href=#基本语句的真假判定>基本语句的真假判定</a></li><li><a href=#复合语句真假判定归结过程>复合语句真假判定归结过程</a></li></ul></li><li><a href=#112-表达式及其语义解释>1.1.2 表达式及其语义解释</a><ul><li><a href=#基本表达式及其语义解释>基本表达式及其语义解释</a></li><li><a href=#量词与表达式>量词与表达式</a></li><li><a href=#自由变元与约束变元>自由变元与约束变元</a></li><li><a href=#表达式语义解释与真假判定>表达式语义解释与真假判定</a></li></ul></li></ul></nav><div class=content-wrapper><div class=content><p>在学习线性代数之前，我们有必要将数学中有关真假判定等逻辑问题解答的基础性知识规范一下。值得一提的是，冯琦老师的专业方向就是数理逻辑和公理化集合论，冯琦老师所著《数理逻辑导引》和《集合论导引》都是相关领域的不可多得的高质量推荐教材，有兴趣的读者可能自行找书学习。</p><h2 id=111-语句真假判定>1.1.1 语句真假判定</h2><p>在数学中，我们总会关注语句的真假，由于数学中的语句都是按照一种确定的规范由简至繁逐渐成形，因而对所关注的语句的真假判定就完全按照其构成方式被规范的归结到对一系列基本事实的真假判定。下面我们就来介绍一下语句的构成规范和真假判定归结规范。</p><p>数学中的语句按照分支被分为各自分支中的<strong>基本语句</strong>和<strong>复合语句</strong>。</p><p>具体到线性代数这一分支，比较典型的基本语句就是由加法运算和乘法运算所确定的等式。比如
@@ -36,7 +36,7 @@ Caleton Academy
 5\cdot7+2\cdot3=41\\
 5\cdot3=11
 \end{array}</span><p>在自然数范围内，或者在整数范围内，第一个基本语句为真，第二个为假。但如果是在只有两个元素的域
-<span class=fallback-latex>{0,1}
+<span class=fallback-latex>\{0,1\}
 </span>上，第二个语句就是真的。因而在线性代数学里，关于语句的真假判定都是在相对于给定的具体的线性代数模型之中实现的。真，是相当于具体对象为真；假，是相对于具体对象为假。
 在一个固定的线性代数对象中，一个给定的基本等式的两边事实上就给出了在这个对象（模型）之中分别计算出两个值的计算过程。<strong>若在给定的具体线性代数对象中按照等式两边所描述的计算结果来看，两边结果一致，则认为所给等式为真；否则，所给等式就为假。</strong></p><h3 id=复合语句真假判定归结过程>复合语句真假判定归结过程</h3><p>复合语句的真假判定依赖于复合语句的布尔值计算规则。</p><p>同基本语句的真假判定一样，复合语句的真假判定也需要在相应的具体的线性代数对象中讨论，其真假是相对于具体的线性代数对象而言的。下面的真值计算表可以看作是系统递归地归结的计算方法。</p><p>我们约定用
 <span class=fallback-latex>1
@@ -395,19 +395,19 @@ t_1(a_1, \cdots, a_2) = t_2(a_1, \cdots, a_2)
 </span>的真假已经在前文被确定好了。</p><p>(2) 如果
 <span class=fallback-latex>\varphi(x_1, x_2, \cdots, x_n)
 </span>是表达式
-<span class=fallback-latex>\varphi(x_1, x_2, \cdots, x_n)
+<span class=fallback-latex>\phi(x_1, x_2, \cdots, x_n)
 </span>的否定式，即
-<span class=fallback-latex>\varphi = (\neg \varphi)
+<span class=fallback-latex>\varphi = (\neg \phi)
 </span>并且
-<span class=fallback-latex>\varphi[a_1, a_2, \cdots, a_n]
+<span class=fallback-latex>\phi[a_1, a_2, \cdots, a_n]
 </span>的真假已经被确定，则<br> (a)
 <span class=fallback-latex>\varphi[a_1, a_2, \cdots, a_n]
 </span>为真当且仅当
-<span class=fallback-latex>\varphi[a_1, a_2, \cdots, a_n]
+<span class=fallback-latex>\phi[a_1, a_2, \cdots, a_n]
 </span>为假<br> (b)
 <span class=fallback-latex>\varphi[a_1, a_2, \cdots, a_n]
 </span>为假当且仅当
-<span class=fallback-latex>\varphi[a_1, a_2, \cdots, a_n]
+<span class=fallback-latex>\phi[a_1, a_2, \cdots, a_n]
 </span>为真</p><p>(3) 如果
 <span class=fallback-latex>\varphi(x_1, x_2, \cdots, x_n)
 </span>是由两个表达式
