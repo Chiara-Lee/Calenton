@@ -50,7 +50,7 @@ tags: [经典力学]
 若先微分后变分(路径{{<latex display="false">}}A\rightarrow B\rightarrow B'{{</latex>}}),精确到一阶小量有
 
 {{<latex display="true">}}
-\begin{align} C'B长度&=f(t+dt)-f(t)=df(t)\\ BB'长度&=\tilde{f}(t+dt)-f(t+dt)\\ &=\delta(f(t+dt))\\ &=\delta(f(t)+df(t)\\ &=\delta(f(t))+\delta(d(f(t)) \end{align}\\
+\begin{align} C'B长度&=f(t+dt)-f(t)=df(t)\\ BB'长度&=\tilde{f}(t+dt)-f(t+dt)\\ &=\delta(f(t+dt))\\ &=\delta(f(t)+df(t))\\ &=\delta(f(t))+\delta(d(f(t)) \end{align}\\
 {{</latex>}}
 
 于是，

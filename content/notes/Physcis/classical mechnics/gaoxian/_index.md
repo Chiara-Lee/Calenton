@@ -4,4 +4,5 @@ layout: list
 cascade:
     type: blog
     layout: single
+categories: [Classical  Mechanics]
 ---

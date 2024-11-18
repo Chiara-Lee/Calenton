@@ -29,3 +29,7 @@ footer:
     name: 引用资料列表
     url: /reference
     weight: 200
+  - identifier: categories
+    name: 教材索引
+    url: /categories
+    weight: 200
