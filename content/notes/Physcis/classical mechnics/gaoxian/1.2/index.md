@@ -1,7 +1,8 @@
 ---
-title:  1.1 变分
+title:  1.2 变分
 date: 2024-11-18
 lastmod: 2024-11-18
+tags: [经典力学]
 ---
 函数和泛函同为映射。”输入/输出“的无穷小变化，对函数而言就是微分，对泛函而言即是**变分（variation）**。简而言之，泛函是函数到数的映射，函数本身的无穷小变化，以及由此引出的泛函的变化即为变分。
 
@@ -30,7 +31,12 @@ lastmod: 2024-11-18
 
 对于函数{{<latex display="false">}}f_1{{</latex>}}和{{<latex display="false">}}f_2{{</latex>}}以及常数 a,b， 我们有
 
-{{<latex display="true">}}\delta(af_1+bf_2)=a\delta f_1+b\delta f_2\\ \delta(f_1f_2)=(\delta f_1)f_2+f_1(\delta f_2)\\{{</latex>}}
+{{<latex display="true">}}
+\begin{align}
+\delta(af_1+bf_2)=a\delta f_1+b\delta f_2\\ 
+\delta(f_1f_2)=(\delta f_1)f_2+f_1(\delta f_2)
+\end{align}\\
+{{</latex>}}
 
 另一个重要且非常有用的性质是，变分和微分可以交换顺序，即”微分的变分”=“变分的微分“
 
