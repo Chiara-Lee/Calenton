@@ -1,0 +1,20 @@
+/* 行内公式样式 */
+.inline-math svg {
+    display: inline;            /* 确保行内公式与文本在一行 */
+    vertical-align: middle;     /* 与文本基线对齐 */
+    max-height: 2em;            /* 防止公式高度过大 */
+    margin: 0;                  /* 清除不必要的边距 */
+}
+
+/* 展示公式样式 */
+.display-math svg {
+    display: block;             /* 独占一行 */
+    margin: 1em auto;           /* 居中显示，增加上下间距 */
+    max-width: 100%;            /* 防止宽度过大导致超出页面 */
+}
+
+/* 兼容性调整 */
+.fallback-latex {
+    font-style: italic;         /* 如果无法渲染公式，用斜体显示纯文本内容 */
+    color: #555;                /* 设置为灰色，以示区分 */
+}
