@@ -1,5 +1,5 @@
 ---
-title:  《线性代数引导|冯琦》
+title:  《线性代数导引|冯琦》
 layout: list
 cascade:
     type: blog

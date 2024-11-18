@@ -52,7 +52,7 @@ toc: true
 \end{array}
 {{</latex>}}
 
-在自然数范围内，或者在整数范围内，第一个基本语句为真，第二个为假。但如果是在只有两个元素的域{{<latex display="false">}}{0,1}{{</latex>}}上，第二个语句就是真的。因而在线性代数学里，关于语句的真假判定都是在相对于给定的具体的线性代数模型之中实现的。真，是相当于具体对象为真；假，是相对于具体对象为假。
+在自然数范围内，或者在整数范围内，第一个基本语句为真，第二个为假。但如果是在只有两个元素的域{{<latex display="false">}}\{0,1\}{{</latex>}}上，第二个语句就是真的。因而在线性代数学里，关于语句的真假判定都是在相对于给定的具体的线性代数模型之中实现的。真，是相当于具体对象为真；假，是相对于具体对象为假。
 在一个固定的线性代数对象中，一个给定的基本等式的两边事实上就给出了在这个对象（模型）之中分别计算出两个值的计算过程。**若在给定的具体线性代数对象中按照等式两边所描述的计算结果来看，两边结果一致，则认为所给等式为真；否则，所给等式就为假。**
 
 ### 复合语句真假判定归结过程
@@ -391,9 +391,9 @@ t_1(a_1, \cdots, a_2) < t_2(a_1, \cdots, a_2)
 
 (1) 如果{{<latex display="false">}}\varphi(x_1, x_2, \cdots, x_n){{</latex>}}是一个基本表达式，那么{{<latex display="false">}}\varphi[a_1, a_2, \cdots, a_n]{{</latex>}}的真假已经在前文被确定好了。
 
-(2) 如果{{<latex display="false">}}\varphi(x_1, x_2, \cdots, x_n){{</latex>}}是表达式{{<latex display="false">}}\varphi(x_1, x_2, \cdots, x_n){{</latex>}}的否定式，即{{<latex display="false">}}\varphi = (\neg \varphi){{</latex>}}并且{{<latex display="false">}}\varphi[a_1, a_2, \cdots, a_n]{{</latex>}}的真假已经被确定，则  
-&emsp;(a) {{<latex display="false">}}\varphi[a_1, a_2, \cdots, a_n]{{</latex>}}为真当且仅当{{<latex display="false">}}\varphi[a_1, a_2, \cdots, a_n]{{</latex>}}为假  
-&emsp;(b) {{<latex display="false">}}\varphi[a_1, a_2, \cdots, a_n]{{</latex>}}为假当且仅当{{<latex display="false">}}\varphi[a_1, a_2, \cdots, a_n]{{</latex>}}为真  
+(2) 如果{{<latex display="false">}}\varphi(x_1, x_2, \cdots, x_n){{</latex>}}是表达式{{<latex display="false">}}\phi(x_1, x_2, \cdots, x_n){{</latex>}}的否定式，即{{<latex display="false">}}\varphi = (\neg \phi){{</latex>}}并且{{<latex display="false">}}\phi[a_1, a_2, \cdots, a_n]{{</latex>}}的真假已经被确定，则  
+&emsp;(a) {{<latex display="false">}}\varphi[a_1, a_2, \cdots, a_n]{{</latex>}}为真当且仅当{{<latex display="false">}}\phi[a_1, a_2, \cdots, a_n]{{</latex>}}为假  
+&emsp;(b) {{<latex display="false">}}\varphi[a_1, a_2, \cdots, a_n]{{</latex>}}为假当且仅当{{<latex display="false">}}\phi[a_1, a_2, \cdots, a_n]{{</latex>}}为真  
 
 (3) 如果{{<latex display="false">}}\varphi(x_1, x_2, \cdots, x_n){{</latex>}}是由两个表达式{{<latex display="false">}}\psi_1(x_1, x_2, \cdots, x_n){{</latex>}}和{{<latex display="false">}}\psi_2(x_1, x_2, \cdots, x_n){{</latex>}}通过联结词{{<latex display="false">}}\lor{{</latex>}}联结而成，即{{<latex display="false">}}\varphi = (\psi_1 \lor \psi_2){{</latex>}}，并且{{<latex display="false">}}\psi_1[a_1, a_2, \cdots, a_n]{{</latex>}}和{{<latex display="false">}}\psi_2[a_1, a_2, \cdots, a_n]{{</latex>}}的真假已经确定，那么  
 &emsp;(a) {{<latex display="false">}}\varphi[a_1, a_2, \cdots, a_n]{{</latex>}}为真，当且仅当{{<latex display="false">}}\psi_1[a_1, a_2, \cdots, a_n]{{</latex>}}为真，或者{{<latex display="false">}}\psi_2[a_1, a_2, \cdots, a_n]{{</latex>}}为真  
