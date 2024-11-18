@@ -1,9 +1,194 @@
-<!doctype html><html lang=zh><head><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel=stylesheet><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>《经典力学|高显》</title>
-<script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
-Caleton Academy
-</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/classical-mechnics/>Classical mechanics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/resource>资源分享</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1 class=page-title>《经典力学|高显》</h1><section id=posts><p class=post-count>Number of pages found: 1</p><div class=post-container><div class=post-card><h2>1.1 泛函</h2><div class=post-meta><span><i class=icon-calendar></i> 创建于2024-11-17</span>
-<span><i class=icon-edit></i> 更新于2024年11月17日</span>
-<span><i class=icon-time></i> 预计阅读1分钟</span>
-<span><i class=icon-text-width></i> 全文约125字</span></div><p>我们首先来回顾一下函数的概念。
+<!DOCTYPE html>
+<html lang="zh">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/png" href="http://localhost:1313/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png">
+      
+      <link rel="stylesheet" href="/css/index.css">
+      
+      <link rel="stylesheet" href="/css/categories.css">
+      
+      <link rel="stylesheet" href="/css/comment.css">
+      
+      <link rel="stylesheet" href="/css/page-main.css">
+      
+      <link rel="stylesheet" href="/css/pagination.css">
+      
+      <link rel="stylesheet" href="/css/profile-card.css">
+      
+      <link rel="stylesheet" href="/css/relative.css">
+      
+      <link rel="stylesheet" href="/css/search.css">
+      
+      <link rel="stylesheet" href="/css/about.css">
+      
+      <link rel="stylesheet" href="/css/post-card.css">
+      
+      <link rel="stylesheet" href="/css/markdown.css">
+      
+      <link rel="stylesheet" href="/css/friends.css">
+      
+    
+    <title>《经典力学|高显》</title>
+    
+    
+    <script type="text/javascript" src="/index.js" defer></script>
+  </head>
+  <body class=" page ">
+    
+      <header>
+      <a href="/">
+      <img src="http://localhost:1313//image/logo.png" alt="Calenton Logo" 
+      style="width: 180px;height:160px;" />
+      Caleton Academy
+      </a>
+      <span id="search">
+        <input type="search" placeholder="Search">
+      <div></div>
+      </span>
+       
+  <nav>
+    
+      <button class="hamburger">&#9776;</button>
+    
+    <ul>
+    
+      <li>
+        <a href="/notes">笔记</a>
+        
+          <ul>
+            
+              <li><a href="/notes/classical-mechnics/">Classical mechanics</a></li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/thoughts">思考碎片</a>
+        
+      </li>
+    
+      <li>
+        <a href="/friends">友人帐</a>
+        
+      </li>
+    
+      <li>
+        <a href="/resource">资源分享</a>
+        
+      </li>
+    
+      <li>
+        <a href="/about">关于</a>
+        
+      </li>
+    
+    </ul> 
+  </nav>
+
+
+      </header>
+      
+    
+<main>
+    <h1 class="page-title">《经典力学|高显》</h1>
+    
+    
+    
+    <section id="posts">
+        <p class="post-count">Number of pages found: 1</p>
+        <div class="post-container">
+            
+            <div class="post-card"> 
+                <h2>1.1 泛函</h2>
+                <div class="post-meta">
+                    <span><i class="icon-calendar"></i> 创建于2024-11-17</span>
+                    <span><i class="icon-edit"></i> 更新于2024年11月17日</span>
+                    <span><i class="icon-time"></i> 预计阅读1分钟</span>
+                    <span><i class="icon-text-width"></i> 全文约58字</span>
+                </div>
+                <p>我们首先来回顾一下函数的概念。
 一个形象的解释是，函数是一个机器，我们把一个数输入到函数中，函数就会按照其描述来给出一个数。换成一个稍微数学的点的说法就是：
-函数是一个具体的映射关系，给定两个集合 X...</p><a href=https://chiara-lee.netlify.app/notes/classical-mechnics/note-1/1.1/ class=read-more>→ 进来看看</a><div class=tags></div></div></div></section></main><script src=/js/bundle.js></script><footer class=dark><nav><ul><li><a href=/categories>目录</a></li><li><a href=/reference>引用资料列表</a></li></ul></nav><ul><li><a href=https://facebook.com/example aria-label=Facebook><i class=icon-facebook></i></a></li><li><a href=https://x.com/i/flow/login aria-label=Twitter><i class=icon-twitter></i></a></li><li><a href=mailto:chiaralee953@foxmail.com aria-label=email><i class=icon-email></i></a></li></ul><div>Copyright © 2024 Caleton Academy of Magic.</div></footer></body></html>
+函数是一个具体的映射关系，给定两个集合 和 ，在两个集合的元素 和 之间建立的一个对应关系即为映射。
+1.1.1 泛函的概念 从映射的角度，很多时候普通函数的概念显的不太够用。
+例如，空间（平面、球面等）中两点用任一曲线连接，给定曲线的形状，就可以计算出曲线的长度，又比如，平面上的封闭曲线和空间中的封闭曲面，给定曲线和曲面的形状，就可以计算出所包围的面积和体积。
+上面的例子有个共同的特点，“输入”——曲线的形状、曲面的形状等等，不是一般意义上的数。而”输出“却都是数。由此可见，为了描述并解决这些问题，普通函数的概念需要被推广，需要引入新的数学概念来描述这种”不是数的输入“。
+这些例子还有一个共同的特点，这些输入都可以用”函数“来刻画。
+至此，**&ldquo;泛函&rdquo;**的概念已经呼之欲出了。用数学语言来说，泛函就是函数到数的映射。两个集合之间的映射有很多种，也就是，存在很多的函数 ，所有这些函数自然也构成集合 ,把函数 的泛函记为 ，即
+其中， 代表复数集合。
+泛函既然也是一种映射，那么如果把泛函输入的函数当成是某种”广义的数“，则泛函也可以视为是一种函数。只不过函数是数的函数，泛函是函数的函数。
+1.1.2 泛函的具体形式 根据泛函的定义——输入函数，输出数。我们可以举出很多泛函的例子，比如
+平面上曲线方程记为 ，则两点之间的曲线长度 为曲线方程 的泛函
+理想气体准静态过程对外做功 即是过程方程 的泛函
+三维空间曲线方程记为 ，则曲面面积 A 为二元函数 的泛函
+经典力学中的遇见的泛函，通常为以下形式
+此处的被积函数 是函数 f(t) 及其导数的一般函数。
+可以再次看到，泛函的结果或者说输出 是一个数，但是 描述的对象是函数的函数，也就是函数所遵循的具体的对应关系，在上式中，它是 f(t) 遵循 。
+我们称数 是 f 的泛函，其实是&quot; 所描述的函数的函数是函数 f 的泛函&quot;的简洁说法，因为 的结果是数，所以简称数 是 f 的泛函。</p>
+                <a href="http://localhost:1313/notes/classical-mechnics/note-1/1.1/" class="read-more">→ 进来看看</a>
+                <div class="tags">
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    
+</main>
+<script src="/js/bundle.js"></script>
+
+    
+      <footer class="dark">
+         
+  <nav>
+    
+    <ul>
+    
+      <li>
+        <a href="/categories">目录</a>
+        
+      </li>
+    
+      <li>
+        <a href="/reference">引用资料列表</a>
+        
+      </li>
+    
+    </ul> 
+  </nav>
+
+
+        <ul>
+          
+            <li>
+              <a href="https://facebook.com/example" aria-label="Facebook">
+                <i class="  icon-facebook"></i>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://x.com/i/flow/login" aria-label="Twitter">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="mailto:chiaralee953@foxmail.com" aria-label="email">
+                <i class="icon-email"></i>
+              </a>
+            </li>
+          
+        </ul>
+        <div>Copyright © 2024 Caleton Academy of Magic.</div>
+    </footer>
+  
+  </body>
+</html>
