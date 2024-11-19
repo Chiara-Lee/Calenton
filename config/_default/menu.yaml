@@ -1,8 +1,4 @@
 main:
-  - identifier: resource
-    name: 资源分享
-    url: /resource
-    weight: 160
   - identifier: notes
     name: 笔记
     url: /notes

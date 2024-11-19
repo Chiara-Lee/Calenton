@@ -2,20 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/notes/physcis/classical-mechnics/note-1/</loc>
-    <lastmod>2024-11-17T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/notes/math/%E4%BB%A3%E6%95%B0%E5%AD%A6/fengqi/</loc>
+    <lastmod>2024-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/notes/physcis/classical-mechnics/note-1/1.1/</loc>
-    <lastmod>2024-11-17T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/notes/math/%E4%BB%A3%E6%95%B0%E5%AD%A6/fengqi/1.1/</loc>
+    <lastmod>2024-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/notes/physcis/classical-mechnics/</loc>
-    <lastmod>2024-11-17T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/notes/physcis/classical-mechnics/gaoxian/1.2/</loc>
+    <lastmod>2024-11-18T13:17:58+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/notes/physcis/</loc>
-    <lastmod>2024-11-17T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/algebra/</loc>
+    <lastmod>2024-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-11-18T13:17:58+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/%E4%BB%A3%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2024-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/notes/math/%E4%BB%A3%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2024-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6/</loc>
+    <lastmod>2024-11-18T13:17:58+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/notes/physcis/classical-mechnics/gaoxian/1.1/</loc>
+    <lastmod>2024-11-18T12:36:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/notes/test-page/</loc>
     <lastmod>2024-11-17T16:17:40+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/notes/physcis/classical-mechnics/gaoxian/</loc>
+    <lastmod>2024-11-18T13:17:58+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-11-16T15:28:50+08:00</lastmod>
@@ -43,25 +71,26 @@
                 href="http://localhost:1313/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/notes/math/</loc>
+    <loc>http://localhost:1313/categories/classical--mechanics/</loc>
+    <lastmod>2024-11-18T13:17:58+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/"
-                />
+    <loc>http://localhost:1313/notes/physcis/classical-mechnics/</loc>
+    <lastmod>2024-11-18T13:17:58+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/notes/math/</loc>
+    <lastmod>2024-11-18T10:41:38+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/notes/physcis/</loc>
+    <lastmod>2024-11-18T10:41:38+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-11-16T15:28:50+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/friends/</loc>
     <lastmod>2024-11-16T15:51:29+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/reference/</loc>
+    <lastmod>2024-11-17T19:39:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/thoughts/</loc>
     <lastmod>2024-11-17T19:39:00+08:00</lastmod>
