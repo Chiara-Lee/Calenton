@@ -79,6 +79,8 @@
         
           <ul>
             
+              <li><a href="/notes/computer-science-and-technology/">Cst</a></li>
+            
               <li><a href="/notes/math/">Math</a></li>
             
               <li><a href="/notes/physcis/">Physics</a></li>
@@ -3410,6 +3412,39 @@ t_1(a_1, \cdots, a_2) = t_2(a_1, \cdots, a_2)
     
       <li class="post">
   
+  <a href="http://localhost:1313/notes/computer-science-and-technology/front-end-development/html--css-the-complete-reference/1.1/">
+    <h2>
+      1.1 First Look at HTML and XHTML
+    </h2>
+    <article>
+      在使用 HTML的情况下，网页中的标记指令1将文档的结构传递给浏览器软件。例如，如果要强调文本的一部分，请将其括在标记 &lt;em&gt; 和 &lt;/em&gt; 中，如下所示：
+&lt;em&gt;This is important text&lt;em&gt;
+当 Web 浏览器读取其中包含 HTML 标记的文档时，它通过考虑文档中嵌入的 HTML 元素来确定如何在屏幕上呈现该文档： 因此，HTML文档只是一个文本文件，其中包含你想要发布的信息以及指示浏览器应该如何构造或呈现文档的适当标记指令。
+标记元素由开始标记(如&lt;strong&gt;)和结束标记(但并非总是)组成，结束标记由标记内的斜杠指示，如&lt;/strong&gt;。这对标签应该完整地包围任何受该元素影响的内容，包括文本和其他 HTML 标记。
+注意：元素（例如 strong）与使用该元素的标签（如 &lt;strong&gt; 和 &lt;/strong&gt;）之间是有区别的。然而，在许多关于 HTML 标记的讨论中，甚至可以说在大多数情况下，“标签”（tag）一词经常被用来代替“元素”（element）。幸运的是，尽管人们在讨论标记时可能会出现用词不够精确的情况，但其含义通常可以很好地理解，因此这不应该成为一个重大问题。
+在传统的HTML(不是XHTML)中，一些元素的关闭标记是可选的，因为它们的闭包可以推断出来。例如，&lt;p&gt;标签不能包含另一个&lt;p&gt;标签，因此当遇到这样的标记时，可以推断出结束的&lt;/p&gt;标签:
+1 2 &lt;p&gt;This is a paragraph. &lt;p&gt;This is also a paragraph. 这种依赖于推理的缩写符号在规范下可能在技术上是正确的，但在风格上不被鼓励。准确总是更可取的，所以我们应该改用这样的标记：
+1 2 &lt;p&gt;This is a paragraph.&lt;/p&gt; &lt;p&gt;This is also a paragraph.&lt;/p&gt; 有一些标记元素称为空元素，它们不包含任何内容，因此根本不需要结束标记，或者在XHTML中使用自结束标识方案。例如，要插入换行符，请使用表示空br元素的单个&lt;br&gt;标记，因为它不包含任何内容，因此没有相应的结束标记：
+&lt;br&gt;
+但是，在XML标记变体中，特别是在XHTML中，不允许使用未结束的标记，因此需要结束标记
+&lt;br&gt;&lt;/br&gt;
+或者，更常见的是，像这样使用自我识别的闭包：
+&lt;br /&gt;
+元素的开始标记可能包含修改标记含义的属性。例如，在HTML中，只需将noshade属性包含在标记中，如下所示：
+&lt;hr noshade&gt;
+指示不应对此水平线应用任何底纹。
+在XHTML下，这样的样式属性是不允许的，因为所有属性都必须有一个值，所以您必须使用如下语法：
+&lt;hr noshade=&quot;noshade&quot; /&gt;
+正如前面的例子所示，属性可能需要值，这些值用等号指定；这些值应该用双引号或单引号括起来。例如，使用标准的HTML语法，
+&lt;img src=&quot;dog.gif&quot; alt=&quot;Angus-Black Scottish Terrier&quot; height=&quot;100&quot;width=&quot;100&quot;&gt; 
+    </article>
+    <div>Read More</div>
+  </a>
+</li>
+
+    
+      <li class="post">
+  
   <a href="http://localhost:1313/notes/physcis/classical-mechnics/gaoxian/1.2/">
     <h2>
       1.2 变分
@@ -3424,34 +3459,6 @@ f(t)\rightarrow\tilde{f(t)}\equiv(f+\delta f)(t)=f(t)+\delta f(t)\\ 1.2.2 变分
 \delta (f^n)=nf^{n-1}\delta f\\ 对于函数 f_1 和 f_2 以及常数 a,b， 我们有
 \begin{align}\delta(af_1+bf_2)=a\delta f_1+b\delta f_2\\ \delta(f_1f_2)=(\delta f_1)f_2+f_1(\delta f_2)\end{align}\\另一个重要且非常有用的性质是，变分和微分可以交换顺序，即”微分的变分”=“变分的微分“
 d(\delta f)=\delta(df)\\ 如图，此性质可以被直观证明。考虑 f 的值在 A 点和 B' 点的差，即 
-    </article>
-    <div>Read More</div>
-  </a>
-</li>
-
-    
-      <li class="post">
-  
-  <a href="http://localhost:1313/notes/physcis/classical-mechnics/gaoxian/1.1/">
-    <h2>
-      1.1 泛函
-    </h2>
-    <article>
-      我们首先来回顾一下函数的概念。
-一个形象的解释是，函数是一个机器，我们把一个数输入到函数中，函数就会按照其描述来给出一个数。换成一个稍微数学的点的说法就是：
-函数是一个具体的映射关系，给定两个集合 X 和 Y ，在两个集合的元素 x\in X 和 y\in Y 之间建立的一个对应关系即为映射。
-f:x\rightarrow y=f(x) \\ 1.1.1 泛函的概念 从映射的角度，很多时候普通函数的概念显的不太够用。
-例如，空间（平面、球面等）中两点用任一曲线连接，给定曲线的形状，就可以计算出曲线的长度，又比如，平面上的封闭曲线和空间中的封闭曲面，给定曲线和曲面的形状，就可以计算出所包围的面积和体积。
-上面的例子有个共同的特点，“输入”——曲线的形状、曲面的形状等等，不是一般意义上的数。而”输出“却都是数。由此可见，为了描述并解决这些问题，普通函数的概念需要被推广，需要引入新的数学概念来描述这种”不是数的输入“。
-这些例子还有一个共同的特点，这些输入都可以用”函数“来刻画。
-至此，**&ldquo;泛函&rdquo;**的概念已经呼之欲出了。用数学语言来说，泛函就是函数到数的映射。两个集合之间的映射有很多种，也就是，存在很多的函数 f_1(x),f_2(x),\cdots,f_n(x) ，所有这些函数自然也构成集合 \mathcal{F}=\{f_1,f_2,\cdots,f_n\} ,把函数 f 的泛函记为 s[f] ，即
-S:f\longmapsto S=S[f],\quad\mathcal{F}\longmapsto \mathcal{C}\\ 其中， \mathcal{C} 代表复数集合。
-泛函既然也是一种映射，那么如果把泛函输入的函数当成是某种”广义的数“，则泛函也可以视为是一种函数。只不过函数是数的函数，泛函是函数的函数。
-1.1.2 泛函的具体形式 根据泛函的定义——输入函数，输出数。我们可以举出很多泛函的例子，比如
-平面上曲线方程记为 y=f(x) ，则两点之间的曲线长度 S 为曲线方程 f(x) 的泛函
-S(曲线长度)=S[f](曲线方程f的泛函)=\int\limits_{曲线}dx\sqrt{1+(f'(x))^2}\\ 理想气体准静态过程对外做功 W 即是过程方程 p=p(V) 的泛函
-W=W[p]=\int\limits_{过程}p(V)dV\\ 三维空间曲线方程记为 z=\phi(x,y) ，则曲面面积 A 为二元函数 z=\phi(x,y) 的泛函
-A=A[\phi]=\iint_{\text {区域 }} \mathrm{d} x \mathrm{~d} y \sqrt{1+\left(\frac{\partial \phi}{\partial x}\right)^{2}+\left(\frac{\partial \phi}{\partial y}\right)^{2}} \\ 经典力学中的遇见的泛函，通常为以下形式 
     </article>
     <div>Read More</div>
   </a>

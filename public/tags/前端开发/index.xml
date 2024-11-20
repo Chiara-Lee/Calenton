@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端开发 on Caleton Academy of Magic</title>
+    <link>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in 前端开发 on Caleton Academy of Magic</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>chiaralee953@foxmail.com (Caleton Academy of Magic)</managingEditor>
+    <webMaster>chiaralee953@foxmail.com (Caleton Academy of Magic)</webMaster>
+    <lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.1 First Look at HTML and XHTML</title>
+      <link>http://localhost:1313/notes/computer-science-and-technology/front-end-development/html--css-the-complete-reference/1.1/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
+      <guid>http://localhost:1313/notes/computer-science-and-technology/front-end-development/html--css-the-complete-reference/1.1/</guid>
+      <description>在使用 HTML的情况下，网页中的标记指令1将文档的结构传递给浏览器软件。例如，如果要强调文本的一部分，请将其括在标记 &amp;lt;em&amp;gt; 和 &amp;lt;/em&amp;gt; 中，如下所示：&#xA;&amp;lt;em&amp;gt;This is important text&amp;lt;em&amp;gt;&#xA;当 Web 浏览器读取其中包含 HTML 标记的文档时，它通过考虑文档中嵌入的 HTML 元素来确定如何在屏幕上呈现该文档： 因此，HTML文档只是一个文本文件，其中包含你想要发布的信息以及指示浏览器应该如何构造或呈现文档的适当标记指令。&#xA;标记元素由开始标记(如&amp;lt;strong&amp;gt;)和结束标记(但并非总是)组成，结束标记由标记内的斜杠指示，如&amp;lt;/strong&amp;gt;。这对标签应该完整地包围任何受该元素影响的内容，包括文本和其他 HTML 标记。&#xA;注意：元素（例如 strong）与使用该元素的标签（如 &amp;lt;strong&amp;gt; 和 &amp;lt;/strong&amp;gt;）之间是有区别的。然而，在许多关于 HTML 标记的讨论中，甚至可以说在大多数情况下，“标签”（tag）一词经常被用来代替“元素”（element）。幸运的是，尽管人们在讨论标记时可能会出现用词不够精确的情况，但其含义通常可以很好地理解，因此这不应该成为一个重大问题。&#xA;在传统的HTML(不是XHTML)中，一些元素的关闭标记是可选的，因为它们的闭包可以推断出来。例如，&amp;lt;p&amp;gt;标签不能包含另一个&amp;lt;p&amp;gt;标签，因此当遇到这样的标记时，可以推断出结束的&amp;lt;/p&amp;gt;标签:&#xA;1 2 &amp;lt;p&amp;gt;This is a paragraph. &amp;lt;p&amp;gt;This is also a paragraph. 这种依赖于推理的缩写符号在规范下可能在技术上是正确的，但在风格上不被鼓励。准确总是更可取的，所以我们应该改用这样的标记：&#xA;1 2 &amp;lt;p&amp;gt;This is a paragraph.&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;This is also a paragraph.&amp;lt;/p&amp;gt; 有一些标记元素称为空元素，它们不包含任何内容，因此根本不需要结束标记，或者在XHTML中使用自结束标识方案。例如，要插入换行符，请使用表示空br元素的单个&amp;lt;br&amp;gt;标记，因为它不包含任何内容，因此没有相应的结束标记：&#xA;&amp;lt;br&amp;gt;&#xA;但是，在XML标记变体中，特别是在XHTML中，不允许使用未结束的标记，因此需要结束标记&#xA;&amp;lt;br&amp;gt;&amp;lt;/br&amp;gt;&#xA;或者，更常见的是，像这样使用自我识别的闭包：&#xA;&amp;lt;br /&amp;gt;&#xA;元素的开始标记可能包含修改标记含义的属性。例如，在HTML中，只需将noshade属性包含在标记中，如下所示：&#xA;&amp;lt;hr noshade&amp;gt;&#xA;指示不应对此水平线应用任何底纹。&#xA;在XHTML下，这样的样式属性是不允许的，因为所有属性都必须有一个值，所以您必须使用如下语法：&#xA;&amp;lt;hr noshade=&amp;quot;noshade&amp;quot; /&amp;gt;&#xA;正如前面的例子所示，属性可能需要值，这些值用等号指定；这些值应该用双引号或单引号括起来。例如，使用标准的HTML语法，&#xA;&amp;lt;img src=&amp;quot;dog.gif&amp;quot; alt=&amp;quot;Angus-Black Scottish Terrier&amp;quot; height=&amp;quot;100&amp;quot;&#xD;width=&amp;quot;100&amp;quot;&amp;gt;</description>
+    </item>
+  </channel>
+</rss>

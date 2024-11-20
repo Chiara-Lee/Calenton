@@ -16,7 +16,7 @@
   }
   .page main ol,
   .page main ul {
-    padding: 0rem 1.25rem 1.25rem 2rem;
+    padding: 1.00rem 1.25rem 1.25rem 2rem;
   }
   .page main ol, 
   .page main ol ol, 
@@ -46,11 +46,35 @@
     padding: .25rem;
     color: #f3f4f6;
   }
-  .page main pre {
-    display: block;
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
+.page main pre {
+  display: block;
+  background-color: #272822; /* 背景色 */
+  color: #f3f4f6; /* 文字颜色 */
+  padding: 0.5rem; /* 内边距 */
+  margin: 0; /* 外边距 */
+  line-height: 1.5; /* 行高 */
+  font-family: monospace; /* 字体 */
+  font-size: 1rem; /* 字体大小 */
+  tab-size: 4; /* Tab 缩进 */
+  counter-reset: line; /* 重置行号 */
+}
+
+.page main pre code {
+  font-family: inherit; /* 继承父级字体 */
+  font-size: inherit; /* 继承父级字体大小 */
+  line-height: inherit; /* 继承父级行高 */
+  padding: 0; /* 确保没有额外内边距 */
+  margin: 0; /* 确保没有额外外边距 */
+}
+
+.page main pre .line-number {
+  color: #999; /* 行号颜色 */
+  font-size: 1rem; /* 行号字体大小，与代码一致 */
+  line-height: 1.5; /* 行号行高，与代码一致 */
+  text-align: right; /* 行号右对齐 */
+  padding-right: 1rem; /* 行号与代码内容间距 */
+}
+
 /*表格及其单元格的样式设置：*/
   .page main table {
     border-color: #e5e7eb;
