@@ -4,5 +4,5 @@ layout: list
 cascade:
     type: blog
     layout: single
-categories: [Algebra]
+categories: [代数学]
 ---
