@@ -1,4 +1,7 @@
 ##  网站使用指南
+
+（网站地址：[Calenton](https://chiara-lee.netlify.app)https://chiara-lee.netlify.app）
+
 ### 1.评论邮箱
 
 由于本网站采用的是 Netlify 支持的评论表单系统，暂时并未配置单独的注册系统。
