@@ -7,7 +7,20 @@ Caleton Academy</a><nav><button class=hamburger>&#9776;</button><ul><li><a href=
 笔记</a></li><li><a href=/thoughts><i class=icon-thoughts></i>
 思考碎片</a></li><li><a href=/friends><i class=icon-friends></i>
 友人帐</a></li><li><a href=/about><i class=icon-about></i>
-关于</a></li></ul></section><section id=blog><h1>Recent push</h1><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/computer-science-and-technology/front-end-development/css-the-definitive-guide/1.1/><h2>1.1 (web)style 简史</h2><article>层叠样式表（Cascading Style Sheets，CSS）是一种强大的编程语言，可用于改变文档或文档集合的呈现方式，它几乎已经渗透到网络的每个角落以及许多表面上非网络的环境中。例如，嵌入式设备的显示通常使用 CSS 来设计其用户界面，许多 RSS 客户端允许你对订阅源和订阅条目应用 CSS，一些即时消息客户端使用 CSS 来格式化聊天窗口。CSS 的某些方面甚至可以在 JavaScript (JS) 框架的语法中以及 JS 本身中找到。它无处不在！
+关于</a></li></ul></section><section id=blog><h1>Recent push</h1><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/1.1/><h2>1.1 皮亚诺公理</h2><article>在学习实数分析之前，我们首先要回溯数的概念以及数的性质。
+我们已经和数打了很多年的交道了，我们会熟练的利用代数法则和数进行计算，那么现在请让我们转向一个更基本的问题：为什么代数法则是有效的？例如，对于 a(b+c)=ab+ac 为什么总是成立的?
+实际上，这些运算法则不是随意给出的，而是通过数系更为原始也更为基本的性质中推演得到的。这推演会使我们获得新的技能，即使用较为简单的性质来推导更加复杂的性质。在这个过程中，请时刻记得怀疑的精神，也就是不要轻易的接受一个结论，要思考一个显然成立的命题为什么是显然的。
+现在，我们要根据皮亚诺公理给出定义自然数的一种标准方法。
+自然数集定义 定义 2.1.1 （非正式的）自然数是集合
+N := \{ 0, 1, 2, 3, \cdots \} 的元素。其中，集合是从 0 开始的，无休止的往前进行计数所得列的所有元素构成的集合。我们称 N 为自然数集。
+注 2.1.2 在有些教材中，自然数被定义为从 1 而不是 0 开始的，但这仅仅是一种符号约定罢了。在以后的讨论中，我们定义集合 \{1, 2, 3, \cdots \} 为正整数集，并记为 Z^+ ，而不是自然数集。自然数有时候也被称为完整数（whole number）。
+从某种意义上讲，上述定义给出了什么是自然数这个问题的答案：自然数是集合 N 中的元素。然而这个定义并非真正的那么令人满意。因为它带来了一个新的问题：
+N 到底是什么？“从 0 开始，无休止的计数”看起来好像是对 N 的足够直观的定义描述，但是这样的叙述尚未解决的可能性问题，例如：如何确定我们不会出现无休止的计数结果循环回到 0 的情景？我们应当怎样在上述定义之下构造出一个系列的计算？
+我们首先来回答第二个问题：我们应该怎样在上面定义诸如加法、乘法等一系列的计算？
+我们使用的方法就是利用较为简单的运算来定义较为复杂的运算。指数运算只不过是对乘法运算的重复迭代：
+a^3 = a \cdot a \cdot a 。
+乘法运算只不过是对加法运算的重复迭代：
+3 \cdot a = a + a + a 。</article><div>Read More</div></a></li><li class=post><a href=https://chiara-lee.netlify.app/notes/computer-science-and-technology/front-end-development/css-the-definitive-guide/1.1/><h2>1.1 (web)style 简史</h2><article>层叠样式表（Cascading Style Sheets，CSS）是一种强大的编程语言，可用于改变文档或文档集合的呈现方式，它几乎已经渗透到网络的每个角落以及许多表面上非网络的环境中。例如，嵌入式设备的显示通常使用 CSS 来设计其用户界面，许多 RSS 客户端允许你对订阅源和订阅条目应用 CSS，一些即时消息客户端使用 CSS 来格式化聊天窗口。CSS 的某些方面甚至可以在 JavaScript (JS) 框架的语法中以及 JS 本身中找到。它无处不在！
 CSS 最早在 1994 年被提出，当时正值互联网开始真正流行之际。当时，浏览器赋予用户大量的样式控制能力——例如，NCSA Mosaic 的显示偏好允许用户定义每种元素的字体系列、大小和颜色。而文档作者却没有任何这样的能力；他们只能将内容标记为段落、某一级别的标题、预格式化文本或其他十几种元素类型之一。如果用户将其浏览器配置为使所有一级标题变得又小又粉红，而所有六级标题变得又大又红，那完全是用户自己的选择。
 CSS 正是在这种环境中被引入的。其目标是为网页作者提供一种简单的声明式样式语言，既灵活又强大，最重要的是，能够同时为作者和用户提供样式控制能力。通过层叠机制，这些样式可以被组合和优先排序，使网站作者和读者都能表达自己的需求——尽管最终的决定权始终在读者手中。
 工作迅速推进，到 1996 年底，CSS1 已经完成。尽管新成立的 CSS 工作组继续推进 CSS2 的开发，但浏览器在以互操作性方式实现 CSS1 时遇到了困难。尽管 CSS 的每个部分本身都相对简单，但它们的组合却产生了一些令人意想不到的复杂行为。不幸的是，还出现了一些问题，比如臭名昭著的盒模型实现差异。这些问题一度威胁到 CSS 的发展，但幸运的是，一些巧妙的提议被实施，浏览器开始趋于一致。在接下来的几年里，随着互操作性的增强以及像《Wired》杂志基于 CSS 的重新设计和 CSS Zen Garden 等高调发展项目的推动，CSS 开始流行起来。
@@ -19,6 +32,4 @@ CSS 正是在这种环境中被引入的。其目标是为网页作者提供一�
 规则的右侧是声明块，由一个或多个声明组成。每个声明由一个 CSS 属性和该属性的值组成。在图 1-1 中，声明块包含两个声明。第一个声明指定规则会将文档的某些部分设置为红色文本，第二个声明指定文档的某些部分将有一个黄色背景。因此，文档中的所有 &lt;h1> 元素（由选择器定义）将被设置为红色文本，并带有黄色背景。
 供应商前缀（Vendor Prefixing） 有时，您会看到 CSS 的某些部分带有连字符和标签，例如：-o-border-image。这些供应商前缀是浏览器供应商用来标记某些属性、值或其他 CSS 部分为实验性或专有功能（或者两者兼有）的一种方式。截至 2023 年初，仍有一些供应商前缀在使用，其中最常见的如表 1-1 所示。 如表1-1所示，供应商前缀的通用格式通常是连字符、标签和连字符，尽管有几个前缀错误地省略了第一个连字符。
 供应商前缀的使用与滥用历史悠久、复杂且超出了本书的范围。简单来说，它们最初的目的是为浏览器供应商提供测试新功能的方式，从而加速互操作性的发展，同时避免被与其他浏览器不兼容的遗留行为所束缚。这避免了一类几乎在 CSS 初期扼杀其发展的问题。然而，不幸的是，这些带前缀的属性随后被网页作者广泛使用，最终导致了全新的一类问题。
-截至 2023 年初，带有供应商前缀的 CSS 功能几乎已经不存在，旧的前缀属性和值正被浏览器实现逐步且稳定地移除。您可能永远不需要编写带前缀的 CSS，但可能会在实际项目中遇到，或者从遗留代码库中继承以下类似的代码：</article><div>Read More</div></a></li><li class=post><a href=https://chiara-lee.netlify.app/notes/computer-science-and-technology/front-end-development/css-the-definitive-guide/1.3/><h2>1.3 Viewing Markup Locally</h2><article>使用简单的文本编辑器，输入前面的任一示例并以文件名保存，如 helloworld.html 或 helloworld.htm；你可以选择使用 .htm 或 .html 文件扩展名，但无论你选择哪个进行开发，都要保持一致。这本书的所有文件都使用 .html。
-将示例文件保存到本地文件系统后，在 Web 浏览器中打开它，方法是打开文件菜单，然后根据你的浏览器选择打开、打开页面或打开文件： 一旦您的浏览器读取了该文件，它就应该呈现如下所示的页面： 如果由于某种原因没有使用适当的扩展名保存文件，则浏览器不会尝试解释 HTML 标记。例如，请注意当你尝试以 .txt 扩展名打开内容时: 如果要对文档进行更改，可以更新标记，保存文件，返回浏览器，然后单击重新加载或刷新按钮。有时，浏览器仍会从其缓存中重新加载页面；如果页面在重新加载时没有正确更新，请在按住 Shift 键的同时单击重新加载按钮，浏览器应该会刷新该页面。
-在编写标记时，保持浏览器和编辑器同时打开是一个非常好的主意，以避免不断地重新打开其中之一。许多 Web 编辑器将帮助您将 Web 页面加载到各种浏览器中，甚至直接预览标记的可视化。图1-1显示了 Adobe 广受欢迎的 Dreamweaver 程序[]。</article><div>Read More</div></a></li></ul></section><footer class=dark><nav><ul><li><a href=/categories>目录</a></li><li><a href=/reference>引用资料列表</a></li><li><a href=/categories>教材索引</a></li></ul></nav><ul><li><a href=https://facebook.com/example aria-label=Facebook><i class=icon-facebook></i></a></li><li><a href=https://x.com/i/flow/login aria-label=Twitter><i class=icon-twitter></i></a></li><li><a href=mailto:chiaralee953@foxmail.com aria-label=email><i class=icon-email></i></a></li></ul><div>Copyright © 2024 Caleton Academy of Magic.</div></footer></body></html>
+截至 2023 年初，带有供应商前缀的 CSS 功能几乎已经不存在，旧的前缀属性和值正被浏览器实现逐步且稳定地移除。您可能永远不需要编写带前缀的 CSS，但可能会在实际项目中遇到，或者从遗留代码库中继承以下类似的代码：</article><div>Read More</div></a></li></ul></section><footer class=dark><nav><ul><li><a href=/categories>目录</a></li><li><a href=/reference>引用资料列表</a></li><li><a href=/categories>教材索引</a></li></ul></nav><ul><li><a href=https://facebook.com/example aria-label=Facebook><i class=icon-facebook></i></a></li><li><a href=https://x.com/i/flow/login aria-label=Twitter><i class=icon-twitter></i></a></li><li><a href=mailto:chiaralee953@foxmail.com aria-label=email><i class=icon-email></i></a></li></ul><div>Copyright © 2024 Caleton Academy of Magic.</div></footer></body></html>
