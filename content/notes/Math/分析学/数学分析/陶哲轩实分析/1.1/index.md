@@ -135,7 +135,7 @@ N := \{0, 0.5, 1, 1.5, 2, 2.5, \cdots\}
 
 隐藏在这个公理中的通俗的直观的说明如下：假设{{<latex display="false">}}P(n){{</latex>}}满足以下条件：{{<latex display="false">}}P(0){{</latex>}}为真，且{{<latex display="false">}}P(n){{</latex>}}为真时{{<latex display="false">}}P(n++){{</latex>}}也为真，那么由于{{<latex display="false">}}P(0){{</latex>}}为真，所以{{<latex display="false">}}P(0++) = P(1){{</latex>}}也为真，进而{{<latex display="false">}}P(1++) = P(2){{</latex>}}也为真，以此类推我们可以得到{{<latex display="false">}}P(0), P(1), P(2), P(3), \cdots{{</latex>}}均为真。
 
-然而由根据这样的规定，我们根本没有定义{{<latex display="false">}}0.5{{</latex>}}这样的元素，因此公理2.5对{{<latex display="false">}}P(0.5){{</latex>}}是失效的，从而我们就避免了自然数系中出现附带的奇怪对象。
+然而根据这样的规定，我们根本没有定义{{<latex display="false">}}0.5{{</latex>}}这样的元素，因此公理2.5对{{<latex display="false">}}P(0.5){{</latex>}}是失效的，从而我们就避免了自然数系中出现附带的奇怪对象。
 
 在公理2.5之上，我们将在习题中给出关于它的其他形式，它们分别是：逆向归纳法、强化归纳法和超限归纳法*（这名字好酷对吧）。
 
@@ -156,6 +156,9 @@ N := \{0, 0.5, 1, 1.5, 2, 2.5, \cdots\}
 
 **proof**:  
 利用归纳法。首先，根据题设，我们有{{<latex display="false">}}a_0 = c{{</latex>}}。假设，题设的过程对{{<latex display="false">}}a_m{{</latex>}}赋予了单一的值，由于公理2.3（{{<latex display="false">}}n++ \neq 0{{</latex>}}）和公理2.4（{{<latex display="false">}}n++ \neq m++ \iff n \neq m{{</latex>}}），可知上述过程{{<latex display="false">}}a_{n++} := f_n(a_n){{</latex>}}对{{<latex display="false">}}a_n{{</latex>}}来说是不会改变{{<latex display="false">}}a_n{{</latex>}}的赋值的，因此可知上述过程也同样使得{{<latex display="false">}}a_{n++}{{</latex>}}被唯一赋值了。那么根据数学归纳法，对于任意的自然数{{<latex display="false">}}n{{</latex>}}，{{<latex display="false">}}a_n{{</latex>}}都被定义了，并且每个{{<latex display="false">}}a_n{{</latex>}}都赋予了唯一的值。
+
+注意所有的公理在这个过程中是如何被应用的。在一个数系中，如果存在某种类型的**绕回状况**，那么递归定义就不适用于该数系。这是因为序列中的某些元素将会连续不断地被重新定义。例如，在例2.1.5中，因为{{<latex display="false">}}3++ = 0{{</latex>}}，所以{{<latex display="false">}}a_0{{</latex>}}（至少）存在两种相矛盾的定义，{{<latex display="false">}}c{{</latex>}}或者{{<latex display="false">}}f_3(a_3){{</latex>}}。在一个含有多余元素（比如{{<latex display="false">}}0.5{{</latex>}}）的数系中，元素{{<latex display="false">}}a_{0.5}{{</latex>}}将永远不会被定义。
+
 
 对于递归定义，我（笔记书写者）的理解是，我们首先固定了{{<latex display="false">}}a_0 = c{{</latex>}}，然后递归的过程是  
 {{<latex display="true">}}
@@ -197,68 +200,71 @@ f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \
 
 就是函数{{<latex display="false">}}f(x){{</latex>}}在{{<latex display="false">}}x_0{{</latex>}}处，通过{{<latex display="false">}}n{{</latex>}}次求导迭代得到的最终拟合的结果。而根据迭代的定义，我们知道这个迭代的拟合的过程中给出的赋值是唯一的，并且我们可以根据迭代次数来构造一个不同次迭代赋值得到的函数值的序列。
 
+
 ##  总结
-总而言之，以下这些就是皮亚诺公理的全部内容：
+
+总而言之，以下是皮亚诺公理的全部内容：
 
 ### 公理假设
-皮亚诺公理假设存在一个集合 \( \mathbb{N} \)，其元素被称为**自然数**，以及一个称为“后继函数”的映射 \( S: \mathbb{N} \to \mathbb{N} \)，满足以下五条公理：
+皮亚诺公理假设存在一个集合 {{<latex display="false">}}\mathbb{N}{{</latex>}}，其元素被称为**自然数**，以及一个称为“后继函数”的映射 {{<latex display="false">}}S: \mathbb{N} \to \mathbb{N}{{</latex>}}，满足以下五条公理：
 
 ### 五条皮亚诺公理
 
-1. **零是自然数**：
-   \[
-   0 \in \mathbb{N}.
-   \]
-   （注：有些表述中将 \( 0 \) 换为 \( 1 \），视具体情况而定。）
+1. **零是自然数**：  
+   {{<latex display="true">}}  
+   0 \in \mathbb{N}.  
+   {{</latex>}}  
+   （注：有些表述中将 {{<latex display="false">}}0{{</latex>}} 换为 {{<latex display="false">}}1{{</latex>}}，视具体情况而定。）
 
-2. **每个自然数都有一个后继**：
-   \[
-   \forall n \in \mathbb{N}, S(n) \in \mathbb{N}.
-   \]
-   后继函数 \( S \) 为每个自然数定义一个唯一的“下一个”自然数。
+2. **每个自然数都有一个后继**：  
+   {{<latex display="true">}}  
+   \forall n \in \mathbb{N}, S(n) \in \mathbb{N}.  
+   {{</latex>}}  
+   后继函数 {{<latex display="false">}}S{{</latex>}} 为每个自然数定义一个唯一的“下一个”自然数。
 
-3. **零不是任何自然数的后继**：
-   \[
-   \forall n \in \mathbb{N}, S(n) \neq 0.
-   \]
-   这保证了自然数序列是以 \( 0 \) 为起点、向后无限延伸的，且没有“前驱”。
+3. **零不是任何自然数的后继**：  
+   {{<latex display="true">}}  
+   \forall n \in \mathbb{N}, S(n) \neq 0.  
+   {{</latex>}}  
+   这保证了自然数序列是以 {{<latex display="false">}}0{{</latex>}} 为起点、向后无限延伸的，且没有“前驱”。
 
-4. **不同的自然数有不同的后继**（后继函数是单射）：
-   \[
-   \forall m, n \in \mathbb{N}, \, S(m) = S(n) \implies m = n.
-   \]
+4. **不同的自然数有不同的后继**（后继函数是单射）：  
+   {{<latex display="true">}}  
+   \forall m, n \in \mathbb{N}, \, S(m) = S(n) \implies m = n.  
+   {{</latex>}}  
    这保证了后继函数不会将两个不同的自然数映射到同一个自然数。
 
-5. **数学归纳原理**：
-   若一个性质 \( P \) 满足以下两点：
-   - \( P(0) \) 成立；
-   - 对任何 \( n \in \mathbb{N} \)，如果 \( P(n) \) 成立，则 \( P(S(n)) \) 也成立，
-   
-   则 \( P(n) \) 对所有 \( n \in \mathbb{N} \) 成立。
+5. **数学归纳原理**：  
+   若一个性质 {{<latex display="false">}}P{{</latex>}} 满足以下两点：  
+   - {{<latex display="false">}}P(0){{</latex>}} 成立；  
+   - 对任何 {{<latex display="false">}}n \in \mathbb{N}{{</latex>}}，如果 {{<latex display="false">}}P(n){{</latex>}} 成立，则 {{<latex display="false">}}P(S(n)){{</latex>}} 也成立，  
+     
+   则 {{<latex display="false">}}P(n){{</latex>}} 对所有 {{<latex display="false">}}n \in \mathbb{N}{{</latex>}} 成立。  
 
    数学归纳原理确保可以对自然数集合进行递归定义和归纳证明。
 
 ---
 
 ### 解释与扩展
-皮亚诺公理定义了自然数的基本结构，其中 \( S \) 通常被解释为“加 1”操作。例如：
-- \( S(0) \) 通常表示 \( 1 \)，
-- \( S(S(0)) \) 表示 \( 2 \)，以此类推。
+皮亚诺公理定义了自然数的基本结构，其中 {{<latex display="false">}}S{{</latex>}} 通常被解释为“加 1”操作。例如：  
+- {{<latex display="false">}}S(0){{</latex>}} 通常表示 {{<latex display="false">}}1{{</latex>}}，  
+- {{<latex display="false">}}S(S(0)){{</latex>}} 表示 {{<latex display="false">}}2{{</latex>}}，以此类推。
 
 ### 递归定义
 通过皮亚诺公理可以递归定义自然数的加法和乘法等运算：
 
-1. **加法定义**：
-   \[
-   n + 0 = n, \quad n + S(m) = S(n + m).
-   \]
+1. **加法定义**：  
+   {{<latex display="true">}}  
+   n + 0 = n, \quad n + S(m) = S(n + m).  
+   {{</latex>}}
 
-2. **乘法定义**：
-   \[
-   n \cdot 0 = 0, \quad n \cdot S(m) = (n \cdot m) + n.
-   \]
+2. **乘法定义**：  
+   {{<latex display="true">}}  
+   n \cdot 0 = 0, \quad n \cdot S(m) = (n \cdot m) + n.  
+   {{</latex>}}
 
 ---
 
 ### 数学基础中的地位
 皮亚诺公理在数学基础中占有重要地位，为数理逻辑、集合论以及模型论等领域提供了形式化的支柱。
+
