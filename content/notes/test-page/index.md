@@ -44,6 +44,10 @@ toc: true
 
 </div>
 
+~ 公理1.1 ~
+
+~公理1.1~
+
 **以上内容来自 [Markdown 语法官方中文教程](https://markdown.com.cn/basic-syntax/links.html)**
 
 ##  2.LaTex渲染测试
@@ -54,3 +58,4 @@ Equation
 --------
 
 {{<latex>}}d \mathord{ \buildrel{ \lower3pt \hbox{$ \scriptscriptstyle \rightharpoonup$}} \over B} = \frac{{{ \mu _0}}}{{4 \pi }} \frac{{Idl \times \mathord{ \buildrel{ \lower3pt \hbox{$ \scriptscriptstyle \rightharpoonup$}} \over r} }}{{{r^3}}} =  \frac{{{ \mu _0}}}{{4 \pi }} \frac{{Idl \sin \theta }}{{{r^2}}} {{</latex>}}
+
