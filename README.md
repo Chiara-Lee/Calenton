@@ -20,13 +20,13 @@
 1.登录 [WordPress](https://wordpress.com/zh-cn/)。在这个平台上创建一个账号。因为 Gravatar 和 WordPress 是绑定的，如果你的邮箱没有绑定 WordPress 账号，那么你就无法在 Gravatar 注册。
 
 2.之后，点击右上角的头像
-![](/image/readme/1.png)
+![](/static/image/readme/1.png)
 根据表单的提示信息，进行填写和保存。
 
 3.登录 [Gravatar](https://gravatar.com/)。使用你已经绑定了 WordPress 的邮箱进行注册，Gravatar 在检测到相关的 WordPress 账号后会自动分配一个与此账号信息关联的 Gravatar 账号。
 
 4.进入网站后，你应该可以看到类似这样的界面
-![](/image/readme/2.png)
+![](/static/image/readme/2.png)
 
 你可以在右侧设计自己的信息卡片什么的。设置完成之后，我们的头像就实现 Gravatar 平台通用了。
 
@@ -35,5 +35,5 @@
 ### 3.网站浏览
 
 如果您使用的是  Google Chrome，那么推荐您使用 90% 的缩放比例来访问本网站以获得最佳体验。
-![](/image/readme/3.png)
+![](/static/image/readme/3.png)
 其他网站可以通过类似的方法来调整网站的缩放比例。
