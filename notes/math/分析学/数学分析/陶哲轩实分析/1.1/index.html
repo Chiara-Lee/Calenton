@@ -181,7 +181,7 @@ Caleton Academy
 <span class=fallback-latex>P(1++) = P(2)
 </span>也为真，以此类推我们可以得到
 <span class=fallback-latex>P(0), P(1), P(2), P(3), \cdots
-</span>均为真。</p><p>然而由根据这样的规定，我们根本没有定义
+</span>均为真。</p><p>然而根据这样的规定，我们根本没有定义
 <span class=fallback-latex>0.5
 </span>这样的元素，因此公理2.5对
 <span class=fallback-latex>P(0.5)
@@ -257,7 +257,19 @@ Caleton Academy
 <span class=fallback-latex>a_n
 </span>都被定义了，并且每个
 <span class=fallback-latex>a_n
-</span>都赋予了唯一的值。</p><p>对于递归定义，我（笔记书写者）的理解是，我们首先固定了
+</span>都赋予了唯一的值。</p><p>注意所有的公理在这个过程中是如何被应用的。在一个数系中，如果存在某种类型的<strong>绕回状况</strong>，那么递归定义就不适用于该数系。这是因为序列中的某些元素将会连续不断地被重新定义。例如，在例2.1.5中，因为
+<span class=fallback-latex>3++ = 0
+</span>，所以
+<span class=fallback-latex>a_0
+</span>（至少）存在两种相矛盾的定义，
+<span class=fallback-latex>c
+</span>或者
+<span class=fallback-latex>f_3(a_3)
+</span>。在一个含有多余元素（比如
+<span class=fallback-latex>0.5
+</span>）的数系中，元素
+<span class=fallback-latex>a_{0.5}
+</span>将永远不会被定义。</p><p>对于递归定义，我（笔记书写者）的理解是，我们首先固定了
 <span class=fallback-latex>a_0 = c
 </span>，然后递归的过程是<br><span class=fallback-latex>\begin{aligned}
 a_1 & := f_0(a_0), \\
@@ -298,31 +310,41 @@ a_3 & := f_2(a_2), \\
 <span class=fallback-latex>x_0
 </span>处，通过
 <span class=fallback-latex>n
-</span>次求导迭代得到的最终拟合的结果。而根据迭代的定义，我们知道这个迭代的拟合的过程中给出的赋值是唯一的，并且我们可以根据迭代次数来构造一个不同次迭代赋值得到的函数值的序列。</p><h2 id=总结>总结</h2><p>总而言之，以下这些就是皮亚诺公理的全部内容：</p><h3 id=公理假设>公理假设</h3><p>皮亚诺公理假设存在一个集合 ( \mathbb{N} )，其元素被称为<strong>自然数</strong>，以及一个称为“后继函数”的映射 ( S: \mathbb{N} \to \mathbb{N} )，满足以下五条公理：</p><h3 id=五条皮亚诺公理>五条皮亚诺公理</h3><ol><li><p><strong>零是自然数</strong>：
-[
-0 \in \mathbb{N}.
-]
-（注：有些表述中将 ( 0 ) 换为 ( 1 \），视具体情况而定。）</p></li><li><p><strong>每个自然数都有一个后继</strong>：
-[
-\forall n \in \mathbb{N}, S(n) \in \mathbb{N}.
-]
-后继函数 ( S ) 为每个自然数定义一个唯一的“下一个”自然数。</p></li><li><p><strong>零不是任何自然数的后继</strong>：
-[
-\forall n \in \mathbb{N}, S(n) \neq 0.
-]
-这保证了自然数序列是以 ( 0 ) 为起点、向后无限延伸的，且没有“前驱”。</p></li><li><p><strong>不同的自然数有不同的后继</strong>（后继函数是单射）：
-[
-\forall m, n \in \mathbb{N}, , S(m) = S(n) \implies m = n.
-]
-这保证了后继函数不会将两个不同的自然数映射到同一个自然数。</p></li><li><p><strong>数学归纳原理</strong>：
-若一个性质 ( P ) 满足以下两点：</p><ul><li>( P(0) ) 成立；</li><li>对任何 ( n \in \mathbb{N} )，如果 ( P(n) ) 成立，则 ( P(S(n)) ) 也成立，</li></ul><p>则 ( P(n) ) 对所有 ( n \in \mathbb{N} ) 成立。</p><p>数学归纳原理确保可以对自然数集合进行递归定义和归纳证明。</p></li></ol><hr><h3 id=解释与扩展>解释与扩展</h3><p>皮亚诺公理定义了自然数的基本结构，其中 ( S ) 通常被解释为“加 1”操作。例如：</p><ul><li>( S(0) ) 通常表示 ( 1 )，</li><li>( S(S(0)) ) 表示 ( 2 )，以此类推。</li></ul><h3 id=递归定义-1>递归定义</h3><p>通过皮亚诺公理可以递归定义自然数的加法和乘法等运算：</p><ol><li><p><strong>加法定义</strong>：
-[
-n + 0 = n, \quad n + S(m) = S(n + m).
-]</p></li><li><p><strong>乘法定义</strong>：
-[
-n \cdot 0 = 0, \quad n \cdot S(m) = (n \cdot m) + n.
-]</p></li></ol><hr><h3 id=数学基础中的地位>数学基础中的地位</h3><p>皮亚诺公理在数学基础中占有重要地位，为数理逻辑、集合论以及模型论等领域提供了形式化的支柱。</p></div><aside class=sidebar><div class=card><h2>摘要</h2><p>在学习实数分析之前，我们首先要回溯数的概念以及数的性质。
-我们已经和数打了很多年的交道了，我们会熟练的利用代数法则和数进行计算，那么现在请让我们转向一个更基本的问题：为什么代数法则是有效的？例如， …</p></div><div class=card><h2>阅读时长</h2><p>5 min</p></div><div class=card><h2>总字数</h2><p>≈ 889</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
+</span>次求导迭代得到的最终拟合的结果。而根据迭代的定义，我们知道这个迭代的拟合的过程中给出的赋值是唯一的，并且我们可以根据迭代次数来构造一个不同次迭代赋值得到的函数值的序列。</p><h2 id=总结>总结</h2><p>总而言之，以下是皮亚诺公理的全部内容：</p><h3 id=公理假设>公理假设</h3><p>皮亚诺公理假设存在一个集合
+<span class=fallback-latex>\mathbb{N}
+</span>，其元素被称为<strong>自然数</strong>，以及一个称为“后继函数”的映射
+<span class=fallback-latex>S: \mathbb{N} \to \mathbb{N}
+</span>，满足以下五条公理：</p><h3 id=五条皮亚诺公理>五条皮亚诺公理</h3><ol><li><p><strong>零是自然数</strong>：<br><span class=fallback-latex>0 \in \mathbb{N}.</span><br>（注：有些表述中将
+<span class=fallback-latex>0
+</span>换为
+<span class=fallback-latex>1
+</span>，视具体情况而定。）</p></li><li><p><strong>每个自然数都有一个后继</strong>：<br><span class=fallback-latex>\forall n \in \mathbb{N}, S(n) \in \mathbb{N}.</span><br>后继函数
+<span class=fallback-latex>S
+</span>为每个自然数定义一个唯一的“下一个”自然数。</p></li><li><p><strong>零不是任何自然数的后继</strong>：<br><span class=fallback-latex>\forall n \in \mathbb{N}, S(n) \neq 0.</span><br>这保证了自然数序列是以
+<span class=fallback-latex>0
+</span>为起点、向后无限延伸的，且没有“前驱”。</p></li><li><p><strong>不同的自然数有不同的后继</strong>（后继函数是单射）：<br><span class=fallback-latex>\forall m, n \in \mathbb{N}, \, S(m) = S(n) \implies m = n.</span><br>这保证了后继函数不会将两个不同的自然数映射到同一个自然数。</p></li><li><p><strong>数学归纳原理</strong>：<br>若一个性质
+<span class=fallback-latex>P
+</span>满足以下两点：</p><ul><li><span class=fallback-latex>P(0)
+</span>成立；</li><li>对任何
+<span class=fallback-latex>n \in \mathbb{N}
+</span>，如果
+<span class=fallback-latex>P(n)
+</span>成立，则
+<span class=fallback-latex>P(S(n))
+</span>也成立，</li></ul><p>则
+<span class=fallback-latex>P(n)
+</span>对所有
+<span class=fallback-latex>n \in \mathbb{N}
+</span>成立。</p><p>数学归纳原理确保可以对自然数集合进行递归定义和归纳证明。</p></li></ol><hr><h3 id=解释与扩展>解释与扩展</h3><p>皮亚诺公理定义了自然数的基本结构，其中
+<span class=fallback-latex>S
+</span>通常被解释为“加 1”操作。例如：</p><ul><li><span class=fallback-latex>S(0)
+</span>通常表示
+<span class=fallback-latex>1
+</span>，</li><li><span class=fallback-latex>S(S(0))
+</span>表示
+<span class=fallback-latex>2
+</span>，以此类推。</li></ul><h3 id=递归定义-1>递归定义</h3><p>通过皮亚诺公理可以递归定义自然数的加法和乘法等运算：</p><ol><li><p><strong>加法定义</strong>：<br><span class=fallback-latex>n + 0 = n, \quad n + S(m) = S(n + m).</span></p></li><li><p><strong>乘法定义</strong>：<br><span class=fallback-latex>n \cdot 0 = 0, \quad n \cdot S(m) = (n \cdot m) + n.</span></p></li></ol><hr><h3 id=数学基础中的地位>数学基础中的地位</h3><p>皮亚诺公理在数学基础中占有重要地位，为数理逻辑、集合论以及模型论等领域提供了形式化的支柱。</p></div><aside class=sidebar><div class=card><h2>摘要</h2><p>在学习实数分析之前，我们首先要回溯数的概念以及数的性质。
+我们已经和数打了很多年的交道了，我们会熟练的利用代数法则和数进行计算，那么现在请让我们转向一个更基本的问题：为什么代数法则是有效的？例如， …</p></div><div class=card><h2>阅读时长</h2><p>5 min</p></div><div class=card><h2>总字数</h2><p>≈ 862</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
 数学分析</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/computer-science-and-technology/front-end-development/css-the-definitive-guide/1.1/><h2>1.1 (web)style 简史</h2><article>层叠样式表（Cascading Style Sheets，CSS）是一种强大的编程语言，可用于改变文档或文档集合的呈现方式，它几乎已经渗透到网络的每个角落以及许多表面上非网络的环境中。例如，嵌入式设备的显示通常使用 CSS 来设计其用户界面，许多 RSS 客户端允许你对订阅源和订阅条目应用 CSS，一些即时消息客户端使用 CSS 来格式化聊天窗口。CSS 的某些方面甚至可以在 JavaScript (JS) 框架的语法中以及 JS 本身中找到。它无处不在！
 CSS 最早在 1994 年被提出，当时正值互联网开始真正流行之际。当时，浏览器赋予用户大量的样式控制能力——例如，NCSA Mosaic 的显示偏好允许用户定义每种元素的字体系列、大小和颜色。而文档作者却没有任何这样的能力；他们只能将内容标记为段落、某一级别的标题、预格式化文本或其他十几种元素类型之一。如果用户将其浏览器配置为使所有一级标题变得又小又粉红，而所有六级标题变得又大又红，那完全是用户自己的选择。
 CSS 正是在这种环境中被引入的。其目标是为网页作者提供一种简单的声明式样式语言，既灵活又强大，最重要的是，能够同时为作者和用户提供样式控制能力。通过层叠机制，这些样式可以被组合和优先排序，使网站作者和读者都能表达自己的需求——尽管最终的决定权始终在读者手中。
