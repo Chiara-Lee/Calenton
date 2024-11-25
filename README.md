@@ -1,6 +1,6 @@
 ##  网站使用指南
 
-（网站地址：[Calenton](https://chiara-lee.netlify.app)https://chiara-lee.netlify.app）
+（网站地址：[Calenton](https://chiara-lee.netlify.app) https://chiara-lee.netlify.app
 
 ### 1.评论邮箱
 
