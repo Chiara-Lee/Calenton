@@ -40,7 +40,7 @@ N := \{ 0, 1, 2, 3, \cdots \}
 {{<latex display="false">}}3 \cdot a = a + a + a{{</latex>}}。  
 （由于减法和除法运算并不完全适用于自然数的运算，因此我们暂不讨论。我们在整数数和有理数对应的章节时，会对这些运算进行讨论。）
 
-## 加法和增量运算{{<latex display="false">}}+{{</latex>}}
+## 加法和增量运算
 
 那么**加法**又是怎么定义的呢？加法就是**重复往前计数**或者**不断增加的运算**。
 
@@ -60,11 +60,9 @@ N := \{ 0, 1, 2, 3, \cdots \}
 
 ## 公理2.1 ~ 定义2.1.3 定义自然数集的具体元素
 
-**公理 2.1**  
-{{<latex display="false">}}0{{</latex>}}是自然数。  
+**公理 2.1**  {{<latex display="false">}}0{{</latex>}}是自然数。  
 
-**公理 2.2**  
-如果{{<latex display="false">}}n{{</latex>}}是自然数，那么{{<latex display="false">}}n++{{</latex>}}也是自然数。  
+**公理 2.2**  如果{{<latex display="false">}}n{{</latex>}}是自然数，那么{{<latex display="false">}}n++{{</latex>}}也是自然数。  
 
 于是，举例来说，我们能通过公理2.1和公理2.2，可以推的{{<latex display="false">}}(0++)++{{</latex>}}是一个自然数。为了计数书写的方便，我们又有如下的定义。
 
@@ -73,8 +71,7 @@ N := \{ 0, 1, 2, 3, \cdots \}
 
 于是，举例来说，我们有：
 
-**命题 2.1.4**  
-3 是一个自然数  
+**命题 2.1.4**  3 是一个自然数  
 
 **proof**:  
 根据公理2.1可知，{{<latex display="false">}}0{{</latex>}}是一个自然数。根据公理2.2，{{<latex display="false">}}0++ = 1{{</latex>}}是一个自然数。又根据公理2.2，{{<latex display="false">}}1++ = 2{{</latex>}}也是自然数，那么再通过依序公理2.2，{{<latex display="false">}}2++ = 3{{</latex>}}自然也是自然数。
@@ -96,8 +93,7 @@ N := \{ 0, 1, 2, 3, \cdots \}
 
 如此一来，我们就有防止循环情况出现的工具了。
 
-**命题 2.1.6**  
-{{<latex display="false">}}4 \neq 0{{</latex>}}  
+**命题 2.1.6**  {{<latex display="false">}}4 \neq 0{{</latex>}}  
 
 **proof**:  
 根据定义{{<latex display="false">}}4 = 3++{{</latex>}}，根据公理2.1和公理2.2，可知{{<latex display="false">}}3{{</latex>}}是一个自然数，故根据公理2.2，{{<latex display="false">}}4{{</latex>}}也是一个自然数，再根据公理2.3，我们就有{{<latex display="false">}}3++ = 4 \neq 0{{</latex>}}。  
@@ -117,8 +113,7 @@ N := \{ 0, 1, 2, 3, \cdots \}
 对于不同的自然数而言，紧跟在它们之后的数字也必然不同。也就是说，如果{{<latex display="false">}}n{{</latex>}}和{{<latex display="false">}}m{{</latex>}}都是自然数，并且{{<latex display="false">}}n \neq m{{</latex>}}，那么{{<latex display="false">}}n++ \neq m++{{</latex>}}。  
 等价地说，如果{{<latex display="false">}}n++ = m++{{</latex>}}，则{{<latex display="false">}}n = m{{</latex>}}。
 
-**命题 2.1.8**  
-6 不等于 2  
+**命题 2.1.8**  6 不等于 2  
 
 **proof**:  
 **使用反证法**，假设{{<latex display="false">}}6 = 2{{</latex>}}，那么有{{<latex display="false">}}5++ = 1++{{</latex>}}。根据公理2.4，有{{<latex display="false">}}5 = 1{{</latex>}}，进而有{{<latex display="false">}}4++ = 0++{{</latex>}}。再次利用公理2.4，也就有{{<latex display="false">}}4 = 0{{</latex>}}。在我们的数系中，只有{{<latex display="false">}}0 \sim 4{{</latex>}}这几个数是被定义好的，所有根据我们的规定，{{<latex display="false">}}4 = 0{{</latex>}}与命题2.1.6矛盾，所有我们有结论{{<latex display="false">}}6 \neq 2{{</latex>}}。
@@ -145,13 +140,13 @@ N := \{0, 0.5, 1, 1.5, 2, 2.5, \cdots\}
 
 在公理2.5之上，我们将在习题中给出关于它的其他形式，它们分别是：逆向归纳法、强化归纳法和超限归纳法*（这名字好酷对吧）。
 
-公理2.1~公理2.5被称为**皮亚诺公理**，这套公理系统*就是定义自然数系的方法之一。为了定义自然数系，我们假设存在一个数系{{<latex display="false">}}N{{</latex>}}，我们称{{<latex display="false">}}N{{</latex>}}中的元素为自然数，而且公理2.1~公理2.5对{{<latex display="false">}}N{{</latex>}}均成立。
+公理2.1~公理2.5被称为**皮亚诺公理**，这套公理系统就是定义自然数系的方法之一。为了定义自然数系，我们假设存在一个数系{{<latex display="false">}}N{{</latex>}}，我们称{{<latex display="false">}}N{{</latex>}}中的元素为自然数，而且公理2.1~公理2.5对{{<latex display="false">}}N{{</latex>}}均成立。
 
 根据前面的所有规定，我们可以得到以下的这个结论：现在我们可以**递归**的定义序列。
 
 ---
 
-## 递归定义{{<latex display="false">}}+{{</latex>}}
+## 递归定义
 
 假设我们通过以下方式来构造数列{{<latex display="false">}}a_0, a_1, a_2, \cdots{{</latex>}}：首先定义{{<latex display="false">}}a_0{{</latex>}}的基值。例如，令{{<latex display="false">}}a_0 = c{{</latex>}}，其中{{<latex display="false">}}c{{</latex>}}是一个固定的数字。然后令{{<latex display="false">}}a_1{{</latex>}}为关于{{<latex display="false">}}a_0{{</latex>}}的某个函数：{{<latex display="false">}}a_1 := f_0(a_0){{</latex>}}，令{{<latex display="false">}}a_2{{</latex>}}为关于{{<latex display="false">}}a_1{{</latex>}}的某个函数：{{<latex display="false">}}a_2 := f_1(a_1){{</latex>}}。以此类推，一般地，我们记{{<latex display="false">}}a_{n++} := f_n(a_n){{</latex>}}，其中{{<latex display="false">}}f_n{{</latex>}}是{{<latex display="false">}}N \to N{{</latex>}}的某个函数。利用前面的公理可以推出，对于任意给定的自然数{{<latex display="false">}}n{{</latex>}}，上述过程将对应数列中的元素{{<latex display="false">}}a_n{{</latex>}}给出唯一的值。
 
