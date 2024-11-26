@@ -226,8 +226,7 @@ a + (b++) = (a + b)++
 **证明**：  
 假设结论的反面 {{<latex display="false">}}a \neq 0{{</latex>}} 或 {{<latex display="false">}}b \neq 0{{</latex>}} 成立。如果 {{<latex display="false">}}a \neq 0{{</latex>}}，那么 {{<latex display="false">}}a{{</latex>}} 是正的，从而根据 **命题 2.2.8** 可知，{{<latex display="false">}}a + b{{</latex>}} 是正的，这显然与已知条件 {{<latex display="false">}}a + b = 0{{</latex>}} 相矛盾。类似地，如果 {{<latex display="false">}}b \neq 0{{</latex>}}，那么 {{<latex display="false">}}b{{</latex>}} 是正的，同样根据 **命题 2.2.8** 可知，{{<latex display="false">}}a + b{{</latex>}} 是正的，这与 {{<latex display="false">}}a + b = 0{{</latex>}} 相矛盾。于是 {{<latex display="false">}}a{{</latex>}} 和 {{<latex display="false">}}b{{</latex>}} 必须同时为 {{<latex display="false">}}0{{</latex>}}。□
 
-**引理 2.2.10**  
-令 {{<latex display="false">}}a{{</latex>}} 表示一个正自然数，那么恰存在一个自然数 {{<latex display="false">}}b{{</latex>}} 使得 {{<latex display="false">}}b++ = a{{</latex>}}。
+**引理 2.2.10**  令 {{<latex display="false">}}a{{</latex>}} 表示一个正自然数，那么恰存在一个自然数 {{<latex display="false">}}b{{</latex>}} 使得 {{<latex display="false">}}b++ = a{{</latex>}}。
 
 **证明**：
 根据皮亚诺公理 3 （0 不是任何自然数的后继）和 4（不同自然数的后继互不相同）有
@@ -236,8 +235,10 @@ a + (b++) = (a + b)++
 {{</latex>}}
 则，
 {{<latex display="true">}}
+\begin{align}
 S(b)=a\\
 \forall n \in \mathbb{N},\text{if} S(n)=S(b)=a \implies n = b.
+\end{align}
 {{</latex>}}
 至此命题成立。
 
