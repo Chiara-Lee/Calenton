@@ -236,8 +236,8 @@ a + (b++) = (a + b)++
 则，
 {{<latex display="true">}}
 \begin{align}
-S(b)=a\\
-\forall n \in \mathbb{N},\text{if} S(n)=S(b)=a \implies n = b.
+&S(b)=a\\
+&\forall n \in \mathbb{N},\text{if} S(n)=S(b)=a \implies n = b.
 \end{align}
 {{</latex>}}
 至此命题成立。
@@ -256,12 +256,12 @@ S(b)=a\\
 (e) {{<latex display="false">}}a < b{{</latex>}}，当且仅当{{<latex display="false">}}a++ \leq b{{</latex>}}。  
 (f) {{<latex display="false">}}a < b{{</latex>}}，当且仅当存在正自然数{{<latex display="false">}}d{{</latex>}}使得{{<latex display="false">}}b = a + d{{</latex>}}。
 
-**证明：**
+**证明**:
 
-**(a)**{{<latex display="false">}}a \geq a{{</latex>}}
+**(a)** {{<latex display="false">}}a \geq a{{</latex>}}
 {{<latex display="true">}}a + 0 = a \rightarrow a \geq a{{</latex>}}
 
-**(b)**{{<latex display="false">}}a \geq b,b \geq c{{</latex>}}，那么{{<latex display="false">}}a \geq c{{</latex>}}
+**(b)** {{<latex display="false">}}a \geq b,b \geq c{{</latex>}}，那么{{<latex display="false">}}a \geq c{{</latex>}}
 {{<latex display="true">}}
 \begin{align}
 a \geq b \rightarrow a = b + n,  n \in \mathbb{N}\\
@@ -273,7 +273,8 @@ b \geq c \rightarrow b = c + m,  m \in \mathbb{N}\\
 a = b + n = c + m + n
 {{</latex>}}
 显然就可得结论，{{<latex display="false">}}a \geq c{{</latex>}}
-**(c)**{{<latex display="false">}}a \geq b，b \geq a{{</latex>}}，则{{<latex display="false">}}a = b{{</latex>}}
+
+**(c)** {{<latex display="false">}}a \geq b，b \geq a{{</latex>}}，则{{<latex display="false">}}a = b{{</latex>}}
 {{<latex display="true">}}
 \begin{align}
 a \geq b \rightarrow a = b + n,  n \in \mathbb{N}\\
@@ -286,7 +287,7 @@ a = a + m + n
 {{</latex>}}
 显然，{{<latex display="false">}}m = 0，n = 0{{</latex>}}，则{{<latex display="false">}}a = b{{</latex>}}。
 
-**(d)**{{<latex display="false">}}a \geq b{{</latex>}} if and only if {{<latex display="false">}}a + c \geq b + c{{</latex>}}.
+**(d)** {{<latex display="false">}}a \geq b{{</latex>}} if and only if {{<latex display="false">}}a + c \geq b + c{{</latex>}}.
 {{<latex display="true">}}
 \begin{align}
 (a \geq b) &\iff a = b + m, \, m \in \mathbb{N} \\
