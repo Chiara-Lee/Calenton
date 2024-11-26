@@ -256,8 +256,10 @@ S(b)=a\\
 (f) {{<latex display="false">}}a < b{{</latex>}}，当且仅当存在正自然数{{<latex display="false">}}d{{</latex>}}使得{{<latex display="false">}}b = a + d{{</latex>}}。
 
 **证明：**
+
 **(a)**{{<latex display="false">}}a \geq a{{</latex>}}
 {{<latex display="true">}}a + 0 = a \rightarrow a \geq a{{</latex>}}
+
 **(b)**{{<latex display="false">}}a \geq b,b \geq c{{</latex>}}，那么{{<latex display="false">}}a \geq c{{</latex>}}
 {{<latex display="true">}}
 \begin{align}
@@ -282,6 +284,7 @@ b \geq a \rightarrow b = a + m,  m \in \mathbb{N}\\
 a = a + m + n
 {{</latex>}}
 显然，{{<latex display="false">}}m = 0，n = 0{{</latex>}}，则{{<latex display="false">}}a = b{{</latex>}}。
+
 **(d)**{{<latex display="false">}}a \geq b{{</latex>}} if and only if {{<latex display="false">}}a + c \geq b + c{{</latex>}}.
 {{<latex display="true">}}
 \begin{align}
