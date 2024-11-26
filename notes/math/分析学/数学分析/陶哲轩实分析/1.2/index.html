@@ -67,18 +67,275 @@ Caleton Academy
 <span class=fallback-latex>n
 </span>采用归纳法。首先考虑最基本的情况，
 <span class=fallback-latex>n = 0
-</span>。此时我们必须证明<br><span class=fallback-latex>0 + (m++) = (0 + m)++</span></p><p>现在归纳性地假定
+</span>。此时我们必须证明<br><span class=fallback-latex>0 + (m++) = (0 + m)++</span></p><p>根据加法定义，左侧等于
+<span class=fallback-latex>m++
+</span>，再次根据加法定义，显然右侧也为
+<span class=fallback-latex>m++
+</span>，因此等式成立。</p><p>现在归纳性地假定
 <span class=fallback-latex>n + (m++) = (n + m)++
-</span>成立，那么我们必须证明<br><span class=fallback-latex>(n++) + (m++) = ((n++) + m)++</span><br>根据加法的定义，上式左端等于<br><span class=fallback-latex>n + ((m++))++ = ((n + m)++)++。</span><br>又由归纳假设可得
+</span>成立，那么我们必须证明<br><span class=fallback-latex>(n++) + (m++) = ((n++) + m)++</span><br>根据加法的定义，上式左端等于
+<span class=fallback-latex>(n + (m++))++
+</span>又由归纳假设可得
 <span class=fallback-latex>(n+(m++))++ = ((n + m)++)++
-</span>。类似地，根据加法的定义可得，
+</span>。
+类似地，根据加法的定义可得，
 <span class=fallback-latex>(n++) + m = (n + m)++
 </span>，从而等式的右端也等于
 <span class=fallback-latex>((n + m)++)++
 </span>。</p><p>因此我们证明了等式左端等于右端，从而整个归纳过程到这里就结束了。
-<span class=fallback-latex>\Box</span></p></div><aside class=sidebar><div class=card><h2>摘要</h2><p>目前来说，自然数系非常简单，我们所知道的只有一种运算：增量运算，以及少数公理。但是现在我们可以构造出更加复杂的运算，如加法运算。
+<span class=fallback-latex>\Box</span></p><p>作为引理 2.2.2 与引理 2.2.3 的一个特别推论，我们得到<br><span class=fallback-latex>n++ = n + 1。</span></p><p>因为
+<span class=fallback-latex>n+1=n+(0++)=(n+0)++=n++
+</span>。</p><p>如之前承诺的，现在，我们来证明
+<span class=fallback-latex>a + b = b + a
+</span>。</p><p><strong>命题 2.2.4 （加法是可交换的）</strong><br>对任意的自然数
+<span class=fallback-latex>n
+</span>和
+<span class=fallback-latex>m
+</span>，有<br><span class=fallback-latex>n + m = m + n</span><br>成立。</p><p><strong>证明</strong>:<br>将
+<span class=fallback-latex>m
+</span>设为定值，对
+<span class=fallback-latex>n
+</span>采用归纳法。首先证明当
+<span class=fallback-latex>n = 0
+</span>时结论成立，也就是说证明
+<span class=fallback-latex>0 + m = m + 0
+</span>。</p><p>一方面，根据加法的定义可以推出
+<span class=fallback-latex>0 + m = m
+</span>；<br>另一方面，根据引理 2.2.2 可得
+<span class=fallback-latex>m + 0 = m
+</span>。<br>于是
+<span class=fallback-latex>n = 0
+</span>时结论成立。</p><p>现在归纳性地假设
+<span class=fallback-latex>n + m = m + n
+</span>成立，那么我们要证明<br><span class=fallback-latex>(n++) + m = m + (n++)</span><br>来完成归纳。</p><p>根据加法的定义，
+<span class=fallback-latex>(n++) + m = (n + m)++
+</span>；<br>根据引理 2.2.3，
+<span class=fallback-latex>m + (n++) = (m + n)++
+</span>；<br>但由归纳假设
+<span class=fallback-latex>n + m = m + n
+</span>可知
+<span class=fallback-latex>(m + n)++ = (n + m)++
+</span>。<br>因此
+<span class=fallback-latex>(n++) + m = m + (n++)
+</span>，进而归纳过程结束。
+<span class=fallback-latex>\Box</span></p><p><strong>命题 2.2.5 （加法是可结合的）</strong><br>对任意三个自然数
+<span class=fallback-latex>a
+</span>、
+<span class=fallback-latex>b
+</span>、
+<span class=fallback-latex>c
+</span>，有<br><span class=fallback-latex>(a + b) + c = a + (b + c)</span><br>成立。</p><p><strong>证明</strong>:<br>固定
+<span class=fallback-latex>a, c \in N
+</span>, 对
+<span class=fallback-latex>b
+</span>进行归纳讨论.</p><p><strong>设定当
+<span class=fallback-latex>b = 0
+</span></strong>:<br><span class=fallback-latex>(a + 0) + c = a + c = a + (c + 0) = a + (0 + c)</span></p><p>现在归纳假设
+<span class=fallback-latex>b=n
+</span>时命题成立, 需要证明
+<span class=fallback-latex>b=n++
+</span>时命题成立:<br><span class=fallback-latex>\begin{align}
+(a + (n++)) + c &= ((a + n)++) + c \\  
+&= c + ((a + n)++) \\
+&= (c + a + n)++ \\  
+&= ((a + n) + c)++ \\
+&= (a + (n + c))++ \\  
+&= a + (n + c)++ \\
+&= a + ((n++) + c)  
+\end{align}  </span></p><p>根据数学归纳法，命题对所有自然数均成立。</p><p>正是因为有了这条结合律，我们可以把
+<span class=fallback-latex>a, b, c
+</span>的和写成
+<span class=fallback-latex>a + b + c
+</span>的形式，而无需顾虑它们是按照什么样的次序加起来的。</p><p>下面，我们给出消去律。</p><p><strong>命题 2.2.6 （消去律）</strong><br>令
+<span class=fallback-latex>a, b, c
+</span>为任意三个自然数并且满足<br><span class=fallback-latex>a + b = a + c,</span><br>那么
+<span class=fallback-latex>b = c
+</span>成立。</p><p><strong>注意</strong>:<br>由于目前我们还没有给出减法和负数的概念，所以这里不能利用减法或者负数对该命题进行证明。事实上，消去律对于后面我们定义减法（和整数）的概念至关重要，因为在正式定义减法之前，消去律就涉及了一种“虚拟减法”。</p><p><strong>证明</strong>:<br>我们通过对
+<span class=fallback-latex>a
+</span>进行归纳来证明该命题。<br>首先考虑最基本的情况
+<span class=fallback-latex>a = 0
+</span>，我们有<br><span class=fallback-latex>0 + b = 0 + c,</span><br>那么根据加法的定义，由
+<span class=fallback-latex>0 + b = 0 + c
+</span>可以得到
+<span class=fallback-latex>b = c
+</span>，故命题成立。</p><p>现在归纳性假设关于
+<span class=fallback-latex>a
+</span>的消去律成立（进而从
+<span class=fallback-latex>a + b = a + c
+</span>中可以得到
+<span class=fallback-latex>b = c
+</span>），接下来我们要证明关于
+<span class=fallback-latex>a++
+</span>的消去律也成立。换言之，就是在假设<br><span class=fallback-latex>(a++) + b = (a++) + c</span><br>成立时，去证明
+<span class=fallback-latex>b = c
+</span>成立。根据加法的定义，我们有<br><span class=fallback-latex>(a++) + b = (a + b)++</span><br>和<br><span class=fallback-latex>(a++) + c = (a + c)++,</span><br>从而可以得到<br><span class=fallback-latex>(a + b)++ = (a + c)++.</span><br>根据公理 2.4（任意两个不同的自然数的后继也是不同的），我们进一步得到<br><span class=fallback-latex>a + b = a + c.</span><br>显然上式为待证情况的充要条件。因为我们已知关于
+<span class=fallback-latex>a
+</span>的消去律成立，所以有
+<span class=fallback-latex>b = c
+</span>成立，结论得证。至此归纳法结束。<br><span class=fallback-latex>\Box</span></p><p>现在我们讨论加法与正性是如何相互作用的。</p><p><strong>定义 2.2.7 （正自然数）</strong>
+称一个自然数
+<span class=fallback-latex>n
+</span>是正的，当且仅当它不等于
+<span class=fallback-latex>0
+</span>。</p><p><strong>命题 2.2.8</strong>
+如果
+<span class=fallback-latex>a
+</span>是正的并且
+<span class=fallback-latex>b
+</span>是自然数，那么
+<span class=fallback-latex>a + b
+</span>是正的（从而根据命题2.2.4可知，
+<span class=fallback-latex>b + a
+</span>也是正的）。</p><p><strong>证明：</strong>
+我们通过对
+<span class=fallback-latex>b
+</span>进行归纳来证明该命题。如果
+<span class=fallback-latex>b = 0
+</span>，那么<br><span class=fallback-latex>a + b = a + 0 = a</span><br>显然是正的，从而
+<span class=fallback-latex>b = 0
+</span>时的结论得证。</p><p>现在归纳性地假设
+<span class=fallback-latex>a + b
+</span>是正的。那么根据公理 2.3 (0 不是任何自然数的后继)可知，<br><span class=fallback-latex>a + (b++) = (a + b)++</span><br>不等于零，从而
+<span class=fallback-latex>a + (b++)
+</span>是正的。至此归纳法结束。<br><span class=fallback-latex>\Box</span></p><p><strong>推论 2.2.9</strong><br>如果
+<span class=fallback-latex>a
+</span>和
+<span class=fallback-latex>b
+</span>是自然数并且满足
+<span class=fallback-latex>a + b = 0
+</span>，那么
+<span class=fallback-latex>a = 0
+</span>且
+<span class=fallback-latex>b = 0
+</span>。</p><p><strong>证明</strong>：<br>假设结论的反面
+<span class=fallback-latex>a \neq 0
+</span>或
+<span class=fallback-latex>b \neq 0
+</span>成立。如果
+<span class=fallback-latex>a \neq 0
+</span>，那么
+<span class=fallback-latex>a
+</span>是正的，从而根据 <strong>命题 2.2.8</strong> 可知，
+<span class=fallback-latex>a + b
+</span>是正的，这显然与已知条件
+<span class=fallback-latex>a + b = 0
+</span>相矛盾。类似地，如果
+<span class=fallback-latex>b \neq 0
+</span>，那么
+<span class=fallback-latex>b
+</span>是正的，同样根据 <strong>命题 2.2.8</strong> 可知，
+<span class=fallback-latex>a + b
+</span>是正的，这与
+<span class=fallback-latex>a + b = 0
+</span>相矛盾。于是
+<span class=fallback-latex>a
+</span>和
+<span class=fallback-latex>b
+</span>必须同时为
+<span class=fallback-latex>0
+</span>。□</p><p><strong>引理 2.2.10</strong><br>令
+<span class=fallback-latex>a
+</span>表示一个正自然数，那么恰存在一个自然数
+<span class=fallback-latex>b
+</span>使得
+<span class=fallback-latex>b++ = a
+</span>。</p><p><strong>证明</strong>：
+根据皮亚诺公理 3 （0 不是任何自然数的后继）和 4（不同自然数的后继互不相同）有
+<span class=fallback-latex>\forall m, n \in \mathbb{N}, S(m) = S(n) \implies m = n.
+</span>则，
+<span class=fallback-latex>S(b)=a\\
+\forall n \in \mathbb{N},\text{if} S(n)=S(b)=a \implies n = b.
+</span>至此命题成立。</p><p><strong>定义 2.2.11 （自然数的序）</strong><br>令
+<span class=fallback-latex>n
+</span>和
+<span class=fallback-latex>m
+</span>表示任意两个自然数。我们称
+<span class=fallback-latex>n
+</span>大于等于
+<span class=fallback-latex>m
+</span>，并且记作
+<span class=fallback-latex>n \geq m
+</span>或者
+<span class=fallback-latex>m \leq n
+</span>，当且仅当存在自然数
+<span class=fallback-latex>a
+</span>使得
+<span class=fallback-latex>n = m + a
+</span>。我们称
+<span class=fallback-latex>n
+</span>大于
+<span class=fallback-latex>m
+</span>，并且记作
+<span class=fallback-latex>n > m
+</span>或者
+<span class=fallback-latex>m < n
+</span>，当且仅当
+<span class=fallback-latex>n \geq m
+</span>且
+<span class=fallback-latex>n \neq m
+</span>。</p><p>于是，例如由于
+<span class=fallback-latex>8 = 5 + 3
+</span>并且
+<span class=fallback-latex>8 \neq 5
+</span>，所以
+<span class=fallback-latex>8 > 5
+</span>。另外注意，对任意的
+<span class=fallback-latex>n
+</span>均有
+<span class=fallback-latex>n++ > n
+</span>；因此不存在最大的自然数
+<span class=fallback-latex>n
+</span>，这是因为下一个数
+<span class=fallback-latex>n++
+</span>总是更大。</p><p><strong>命题 2.2.12 （自然数的序的基本性质）</strong><br>令
+<span class=fallback-latex>a, b, c
+</span>为任意自然数，那么：<br>(a) （序是自反的）
+<span class=fallback-latex>a \geq a
+</span>。<br>(b) （序是可传递的）如果
+<span class=fallback-latex>a \geq b
+</span>并且
+<span class=fallback-latex>b \geq c
+</span>，那么
+<span class=fallback-latex>a \geq c
+</span>。<br>(c) （序是反对称的）如果
+<span class=fallback-latex>a \geq b
+</span>并且
+<span class=fallback-latex>b \geq a
+</span>，那么
+<span class=fallback-latex>a = b
+</span>。
+(d) （加法保持序不变）
+<span class=fallback-latex>a \geq b
+</span>，当且仅当
+<span class=fallback-latex>a + c \geq b + c
+</span>。<br>(e)
+<span class=fallback-latex>a < b
+</span>，当且仅当
+<span class=fallback-latex>a++ \leq b
+</span>。<br>(f)
+<span class=fallback-latex>a < b
+</span>，当且仅当存在正自然数
+<span class=fallback-latex>d
+</span>使得
+<span class=fallback-latex>b = a + d
+</span>。</p><p><strong>证明：</strong>
+(a)
+<span class=fallback-latex>a \geq a
+</span><span class=fallback-latex>a + 0 = a \rightarrow a \geq a
+</span>(b)
+<span class=fallback-latex>a \geq b,b \geq c
+</span>，那么
+<span class=fallback-latex>a \geq c
+</span><span class=fallback-latex>begin{align}
+a \geq b \rightarrow a = b + n, n \in \mathbb{N}\\
+b \geq c \rightarrow b = c + m, m \in \mathbb{N}\\
+end{align}
+</span>因此，
+<span class=fallback-latex>a = b + n = c + m + n
+</span>显然就可得结论，
+<span class=fallback-latex>a \geq c</span></p><p>(c)</p></div><aside class=sidebar><div class=card><h2>摘要</h2><p>目前来说，自然数系非常简单，我们所知道的只有一种运算：增量运算，以及少数公理。但是现在我们可以构造出更加复杂的运算，如加法运算。
 具体做法如下：
-5 加上 3 与对 5 进行 3 次增量运算的结果是一 …</p></div><div class=card><h2>阅读时长</h2><p>2 min</p></div><div class=card><h2>总字数</h2><p>≈ 255</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
+5 加上 3 与对 5 进行 3 次增量运算的结果是一 …</p></div><div class=card><h2>阅读时长</h2><p>5 min</p></div><div class=card><h2>总字数</h2><p>≈ 1050</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
 数学分析</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/1.1/><h2>2.1 皮亚诺公理</h2><article>在学习实数分析之前，我们首先要回溯数的概念以及数的性质。
 我们已经和数打了很多年的交道了，我们会熟练的利用代数法则和数进行计算，那么现在请让我们转向一个更基本的问题：为什么代数法则是有效的？例如，对于 a(b+c)=ab+ac 为什么总是成立的?
 实际上，这些运算法则不是随意给出的，而是通过数系更为原始也更为基本的性质中推演得到的。这推演会使我们获得新的技能，即使用较为简单的性质来推导更加复杂的性质。在这个过程中，请时刻记得怀疑的精神，也就是不要轻易的接受一个结论，要思考一个显然成立的命题为什么是显然的。
