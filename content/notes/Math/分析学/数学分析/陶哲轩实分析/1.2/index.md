@@ -1,5 +1,5 @@
 ---
-title: 2.2 加法
+title: 2.2 加法和归纳原理的两个变体
 date: 2024-11-26
 lastmod: 2024-11-26
 tags: [数学分析]
@@ -256,19 +256,200 @@ S(b)=a\\
 (f) {{<latex display="false">}}a < b{{</latex>}}，当且仅当存在正自然数{{<latex display="false">}}d{{</latex>}}使得{{<latex display="false">}}b = a + d{{</latex>}}。
 
 **证明：**
-(a){{<latex display="false">}}a \geq a{{</latex>}}
+**(a)**{{<latex display="false">}}a \geq a{{</latex>}}
 {{<latex display="true">}}a + 0 = a \rightarrow a \geq a{{</latex>}}
-(b){{<latex display="false">}}a \geq b,b \geq c{{</latex>}}，那么{{<latex display="false">}}a \geq c{{</latex>}}
+**(b)**{{<latex display="false">}}a \geq b,b \geq c{{</latex>}}，那么{{<latex display="false">}}a \geq c{{</latex>}}
 {{<latex display="true">}}
-begin{align}
+\begin{align}
 a \geq b \rightarrow a = b + n,  n \in \mathbb{N}\\
 b \geq c \rightarrow b = c + m,  m \in \mathbb{N}\\
-end{align}
+\end{align}
 {{</latex>}}
 因此，
 {{<latex display="true">}}
 a = b + n = c + m + n
 {{</latex>}}
 显然就可得结论，{{<latex display="false">}}a \geq c{{</latex>}}
+**(c)**{{<latex display="false">}}a \geq b，b \geq a{{</latex>}}，则{{<latex display="false">}}a = b{{</latex>}}
+{{<latex display="true">}}
+\begin{align}
+a \geq b \rightarrow a = b + n,  n \in \mathbb{N}\\
+b \geq a \rightarrow b = a + m,  m \in \mathbb{N}\\
+\end{align}
+{{</latex>}}
+即
+{{<latex display="true">}}
+a = a + m + n
+{{</latex>}}
+显然，{{<latex display="false">}}m = 0，n = 0{{</latex>}}，则{{<latex display="false">}}a = b{{</latex>}}。
+**(d)**{{<latex display="false">}}a \geq b{{</latex>}} if and only if {{<latex display="false">}}a + c \geq b + c{{</latex>}}.
+{{<latex display="true">}}
+\begin{align}
+(a \geq b) &\iff a = b + m, \, m \in \mathbb{N} \\
+          &\iff a + c = b + m + c = b + c + m, \, m \in \mathbb{N} \\
+          &\iff a + c \geq b + c.
+\end{align}
+{{</latex>}}
 
-(c)
+**(e)** {{<latex display="false">}}a < b{{</latex>}} if and only if {{<latex display="false">}}a++ \leq b{{</latex>}}.
+
+We have
+
+{{<latex display="true">}}
+\begin{align}
+(a < b) &\iff ((a \leq b) \land (a \neq b)) \\
+        &\iff ((a + m = b, \, m \in \mathbb{N}) \land (a \neq b)) \\
+        &\iff m \neq 0 \\
+        &\iff \exists n \in \mathbb{N}, \, n++ = m \\
+        &\iff a + (n++) = b, \, n \in \mathbb{N} \\
+        &\iff (a++) + n = b, \, n \in \mathbb{N} (引理 2.2.3)\\
+        &\iff a++ \leq b.
+\end{align}
+{{</latex>}}
+
+**(f)** {{<latex display="false">}}a < b{{</latex>}} if and only if {{<latex display="false">}}b = a + d{{</latex>}} for some positive number {{<latex display="false">}}d{{</latex>}}.
+
+We have
+
+{{<latex display="true">}}
+\begin{align}
+(a < b) &\iff ((a \leq b) \land (a \neq b)) \\
+        &\iff (a + d = b, \, d \in \mathbb{N}) \land (d \neq 0) \\
+        &\iff a + d = b, \, d \text{ is positive.}
+\end{align}
+{{</latex>}}
+
+**命题 2.2.13 （自然数的序的三歧性）**  
+令 {{<latex display="false">}}a{{</latex>}} 和 {{<latex display="false">}}b{{</latex>}} 表示任意两个自然数，那么在下面三种表述中恰有一种表述为真：{{<latex display="false">}}a < b{{</latex>}}，{{<latex display="false">}}a = b{{</latex>}}，{{<latex display="false">}}a > b{{</latex>}}。
+
+**证明**：
+
+首先我们证明 {{<latex display="false">}}a < b{{</latex>}}，{{<latex display="false">}}a = b{{</latex>}} 以及 {{<latex display="false">}}a > b{{</latex>}} 这三种表述中同时为真的表述个数不超过一个。如果 {{<latex display="false">}}a < b{{</latex>}}，那么根据定义可知 {{<latex display="false">}}a \neq b{{</latex>}}；同样，如果 {{<latex display="false">}}a > b{{</latex>}}，根据定义可知 {{<latex display="false">}}a \neq b{{</latex>}}。如果 {{<latex display="false">}}a > b{{</latex>}} 并且 {{<latex display="false">}}a < b{{</latex>}}，那么根据命题 2.2.12 可知 {{<latex display="false">}}a = b{{</latex>}}，这显然与 {{<latex display="false">}}a \neq b{{</latex>}} 相矛盾。因此同时为真的表述个数不超过一个。
+
+现在我们证明至少有一个表述为真。
+
+保持 {{<latex display="false">}}b{{</latex>}} 固定不变，对 {{<latex display="false">}}a{{</latex>}} 进行归纳。当 {{<latex display="false">}}a = 0{{</latex>}} 时，对所有的 {{<latex display="false">}}b{{</latex>}} 均有 {{<latex display="false">}}0 \leq b{{</latex>}} （为什么？）因此我们得到 {{<latex display="false">}}0 = b{{</latex>}} 或者 {{<latex display="false">}}0 < b{{</latex>}}，从而 {{<latex display="false">}}a = 0{{</latex>}} 时的结论得证。
+
+现在归纳性地假设关于 {{<latex display="false">}}a{{</latex>}} 的命题已经被证明是成立的，下面我们要证明 {{<latex display="false">}}a++{{</latex>}} 也同样成立。
+
+从关于 {{<latex display="false">}}a{{</latex>}} 的三歧性中可知，存在三种可能的情况：{{<latex display="false">}}a < b{{</latex>}}，{{<latex display="false">}}a = b{{</latex>}} 以及 {{<latex display="false">}}a > b{{</latex>}}。如果 {{<latex display="false">}}a > b{{</latex>}}，那么有 {{<latex display="false">}}a++ > b{{</latex>}}。（为什么？）如果 {{<latex display="false">}}a = b{{</latex>}}，那么 {{<latex display="false">}}a++ > b{{</latex>}}。（为什么？）现在假设 {{<latex display="false">}}a < b{{</latex>}}，那么根据命题 2.2.12 可知 {{<latex display="false">}}a++ \leq b{{</latex>}}。于是我们得到要么 {{<latex display="false">}}a++ = b{{</latex>}}，要么 {{<latex display="false">}}a++ < b{{</latex>}}，其中任何一种情况都符合我们的要求。至此归纳法结束。
+
+**Why 1:** When {{<latex display="false">}}a = 0{{</latex>}}, we have {{<latex display="false">}}0 \leq b{{</latex>}} for all {{<latex display="false">}}b{{</latex>}}.  
+
+{{<latex display="true">}}
+(0 + b = b, b \in \mathbb{N}) \Rightarrow (0 \leq b, b \in \mathbb{N})
+{{</latex>}}
+
+---
+
+**Why 2:** If {{<latex display="false">}}a > b{{</latex>}}, then {{<latex display="false">}}a++ > b{{</latex>}}.
+
+{{<latex display="true">}}
+(a > b) \Rightarrow (a = b + m, m \in \mathbb{N}) \land (a \neq b) \\  
+\Rightarrow a++ = b + (m++) \Rightarrow a++ > b  
+{{</latex>}}
+
+---
+
+**Why 3:** If {{<latex display="false">}}a = b{{</latex>}}, then {{<latex display="false">}}a++ > b{{</latex>}}.
+
+{{<latex display="true">}}
+(a = b) \Rightarrow a++ = b++ = (b + 0)++ = b + (0++) = b + 1 \\  
+\Rightarrow a++ > b  
+{{</latex>}}
+
+**命题 2.2.14 （强归纳法原理）**  
+令 {{<latex display="false">}}m_0{{</latex>}} 表示一个自然数，{{<latex display="false">}}P(m){{</latex>}} 表示与任意自然数 {{<latex display="false">}}m{{</latex>}} 有关的性质。假设对任意满足 {{<latex display="false">}}m \geq m_0{{</latex>}} 的自然数 {{<latex display="false">}}m{{</latex>}}，均有如下内容成立：若 {{<latex display="false">}}P(m'){{</latex>}} 对任意满足 {{<latex display="false">}}m_0 \leq m' < m{{</latex>}} 的自然数 {{<latex display="false">}}m'{{</latex>}} 均为真，那么 {{<latex display="false">}}P(m){{</latex>}} 也为真。（特别地，这意味着 {{<latex display="false">}}P(m_0){{</latex>}} 为真，因为当 {{<latex display="false">}}m = m_0{{</latex>}} 时，前提中的 {{<latex display="false">}}m'{{</latex>}} 取值范围为空。）于是我们能够断定，对于任意满足 {{<latex display="false">}}m \geq m_0{{</latex>}} 的自然数 {{<latex display="false">}}m{{</latex>}}，{{<latex display="false">}}P(m){{</latex>}} 为真。
+
+---
+
+**注 2.2.15** 在应用强归纳法原理的时候，我们通常令 {{<latex display="false">}}m_0 = 0{{</latex>}} 或者 {{<latex display="false">}}m_0 = 1{{</latex>}}。
+
+**证明：**
+设 {{<latex display="false">}}P(m){{</latex>}} 是一个与自然数 {{<latex display="false">}}m{{</latex>}} 相关的命题。如果满足以下条件：
+
+1. **基础情况**：当 {{<latex display="false">}}m = m_0{{</latex>}} 时，{{<latex display="false">}}P(m_0){{</latex>}} 为真。
+2. **归纳假设**：对于任意 {{<latex display="false">}}m > m_0{{</latex>}}，如果 {{<latex display="false">}}P(m'){{</latex>}} 对所有 {{<latex display="false">}}m_0 \leq m' < m{{</latex>}} 都成立，则 {{<latex display="false">}}P(m){{</latex>}} 也为真。
+
+则结论是：{{<latex display="false">}}P(m){{</latex>}} 对所有 {{<latex display="false">}}m \geq m_0{{</latex>}} 成立。
+
+**证明过程**
+
+**1. 用普通归纳法重新定义问题**
+
+设 {{<latex display="false">}}Q(n){{</latex>}} 表示如下命题：
+
+>对于所有 {{<latex display="false">}}m{{</latex>}} 满足 {{<latex display="false">}}m_0 \leq m < m_0 + n{{</latex>}}，命题 {{<latex display="false">}}P(m){{</latex>}} 都为真。
+
+我们的目标是证明：对于所有正整数 {{<latex display="false">}}n{{</latex>}}，{{<latex display="false">}}Q(n){{</latex>}} 成立。这等价于强归纳原理，因为 {{<latex display="false">}}Q(n){{</latex>}} 的结论覆盖了 {{<latex display="false">}}P(m){{</latex>}} 在 {{<latex display="false">}}m \geq m_0{{</latex>}} 的所有情况。
+
+**2. 验证基础情况**
+
+当 {{<latex display="false">}}n = 1{{</latex>}} 时，{{<latex display="false">}}Q(1){{</latex>}} 的含义是：对于所有 {{<latex display="false">}}m{{</latex>}} 满足 {{<latex display="false">}}m_0 \leq m < m_0 + 1{{</latex>}}，{{<latex display="false">}}P(m){{</latex>}} 为真。
+
+因为能满足 {{<latex display="false">}}m_0 \leq m < m_0 + 1{{</latex>}} 的自然数 {{<latex display="false">}}m{{</latex>}} 只有{{<latex display="false">}}m_0{{</latex>}}，因此此情况下性质仅涉及 {{<latex display="false">}}P(m_0){{</latex>}}，而强归纳原理假设，{{<latex display="false">}}P(m_0){{</latex>}} 为真，因此 {{<latex display="false">}}Q(1){{</latex>}} 为真。
+
+**3. 验证归纳步骤**
+
+假设 {{<latex display="false">}}Q(n){{</latex>}} 为真，即：  
+对于所有 {{<latex display="false">}}m{{</latex>}} 满足 {{<latex display="false">}}m_0 \leq m < m_0 + n{{</latex>}}，{{<latex display="false">}}P(m){{</latex>}} 为真。
+
+需要证明 {{<latex display="false">}}Q(n+1){{</latex>}} 为真，即：  
+对于所有 {{<latex display="false">}}m{{</latex>}} 满足 {{<latex display="false">}}m_0 \leq m < m_0 + n + 1{{</latex>}}，{{<latex display="false">}}P(m){{</latex>}} 为真。
+
+根据 {{<latex display="false">}}Q(n){{</latex>}}，我们已经知道：
+- {{<latex display="false">}}P(m'){{</latex>}} 对于所有 {{<latex display="false">}}m_0 \leq m' < m_0 + n{{</latex>}} 都成立。
+
+我们现在需要证明 {{<latex display="false">}}P(m_0 + n){{</latex>}} 为真。这与基础情况的逻辑是相同的。
+
+因为 {{<latex display="false">}}Q(n+1){{</latex>}} 的定义是
+{{<latex display="true">}}
+Q(n+1) := \forall m(m_0 < m < m_0 + n + 1 \rightarrow P(m) \text{为真})
+{{</latex>}}
+
+根据归纳假设，{{<latex display="false">}}Q(n){{</latex>}} 为真，即
+{{<latex display="true">}}
+P(m) \text{对于所有的} m_0 \le m < m_0 + n \text{都为真}
+{{</latex>}}
+
+所以我们有待验证的范围还剩下
+{{<latex display="true">}}
+m_0 + n \le m < m_0 + n + 1
+{{</latex>}}
+
+而满足上述范围的自然数{{<latex display="false">}}m{{</latex>}} 只有{{<latex display="false">}}m_0 + n{{</latex>}}。
+
+综上，我们只需要证明 {{<latex display="false">}}P(m_0 + n){{</latex>}} 为真，即可得到 {{<latex display="false">}}Q(n+1){{</latex>}} 为真。
+
+根据强归纳原理假设，若 {{<latex display="false">}}P(m'){{</latex>}} 对所有 {{<latex display="false">}}m_0 \leq m' < m{{</latex>}} 都成立，则 {{<latex display="false">}}P(m){{</latex>}} 为真。  
+将 {{<latex display="false">}}m = m_0 + n{{</latex>}} 代入，这里 {{<latex display="false">}}P(m'){{</latex>}} 对所有 {{<latex display="false">}}m_0 \leq m' < m_0 + n{{</latex>}} 已经成立（由归纳假设 {{<latex display="false">}}Q(n){{</latex>}}），因此 {{<latex display="false">}}P(m_0 + n){{</latex>}} 为真。
+
+结合归纳假设，我们得出 {{<latex display="false">}}Q(n+1){{</latex>}} 为真。
+
+**4. 归纳完成**
+
+通过普通数学归纳法，我们证明了 {{<latex display="false">}}Q(n){{</latex>}} 对所有正整数 {{<latex display="false">}}n{{</latex>}} 都成立。这意味着：
+
+- 对于所有 {{<latex display="false">}}m \geq m_0{{</latex>}}，{{<latex display="false">}}P(m){{</latex>}} 为真。
+
+**逆向归纳法原理**
+
+令 {{<latex display="false">}}n{{</latex>}} 表示一个自然数，{{<latex display="false">}}P(m){{</latex>}} 是关于自然数的一个性质并且满足：只要 {{<latex display="false">}}P(m++){{</latex>}} 为真，{{<latex display="false">}}P(m){{</latex>}} 就为真。假设 {{<latex display="false">}}P(n){{</latex>}} 也为真，证明：{{<latex display="false">}}P(m){{</latex>}} 对任意满足 {{<latex display="false">}}m \leq n{{</latex>}} 的自然数 {{<latex display="false">}}m{{</latex>}} 均为真；这被称为**逆向归纳法原理**。（提示：对变量 {{<latex display="false">}}n{{</latex>}} 使用归纳法。）
+
+**证明：**
+Induction on {{<latex display="false">}}n{{</latex>}}, let {{<latex display="false">}}Q(n){{</latex>}} represent:  
+{{<latex display="true">}}  
+Q(n) := \{ P(m) \text{ is true, } \forall m \leq n \}  
+{{</latex>}}  
+
+**Case 0**: {{<latex display="false">}}Q(0){{</latex>}} is true.
+
+If {{<latex display="false">}}Q(k){{</latex>}} is true, then consider {{<latex display="false">}}Q(k++){{</latex>}}:  
+{{<latex display="false">}}Q(k++) = \{ P(m) \text{ is true, } \forall m \leq k++ \}{{</latex>}},  
+as {{<latex display="false">}}P(k++){{</latex>}} is true. Hence, {{<latex display="false">}}Q(k++){{</latex>}} is true.
+
+The induction is valid.
+
+
+
+
