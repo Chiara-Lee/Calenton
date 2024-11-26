@@ -70,9 +70,6 @@ n + (m++) = (n + m)++
 {{<latex display="true">}}  
 0 + (m++) = (0 + m)++  
 {{</latex>}}  
-根据加法的定义可得，{{<latex display="false">}}0 + (m++) = m++{{</latex>}}。
-
-以及{{<latex display="false">}}0 + m = m{{</latex>}}。所以，要证明等式的两端均与{{<latex display="false">}}m++{{</latex>}}相等，进而该等式两端相等。
 
 现在归纳性地假定{{<latex display="false">}}n + (m++) = (n + m)++{{</latex>}}成立，那么我们必须证明  
 {{<latex display="true">}}  
@@ -82,7 +79,7 @@ n + (m++) = (n + m)++
 {{<latex display="true">}}  
 n + ((m++))++ = ((n + m)++)++。  
 {{</latex>}}  
-又由归纳假设可得{{<latex display="false">}}n + ((m++))++ = ((n + m)++)++{{</latex>}}。类似地，根据加法的定义可得，{{<latex display="false">}}(n++) + m = (n + m)++{{</latex>}}，从而等式的右端也等于{{<latex display="false">}}((n + m)++)++{{</latex>}}。
+又由归纳假设可得{{<latex display="false">}}(n+(m++))++ = ((n + m)++)++{{</latex>}}。类似地，根据加法的定义可得，{{<latex display="false">}}(n++) + m = (n + m)++{{</latex>}}，从而等式的右端也等于{{<latex display="false">}}((n + m)++)++{{</latex>}}。
 
 因此我们证明了等式左端等于右端，从而整个归纳过程到这里就结束了。{{<latex display="false">}}\Box{{</latex>}}
 
