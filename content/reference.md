@@ -23,5 +23,6 @@ layout: single
 - [Fontawesome](https://fontawesome.com/icons) 网站图标
 - [重返未来1999](https://re.bluepoch.com/home/) 友人帐背景
 - [Georgia](https://zh.fonts2u.com/georgia.%E5%AD%97%E4%BD%93) 网站字体
+- [LaTeX] 网站上的 LaTeX 渲染来自"Hugo in Action"中的 api 文件，读者可以在我的 GitHub Calenton 库找到它
 
 以上即为本网站目前引用的所有资料，关于本网站引用的教材资料，将会在 笔记 页进行特殊声明。最后，再次感谢以上资源提供者。

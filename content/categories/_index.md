@@ -1,5 +1,5 @@
 ---
-title: Categories
+title: 教材索引
 layout: categories
 ---
 

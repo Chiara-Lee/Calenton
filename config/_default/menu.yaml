@@ -17,10 +17,10 @@ main:
     weight: 160
 
 footer:
-  - identifier: Categories
-    name: 目录
-    url: /categories
-    weight: 150
+  - identifier: 
+    name: 
+    url: 
+    weight: 
   - identifier: reference
     name: 引用资料列表
     url: /reference
