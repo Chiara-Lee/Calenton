@@ -152,15 +152,15 @@ S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, 
 在上式中的积分已经具有泛函导数的形式，主要的阻碍来自于边界项。由上面的推导可知，如果泛函的被积函数{{<latex display="false">}}L{{</latex>}}包含{{<latex display="false">}}f(t){{</latex>}}的最高{{<latex display="false">}}n{{</latex>}}阶导数，则边界项{{<latex display="false">}}B{{</latex>}}就包含{{<latex display="false">}}\delta f(t){{</latex>}}的最高{{<latex display="false">}}n-1{{</latex>}}阶导数。
 
 因此，变分法的一个基本假设是：
-**如果泛函的被积函数包含函数的最高{{<latex display="false">}}n{{</latex>}}阶导数，那么在积分的边界处，函数及其直到{{<latex display="false">}}n-1{{</latex>}}阶导数的变分为零。**  
+**如果泛函的被积函数包含函数的最高**{{<latex display="false">}}n{{</latex>}}**阶导数，那么在积分的边界处，函数及其直到**{{<latex display="false">}}n-1{{</latex>}}**阶导数的变分为零。**  
 即：
 {{<latex display="true">}}
-\begin{aligned}
+\begin{align}
 \delta f|_{t_1} &= \delta f|_{t_2} = 0 \\
 \delta f'|_{t_1} &= \delta f'|_{t_2} = 0 \\
 &\vdots \\
 \delta f^{(n-1)}|_{t_1} &= \delta f^{(n-1)}|_{t_2} = 0
-\end{aligned}
+\end{align}
 {{</latex>}}
 
 在这样的假设下，边界项{{<latex display="false">}}\mathcal{B}|_{t_1} = \mathcal{B}|_{t_2} = 0{{</latex>}}恒为零。这也意味着，被积函数可以加上函数{{<latex display="false">}}f(t){{</latex>}}及其直到{{<latex display="false">}}n-1{{</latex>}}阶导数的任意函数
