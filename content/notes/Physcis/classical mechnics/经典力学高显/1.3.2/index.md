@@ -33,7 +33,7 @@ R_n(x) = o[x^n]
 {{</latex>}}
 
 > 一般函数在{{<latex display="false">}}x_0{{</latex>}}处的泰勒展开
-
+<!--
 通过上式和下式的比较
 
 {{<latex display="true">}}
