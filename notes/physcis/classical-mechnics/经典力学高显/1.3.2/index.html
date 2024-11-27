@@ -1,0 +1,30 @@
+<!doctype html><html lang=zh><head><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel=stylesheet><meta charset=UTF-8><meta name=description content="根据上面的讨论，泛函导数归结于计算泛函 S[f] 的变分。
+换个角度，在泛函 S[f + \epsilon \delta f] 中， \epsilon 是一个参数，而泛函 S 是一个数，其值依赖于 \epsilon 。所以，泛函 S[f + \epsilon \delta f] 可以被看作是 \epsilon 的普通函数，于是公式：
+S[f + \epsilon \delta f] = S[f] + \epsilon \left. \frac{d}{d\epsilon} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \frac{\epsilon^2}{2!} \left. \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \cdots 可以视为 S[f + \epsilon \delta f] 相对于 \epsilon 的普通泰勒展开。
+f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \cdots + \frac{f^{(n)}(x_0)}{n!"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>1.3.2 泛函导数的操作定义</title>
+<script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
+Caleton Academy
+</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/computer-science-and-technology/>Cst</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>1.3.2 泛函导数的操作定义</h1><div class=content-wrapper><div class=content><p>根据上面的讨论，泛函导数归结于计算泛函
+<span class=fallback-latex>S[f]
+</span>的变分。</p><p>换个角度，在泛函
+<span class=fallback-latex>S[f + \epsilon \delta f]
+</span>中，
+<span class=fallback-latex>\epsilon
+</span>是一个参数，而泛函
+<span class=fallback-latex>S
+</span>是一个数，其值依赖于
+<span class=fallback-latex>\epsilon
+</span>。所以，泛函
+<span class=fallback-latex>S[f + \epsilon \delta f]
+</span>可以被看作是
+<span class=fallback-latex>\epsilon
+</span>的普通函数，于是公式：</p><span class=fallback-latex>S[f + \epsilon \delta f] = S[f] + \epsilon \left. \frac{d}{d\epsilon} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \frac{\epsilon^2}{2!} \left. \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \cdots</span><p>可以视为
+<span class=fallback-latex>S[f + \epsilon \delta f]
+</span>相对于
+<span class=fallback-latex>\epsilon
+</span>的普通泰勒展开。</p><span class=fallback-latex>f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n + R_n
+</span><span class=fallback-latex>R_n(x) = o[(x-x_0)^n]
+</span><span class=fallback-latex>f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \cdots + \frac{f^{(n)}(0)}{n!}x^n + R_n
+</span><span class=fallback-latex>R_n(x) = o[x^n]</span><blockquote><p>一般函数在
+<span class=fallback-latex>x_0
+</span>处的泰勒展开</p></blockquote>
