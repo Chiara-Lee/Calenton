@@ -3,6 +3,7 @@ title:  1.3.2 泛函导数的操作定义
 date: 2024-11-27
 lastmod: 2024-11-27
 tags: [经典力学]
+draft: true
 ---
 
 根据上面的讨论，泛函导数归结于计算泛函{{<latex display="false">}}S[f]{{</latex>}}的变分。
@@ -159,6 +160,7 @@ S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, 
 因此，变分法的一个基本假设是：
 **如果泛函的被积函数包含函数的最高**{{<latex display="false">}}n{{</latex>}}**阶导数，那么在积分的边界处，函数及其直到**{{<latex display="false">}}n-1{{</latex>}}**阶导数的变分为零。**  
 即：
+
 {{<latex display="true">}}
 \begin{align}
 \delta f|_{t_1} &= \delta f|_{t_2} = 0 \\
