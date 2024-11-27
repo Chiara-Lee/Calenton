@@ -42,11 +42,11 @@ S[f + \epsilon f] = S[f] + \epsilon \delta S[f] + \frac{\epsilon^2}{2!} \delta^2
 对于一阶泛函导数，即有
 
 {{<latex display="true">}}
-\delta S = \frac{d}{d\epsilon} S[f + \epsilon \delta f] \bigg|_{\epsilon=0} = \int dt \, \frac{\delta S}{\delta f(t)} \delta f(t)
+\delta S = \frac{d}{d\epsilon} S[f + \epsilon \delta f] \big|_{\epsilon=0} = \int dt \, \frac{\delta S}{\delta f(t)} \delta f(t)
 {{</latex>}}
 
 {{<latex display="true">}}
-\delta^2 S = \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \bigg|_{\epsilon=0} = \int dt_1 \int dt_2 \, \frac{\delta^2 S}{\delta f(t_1) \delta f(t_2)} \delta f(t_1) \delta f(t_2)
+\delta^2 S = \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \big|_{\epsilon=0} = \int dt_1 \int dt_2 \, \frac{\delta^2 S}{\delta f(t_1) \delta f(t_2)} \delta f(t_1) \delta f(t_2)
 {{</latex>}}
 
 高阶泛函导数的形式可以类似地写出。
@@ -61,7 +61,11 @@ S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, 
 可以联系上文的式子得到：
 
 {{<latex display="true">}}
-\begin{align} \delta S&=\left.\int\limits_{t_1}^{t_2}dt\frac{d}{d\epsilon}L(t_,f+\epsilon\delta f,f'+\epsilon\delta f',f''+\epsilon\delta f''+\cdots)\right|_{\epsilon=0}\\  &\text{其中} f+\epsilon\delta f \text{是关于} \epsilon \text{的函数} f(\epsilon)，f' \text{同理}\\ &=\int\limits_{t_1}^{t_2}dt\underbrace{(\frac{\partial L}{\partial f}\delta f+\frac{\partial L}{\partial f'}\delta f'+\frac{\partial L}{\partial f''}\delta f''+\cdots)}_{\equiv\delta L} \end{align}
+\begin{align} 
+\delta S&=\left.\int\limits_{t_1}^{t_2}dt\frac{d}{d\epsilon}L(t_,f+\epsilon\delta f,f'+\epsilon\delta f',f''+\epsilon\delta f''+\cdots)\right|_{\epsilon=0}\\  
+&\text{其中} f+\epsilon\delta f \text{是关于} \epsilon \text{的函数} f(\epsilon)，f' \text{同理}\\ 
+&=\int\limits_{t_1}^{t_2}dt\underbrace{(\frac{\partial L}{\partial f}\delta f+\frac{\partial L}{\partial f'}\delta f'+\frac{\partial L}{\partial f''}\delta f''+\cdots)}_{\equiv\delta L} 
+\end{align}
 {{</latex>}}
 
 上式的被积函数就是 {{<latex display="false">}}L{{</latex>}} 的一阶变分 {{<latex display="false">}}\delta L{{</latex>}}，与其微分 {{<latex display="false">}}dL{{</latex>}} 的形式全同，只是微分被换成了变分。
@@ -83,7 +87,7 @@ S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, 
 右边只出现了函数的变分 {{<latex display="false">}}\delta f{{</latex>}}。但是在：
 
 {{<latex display="true">}}
-\delta S = \int_{t_1}^{t_2} dt \frac{d}{d\epsilon} L(t, f + \epsilon \delta f, f' + \epsilon \delta f', f'' + \epsilon \delta f'' + \cdots) \bigg|_{\epsilon=0}
+\delta S = \int_{t_1}^{t_2} dt \frac{d}{d\epsilon} L(t, f + \epsilon \delta f, f' + \epsilon \delta f', f'' + \epsilon \delta f'' + \cdots) \big|_{\epsilon=0}
 {{</latex>}}
 
 {{<latex display="true">}}
@@ -181,7 +185,7 @@ L_1 \simeq L_2 \Leftrightarrow L_1 = L_2 + \frac{dF(t, f, f', \cdots)}{dy}
 S_1 \simeq S_2 \Leftrightarrow S_1 = S_2 + L|_{t_1}^{t_2}
 {{</latex>}}
 
-基于以上假设，对于泛函导数的计算来说，边界项不重要。在实际计算中，都是直接去掉边界项，而无需写出其具体形式的0。例如：
+基于以上假设，对于泛函导数的计算来说，边界项不重要。在实际计算中，都是直接去掉边界项，而无需写出其具体形式的。例如：
 
 {{<latex display="true">}}
 \frac{\partial L}{\partial f'} \delta f' \simeq -\frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) \delta f, \quad
