@@ -9,21 +9,23 @@ tags: [经典力学]
 
 对于普通函数的导数，函数的微分是由自变量的微分引起的：
 
-{{<latex display="true">}}  
-f(t) \xrightarrow{t \to t+\epsilon} f(\tilde{t}) = f(t+ \epsilon) \\  
-= f(t) + \epsilon f'(t) + \frac{\epsilon^2}{2!} f''(t) + \frac{\epsilon^3}{3!} f^{(3)}(t) + \cdots  
+{{<latex display="true">}}
+\begin{align}
+&f(t) \xrightarrow{t \to t+\epsilon} f(\tilde{t}) = f(t+ \epsilon) \\
+&= f(t) + \epsilon df(t) + \frac{\epsilon^2}{2!} d^2 f(t) + \frac{\epsilon^3}{3!} d^3 f(t) + \cdots
+\end{align}
 {{</latex>}}
 
 其中 {{<latex display="false">}}\epsilon{{</latex>}} 是无穷小参数，{{<latex display="false">}}\epsilon^n{{</latex>}} 项即为函数的 {{<latex display="false">}}n{{</latex>}} 阶微分，函数的 {{<latex display="false">}}n{{</latex>}} 阶导数则由函数的 {{<latex display="false">}}n{{</latex>}} 阶微分与 {{<latex display="false">}}dt{{</latex>}} 的关系给出。对于一阶导数：
 
-{{<latex display="true">}}  
-df(t) = \frac{df(t)}{dt} dt  
+{{<latex display="true">}}
+df(t) = \frac{df(t)}{dt} dt
 {{</latex>}}
 
 高阶导数则为：
 
-{{<latex display="true">}}  
-d^{(n)} f(t) = \frac{d^{(n)}f(t)}{dt^n} dt  
+{{<latex display="true">}}
+d^{(n)} f(t) = \frac{d^{(n)}f(t)}{dt^n} dt
 {{</latex>}}
 
 只要计算出函数的各阶微分，就可以给出相应的各阶导数。
@@ -31,8 +33,10 @@ d^{(n)} f(t) = \frac{d^{(n)}f(t)}{dt^n} dt
 泛函导数从形式上完全是对普通函数导数的类比。对于泛函 {{<latex display="false">}}S[f]{{</latex>}}，其变分是由函数的变分引起的：
 
 {{<latex display="true">}}  
-S[f] \xrightarrow{f \to \tilde{f}} S[\tilde{f}] = S[f + \epsilon f] \\  
-= S[f] + \epsilon \frac{\delta S[f]}{\delta f} + \frac{\epsilon^2}{2!} \delta^2 S[f] + \frac{\epsilon^3}{3!} \delta^3 S[f] + \cdots  
+\begin{align}
+&S[f] \xrightarrow{f \to \tilde{f}} S[\tilde{f}] = S[f + \epsilon f] \\  
+&= S[f] + \epsilon \delta S[f] + \frac{\epsilon^2}{2!} \delta^2 S[f] + \frac{\epsilon^3}{3!} \delta^3 S[f] + \cdots  
+\end{align}
 {{</latex>}}
 
 这里 {{<latex display="false">}}\epsilon^n{{</latex>}} 项即被称为是泛函的 {{<latex display="false">}}n{{</latex>}} 阶变分 {{<latex display="false">}}\delta^n S[f]{{</latex>}}。仿照函数的 {{<latex display="false">}}n{{</latex>}} 阶导数即可定义 {{<latex display="false">}}n{{</latex>}} 阶泛函导数。
