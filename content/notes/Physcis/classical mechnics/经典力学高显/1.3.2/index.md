@@ -113,13 +113,7 @@ S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, 
 
 类似的：
 
-{{<latex display="true">}}
-\begin{align}
-\frac{\partial L}{\partial f''} \delta f'' &= \frac{\partial L}{\partial f''} \frac{d^2}{dt^2} \delta f \\
-&= \frac{d}{dt} \left( \frac{\partial L}{\partial f''} \frac{d}{dt} \delta f \right) - \frac{d}{dt} \left( \frac{\partial L}{\partial f''} \right) \frac{d}{dt} \delta f \\
-&= \underbrace{\frac{d}{dt} \left[ \frac{\partial L}{\partial f''} \delta f' \right] - \frac{d}{dt} \left( \frac{\partial L}{\partial f''} \right) \delta f' }_{\text{全导数}}+ \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right) \delta f
-\end{align}
-{{</latex>}}
+
 
 
 
