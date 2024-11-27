@@ -12,7 +12,7 @@ tags: [经典力学]
 {{<latex display="true">}}
 S[f + \epsilon \delta f] = S[f] + \epsilon \left. \frac{d}{d\epsilon} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \frac{\epsilon^2}{2!} \left. \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \cdots
 {{</latex>}}
-<!--
+
 可以视为{{<latex display="false">}}S[f + \epsilon \delta f]{{</latex>}}相对于{{<latex display="false">}}\epsilon{{</latex>}}的普通泰勒展开。
 
 {{<latex display="true">}}
@@ -31,6 +31,7 @@ f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \cdots + \frac{f^{(n)}(
 R_n(x) = o[x^n]
 {{</latex>}}
 
+<!--
 > 一般函数在{{<latex display="false">}}x_0{{</latex>}}处的泰勒展开
 
 通过上式和下式的比较
