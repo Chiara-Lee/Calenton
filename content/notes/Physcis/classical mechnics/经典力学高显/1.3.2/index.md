@@ -42,11 +42,11 @@ S[f + \epsilon f] = S[f] + \epsilon \delta S[f] + \frac{\epsilon^2}{2!} \delta^2
 对于一阶泛函导数，即有
 
 {{<latex display="true">}}
-\delta S = \frac{d}{d\epsilon} S[f + \epsilon \delta f] \big|_{\epsilon=0} = \int dt \, \frac{\delta S}{\delta f(t)} \delta f(t)
+\delta S = \frac{d}{d\epsilon} S[f + \epsilon \delta f] \bigg|_{\epsilon=0} = \int dt \, \frac{\delta S}{\delta f(t)} \delta f(t)
 {{</latex>}}
 
 {{<latex display="true">}}
-\delta^2 S = \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \big|_{\epsilon=0} = \int dt_1 \int dt_2 \, \frac{\delta^2 S}{\delta f(t_1) \delta f(t_2)} \delta f(t_1) \delta f(t_2)
+\delta^2 S = \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \bigg|_{\epsilon=0} = \int dt_1 \int dt_2 \, \frac{\delta^2 S}{\delta f(t_1) \delta f(t_2)} \delta f(t_1) \delta f(t_2)
 {{</latex>}}
 
 高阶泛函导数的形式可以类似地写出。
@@ -87,7 +87,7 @@ S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, 
 右边只出现了函数的变分 {{<latex display="false">}}\delta f{{</latex>}}。但是在：
 
 {{<latex display="true">}}
-\delta S = \int_{t_1}^{t_2} dt \frac{d}{d\epsilon} L(t, f + \epsilon \delta f, f' + \epsilon \delta f', f'' + \epsilon \delta f'' + \cdots) \big|_{\epsilon=0}
+\delta S = \int_{t_1}^{t_2} dt \frac{d}{d\epsilon} L(t, f + \epsilon \delta f, f' + \epsilon \delta f', f'' + \epsilon \delta f'' + \cdots) \bigg|_{\epsilon=0}
 {{</latex>}}
 
 {{<latex display="true">}}
@@ -140,11 +140,11 @@ S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, 
 + \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right)
 + \cdots
 \right] \delta f
-+ \mathcal{B} \big|_{t_1}^{t_2}
++ \mathcal{B} \bigg|_{t_1}^{t_2}
 \end{align}
 {{</latex>}}
 
-这里 {{<latex display="false">}} \frac{d \mathcal{B}}{dt} {{</latex>}} 代表**全导数项**，积分后得到的 {{<latex display="false">}} \mathcal{B} \big|_{t_1}^{t_2} {{</latex>}} 被称为**边界项**（boundary term），在积分的端点（边界）处取值。对比：
+这里 {{<latex display="false">}} \frac{d \mathcal{B}}{dt} {{</latex>}} 代表**全导数项**，积分后得到的 {{<latex display="false">}} \mathcal{B} \bigg|_{t_1}^{t_2} {{</latex>}} 被称为**边界项**（boundary term），在积分的端点（边界）处取值。对比：
 
 {{<latex display="true">}}
 \delta S[f] := \int dt \frac{\delta S}{\delta f} \delta f
