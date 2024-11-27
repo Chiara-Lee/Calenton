@@ -3,7 +3,6 @@ title:  1.3.2 泛函导数的操作定义
 date: 2024-11-27
 lastmod: 2024-11-27
 tags: [经典力学]
-draft: true
 ---
 
 根据上面的讨论，泛函导数归结于计算泛函{{<latex display="false">}}S[f]{{</latex>}}的变分。
@@ -200,6 +199,7 @@ S_1 \simeq S_2 \Leftrightarrow S_1 = S_2 + L|_{t_1}^{t_2}
 S = \int dt \, L
 {{</latex>}}
 
+end.
 
 
 
