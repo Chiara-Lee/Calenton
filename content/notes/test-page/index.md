@@ -68,3 +68,9 @@ toc: true
 {{<latex display="true">}}
 f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \cdots + \frac{f^(n)(x_0)}{n!}(x-x_0)^n + R_n
 {{</latex>}}
+
+---
+
+{{<latex display="true">}}
+R_n(x) = o[(x-x_0)^n]
+{{</latex>}}
