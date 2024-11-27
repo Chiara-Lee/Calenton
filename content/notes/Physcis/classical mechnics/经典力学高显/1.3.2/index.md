@@ -3,7 +3,6 @@ title:  1.3.2 泛函导数的操作定义
 date: 2024-11-27
 lastmod: 2024-11-27
 tags: [经典力学]
-draft: true
 ---
 
 根据上面的讨论，泛函导数归结于计算泛函{{<latex display="false">}}S[f]{{</latex>}}的变分。
@@ -15,7 +14,7 @@ S[f + \epsilon \delta f] = S[f] + \epsilon \left. \frac{d}{d\epsilon} S[f + \eps
 {{</latex>}}
 
 可以视为{{<latex display="false">}}S[f + \epsilon \delta f]{{</latex>}}相对于{{<latex display="false">}}\epsilon{{</latex>}}的普通泰勒展开。
-<!--
+
 {{<latex display="true">}}
 f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \cdots + \frac{f^(n)(x_0)}{n!}(x-x_0)^n + R_n
 {{</latex>}}
@@ -25,14 +24,14 @@ R_n(x) = o[(x-x_0)^n]
 {{</latex>}}
 
 {{<latex display="true">}}
-f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \cdots + \frac{f^{(n)}(0)}{n!}x^n + R_n
+f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \cdots + \frac{f^(n)(0)}{n!}x^n + R_n
 {{</latex>}}
 
 {{<latex display="true">}}
 R_n(x) = o[x^n]
 {{</latex>}}
 
--->
+
 > 一般函数在{{<latex display="false">}}x_0{{</latex>}}处的泰勒展开
 
 通过上式和下式的比较
