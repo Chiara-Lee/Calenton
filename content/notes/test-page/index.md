@@ -62,3 +62,9 @@ toc: true
 ---
 
 {{<latex display="true">}}\delta S = \int_{t_1}^{t_2} dt \frac{d}{d\epsilon} L(t, f + \epsilon \delta f, f' + \epsilon \delta f', f'' + \epsilon \delta f'' + \cdots) \bigg|_{\epsilon=0}{{</latex>}}
+
+---
+
+{{<latex display="true">}}
+f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \cdots + \frac{f^(n)(x_0)}{n!}(x-x_0)^n + R_n
+{{</latex>}}
