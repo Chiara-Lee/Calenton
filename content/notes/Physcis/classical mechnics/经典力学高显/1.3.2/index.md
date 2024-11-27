@@ -163,7 +163,7 @@ S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, 
 \end{align}
 {{</latex>}}
 
-在这样的假设下，边界项{{<latex display="false">}}\mathcal{B}|_{t_1} = \mathcal{B}|_{t_2} = 0{{</latex>}}恒为零。这也意味着，被积函数可以加上函数{{<latex display="false">}}f(t){{</latex>}}及其直到{{<latex display="false">}}n-1{{</latex>}}阶导数的任意函数
+在这样的假设下，边界项{{<latex display="false">}}\left.\mathcal{B}\right|_{t_1}=\left.\mathcal{B}\right|_{t_2}=0{{</latex>}}恒为零。这也意味着，被积函数可以加上函数{{<latex display="false">}}f(t){{</latex>}}及其直到{{<latex display="false">}}n-1{{</latex>}}阶导数的任意函数
 {{<latex display="false">}}
 F = F(t, f, f', \ldots, f^{(n-1)})
 {{</latex>}}
