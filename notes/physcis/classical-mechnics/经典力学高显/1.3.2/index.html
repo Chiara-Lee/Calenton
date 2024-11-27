@@ -27,8 +27,12 @@ Caleton Academy
 </span><span class=fallback-latex>f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \cdots + \frac{f^{(n)}(0)}{n!}x^n + R_n
 </span><span class=fallback-latex>R_n(x) = o[x^n]</span><blockquote><p>一般函数在
 <span class=fallback-latex>x_0
-</span>处的泰勒展开</p></blockquote><p>通过上式和下式的比较</p><span class=fallback-latex>S[f + \epsilon f] = S[f] + \epsilon \delta S[f] + \frac{\epsilon^2}{2!} \delta^2 S[f] + \frac{\epsilon^3}{3!} \delta^3 S[f] + \cdots</span><p>对于一阶泛函导数，即有</p><span class=fallback-latex>\delta S = \frac{d}{d\epsilon} S[f + \epsilon \delta f] \bigg|_{\epsilon=0} = \int dt \, \frac{\delta S}{\delta f(t)} \delta f(t)
-</span><span class=fallback-latex>\delta^2 S = \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \bigg|_{\epsilon=0} = \int dt_1 \int dt_2 \, \frac{\delta^2 S}{\delta f(t_1) \delta f(t_2)} \delta f(t_1) \delta f(t_2)</span><p>高阶泛函导数的形式可以类似地写出。</p><p>对于下述形式的泛函：</p><span class=fallback-latex>S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, f' + \epsilon \delta f', f'' + \epsilon \delta f'' + \cdots \right)</span><p>可以联系上文的式子得到：</p><span class=fallback-latex>\begin{align} \delta S&=\left.\int\limits_{t_1}^{t_2}dt\frac{d}{d\epsilon}L(t_,f+\epsilon\delta f,f'+\epsilon\delta f',f''+\epsilon\delta f''+\cdots)\right|_{\epsilon=0}\\ &\text{其中} f+\epsilon\delta f \text{是关于} \epsilon \text{的函数} f(\epsilon)，f' \text{同理}\\ &=\int\limits_{t_1}^{t_2}dt\underbrace{(\frac{\partial L}{\partial f}\delta f+\frac{\partial L}{\partial f'}\delta f'+\frac{\partial L}{\partial f''}\delta f''+\cdots)}_{\equiv\delta L} \end{align}</span><p>上式的被积函数就是
+</span>处的泰勒展开</p></blockquote><p>通过上式和下式的比较</p><span class=fallback-latex>S[f + \epsilon f] = S[f] + \epsilon \delta S[f] + \frac{\epsilon^2}{2!} \delta^2 S[f] + \frac{\epsilon^3}{3!} \delta^3 S[f] + \cdots</span><p>对于一阶泛函导数，即有</p><span class=fallback-latex>\delta S = \frac{d}{d\epsilon} S[f + \epsilon \delta f] \big|_{\epsilon=0} = \int dt \, \frac{\delta S}{\delta f(t)} \delta f(t)
+</span><span class=fallback-latex>\delta^2 S = \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \big|_{\epsilon=0} = \int dt_1 \int dt_2 \, \frac{\delta^2 S}{\delta f(t_1) \delta f(t_2)} \delta f(t_1) \delta f(t_2)</span><p>高阶泛函导数的形式可以类似地写出。</p><p>对于下述形式的泛函：</p><span class=fallback-latex>S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, f' + \epsilon \delta f', f'' + \epsilon \delta f'' + \cdots \right)</span><p>可以联系上文的式子得到：</p><span class=fallback-latex>\begin{align}
+\delta S&=\left.\int\limits_{t_1}^{t_2}dt\frac{d}{d\epsilon}L(t_,f+\epsilon\delta f,f'+\epsilon\delta f',f''+\epsilon\delta f''+\cdots)\right|_{\epsilon=0}\\
+&\text{其中} f+\epsilon\delta f \text{是关于} \epsilon \text{的函数} f(\epsilon)，f' \text{同理}\\
+&=\int\limits_{t_1}^{t_2}dt\underbrace{(\frac{\partial L}{\partial f}\delta f+\frac{\partial L}{\partial f'}\delta f'+\frac{\partial L}{\partial f''}\delta f''+\cdots)}_{\equiv\delta L}
+\end{align}</span><p>上式的被积函数就是
 <span class=fallback-latex>L
 </span>的一阶变分
 <span class=fallback-latex>\delta L
@@ -36,7 +40,7 @@ Caleton Academy
 <span class=fallback-latex>dL
 </span>的形式全同，只是微分被换成了变分。</p><p>这意味着：</p><span class=fallback-latex>\delta S \equiv \delta \left( \int_{t_1}^{t_2} dt L \right) = \int_{t_1}^{t_2} dt \delta L</span><p>也就是说，变分符号可以移到积分内。</p><p>观察一阶泛函导数的形式：</p><span class=fallback-latex>\delta S[f] := \int dt \frac{\delta S}{\delta f} \delta f</span><p>右边只出现了函数的变分
 <span class=fallback-latex>\delta f
-</span>。但是在：</p><span class=fallback-latex>\delta S = \int_{t_1}^{t_2} dt \frac{d}{d\epsilon} L(t, f + \epsilon \delta f, f' + \epsilon \delta f', f'' + \epsilon \delta f'' + \cdots) \bigg|_{\epsilon=0}
+</span>。但是在：</p><span class=fallback-latex>\delta S = \int_{t_1}^{t_2} dt \frac{d}{d\epsilon} L(t, f + \epsilon \delta f, f' + \epsilon \delta f', f'' + \epsilon \delta f'' + \cdots) \big|_{\epsilon=0}
 </span><span class=fallback-latex>= \int_{t_1}^{t_2} dt \left( \frac{\partial L}{\partial f} \delta f + \frac{\partial L}{\partial f'} \delta f' + \frac{\partial L}{\partial f''} \delta f'' + \cdots \right) \equiv \delta L</span><p>中却出现了函数的导数的变分
 <span class=fallback-latex>\delta f', \delta f''
 </span>。在处理这个情况下，我们就需要使用变分法中非常重要的技巧——<strong>分部积分（integration by parts）</strong></p><p>分部积分的基本思路是：利用变分和求导可以交换顺序的性质，将作用于
@@ -106,7 +110,7 @@ Caleton Academy
 <span class=fallback-latex>F = F(t, f, f', \ldots, f^{(n-1)})
 </span>的全导数，而不影响泛函导数。</p><p>**两个被积函数相差全导数，或者两个积分相差边界项，这件事在变分法中非常重要。**因此通常使用专门的符号 “
 <span class=fallback-latex>\simeq
-</span>” 来表示：</p><span class=fallback-latex>L_1 \simeq L_2 \Leftrightarrow L_1 = L_2 + \frac{dF(t, f, f', \cdots)}{dy}</span><p>以及：</p><span class=fallback-latex>S_1 \simeq S_2 \Leftrightarrow S_1 = S_2 + L|_{t_1}^{t_2}</span><p>基于以上假设，对于泛函导数的计算来说，边界项不重要。在实际计算中，都是直接去掉边界项，而无需写出其具体形式的0。例如：</p><span class=fallback-latex>\frac{\partial L}{\partial f'} \delta f' \simeq -\frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) \delta f, \quad
+</span>” 来表示：</p><span class=fallback-latex>L_1 \simeq L_2 \Leftrightarrow L_1 = L_2 + \frac{dF(t, f, f', \cdots)}{dy}</span><p>以及：</p><span class=fallback-latex>S_1 \simeq S_2 \Leftrightarrow S_1 = S_2 + L|_{t_1}^{t_2}</span><p>基于以上假设，对于泛函导数的计算来说，边界项不重要。在实际计算中，都是直接去掉边界项，而无需写出其具体形式的。例如：</p><span class=fallback-latex>\frac{\partial L}{\partial f'} \delta f' \simeq -\frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) \delta f, \quad
 \frac{\partial L}{\partial f''} \delta f'' \simeq \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right) \delta f</span><p>基于同样的理由，泛函积分的上下限也经常被省略，即：</p><span class=fallback-latex>S = \int dt \, L</span></div><aside class=sidebar><div class=card><h2>摘要</h2><p>根据上面的讨论，泛函导数归结于计算泛函 S[f] 的变分。
 换个角度，在泛函 S[f + \epsilon \delta f] 中， \epsilon 是一个参数，而泛函 S 是一个数， …</p></div><div class=card><h2>阅读时长</h2><p>3 min</p></div><div class=card><h2>总字数</h2><p>≈ 638</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
 经典力学</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/physcis/classical-mechnics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.3/><h2>1.3 泛函导数</h2><article>1.3.1 泛函导数的概念 对于普通函数的导数，函数的微分是由自变量的微分引起的：
