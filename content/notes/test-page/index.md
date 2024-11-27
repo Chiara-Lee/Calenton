@@ -74,3 +74,26 @@ f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \cdot
 {{<latex display="true">}}
 R_n(x) = o[(x-x_0)^n]
 {{</latex>}}
+
+---
+
+{{<latex display="true">}}
+\begin{align}
+\delta S &= \int\limits_{t_1}^{t_2} dt 
+\left[
+\frac{\partial L}{\partial f} \delta f
+- \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) \delta f
++ \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right) \delta f
++ \cdots
++ \frac{d \mathcal{B}}{dt}
+\right] \\
+&= \int\limits_{t_1}^{t_2} dt 
+\left[
+\frac{\partial L}{\partial f}
+- \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right)
++ \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right)
++ \cdots
+\right] \delta f
++ \mathcal{B} \bigg|_{t_1}^{t_2}
+\end{align}
+{{</latex>}}
