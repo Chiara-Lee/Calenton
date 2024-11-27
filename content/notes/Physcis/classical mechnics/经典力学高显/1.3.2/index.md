@@ -31,7 +31,7 @@ f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \cdots + \frac{f^{(n)}(
 R_n(x) = o[x^n]
 {{</latex>}}
 
-
+-->
 > 一般函数在{{<latex display="false">}}x_0{{</latex>}}处的泰勒展开
 
 通过上式和下式的比较
@@ -199,7 +199,7 @@ S_1 \simeq S_2 \Leftrightarrow S_1 = S_2 + L|_{t_1}^{t_2}
 S = \int dt \, L
 {{</latex>}}
 
--->
+
 
 
 
