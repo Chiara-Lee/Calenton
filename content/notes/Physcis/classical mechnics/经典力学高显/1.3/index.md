@@ -11,7 +11,7 @@ tags: [经典力学]
 
 {{<latex display="true">}}
 \begin{align}
-&f(t) \xrightarrow{t \to t+\epsilon} f(\tilde{t}) = f(t+ \epsilon) \\
+f(t) \xrightarrow{t \to t+\epsilon} f(\tilde{t}) = &f(t+ \epsilon) \\
 &= f(t) + \epsilon df(t) + \frac{\epsilon^2}{2!} d^2 f(t) + \frac{\epsilon^3}{3!} d^3 f(t) + \cdots
 \end{align}
 {{</latex>}}
@@ -34,7 +34,7 @@ d^{(n)} f(t) = \frac{d^{(n)}f(t)}{dt^n} dt
 
 {{<latex display="true">}}  
 \begin{align}
-&S[f] \xrightarrow{f \to \tilde{f}} S[\tilde{f}] = S[f + \epsilon f] \\  
+S[f] \xrightarrow{f \to \tilde{f}} S[\tilde{f}] = &S[f + \epsilon f] \\  
 &= S[f] + \epsilon \delta S[f] + \frac{\epsilon^2}{2!} \delta^2 S[f] + \frac{\epsilon^3}{3!} \delta^3 S[f] + \cdots  
 \end{align}
 {{</latex>}}
