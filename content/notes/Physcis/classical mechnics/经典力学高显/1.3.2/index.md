@@ -113,6 +113,90 @@ S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, 
 
 类似的：
 
+{{<latex display="true">}}
+\begin{align}
+\frac{\partial L}{\partial f''} \delta f'' &= \frac{\partial L}{\partial f''} \frac{d^2}{dt^2} \delta f \\
+&= \frac{d}{dt} \left( \frac{\partial L}{\partial f''} \frac{d}{dt} \delta f \right) - \frac{d}{dt} \left( \frac{\partial L}{\partial f''} \right) \frac{d}{dt} \delta f \\
+&= \underbrace{\frac{d}{dt} \left[ \frac{\partial L}{\partial f''} \delta f' \right] - \frac{d}{dt} \left( \frac{\partial L}{\partial f''} \right) \delta f' }_{\text{全导数}}+ \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right) \delta f
+\end{align}
+{{</latex>}}
+
+由此类推，有
+
+{{<latex display="true">}}
+\begin{align}
+\delta S &= \int\limits_{t_1}^{t_2} dt 
+\left[
+\frac{\partial L}{\partial f} \delta f
+- \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) \delta f
++ \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right) \delta f
++ \cdots
++ \frac{d \mathcal{B}}{dt}
+\right] \\
+&= \int\limits_{t_1}^{t_2} dt 
+\left[
+\frac{\partial L}{\partial f}
+- \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right)
++ \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right)
++ \cdots
+\right] \delta f
++ \mathcal{B} \big|_{t_1}^{t_2}
+\end{align}
+{{</latex>}}
+
+这里 {{<latex display="false">}} \frac{d \mathcal{B}}{dt} {{</latex>}} 代表**全导数项**，积分后得到的 {{<latex display="false">}} \mathcal{B} \big|_{t_1}^{t_2} {{</latex>}} 被称为**边界项**（boundary term），在积分的端点（边界）处取值。对比：
+
+{{<latex display="true">}}
+\delta S[f] := \int dt \frac{\delta S}{\delta f} \delta f
+{{</latex>}}
+
+{{<latex display="false">}}
+\delta S
+{{</latex>}}
+在上式中的积分已经具有泛函导数的形式，主要的阻碍来自于边界项。由上面的推导可知，如果泛函的被积函数{{<latex display="false">}}L{{</latex>}}包含{{<latex display="false">}}f(t){{</latex>}}的最高{{<latex display="false">}}n{{</latex>}}阶导数，则边界项{{<latex display="false">}}\mathcal{B}{{</latex>}}就包含{{<latex display="false">}}\delta f(t){{</latex>}}的最高{{<latex display="false">}}n-1{{</latex>}}阶导数。
+
+因此，变分法的一个基本假设是：
+**如果泛函的被积函数包含函数的最高**{{<latex display="false">}}n{{</latex>}}**阶导数，那么在积分的边界处，函数及其直到**{{<latex display="false">}}n-1{{</latex>}}**阶导数的变分为零。**  
+即：
+{{<latex display="true">}}
+\begin{align}
+\delta f|_{t_1} &= \delta f|_{t_2} = 0 \\
+\delta f'|_{t_1} &= \delta f'|_{t_2} = 0 \\
+&\vdots \\
+\delta f^{(n-1)}|_{t_1} &= \delta f^{(n-1)}|_{t_2} = 0
+\end{align}
+{{</latex>}}
+
+在这样的假设下，边界项{{<latex display="false">}}\left.\mathcal{B}\right|_{t_1}=\left.\mathcal{B}\right|_{t_2}=0{{</latex>}}恒为零。这也意味着，被积函数可以加上函数{{<latex display="false">}}f(t){{</latex>}}及其直到{{<latex display="false">}}n-1{{</latex>}}阶导数的任意函数
+{{<latex display="false">}}
+F = F(t, f, f', \ldots, f^{(n-1)})
+{{</latex>}}
+的全导数，而不影响泛函导数。
+
+**两个被积函数相差全导数，或者两个积分相差边界项，这件事在变分法中非常重要。**因此通常使用专门的符号 “{{<latex display="false">}}\simeq{{</latex>}}” 来表示：
+
+{{<latex display="true">}}
+L_1 \simeq L_2 \Leftrightarrow L_1 = L_2 + \frac{dF(t, f, f', \cdots)}{dy}
+{{</latex>}}
+
+以及：
+
+{{<latex display="true">}}
+S_1 \simeq S_2 \Leftrightarrow S_1 = S_2 + L|_{t_1}^{t_2}
+{{</latex>}}
+
+基于以上假设，对于泛函导数的计算来说，边界项不重要。在实际计算中，都是直接去掉边界项，而无需写出其具体形式的。例如：
+
+{{<latex display="true">}}
+\frac{\partial L}{\partial f'} \delta f' \simeq -\frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) \delta f, \quad
+\frac{\partial L}{\partial f''} \delta f'' \simeq \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right) \delta f
+{{</latex>}}
+
+基于同样的理由，泛函积分的上下限也经常被省略，即：
+
+{{<latex display="true">}}
+S = \int dt \, L
+{{</latex>}}
 
 
 
