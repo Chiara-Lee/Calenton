@@ -62,7 +62,7 @@ toc: true
 
 ---
 
-结果表明，展示渲染块内无需添加 `//` 以声明展示居中，这正是我们特地定义展示渲染模式的目的。根据 layouts/shortcode/latex.html 设定，`{{</latex>}}` 默认 `display="true"` 因此展示渲染可以直接使用 `{{<latex>}}{{</latex>}}`，行内展示则需要定义 `display="false"`。
+结果表明，展示渲染块内无需添加 `//` 以声明展示居中，这正是我们特地定义展示渲染模式的目的。根据 layouts/shortcode/latex.html 设定，`{{<latex>}}` 默认 `display="true"` 因此展示渲染可以直接使用 `{{<latex>}}{{</latex>}}`，行内展示则需要定义 `display="false"`。
 
 
 测试结果项目（2）：公式内空格
