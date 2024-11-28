@@ -113,6 +113,7 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 {{</latex>}}
 
 类似的，
+
 <!---
 {{<latex display="true">}}
 \begin{align} 
