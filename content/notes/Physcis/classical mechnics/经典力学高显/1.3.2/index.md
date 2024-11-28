@@ -71,7 +71,31 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 \end{align}
 {{</latex>}}
 
+上式的被积函数就是{{<latex display="false">}}L{{</latex>}}的一阶变分{{<latex display="false">}}\delta L{{</latex>}}，与其微分形式{{<latex display="false">}}dL{{</latex>}}全同。只是微分换成了变分。
 
+这意味着
+
+{{<latex display="true">}}
+\delta S\equiv\delta(\int\limits_{t_1}^{t_2}dtL)=\int\limits_{t_1}^{t_2}dt\delta L
+{{</latex>}}
+
+即是说，变分符号可以移到积分内。
+
+观察一阶泛函导数的形式 
+
+{{<latex display="true">}}
+\delta S[f]:=\int\limits dt\frac{\delta S}{\delta f}\delta f
+{{</latex>}}
+
+右边只出现了函数的变分{{<latex display="false">}}\delta f{{</latex>}}。但是在
+
+{{<latex display="true">}}
+\begin{align} \delta S&=\left.\int\limits_{t_1}^{t_2}dt\frac{d}{d\epsilon}L(t_,f+\epsilon\delta f,f'+\epsilon\delta f',f''+\epsilon\delta f''+\cdots)\right|_{\epsilon=0}\\ &=\int\limits_{t_1}^{t_2}dt\underbrace{(\frac{\partial L}{\partial f}\delta f+\frac{\partial L}{\partial f'}\delta f'+\frac{\partial L}{\partial f''}\delta f''+\cdots)}_{\equiv\delta L} \end{align}\\
+{{</latex>}}
+
+中却出现了函数的导数的变分{{<latex display="false">}}\delta f',\delta f'',\cdots{{</latex>}}，在处理这个情况时，我们就需要使用变分法中非常重要的技巧——**分部积分（integration by parts）**。
+
+分部积分的基本思路是：利用变分和求导可以交换顺序的性质，**将作用于{{<latex display="false">}}\delta f{{</latex>}}的导数移除**，代价是产生额外的“全导数”项，然后设定全导数为边界项，并且忽略边界项，使得泛函的变分式中各项的共有项为{{<latex display="false">}}\delta f{{</latex>}}，提出{{<latex display="false">}}\delta f{{</latex>}}后即得一阶泛函导数。
 
 
 
