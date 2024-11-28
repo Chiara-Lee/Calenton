@@ -61,3 +61,21 @@ toc: true
 
 ---
 
+测试结果项目（1）：
+
+`S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon \delta f,f'+\epsilon \delta f',f''+\epsilon \delta f''+\cdots)`
+
+{{<latex display="true">}}
+S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon \delta f,f'+\epsilon \delta f',f''+\epsilon \delta f''+\cdots)
+{{</latex>}}
+
+`S[f+\epsilon\delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsilon\delta f',f''+\epsilon\delta f''+\cdots)`
+
+{{<latex display="true">}}
+S[f+\epsilon\delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsilon\delta f',f''+\epsilon\delta f''+\cdots)
+{{</latex>}}
+
+测试结果项目（2）：公式写法
+
+1.\bigg、\equiv 等特殊形式都是可用的。
+2.align 环境中不可插入中文，需要使用 \text{}
