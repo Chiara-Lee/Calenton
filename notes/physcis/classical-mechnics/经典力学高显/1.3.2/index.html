@@ -54,7 +54,16 @@ Caleton Academy
 <span class=fallback-latex>\delta f
 </span>后即得一阶泛函导数。</p><p>例如，对于正比于
 <span class=fallback-latex>\delta f'
-</span>的项。</p><span class=fallback-latex>\frac{\partial L}{\partial f'}\delta f'\xlongequal{\text{变分与求导交换顺序}}\frac{\partial L}{\partial f'}\frac{d}{dt}\delta f=\underbrace{\frac{d}{dt}(\frac{\partial L}{\partial f'}\delta f)}_{\text{全导数}}-\frac{d}{dt}(\frac{\partial L}{\partial f'})\delta f</span><p>第二个等号是因为</p><span class=fallback-latex>\begin{align} &(uv)'=u'v+uv'\\ &uv'=(uv)'-u'v\\ \end{align}</span><p>类似的，</p><span class=fallback-latex>\begin{align} \frac{\partial L}{\partial f''}\delta f''&=\frac{\partial L}{\partial f''}\frac{d^2}{dt^2}\delta f={\frac{d}{dt}(\frac{\partial L}{\partial f''}\frac{d}{dt}\delta f)}-\frac{d}{dt}(\frac{\partial L}{\partial f''})\frac{d}{dt}\delta f\\ &=\underbrace{\frac{d}{dt}[\frac{\partial L}{\partial f''}\delta f'-\frac{d}{dt}(\frac{\partial L}{\partial f''})\delta f]}_{\text{全导数}}+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})\delta f \end{align}</span><p>由此类推，有</p><span class=fallback-latex>\begin{align} \delta S&=\int\limits_{t_1}^{t_2}dt[\frac{\partial L}{\partial f}\delta f-\frac{d}{dt}(\frac{\partial L}{\partial f'})\delta f+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})\delta f+\cdots+\frac{d\mathcal{B}}{dt}]\\ &=\int\limits_{t_1}^{t_2}dt[\frac{\partial L}{\partial f}-\frac{d}{dt}(\frac{\partial L}{\partial f'})+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})+\cdots]\delta f+\left.\mathcal{B}\right|_{t_1}^{t_2}\\ \end{align}</span><p>这里
+</span>的项。</p><span class=fallback-latex>\frac{\partial L}{\partial f'}\delta f'\xlongequal{\text{变分与求导交换顺序}}\frac{\partial L}{\partial f'}\frac{d}{dt}\delta f=\underbrace{\frac{d}{dt}(\frac{\partial L}{\partial f'}\delta f)}_{\text{全导数}}-\frac{d}{dt}(\frac{\partial L}{\partial f'})\delta f</span><p>第二个等号是因为</p><span class=fallback-latex>\begin{align}
+&(uv)'=u'v+uv'\\ 
+&uv'=(uv)'-u'v 
+\end{align}</span><p>类似的，</p><span class=fallback-latex>\begin{align}
+\frac{\partial L}{\partial f''}\delta f''&=\frac{\partial L}{\partial f''}\frac{d^2}{dt^2}\delta f={\frac{d}{dt}(\frac{\partial L}{\partial f''}\frac{d}{dt}\delta f)}-\frac{d}{dt}(\frac{\partial L}{\partial f''})\frac{d}{dt}\delta f\\
+&=\underbrace{\frac{d}{dt}[\frac{\partial L}{\partial f''}\delta f'-\frac{d}{dt}(\frac{\partial L}{\partial f''})\delta f]}_{\text{全导数}}+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})\delta f
+\end{align}</span><p>由此类推，有</p><span class=fallback-latex>\begin{align}
+\delta S&=\int\limits_{t_1}^{t_2}dt[\frac{\partial L}{\partial f}\delta f-\frac{d}{dt}(\frac{\partial L}{\partial f'})\delta f+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})\delta f+\cdots+\frac{d\mathcal{B}}{dt}]\\
+&=\int\limits_{t_1}^{t_2}dt[\frac{\partial L}{\partial f}-\frac{d}{dt}(\frac{\partial L}{\partial f'})+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})+\cdots]\delta f+\left.\mathcal{B}\right|_{t_1}^{t_2}
+\end{align}</span><p>这里
 <span class=fallback-latex>\frac{d\mathcal{B}}{dt}
 </span>代表全导数项。积分后得到的
 <span class=fallback-latex>\left.\mathcal{B}\right|_{t_1}^{t_2}
