@@ -125,12 +125,7 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 
 由此类推，有 
 
-{{<latex display="true">}}
-\begin{align} 
-\delta S&=\int\limits_{t_1}^{t_2}dt\bigg[\frac{\partial L}{\partial f}\delta f-\frac{d}{dt}(\frac{\partial L}{\partial f'})\delta f+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})\delta f+\cdots+\frac{d\mathcal{B}}{dt}\bigg]\\ 
-&=\int\limits_{t_1}^{t_2}dt[\frac{\partial L}{\partial f}-\frac{d}{dt}(\frac{\partial L}{\partial f'})+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})+\cdots]\delta f+\left.\mathcal{B}\right|_{t_1}^{t_2}
-\end{align}
-{{</latex>}}
+
 
 这里{{<latex display="false">}}\frac{d\mathcal{B}}{dt}{{</latex>}}代表全导数项。积分后得到的{{<latex display="false">}}\left.\mathcal{B}\right|_{t_1}^{t_2}{{</latex>}}被称为**边界项（boundary term）**,在积分的端点（边界）处取值。对比
 
