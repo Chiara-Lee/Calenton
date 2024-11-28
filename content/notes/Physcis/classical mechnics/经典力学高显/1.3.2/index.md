@@ -115,7 +115,38 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 \begin{align} \frac{\partial L}{\partial f''}\delta f''&=\frac{\partial L}{\partial f''}\frac{d^2}{dt^2}\delta f={\frac{d}{dt}(\frac{\partial L}{\partial f''}\frac{d}{dt}\delta f)}-\frac{d}{dt}(\frac{\partial L}{\partial f''})\frac{d}{dt}\delta f\\ &=\underbrace{\frac{d}{dt}[\frac{\partial L}{\partial f''}\delta f'-\frac{d}{dt}(\frac{\partial L}{\partial f''})\delta f]}_{\text{全导数}}+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})\delta f \end{align}
 {{</latex>}}
 
+由此类推，有 
 
+{{<latex display="true">}}
+\begin{align} \delta S&=\int\limits_{t_1}^{t_2}dt[\frac{\partial L}{\partial f}\delta f-\frac{d}{dt}(\frac{\partial L}{\partial f'})\delta f+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})\delta f+\cdots+\frac{d\mathcal{B}}{dt}]\\ &=\int\limits_{t_1}^{t_2}dt[\frac{\partial L}{\partial f}-\frac{d}{dt}(\frac{\partial L}{\partial f'})+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})+\cdots]\delta f+\left.\mathcal{B}\right|_{t_1}^{t_2}\\ \end{align}
+{{</latex>}}
 
+这里{{<latex display="false">}}\frac{d\mathcal{B}}{dt}{{</latex>}}代表全导数项。积分后得到的{{<latex display="false">}}\left.\mathcal{B}\right|_{t_1}^{t_2}{{</latex>}}被称为**边界项（boundary term）**,在积分的端点（边界）处取值。对比
 
+{{<latex display="true">}}
+\delta S[f]:=\int\limits dt\frac{\delta S}{\delta f}\delta f
+{{</latex>}}
 
+{{<latex display="false">}}\delta S{{</latex>}}在上式中的积分已经具有泛函导数的形式，主要的阻碍来自于边界项。由上面的推导可知，如果泛函的被积函数{{<latex display="false">}}L{{</latex>}}包含{{<latex display="false">}}f(t){{</latex>}}的最高{{<latex display="false">}}n{{</latex>}}阶导数，则边界项{{<latex display="false">}}\mathcal{B}{{</latex>}}就包含{{<latex display="false">}}\delta f(t){{</latex>}}的最高{{<latex display="false">}}n-1{{</latex>}}阶导数。
+
+因此，变分法的一个基本假设就是：**如果泛函的被积函数包含函数的最高{{<latex display="false">}}n{{</latex>}}阶导数，那么在积分的边界处，函数及其直到{{<latex display="false">}}n-1{{</latex>}}阶导数的变分为零。**即 
+
+{{<latex display="true">}}
+\left.\delta f\right|_{t_1}=\left.\delta f\right|_{t_2}=0
+{{</latex>}}
+
+{{<latex display="true">}}
+\left.\delta f'\right|_{t_1}=\left.\delta f'\right|_{t_2}=0
+{{</latex>}}
+
+{{<latex display="true">}}
+\vdots
+{{</latex>}}
+
+{{<latex display="true">}}
+\left.\delta f^{(n-1)}\right|_{t_1}=\left.\delta f^{(n-1)}\right|_{t_2}=0
+{{</latex>}}
+
+在这样的假设下，边界项{{<latex display="false">}}\left.\mathcal{B}\right|_{t_1}=\left.\mathcal{B}\right|_{t_2}=0{{</latex>}}恒为零。这也意味着，被积函数可以加上函数{{<latex display="false">}}f(t){{</latex>}}及其直到{{<latex display="false">}}n-1{{</latex>}}阶导数的任意函数{{<latex display="false">}}F=F(t,f,f',\cdots,f^{(n-1)}){{</latex>}}的全导数，而不影响泛函导数。
+
+**两个被积函数相差全导数**，或者两个积分相差边界项，这件事在变分法中非常重要。因此通常使用专门的符号
