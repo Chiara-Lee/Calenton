@@ -97,6 +97,12 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 
 分部积分的基本思路是：利用变分和求导可以交换顺序的性质，**将作用于{{<latex display="false">}}\delta f{{</latex>}}的导数移除**，代价是产生额外的“全导数”项，然后设定全导数为边界项，并且忽略边界项，使得泛函的变分式中各项的共有项为{{<latex display="false">}}\delta f{{</latex>}}，提出{{<latex display="false">}}\delta f{{</latex>}}后即得一阶泛函导数。
 
+例如，对于正比于{{<latex display="false">}}\delta f'{{</latex>}}的项。
+
+{{<latex>}}
+\frac{\partial L}{\partial f'}\delta f'\xlongequal{变分与求导交换顺序}\frac{\partial L}{\partial f'}\frac{d}{dt}\delta f=\underbrace{\frac{d}{dt}(\frac{\partial L}{\partial f'}\delta f)}_{全导数}-\frac{d}{dt}(\frac{\partial L}{\partial f'})\delta f\\
+{{</latex>}}
+
 
 
 
