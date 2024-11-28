@@ -106,7 +106,10 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 第二个等号是因为
 
 {{<latex display="true">}}
-\begin{align} &(uv)'=u'v+uv'\\ &uv'=(uv)'-u'v\\ \end{align}
+\begin{align} 
+&(uv)'=u'v+uv'\\ 
+&uv'=(uv)'-u'v 
+\end{align}
 {{</latex>}}
 
 类似的，
