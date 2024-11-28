@@ -114,7 +114,7 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 
 类似的，
 
-
+<!---
 {{<latex display="true">}}
 \begin{align} 
 \frac{\partial L}{\partial f''}\delta f''&=\frac{\partial L}{\partial f''}\frac{d^2}{dt^2}\delta f={\frac{d}{dt}(\frac{\partial L}{\partial f''}\frac{d}{dt}\delta f)}-\frac{d}{dt}(\frac{\partial L}{\partial f''})\frac{d}{dt}\delta f\\ 
@@ -124,7 +124,7 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 
 
 由此类推，有 
-<!---
+
 {{<latex display="true">}}
 \begin{align} 
 \delta S&=\int\limits_{t_1}^{t_2}dt\bigg[\frac{\partial L}{\partial f}\delta f-\frac{d}{dt}(\frac{\partial L}{\partial f'})\delta f+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})\delta f+\cdots+\frac{d\mathcal{B}}{dt}\bigg]\\ 
