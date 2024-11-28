@@ -13,8 +13,53 @@ tags: [经典力学]
 S[f + \epsilon \delta f] = S[f] + \epsilon \left. \frac{d}{d\epsilon} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \frac{\epsilon^2}{2!} \left. \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \cdots
 {{</latex>}}
 
+可以视为{{<latex display="false">}}S[f + \epsilon \delta f]{{</latex>}}相对于{{<latex display="false">}}\epsilon{{</latex>}}的普通泰勒展开。
 
+>一般函数在{{<latex display="false">}}x_0{{</latex>}}处以及{{<latex display="false">}}x_0 = 0{{</latex>}}的泰勒展开
 
+{{<latex display="true">}}
+f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^2 + R_n
+{{</latex>}}
+
+{{<latex display="true">}}
+R_n=o[(x-x_0)^n]
+{{</latex>}}
+
+{{<latex display="true">}}
+f(x) = f(0) + \frac{f'(0)}{1!}(x) + \frac{f''(0)}{2!}(x)^2 + \cdots + \frac{f^{(n)}(0)}{n!}(x)^2 + R_n
+{{</latex>}}
+
+{{<latex display="true">}}
+R_n=o[(x)^n]
+{{</latex>}}
+
+通过比较
+
+{{<latex display="true">}}
+S[f + \epsilon \delta f] = S[f] + \epsilon \left. \frac{d}{d\epsilon} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \frac{\epsilon^2}{2!} \left. \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \cdots
+{{</latex>}}
+
+{{<latex display="true">}}
+S[f + \epsilon \delta f] = S[f] + \epsilon \delta S[f] + \frac{\epsilon^2}{2!} \delta^2 S[f] + \frac{\epsilon^3}{3!} \delta^3 S[f] + \cdots
+{{</latex>}}
+
+即可得到一阶泛函导数的形式：
+
+{{<latex display="true">}}
+\delta S=\left.\frac{d}{d\epsilon}S[f+\epsilon \delta f]\right|_{\epsilon=0}=\int\limits dt\frac{\delta S}{\delta f(t)}\delta f(t)
+{{</latex>}}
+
+{{<latex display="true">}}
+\delta S^2=\left.\frac{d^2}{d\epsilon^2}S[f+\epsilon\delta f]\right|_{\epsilon=0}=\int dt_1\int dt_2\frac{\delta ^2S}{\delta f(t_1)\delta f(t_2)}\delta f(t_1)\delta f(t_2)
+{{</latex>}}
+
+高阶泛函导数的形式可以类似的写出。
+
+对于下述形式的泛函 
+
+{{<latex display="true">}}
+S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsilon\delta f',f''+\epsilon\delta f''+\cdots)
+{{</latex>}}
 
 
 
