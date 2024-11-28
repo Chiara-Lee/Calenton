@@ -90,7 +90,7 @@ Markdown 代码块中的代码是保存功能而不仅仅只是展示用的，�
 结果表明，展示渲染块内无需添加 // 以声明展示居中，这正是我们特地定义展示渲染模式的目的。（事实上，展示渲染加 // 会导致报错）
 
 根据 layouts/shortcode/latex.html 设定，<code>{{latex}}</code>
-默认 display="true" 因此展示渲染可以直接使用 <code>{{latex}}{{/latex}}</code>，行内展示则需要定义 display="false"。
+默认 display="true" 因此展示渲染可以直接使用 <code>{{latex}}{{/latex}}</code>，行内展示则需要定义 display="false"。(但是保险起见还是全都加上 dispaly 属性的好，因为有时 api 会因为一些神秘原因而为此报错)
 
 
 测试结果项目（2）：公式内空格

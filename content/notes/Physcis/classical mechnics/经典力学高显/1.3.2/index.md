@@ -103,6 +103,17 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 \frac{\partial L}{\partial f'}\delta f'\xlongequal{\text{变分与求导交换顺序}}\frac{\partial L}{\partial f'}\frac{d}{dt}\delta f=\underbrace{\frac{d}{dt}(\frac{\partial L}{\partial f'}\delta f)}_{\text{全导数}}-\frac{d}{dt}(\frac{\partial L}{\partial f'})\delta f
 {{</latex>}}
 
+第二个等号是因为
+
+{{<latex display="true">}}
+\begin{align} &(uv)'=u'v+uv'\\ &uv'=(uv)'-u'v\\ \end{align}\\
+{{</latex>}}
+
+类似的，
+
+{{<latex display="true">}}
+\begin{align} \frac{\partial L}{\partial f''}\delta f''&=\frac{\partial L}{\partial f''}\frac{d^2}{dt^2}\delta f={\frac{d}{dt}(\frac{\partial L}{\partial f''}\frac{d}{dt}\delta f)}-\frac{d}{dt}(\frac{\partial L}{\partial f''})\frac{d}{dt}\delta f\\ &=\underbrace{\frac{d}{dt}[\frac{\partial L}{\partial f''}\delta f'-\frac{d}{dt}(\frac{\partial L}{\partial f''})\delta f]}_{\text{全导数}}+\frac{d^2}{dt^2}(\frac{\partial L}{\partial f''})\delta f \end{align}\\
+{{</latex>}}
 
 
 
