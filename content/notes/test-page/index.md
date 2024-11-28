@@ -99,6 +99,7 @@ S[f + \epsilon f] = S[f] + \epsilon \delta S[f] + \frac{\epsilon^2}{2!} \delta^2
 S[f + \epsilon \delta f] = \int_{t_1}^{t_2} dt L\left(t, f + \epsilon \delta f, f' + \epsilon \delta f', f'' + \epsilon \delta f'' + \cdots \right)
 {{</latex>}}
 
+<!---
 {{<latex display="true">}}
 \begin{align} 
 \delta S&=\left.\int\limits_{t_1}^{t_2}dt\frac{d}{d\epsilon}L(t_,f+\epsilon\delta f,f'+\epsilon\delta f',f''+\epsilon\delta f''+\cdots)\right|_{\epsilon=0}\\  
@@ -189,3 +190,4 @@ S_1 \simeq S_2 \Leftrightarrow S_1 = S_2 + L|_{t_1}^{t_2}
 \frac{\partial L}{\partial f'} \delta f' \simeq -\frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) \delta f, \quad
 \frac{\partial L}{\partial f''} \delta f'' \simeq \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right) \delta f
 {{</latex>}}
+--->
