@@ -100,7 +100,7 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 例如，对于正比于{{<latex display="false">}}\delta f'{{</latex>}}的项。
 
 {{<latex>}}
-\frac{\partial L}{\partial f'}\delta f'\xlongequal{变分与求导交换顺序}\frac{\partial L}{\partial f'}\frac{d}{dt}\delta f=\underbrace{\frac{d}{dt}(\frac{\partial L}{\partial f'}\delta f)}_{全导数}-\frac{d}{dt}(\frac{\partial L}{\partial f'})\delta f\\
+\frac{\partial L}{\partial f'}\delta f'\xlongequal{\text{变分与求导交换顺序}}\frac{\partial L}{\partial f'}\frac{d}{dt}\delta f=\underbrace{\frac{d}{dt}(\frac{\partial L}{\partial f'}\delta f)}_{\text{全导数}}-\frac{d}{dt}(\frac{\partial L}{\partial f'})\delta f\\
 {{</latex>}}
 
 
