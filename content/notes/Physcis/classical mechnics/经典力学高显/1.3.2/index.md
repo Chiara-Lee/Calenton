@@ -114,7 +114,7 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 
 类似的，
 
-<!---
+
 {{<latex display="true">}}
 \begin{align} 
 \frac{\partial L}{\partial f''}\delta f''&=\frac{\partial L}{\partial f''}\frac{d^2}{dt^2}\delta f={\frac{d}{dt}(\frac{\partial L}{\partial f''}\frac{d}{dt}\delta f)}-\frac{d}{dt}(\frac{\partial L}{\partial f''})\frac{d}{dt}\delta f\\ 
@@ -161,4 +161,4 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 在这样的假设下，边界项{{<latex display="false">}}\left.\mathcal{B}\right|_{t_1}=\left.\mathcal{B}\right|_{t_2}=0{{</latex>}}恒为零。这也意味着，被积函数可以加上函数{{<latex display="false">}}f(t){{</latex>}}及其直到{{<latex display="false">}}n-1{{</latex>}}阶导数的任意函数{{<latex display="false">}}F=F(t,f,f',\cdots,f^{(n-1)}){{</latex>}}的全导数，而不影响泛函导数。
 
 **两个被积函数相差全导数**，或者两个积分相差边界项，这件事在变分法中非常重要。因此通常使用专门的符号
---->
+
