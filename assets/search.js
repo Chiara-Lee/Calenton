@@ -43,15 +43,19 @@ export const SearchModule = {
       const results = index.search(searchBox.value);
       result.innerHTML = results
         .slice(0, MAX_SEARCH_RESULTS)
-        .map(x => `<a href="${x.item.url}">
-          <img src="${x.item.cover || ""}" width="40" height="40">
-          <h3>${x.item.title}</h3>
-          <span>${x.item.content.substr(0,40)}</span>
-        </a>`)
+        .map(x => {
+          // 检查封面是否存在
+          const coverImage = x.item.cover ? x.item.cover : "default-image.jpg"; // 设置默认封面图片
+          return `<a href="${x.item.url}">
+            <img src="${coverImage}" width="40" height="40">
+            <h3>${x.item.title}</h3>
+            <span>${x.item.content.substr(0, 40)}</span>
+          </a>`;
+        })
         .join("");
     } else {
       result.innerHTML = '';
-    }
+    }    
   },
 
   removeSearch() {
