@@ -166,7 +166,8 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 L_1\simeq L_2\Leftrightarrow L_1=L_2+\frac{dF(t,f,f',\cdots)}{dt}
 {{</latex>}}
 
-之所以全导数项是{{<latex display="false">}}\frac{dF(t,f,f',\cdots)}{dt}{{</latex>}}是因为上文中的所有函数{{<latex display="false">}}f(t){{</latex>}}都是关于{{<latex display="false">}}t{{</latex>}}的函数，而所有的泛函{{<latex display="false">}}s[f+\epsilon\delta f]{{</latex>}}，则可被视为是{{<latex display="false">}}\epsilon{{</latex>}}的函数。
+之所以全导数项是{{<latex display="false">}}\frac{dF(t,f,f',\cdots)}{dt}{{</latex>}}是因为上文中的所有函数{{<latex display="false">}}f(t){{</latex>}}都是关于{{<latex display="false">}}t{{</latex>}}的函数，而所有的泛函{{<latex display="false">}}s[f+\epsilon \delta f]{{</latex>}}，则可被视为是{{<latex display="false">}}\epsilon{{</latex>}}的函数。
+
 以及
 
 {{<latex display="true">}}
