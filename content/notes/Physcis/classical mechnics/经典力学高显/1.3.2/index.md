@@ -175,7 +175,7 @@ S_1\simeq S_2\Leftrightarrow S_1=S_2+\left.L\right|_{t_1}^{t_2}
 基于以上假设，对于泛函导数的计算来说，边界项不重要。在实际计算中，都是直接丢掉边界项，而无需写出其具体形式的。例如
 
 {{<latex display="true">}}
-\frac{\partial L}{\partial f^{\prime}} \delta f^{\prime} \simeq-\frac{\mathrm{d}}{\mathrm{d} t}\left(\frac{\partial L}{\partial f^{\prime}}\right) \delta f, \quad \frac{\partial L}{\partial f^{\prime \prime}} \delta f^{\prime \prime} \simeq \frac{\mathrm{d}^{2}}{\mathrm{~d} t^{2}}\left(\frac{\partial L}{\partial f^{\prime \prime}}\right) \delta f
+\frac{\partial L}{\partial f^{\prime}} \delta f^{\prime} \simeq-\frac{\mathrm{d}}{\mathrm{d} t}\left(\frac{\partial L}{\partial f^{\prime}}\right) \delta f, \quad \frac{\partial L}{\partial f^{\prime \prime}} \delta f^{\prime \prime} \simeq \frac{\mathrm{d}^{2}}{\mathrm{d} t^{2}}\left(\frac{\partial L}{\partial f^{\prime \prime}}\right) \delta f
 {{</latex>}}
 
 基于同样的理由，泛函积分的上下限也经常被省略，即 
