@@ -5,7 +5,7 @@
 [build]
   publish = "public"
   command = "npm install && hugo --minify --baseURL $DEPLOY_PRIME_URL"
-  ignoreLogs = ['error-remote-getjson']
+  ignoreLogs = ["error-remote-getjson"]
 
 [context.production.environment]
   HUGO_VERSION = "0.128.0"
