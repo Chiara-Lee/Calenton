@@ -61,7 +61,7 @@ S[f + \epsilon \delta f] = S[f] + \epsilon \delta S[f] + \frac{\epsilon^2}{2!} \
 S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsilon\delta f',f''+\epsilon\delta f''+\cdots)
 {{</latex>}}
 
-可以联系上文的式子得到 
+可以联系一阶泛函导数的形式可以得到 
 
 {{<latex display="true">}}
 \begin{align}
@@ -140,7 +140,7 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 
 {{<latex display="false">}}\delta S{{</latex>}}在上式中的积分已经具有泛函导数的形式，主要的阻碍来自于边界项。由上面的推导可知，如果泛函的被积函数{{<latex display="false">}}L{{</latex>}}包含{{<latex display="false">}}f(t){{</latex>}}的最高{{<latex display="false">}}n{{</latex>}}阶导数，则边界项{{<latex display="false">}}\mathcal{B}{{</latex>}}就包含{{<latex display="false">}}\delta f(t){{</latex>}}的最高{{<latex display="false">}}n-1{{</latex>}}阶导数。
 
-因此，变分法的一个基本假设就是：**如果泛函的被积函数包含函数的最高{{<latex display="false">}}n{{</latex>}}阶导数，那么在积分的边界处，函数及其直到{{<latex display="false">}}n-1{{</latex>}}阶导数的变分为零。**即 
+因此，变分法的一个基本假设就是： **如果泛函的被积函数包含函数的最高{{<latex display="false">}}n{{</latex>}}阶导数，那么在积分的边界处，函数及其直到{{<latex display="false">}}n-1{{</latex>}}阶导数的变分为零。** 即 
 
 {{<latex display="true">}}
 \left.\delta f\right|_{t_1}=\left.\delta f\right|_{t_2}=0
@@ -160,5 +160,26 @@ S[f+\epsilon \delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsi
 
 在这样的假设下，边界项{{<latex display="false">}}\left.\mathcal{B}\right|_{t_1}=\left.\mathcal{B}\right|_{t_2}=0{{</latex>}}恒为零。这也意味着，被积函数可以加上函数{{<latex display="false">}}f(t){{</latex>}}及其直到{{<latex display="false">}}n-1{{</latex>}}阶导数的任意函数{{<latex display="false">}}F=F(t,f,f',\cdots,f^{(n-1)}){{</latex>}}的全导数，而不影响泛函导数。
 
-**两个被积函数相差全导数**，或者两个积分相差边界项，这件事在变分法中非常重要。因此通常使用专门的符号
+**两个被积函数相差全导数**，或者两个积分相差边界项，这件事在变分法中非常重要。因此通常使用专门的符号"\simeq"来表示：
 
+{{<latex display="true">}}
+L_1\simeq L_2\Leftrightarrow L_1=L_2+\frac{dF(t,f,f',\cdots)}{dy}
+{{</latex>}}
+
+以及
+
+{{<latex display="true">}}
+S_1\simeq S_2\Leftrightarrow S_1=S_2+\left.L\right|_{t_1}^{t_2}
+{{</latex>}}
+
+基于以上假设，对于泛函导数的计算来说，边界项不重要。在实际计算中，都是直接丢掉边界项，而无需写出其具体形式的。例如
+
+{{<latex display="true">}}
+\frac{\partial L}{\partial f^{\prime}} \delta f^{\prime} \simeq-\frac{\mathrm{d}}{\mathrm{d} t}\left(\frac{\partial L}{\partial f^{\prime}}\right) \delta f, \quad \frac{\partial L}{\partial f^{\prime \prime}} \delta f^{\prime \prime} \simeq \frac{\mathrm{d}^{2}}{\mathrm{~d} t^{2}}\left(\frac{\partial L}{\partial f^{\prime \prime}}\right) \delta f
+{{</latex>}}
+
+基于同样的理由，泛函积分的上下限也经常被省略，即 
+
+{{<latex display="true">}}
+S=\int\limits dtL
+{{</latex>}}
