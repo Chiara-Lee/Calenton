@@ -46,21 +46,21 @@ S=\sum_{k=0}^{n-1}(1+h)^k=\frac{(1+h)^n-1}{h}
 >
 > 对于等比数列
 >
-{{<latex display="true">}}
-S_n=a+ar+ar^2+\cdots+ar^{n-1}
-{{</latex>}}
+> {{<latex display="true">}}
+> S_n=a+ar+ar^2+\cdots+ar^{n-1}
+> {{</latex>}}
 >
 > 将两侧乘{{<latex display="false">}}r{{</latex>}}得到
 >
-{{<latex display="true">}}
-rS_n=ar+ar^2+\cdots+ar^{n}
-{{</latex>}}
+> {{<latex display="true">}}
+> rS_n=ar+ar^2+\cdots+ar^{n}
+> {{</latex>}}
 >
 > 两式相减得到
 >
-{{<latex display="true">}}
-S_n-rS_n=a-ar^n
-{{</latex>}}
+> {{<latex display="true">}}
+> S_n-rS_n=a-ar^n
+> {{</latex>}}
 >
 > 整理即得到
 >
