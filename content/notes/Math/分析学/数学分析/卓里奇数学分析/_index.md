@@ -1,5 +1,5 @@
 ---
-title:  《谢惠民数学分析》
+title:  《数学分析|卓里奇》
 layout: list
 cascade:
     type: blog
