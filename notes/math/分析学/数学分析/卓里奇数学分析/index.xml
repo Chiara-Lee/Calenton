@@ -7,7 +7,7 @@ S=\frac{1-r^n}{1-r} 代入可得
 S=\sum_{k=0}^{n-1}(1+h)^k=\frac{(1+h)^n-1}{h} 故而（1.1）式成立。
 等比数列求和公式：
 对于等比数列
-S_n=a+ar+ar^2+\cdots+ar^{n-1} 将两侧乘 r 得到
-rS_n=ar+ar^2+\cdots+ar^{n} 两式相减得到
-S_n-rS_n=a-ar^n 整理即得到
+> S_n=a+ar+ar^2+\cdots+ar^{n-1} > 将两侧乘 r 得到
+> rS_n=ar+ar^2+\cdots+ar^{n} > 两式相减得到
+> S_n-rS_n=a-ar^n > 整理即得到
 S_n=\frac{a(1-r^n)}{1-r} 当 r=1 时，等比数列即为 n 项 a 相加，因此结果即为 S_n=na</description></item><item><title>1.2</title><link>https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1.2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author><guid>https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1.2/</guid><description/></item></channel></rss>
