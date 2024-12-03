@@ -32,5 +32,5 @@ x-1 < [x]\le x
 
 6. {{<latex display="false">}}\square{{</latex>}} 表示一个证明或解的结束。
 7. {{<latex display="false">}}\binom{n}{k}=C^k_n=\frac{n(n-1)\cdots(n-l+1)}{k!}{{</latex>}}
-8. 若{{<latex display="false">}}A{{</latex>}}和{{<latex display="false">}}B{{</latex>}}为两集合，则使用记号{{<latex display="false">}}A-B{{</latex>}}或者{{<latex display="false">}}A\B{{</latex>}}表示{{<latex display="false">}}A{{</latex>}}与{{<latex display="false">}}B{{</latex>}}的差集。其也就是集合{{<latex display="false">}}A\B={x | x\in A\vee x\notin B}{{</latex>}}。
+8. 若{{<latex display="false">}}A{{</latex>}}和{{<latex display="false">}}B{{</latex>}}为两集合，则使用记号{{<latex display="false">}}A-B{{</latex>}}或者{{<latex display="false">}}A \ B{{</latex>}}表示{{<latex display="false">}}A{{</latex>}}与{{<latex display="false">}}B{{</latex>}}的差集。其也就是集合{{<latex display="false">}}A \ B={x | x\in A\vee x\notin B}{{</latex>}}。
 9. 用{{<latex display="false">}}O_{\delta}(a)\, U_{\delta}(a){{</latex>}}表示以{{<latex display="false">}}a{{</latex>}}为中心，以{{<latex display="false">}}\delta > 0{{</latex>}}为半径的邻域。它就是开区间{{<latex display="false">}}(a-\delta ,a+\delta){{</latex>}}。如不必指出半径，则可简写为{{<latex display="false">}}O(a)\, U(a){{</latex>}}
