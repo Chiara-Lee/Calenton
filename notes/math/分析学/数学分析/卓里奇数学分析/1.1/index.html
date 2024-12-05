@@ -7,10 +7,11 @@ S=\frac{1-r^n}{1-r} 代入可得
 S=\sum_{k=0}^{n-1}(1+h)^k=\frac{(1+h)^n-1}{h} 故而（1.1）式成立。
 等比数列求和公式：
 对于等比数列
-> S_n=a+ar+ar^2+\cdots+ar^{n-1} > 将两侧乘 r 得到
+S_n=a+ar+ar^2+\cdots+ar^{n-1} 将两侧乘 r 得到
 > rS_n=ar+ar^2+\cdots+ar^{n} > 两式相减得到
-> S_n-rS_n=a-ar^n > 整理即得到
-S_n=\frac{a(1-r^n)}{1-r} 当 r=1 时，等比数列即为 n 项 a 相加，因此结果即为 S_n=na "><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>1.1 几个常用不等式</title>
+S_n-rS_n=a-ar^n 整理即得到
+S_n=\frac{a(1-r^n)}{1-r} 当 r=1 时，等比数列即为 n 项 a 相加，因此结果即为 S_n=na 当 h > 0 时，在右边方括号内从第二项起都大于 1，因此就有：
+(1 + h)^n - 1 > nh. 在 -1 < h < 0 时，在 (1."><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>1.1 几个常用不等式</title>
 <script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
 Caleton Academy
 </a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/computer-science-and-technology/>Cst</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>1.1 几个常用不等式</h1><h2>Table of Contents</h2><nav id=TableOfContents></nav><div class=content-wrapper><div class=content><p><strong>命题 1.3.1 (Bernoulli(伯努利)不等式)</strong> 设
@@ -30,17 +31,87 @@ Caleton Academy
 <span class=fallback-latex>(1+h)^n-1
 </span>作因式分解，</p><span class=fallback-latex>(1+h)^n-1=h[1+(1+h)+(1+h)^2+\cdots+(1+h)^{n-1}]\tag{1.1}</span><p>其中，上式的右侧即是级数</p><span class=fallback-latex>S=\sum_{k=0}^{n-1}(1+h)^k</span><p>根据等比数列求和公式，对于等比数列
 <span class=fallback-latex>\sum_{k=0}^{n-1}r^k
-</span>，其和为</p><span class=fallback-latex>S=\frac{1-r^n}{1-r}</span><p>代入可得</p><span class=fallback-latex>S=\sum_{k=0}^{n-1}(1+h)^k=\frac{(1+h)^n-1}{h}</span><p>故而（1.1）式成立。</p><blockquote><p>等比数列求和公式：</p><p>对于等比数列</p><span class=fallback-latex>> S_n=a+ar+ar^2+\cdots+ar^{n-1} ></span><p>将两侧乘
+</span>，其和为</p><span class=fallback-latex>S=\frac{1-r^n}{1-r}</span><p>代入可得</p><span class=fallback-latex>S=\sum_{k=0}^{n-1}(1+h)^k=\frac{(1+h)^n-1}{h}</span><p>故而（1.1）式成立。</p><blockquote><p>等比数列求和公式：</p><p>对于等比数列</p><span class=fallback-latex>S_n=a+ar+ar^2+\cdots+ar^{n-1}</span><p>将两侧乘
 <span class=fallback-latex>r
-</span>得到</p><span class=fallback-latex>> rS_n=ar+ar^2+\cdots+ar^{n} ></span><p>两式相减得到</p><span class=fallback-latex>> S_n-rS_n=a-ar^n ></span><p>整理即得到</p></blockquote><span class=fallback-latex>S_n=\frac{a(1-r^n)}{1-r}</span><blockquote><p>当
+</span>得到</p><span class=fallback-latex>> rS_n=ar+ar^2+\cdots+ar^{n} ></span><p>两式相减得到</p><span class=fallback-latex>S_n-rS_n=a-ar^n</span><p>整理即得到</p><span class=fallback-latex>S_n=\frac{a(1-r^n)}{1-r}</span><p>当
 <span class=fallback-latex>r=1
 </span>时，等比数列即为
 <span class=fallback-latex>n
 </span>项
 <span class=fallback-latex>a
 </span>相加，因此结果即为
-<span class=fallback-latex>S_n=na</span></p></blockquote></div><aside class=sidebar><div class=card><h2>摘要</h2><p>命题 1.3.1 (Bernoulli(伯努利)不等式) 设 h>-1,n\in \mathbb{N}_+ ，则有不等式成立
-(1+h)^n\ge 1+nh 其中当 n>1 …</p></div><div class=card><h2>阅读时长</h2><p>1 min</p></div><div class=card><h2>总字数</h2><p>≈ 61</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
+<span class=fallback-latex>S_n=na</span></p></blockquote><p>当
+<span class=fallback-latex>h > 0
+</span>时，在右边方括号内从第二项起都大于 1，因此就有：</p><span class=fallback-latex>(1 + h)^n - 1 > nh.</span><p>在
+<span class=fallback-latex>-1 < h < 0
+</span>时，在 (1.1) 右边方括号中从第二项起都小于 1，因此方括号中表达式之和小于
+<span class=fallback-latex>n
+</span>。由于
+<span class=fallback-latex>h < 0
+</span>，因此又得到：</p><span class=fallback-latex>(1 + h)^n - 1 > nh.</span><p>为了应用的方便，可将 Bernoulli 不等式推广为双参数形式。</p><p>令
+<span class=fallback-latex>h = \frac{B}{A}
+</span>，其中
+<span class=fallback-latex>A > 0
+</span>，
+<span class=fallback-latex>A + B > 0
+</span>，则条件
+<span class=fallback-latex>1 + h > 0
+</span>成立。将这个
+<span class=fallback-latex>h
+</span>代入 Bernoulli 不等式中，就可以得到下一个不等式。</p><p><strong>命题 1.3.2 (Bernoulli 不等式双参数形式)</strong><br>设有
+<span class=fallback-latex>A > 0
+</span>，
+<span class=fallback-latex>A + B > 0
+</span>，
+<span class=fallback-latex>n \in \mathbb{N}_+
+</span>，则成立不等式：</p><span class=fallback-latex>(A + B)^n \geq A^n + n A^{n-1} B,</span><p>而且当
+<span class=fallback-latex>n > 1
+</span>时等号成立的充分必要条件是
+<span class=fallback-latex>B = 0
+</span>。</p><p>下面要介绍的是著名的<strong>算术平均值-几何平均值不等式</strong>，也简称为<strong>平均值不等式</strong>。它在两个实数的情况下包含了中学数学的三个基本不等式：</p><ol><li><span class=fallback-latex>\sqrt{ab} \leq \frac{1}{2}(a+b) \quad (a, b > 0),</span></li><li><span class=fallback-latex>\frac{a}{b} + \frac{b}{a} \geq 2 \quad (a, b \text{ 同号}),</span></li><li><span class=fallback-latex>a^2 + b^2 \geq 2ab \quad (a, b \in \mathbb{R}),</span></li></ol><p>且仅当
+<span class=fallback-latex>a = b
+</span>时，以上三个不等式中等号成立。</p><p><strong>命题 1.3.3 （算术平均值 - 几何平均值不等式）</strong><br>设
+<span class=fallback-latex>a_1, a_2, \dots, a_n
+</span>是
+<span class=fallback-latex>n
+</span>个非负实数，则成立不等式</p><span class=fallback-latex>\frac{a_1 + a_2 + \cdots + a_n}{n} \geq \sqrt[n]{a_1 a_2 \cdots a_n},</span><p>其中等号成立的充分必要条件是
+<span class=fallback-latex>a_1 = a_2 = \cdots = a_n
+</span>。</p><p><strong>证 1</strong><br>一开始可以看出，如果在
+<span class=fallback-latex>a_1, a_2, \dots, a_n
+</span>中出现 0，则不等式已经成立。</p><p>又可以看出，这时等号成立的充分必要条件是其中每个数为 0。<br>因此以下只要对
+<span class=fallback-latex>a_1, a_2, \dots, a_n
+</span>为
+<span class=fallback-latex>n
+</span>个正数的情况来进行证明就够了。</p><p>应用数学归纳法。在
+<span class=fallback-latex>n=0
+</span>时结论已经成立。现设
+<span class=fallback-latex>n=k
+</span>时不等式已成立，然后讨论
+<span class=fallback-latex>n=k+1
+</span>。将
+<span class=fallback-latex>k+1
+</span>个正数
+<span class=fallback-latex>a_1, a_2, \dots, a_{k+1}
+</span>的算术平均值分解如下：</p><span class=fallback-latex>\frac{a_1 + a_2 + \cdots + a_{k+1}}{k+1} = \frac{a_1 + a_2 + \cdots + a_k}{k} + \frac{k a_{k+1} - (a_1 + a_2 + \cdots + a_k)}{k(k+1)}. \tag{1.2}</span><p>解释下上式的分解动机：首先我们来分析各项的含义：</p><ol><li><span class=fallback-latex>\frac{a_1 + a_2 + \cdots + a_{k+1}}{k+1}
+</span>代表 k+1 项的平均数。</li><li><span class=fallback-latex>\frac{a_1 + a_2 + \cdots + a_{k}}{k}
+</span>代表前 k 项的平均数。</li></ol><p>观察两平均数的差值，我们可以得到</p><span class=fallback-latex>\begin{align}
+a_{k+1}^{-}-a_{k}^{-}&=\frac{a_{1}+a_{2}+\cdots+a_{k}+a_{k+1}}{k+1}-\frac{a_{1}+a_{2}+\cdots+a_{k}}{k}\\
+&=\frac{ka_{k+1}-(a_1+a_2+\cdots+a_k)}{k(k+1)}
+\end{align}</span><p>很显然，它就是（1.2）式中的右侧第二项。因此（1.2）式的分解动机就非常明显了，即：
+<span class=fallback-latex>a_{k+1}^{-}= a_{k}^{-}+(a_{k+1}^{-}-a_{k}^{-})</span></p><p>然后将上述式右边的两项分别记为
+<span class=fallback-latex>A
+</span>和
+<span class=fallback-latex>B
+</span>。这时条件
+<span class=fallback-latex>A > 0
+</span>，
+<span class=fallback-latex>A + B > 0
+</span>满足，因此就可以应用 Bernoulli 不等式中双参形式作以下计算：</p><span class=fallback-latex>\left( \frac{a_1 + a_2 + \cdots + a_k + a_{k+1}}{k+1} \right)^{k+1}
+= (A + B)^{k+1} \geq A^{k+1} + (k+1) A^k B
+= A^k (A + (k+1) B)
+= \left( \frac{a_1 + a_2 + \cdots + a_k}{k} \right)^k \cdot a_{k+1}
+\geq a_1 a_2 \cdots a_k a_{k+1}.</span></div><aside class=sidebar><div class=card><h2>摘要</h2><p>命题 1.3.1 (Bernoulli(伯努利)不等式) 设 h>-1,n\in \mathbb{N}_+ ，则有不等式成立
+(1+h)^n\ge 1+nh 其中当 n>1 …</p></div><div class=card><h2>阅读时长</h2><p>2 min</p></div><div class=card><h2>总字数</h2><p>≈ 377</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
 数学分析</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1.2/><h2>1.2</h2><article></article><div>Read More</div></a></li><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/1.2/><h2>2.2 加法和归纳原理的两个变体</h2><article>目前来说，自然数系非常简单，我们所知道的只有一种运算：增量运算，以及少数公理。但是现在我们可以构造出更加复杂的运算，如加法运算。
 具体做法如下：
 5 加上 3 与对 5 进行 3 次增量运算的结果是一样的。且这比 5 加上 2 多了一次增量运算，而 5 加 2 又比 5 加 1 多了一次增量运算。5 加 1 比 5 加 0 多了一次增量运算，最后，5 加 0 就等于 5。如此，我们就可以递归的定义加法运算。
