@@ -2,20 +2,17 @@
 <script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
 Caleton Academy
 </a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/computer-science-and-technology/>Cst</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>1.2</h1><h2>Table of Contents</h2><nav id=TableOfContents></nav><div class=content-wrapper><div class=content></div><aside class=sidebar><div class=card><h2>摘要</h2><p></p></div><div class=card><h2>阅读时长</h2><p>0 min</p></div><div class=card><h2>总字数</h2><p>≈ 0</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
-数学分析</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1.1/><h2>1.1 几个常用不等式</h2><article>命题 1.3.1 (Bernoulli(伯努利)不等式) 设 h>-1,n\in \mathbb{N}_+ ，则有不等式成立
-(1+h)^n\ge 1+nh 其中当 n>1 时等号成立的充分必要条件是 h=0 证： n=1 或者 h=0 时不等式显然成立（且均为等号成立），故以下仅讨论 n>1 和 h\ne 0 的情况。
-将 (1+h)^n-1 作因式分解，
-(1+h)^n-1=h[1+(1+h)+(1+h)^2+\cdots+(1+h)^{n-1}]\tag{1.1} 其中，上式的右侧即是级数
-S=\sum_{k=0}^{n-1}(1+h)^k 根据等比数列求和公式，对于等比数列 \sum_{k=0}^{n-1}r^k ，其和为
-S=\frac{1-r^n}{1-r} 代入可得
-S=\sum_{k=0}^{n-1}(1+h)^k=\frac{(1+h)^n-1}{h} 故而（1.1）式成立。
-等比数列求和公式：
-对于等比数列
-S_n=a+ar+ar^2+\cdots+ar^{n-1} 将两侧乘 r 得到
-> rS_n=ar+ar^2+\cdots+ar^{n} > 两式相减得到
-S_n-rS_n=a-ar^n 整理即得到
-S_n=\frac{a(1-r^n)}{1-r} 当 r=1 时，等比数列即为 n 项 a 相加，因此结果即为 S_n=na 当 h > 0 时，在右边方括号内从第二项起都大于 1，因此就有：
-(1 + h)^n - 1 > nh. 在 -1 < h < 0 时，在 (1.</article><div>Read More</div></a></li><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/1.2/><h2>2.2 加法和归纳原理的两个变体</h2><article>目前来说，自然数系非常简单，我们所知道的只有一种运算：增量运算，以及少数公理。但是现在我们可以构造出更加复杂的运算，如加法运算。
+数学分析</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1.1/><h2>1.2 集合及其基本运算习题选做</h2><article>1.请给出以下集合的笛卡尔积的几何解释：
+二线段（矩形） 二直线（平面） 直线和圆周（圆柱面） 直线和圆面（圆柱体） 二圆周（圆环面） 圆周和圆面（圆环体） 解答：
+二线段（矩形） 集合： A = [a_1, a_2] ， B = [b_1, b_2] 。 笛卡尔积：
+A \times B = {(x, y) \mid x \in [a_1, a_2], y \in [b_1, b_2] } 。
+几何解释：
+该笛卡尔积代表了二维平面中的一个矩形区域，其中横坐标范围为 [a_1, a_2] ，纵坐标范围为 [b_1, b_2] 。因此，笛卡尔积构成了一个矩形。
+二直线（平面） 集合： A = \mathbb{R} ， B = \mathbb{R} 。 笛卡尔积：
+A \times B = \mathbb{R}^2 。
+几何解释：
+二直线的笛卡尔积是二维平面。每个直线可以看作一个一维空间（实数集合 \mathbb{R} ），而笛卡尔积将其结合形成了一个二维平面 \mathbb{R}^2 。
+直线和圆周（圆柱面） 集合： A = \mathbb{R} ， B = S^1 （单位圆周）。 笛卡尔积：</article><div>Read More</div></a></li><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/1.2/><h2>2.2 加法和归纳原理的两个变体</h2><article>目前来说，自然数系非常简单，我们所知道的只有一种运算：增量运算，以及少数公理。但是现在我们可以构造出更加复杂的运算，如加法运算。
 具体做法如下：
 5 加上 3 与对 5 进行 3 次增量运算的结果是一样的。且这比 5 加上 2 多了一次增量运算，而 5 加 2 又比 5 加 1 多了一次增量运算。5 加 1 比 5 加 0 多了一次增量运算，最后，5 加 0 就等于 5。如此，我们就可以递归的定义加法运算。
 定义 2.2.1 (自然数的加法) 令 m 为一个自然数，我们定义 m 加 0 为：
