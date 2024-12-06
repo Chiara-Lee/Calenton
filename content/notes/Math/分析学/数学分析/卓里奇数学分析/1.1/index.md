@@ -6,7 +6,7 @@ tags: [数学分析]
 toc: true
 ---
 
-**请给出以下集合的笛卡尔积的几何解释：**
+**1.请给出以下集合的笛卡尔积的几何解释：**
 1. 二线段（矩形）
 2. 二直线（平面）
 3. 直线和圆周（圆柱面）
@@ -21,6 +21,7 @@ toc: true
 {{<latex display="false">}}A = [a_1, a_2]{{</latex>}}，{{<latex display="false">}}B = [b_1, b_2]{{</latex>}}。
 
 笛卡尔积：
+
 {{<latex display="true">}}A \times B = {(x, y) \mid x \in [a_1, a_2], y \in [b_1, b_2] }{{</latex>}}。
 
 几何解释：
@@ -32,6 +33,7 @@ toc: true
 {{<latex display="false">}}A = \mathbb{R}{{</latex>}}，{{<latex display="false">}}B = \mathbb{R}{{</latex>}}。
 
 笛卡尔积：
+
 {{<latex display="true">}}A \times B = \mathbb{R}^2{{</latex>}}。
 
 几何解释：
@@ -43,6 +45,7 @@ toc: true
 {{<latex display="false">}}A = \mathbb{R}{{</latex>}}，{{<latex display="false">}}B = S^1{{</latex>}}（单位圆周）。
 
 笛卡尔积：
+
 {{<latex display="true">}}A \times B = \mathbb{R} \times S^1{{</latex>}}。
 
 几何解释：
@@ -83,6 +86,7 @@ toc: true
 {{<latex display="false">}}A = \mathbb{R}{{</latex>}}，{{<latex display="false">}}B = \mathbb{R}^2{{</latex>}}（二维圆面，如 {{<latex display="false">}}x^2 + y^2 = r^2{{</latex>}}）。
 
 笛卡尔积：
+
 {{<latex display="true">}}A \times B = \mathbb{R} \times \mathbb{R}^2{{</latex>}}。
 
 几何解释：
@@ -101,6 +105,7 @@ toc: true
 {{<latex display="false">}}A = S^1{{</latex>}}，{{<latex display="false">}}B = S^1{{</latex>}}。
 
 笛卡尔积：
+
 {{<latex display="true">}}A \times B = S^1 \times S^1{{</latex>}}。
 
 几何解释：
@@ -126,19 +131,25 @@ toc: true
 *2.极坐标描述 vs. 笛卡尔坐标描述：*
 
 在描述{{<latex display="false">}}S^1 \times S^1{{</latex>}}时，我们只需要用两组角度来参数化描述：
+
 {{<latex display="true">}}
 (\theta_1,\theta_2)
 {{</latex>}}
+
 这里用两个角度参数就能完全描述这个流形上的任意一点，因此体现了它的二维本质。
 
 如果你尝试用“笛卡尔坐标”来描述每个{{<latex display="false">}}S^1{{</latex>}}，你可能会写出
+
 {{<latex display="true">}}
 S^1=\{(x,y)|x^2+y^2=1^2\}
 {{</latex>}}
+
 这里的每一个{{<latex display="false">}}S^1{{</latex>}}都嵌入到{{<latex display="false">}}\mathbb{R}^2{{</latex>}}中，因此{{<latex display="false">}}S^1 \times S^1{{</latex>}}被嵌入到{{<latex display="false">}}\mathbb{R}^2 \times \mathbb{R}^2=\mathbb{R}^4{{</latex>}}中，在这种表示下，笛卡尔积元素中的一个点{{<latex display="false">}}(\theta_1,\theta_2){{</latex>}}被映射为：
+
 {{<latex display="true">}}
 (\cos(\theta_1),\sin(\theta_1),\cos(\theta_2),\sin(\theta_2))\in\mathbb{R}^4
 {{</latex>}}
+
 虽然这里用了四个坐标数值来描述这个环面上的一个点，但这并不意味着该流形是四维的。它只意味着当你以这种方式嵌入到{<latex display="false">}}\mathbb{R}^4{{</latex>}}时，这个二维流形占据了一个四维空间中的二维子集。换句话说，它是一个嵌入在四维空间中的二维曲面，就像一条线（1维）可以嵌入到平面（2维）中，而不会改变线本身是一维的事实。**坐标系的选择不会改变流形的维数。**
 
 因此，我们在情况3、4中说讨论的笛卡尔积，实际上都是二维流形嵌入三维空间的实例，它们本身仍然是二维的。
@@ -148,6 +159,7 @@ S^1=\{(x,y)|x^2+y^2=1^2\}
 {{<latex display="false">}}A = S^1{{</latex>}}，{{<latex display="false">}}B = \mathbb{R}^2{{</latex>}}（二维圆面）。
 
 笛卡尔积：
+
 {{<latex display="true">}}A \times B = S^1 \times \mathbb{R}^2{{</latex>}}。
 
 几何解释：
