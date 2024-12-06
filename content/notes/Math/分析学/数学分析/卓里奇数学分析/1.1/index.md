@@ -1,160 +1,185 @@
 ---
-title: 1.1 几个常用不等式
+title: 1.2 集合及其基本运算习题选做
 date: 2024-12-3
 lastmod: 2024-12-3
 tags: [数学分析]
 toc: true
 ---
 
-**命题 1.3.1 (Bernoulli(伯努利)不等式)** 设{{<latex display="false">}}h>-1,n\in \mathbb{N}_+{{</latex>}}，则有不等式成立
+**请给出以下集合的笛卡尔积的几何解释：**
+1. 二线段（矩形）
+2. 二直线（平面）
+3. 直线和圆周（圆柱面）
+4. 直线和圆面（圆柱体）
+5. 二圆周（圆环面）
+6. 圆周和圆面（圆环体）
+
+**解答：**
+
+1. 二线段（矩形）
+集合：
+{{<latex display="false">}}A = [a_1, a_2]{{</latex>}}，{{<latex display="false">}}B = [b_1, b_2]{{</latex>}}。
+
+笛卡尔积：
+{{<latex display="true">}}A \times B = {(x, y) \mid x \in [a_1, a_2], y \in [b_1, b_2] }{{</latex>}}。
+
+几何解释：
+
+该笛卡尔积代表了二维平面中的一个矩形区域，其中横坐标范围为 {{<latex display="false">}}[a_1, a_2]{{</latex>}}，纵坐标范围为 {{<latex display="false">}}[b_1, b_2]{{</latex>}}。因此，笛卡尔积构成了一个矩形。
+
+2. 二直线（平面）
+集合：
+{{<latex display="false">}}A = \mathbb{R}{{</latex>}}，{{<latex display="false">}}B = \mathbb{R}{{</latex>}}。
+
+笛卡尔积：
+{{<latex display="true">}}A \times B = \mathbb{R}^2{{</latex>}}。
+
+几何解释：
+
+二直线的笛卡尔积是二维平面。每个直线可以看作一个一维空间（实数集合 {{<latex display="false">}}\mathbb{R}{{</latex>}}），而笛卡尔积将其结合形成了一个二维平面 {{<latex display="false">}}\mathbb{R}^2{{</latex>}}。
+
+3. 直线和圆周（圆柱面）
+集合：
+{{<latex display="false">}}A = \mathbb{R}{{</latex>}}，{{<latex display="false">}}B = S^1{{</latex>}}（单位圆周）。
+
+笛卡尔积：
+{{<latex display="true">}}A \times B = \mathbb{R} \times S^1{{</latex>}}。
+
+几何解释：
+
+直线和圆周的笛卡尔积在三维空间中形成了一个圆柱面。圆周 {{<latex display="false">}}S^1{{</latex>}} 提供了一个循环的二维几何结构，直线 {{<latex display="false">}}\mathbb{R}{{</latex>}} 沿该圆周的每个点延伸，因此形成了一个圆柱面。圆柱面每一“层”都是一个圆周。
+
+当我们将圆周{{<latex display="false">}}S^1{{</latex>}}中的点用极坐标表示时，通常会使用坐标对{{<latex display="false">}}(r\,theta){{</latex>}}，由于{{<latex display="false">}}S^1{{</latex>}}形成的圆周是一个单位圆，因此{{<latex display="false">}}r=1{{</latex>}}。
+
+- {{<latex display="false">}}A=\mathbb{R}{{</latex>}}表示一条直线（即 x 轴）。
+- {{<latex display="false">}}B=S^1{{</latex>}}表示单位圆周，圆周上的任意一个点的极坐标表示为{{<latex display="false">}}(r,\theta)=(1,\theta){{</latex>}}
+
+基于以上条件，笛卡尔积{{<latex display="false">}}A \times B = \mathbb{R} \times S^1{{</latex>}}中的每一个元素就都是形如{{<latex display="false">}}(x,(1,\theta)){{</latex>}}的元素。
+
+更进一步，如果我们考虑的是三维空间中的直线和圆周的笛卡尔积，则我们需要用笛卡尔坐标系来表示这些点。
+
+圆周上的点{{<latex display="false">}}(r,\theta)=(1,\theta){{</latex>}}通过极坐标转换到笛卡尔坐标时，可以得到圆周上一个点的笛卡尔坐标表示：
 
 {{<latex display="true">}}
-(1+h)^n\ge 1+nh
+(x,y)=(\cos(\theta),\sin(\theta))
 {{</latex>}}
 
-其中当{{<latex display="false">}}n>1{{</latex>}}时等号成立的充分必要条件是{{<latex display="false">}}h=0{{</latex>}}
-
-**证：**  {{<latex display="false">}}n=1{{</latex>}}或者{{<latex display="false">}}h=0{{</latex>}}时不等式显然成立（且均为等号成立），故以下仅讨论{{<latex display="false">}}n>1{{</latex>}}和{{<latex display="false">}}h\ne 0{{</latex>}}的情况。
-
-将{{<latex display="false">}}(1+h)^n-1{{</latex>}}作因式分解，
+因此，笛卡尔积中元素点所对应的三维坐标形式即为：
 
 {{<latex display="true">}}
-(1+h)^n-1=h[1+(1+h)+(1+h)^2+\cdots+(1+h)^{n-1}]\tag{1.1}
+(x,y,z)=(\cos(\theta),\sin(\theta),a)
 {{</latex>}}
 
-其中，上式的右侧即是级数
+其中{{<latex display="false">}}a\in A{{</latex>}}。
+
+这个结果表明了情况三的笛卡尔积的几何结构：
+- 直线（z 轴）上的每一个点 a 都对应圆周上的一个点{{<latex display="false">}}(\cos(\theta),\sin(\theta),a){{</latex>}}
+- {{<latex display="false">}}(\cos(\theta),\sin(\theta),a){{</latex>}}最终构成的集合的几何形式即为{{<latex display="false">}}x-y{{</latex>}}平面上的单位圆（简单起见，我们可以把圆心与坐标原点重合）。
+- {{<latex display="false">}}(x,y,z)=(\cos(\theta),\sin(\theta),a){{</latex>}}所构成的几何形状自然就是，以{{<latex display="false">}}x-y{{</latex>}}平面上的单位圆为底，整个{{<latex display="false">}}z{{</latex>}}
+轴为高的一个圆柱面。（圆柱面是一个曲面，它由一族平行的直线构成，每条直线都通过一个固定的曲线（通常是圆形）。圆柱面是二维的，没有“内部”部分，它只包含外部的“面”。）
+
+4. 直线和圆面（圆柱体）
+集合：
+{{<latex display="false">}}A = \mathbb{R}{{</latex>}}，{{<latex display="false">}}B = \mathbb{R}^2{{</latex>}}（二维圆面，如 {{<latex display="false">}}x^2 + y^2 = r^2{{</latex>}}）。
+
+笛卡尔积：
+{{<latex display="true">}}A \times B = \mathbb{R} \times \mathbb{R}^2{{</latex>}}。
+
+几何解释：
+
+直线和圆面的笛卡尔积生成一个圆柱体。直线 {{<latex display="false">}}\mathbb{R}{{</latex>}} 是圆柱体的轴，而二维圆面 {{<latex display="false">}}\mathbb{R}^2{{</latex>}} 在每个点沿轴方向扩展，形成圆柱体的横截面。
+
+实际上，基于上一情况的描述，我们容易知道，这个圆周体上的元素的形式为：
 
 {{<latex display="true">}}
-S=\sum_{k=0}^{n-1}(1+h)^k
+(x,y,z)=(r\cos(\theta),r\sin(\theta),a)
 {{</latex>}}
 
-根据等比数列求和公式，对于等比数列{{<latex display="false">}}\sum_{k=0}^{n-1}r^k{{</latex>}}，其和为
+
+5. 二圆周（圆环面）
+集合：
+{{<latex display="false">}}A = S^1{{</latex>}}，{{<latex display="false">}}B = S^1{{</latex>}}。
+
+笛卡尔积：
+{{<latex display="true">}}A \times B = S^1 \times S^1{{</latex>}}。
+
+几何解释：
+
+两个圆周的笛卡尔积描述了一个圆环面。每个点在这个圆环面上都可以由两个角度来标定，分别属于两个独立的圆周。形象地说，圆环面是两个圆周的组合，类似于圆环的表面。
+
+在这个情况下，由于笛卡尔积的两个坐标都可以使用极坐标来表示，因此我们可以完全使用极坐标系来描述这个笛卡尔积，那么，该笛卡尔积上的每一个元素的形式即为：
 
 {{<latex display="true">}}
-S=\frac{1-r^n}{1-r}
+(r\theta_1,r\theta_2)=(\theta_1,\theta_2)
 {{</latex>}}
 
-代入可得
+让我们来看一些更有趣的事实：
 
+*1.{{<latex display="false">}}S^1 \times S^1{{</latex>}}的拓扑维度：*
+
+{{<latex display="false">}}S^1{{</latex>}}是一个一维流形，它在拓扑意义上需要一个参数（{{<latex display="false">}}|\theta{{</latex>}}）即可描述。因此
+- {{<latex display="false">}}S^1{{</latex>}}的维度是 1 维。
+- {{<latex display="false">}}S^1 \times S^1{{</latex>}}的维度是 2 维。
+
+从流形的角度，它本质上是一个二维流形（常称为环面或圆环面，torus）。这个二维性与所使用的坐标系无关——它是一个固有性质。无论你用哪种坐标（极坐标、角度坐标或其他），该流形本身的拓扑维度始终是 2。
+
+*2.极坐标描述 vs. 笛卡尔坐标描述：*
+
+在描述{{<latex display="false">}}S^1 \times S^1{{</latex>}}时，我们只需要用两组角度来参数化描述：
 {{<latex display="true">}}
-S=\sum_{k=0}^{n-1}(1+h)^k=\frac{(1+h)^n-1}{h}
+(\theta_1,\theta_2)
 {{</latex>}}
+这里用两个角度参数就能完全描述这个流形上的任意一点，因此体现了它的二维本质。
 
-故而（1.1）式成立。
+如果你尝试用“笛卡尔坐标”来描述每个{{<latex display="false">}}S^1{{</latex>}}，你可能会写出
+{{<latex display="true">}}
+S^1=\{(x,y)|x^2+y^2=1^2\}
+{{</latex>}}
+这里的每一个{{<latex display="false">}}S^1{{</latex>}}都嵌入到{{<latex display="false">}}\mathbb{R}^2{{</latex>}}中，因此{{<latex display="false">}}S^1 \times S^1{{</latex>}}被嵌入到{{<latex display="false">}}\mathbb{R}^2 \times \mathbb{R}^2=\mathbb{R}^4{{</latex>}}中，在这种表示下，笛卡尔积元素中的一个点{{<latex display="false">}}(\theta_1,\theta_2){{</latex>}}被映射为：
+{{<latex display="true">}}
+(\cos(\theta_1),\sin(\theta_1),\cos(\theta_2),\sin(\theta_2))\in\mathbb{R}^4
+{{</latex>}}
+虽然这里用了四个坐标数值来描述这个环面上的一个点，但这并不意味着该流形是四维的。它只意味着当你以这种方式嵌入到{<latex display="false">}}\mathbb{R}^4{{</latex>}}时，这个二维流形占据了一个四维空间中的二维子集。换句话说，它是一个嵌入在四维空间中的二维曲面，就像一条线（1维）可以嵌入到平面（2维）中，而不会改变线本身是一维的事实。**坐标系的选择不会改变流形的维数。**
 
-> 等比数列求和公式：
+因此，我们在情况3、4中说讨论的笛卡尔积，实际上都是二维流形嵌入三维空间的实例，它们本身仍然是二维的。
+
+6. 圆周和圆面（圆环体）
+集合：
+{{<latex display="false">}}A = S^1{{</latex>}}，{{<latex display="false">}}B = \mathbb{R}^2{{</latex>}}（二维圆面）。
+
+笛卡尔积：
+{{<latex display="true">}}A \times B = S^1 \times \mathbb{R}^2{{</latex>}}。
+
+几何解释：
+
+圆周和圆面的笛卡尔积描述了一个圆环体。圆周 {{<latex display="false">}}S^1{{</latex>}} 确定了该体的一个边界，而二维圆面 {{<latex display="false">}}\mathbb{R}^2{{</latex>}} 表示内部的自由度。圆环体可以想象为一个在三维空间中的“管状”体，外部表面是由圆周和圆面笛卡尔积形成的。
+
+有了情况5的讨论，我们很容易就可以看出此笛卡尔积的几何意义，本质上，它是一个三维流形，
+
+将 {{<latex display="false">}}S^1{{</latex>}} 理解为一个“环”（圆周），将 {{<latex display="false">}}\mathbb{R}^2{{</latex>}} 理解为一个无限扩展的平面。那么 {{<latex display="false">}}S^1 \times \mathbb{R}^2{{</latex>}} 可以看作是在圆周的每一点上，都“附着”了一个与之关联的二维平面。
+
+换句话说，如果你固定一个 {{<latex display="false">}}\theta \in S^1{{</latex>}}，那么对应的 {{<latex display="false">}}{\theta} \times \mathbb{R}^2{{</latex>}} 就是一个平面。随着 {{<latex display="false">}}\theta{{</latex>}} 沿着圆周变化，这些平面在空间中“环绕”一圈，形成了一个三维的几何结构。
+
+若仅有 {{<latex display="false">}}S^1 \times \mathbb{R}{{</latex>}}，我们会得到一个圆柱面（2维流形：圆周 × 直线）。
+而当直线 {{<latex display="false">}}\mathbb{R}{{</latex>}} 替换为平面 {{<latex display="false">}}\mathbb{R}^2{{</latex>}}，每个圆周点对应的不是一条线，而是一个无限扩展的平面。将这些无数平面按照圆周参数拼接起来，就会得到一个比圆柱面更高维的结构——一个 3维流形，可以形象地称其为“环状分布的无限平面叠加”。
+
+虽然这个形状很难在我们的三维直观中完全可视化，但从拓扑维度与参数化的角度，它是一个3维的流形，其内部结构由一个环状方向（{{<latex display="false">}}S^1{{</latex>}}）和两个线性无界方向（{{<latex display="false">}}\mathbb{R}^2{{</latex>}}）组成。
+
+> **1. 什么是流形？**
+首先，**流形（manifold）**是一个具有局部欧几里得空间结构的几何对象。对于 二维流形 来说，它在局部看起来就像一个二维平面，即在每个点附近都有一个局部坐标系统（通常是二维坐标）。但全局结构可能更复杂，具有弯曲或扭曲的特性。
 >
-> 对于等比数列
+> 例如，地球表面是一个二维流形，它局部看上去是平面的（如地图上的小区域），但全局却是球形的。
+> **2. 二维流形嵌入到三维空间**
+当我们说一个 二维流形 嵌入到 三维空间 中时，实际上是指流形的每个点都通过一个嵌入函数与三维空间中的一个点一一对应。这个嵌入的意义是，流形可以通过一些连续函数与三维空间的点相对应，使得流形在局部看起来和欧几里得平面一致，但可能具有全局的弯曲或曲率。
+> 常见的二维流形嵌入三维空间的例子：
+> 
+- **圆环（圆周）**：圆周是一个二维流形，局部上看起来像平面，但在三维空间中，它形成了一个二维曲面。
+- **球面（如地球表面）**：球面是一个二维流形，在三维空间中它表现为一个弯曲的表面。尽管它是二维流形，但它的形状在三维空间中是显而易见的。
+- **环面（如甜甜圈形状）**：环面是两个圆周的笛卡尔积({{<latex display="false">}}S^1 \times S^1{{</latex>}})，它是一个二维流形，嵌入三维空间时，表现为一个环状的表面。
+> **3. 流形看上去是否是三维的？**
+> 当二维流形嵌入三维空间时，它 **在整体上** 不会显现出三维的结构，因为它只有 **二维**。然而，二维流形的形状和性质可能会因为其弯曲、扭曲等特性而使得它的几何体积在视觉上更为复杂，从而给人一种“近似三维”的感觉。
+例如：
+- 一个 **圆柱面** 是一个二维流形，在三维空间中表现为一个有曲率的表面，尽管它是二维的，但由于其延伸在三维空间中，它看上去很像三维物体。
+- **球面** 是二维流形，但它在三维空间中的嵌入是弯曲的，从几何学上看，它显然是一个弯曲的三维物体，尽管它本质上是二维流形。
 >
-> {{<latex display="true">}}
- S_n=a+ar+ar^2+\cdots+ar^{n-1}
- {{</latex>}}
->
-> 将两侧乘{{<latex display="false">}}r{{</latex>}}得到
->
-> {{<latex display="true">}}
-> rS_n=ar+ar^2+\cdots+ar^{n}
-> {{</latex>}}
->
-> 两式相减得到
->
-> {{<latex display="true">}}
- S_n-rS_n=a-ar^n
- {{</latex>}}
->
-> 整理即得到
->
-> {{<latex display="true">}}
- S_n=\frac{a(1-r^n)}{1-r}
- {{</latex>}}
->
-> 当{{<latex display="false">}}r=1{{</latex>}}时，等比数列即为{{<latex display="false">}}n{{</latex>}}项{{<latex display="false">}}a{{</latex>}}相加，因此结果即为{{<latex display="false">}}S_n=na{{</latex>}}
-
-当 {{<latex display="false">}}h > 0{{</latex>}} 时，在右边方括号内从第二项起都大于 1，因此就有：
-
-{{<latex display="true">}}
-(1 + h)^n - 1 > nh.
-{{</latex>}}
-
-在 {{<latex display="false">}}-1 < h < 0{{</latex>}} 时，在 (1.1) 右边方括号中从第二项起都小于 1，因此方括号中表达式之和小于 {{<latex display="false">}}n{{</latex>}}。由于 {{<latex display="false">}}h < 0{{</latex>}}，因此又得到：
-
-{{<latex display="true">}}
-(1 + h)^n - 1 > nh.
-{{</latex>}}
-
-为了应用的方便，可将 Bernoulli 不等式推广为双参数形式。
-
-令 {{<latex display="false">}}h = \frac{B}{A}{{</latex>}}，其中 {{<latex display="false">}}A > 0{{</latex>}}，{{<latex display="false">}}A + B > 0{{</latex>}}，则条件 {{<latex display="false">}}1 + h > 0{{</latex>}} 成立。将这个 {{<latex display="false">}}h{{</latex>}} 代入 Bernoulli 不等式中，就可以得到下一个不等式。
-
-**命题 1.3.2 (Bernoulli 不等式双参数形式)**  
-设有 {{<latex display="false">}}A > 0{{</latex>}}，{{<latex display="false">}}A + B > 0{{</latex>}}，{{<latex display="false">}}n \in \mathbb{N}_+{{</latex>}}，则成立不等式：
-
-{{<latex display="true">}}
-(A + B)^n \geq A^n + n A^{n-1} B,
-{{</latex>}}
-
-而且当 {{<latex display="false">}}n > 1{{</latex>}} 时等号成立的充分必要条件是 {{<latex display="false">}}B = 0{{</latex>}}。
-
-下面要介绍的是著名的**算术平均值-几何平均值不等式**，也简称为**平均值不等式**。它在两个实数的情况下包含了中学数学的三个基本不等式：
-
-1. {{<latex display="true">}}
-\sqrt{ab} \leq \frac{1}{2}(a+b) \quad (a, b > 0),
-{{</latex>}}
-
-2. {{<latex display="true">}}
-\frac{a}{b} + \frac{b}{a} \geq 2 \quad (a, b \text{ 同号}),
-{{</latex>}}
-
-3. {{<latex display="true">}}
-a^2 + b^2 \geq 2ab \quad (a, b \in \mathbb{R}),
-{{</latex>}}
-
-且仅当 {{<latex display="false">}}a = b{{</latex>}} 时，以上三个不等式中等号成立。
-
-**命题 1.3.3 （算术平均值 - 几何平均值不等式）**  
-设 {{<latex display="false">}}a_1, a_2, \dots, a_n{{</latex>}} 是 {{<latex display="false">}}n{{</latex>}} 个非负实数，则成立不等式
-
-{{<latex display="true">}}
-\frac{a_1 + a_2 + \cdots + a_n}{n} \geq \sqrt[n]{a_1 a_2 \cdots a_n},
-{{</latex>}}
-
-其中等号成立的充分必要条件是 {{<latex display="false">}}a_1 = a_2 = \cdots = a_n{{</latex>}}。
-
-**证 1**  
-一开始可以看出，如果在 {{<latex display="false">}}a_1, a_2, \dots, a_n{{</latex>}} 中出现 0，则不等式已经成立。  
-
-又可以看出，这时等号成立的充分必要条件是其中每个数为 0。  
-因此以下只要对 {{<latex display="false">}}a_1, a_2, \dots, a_n{{</latex>}} 为 {{<latex display="false">}}n{{</latex>}} 个正数的情况来进行证明就够了。
-
-应用数学归纳法。在 {{<latex display="false">}}n=0{{</latex>}} 时结论已经成立。现设 {{<latex display="false">}}n=k{{</latex>}} 时不等式已成立，然后讨论 {{<latex display="false">}}n=k+1{{</latex>}}。将 {{<latex display="false">}}k+1{{</latex>}} 个正数 {{<latex display="false">}}a_1, a_2, \dots, a_{k+1}{{</latex>}} 的算术平均值分解如下：
-
-{{<latex display="true">}}
-\frac{a_1 + a_2 + \cdots + a_{k+1}}{k+1} = \frac{a_1 + a_2 + \cdots + a_k}{k} + \frac{k a_{k+1} - (a_1 + a_2 + \cdots + a_k)}{k(k+1)}. \tag{1.2}
-{{</latex>}}
-
-解释下上式的分解动机：首先我们来分析各项的含义：
-
-1. {{<latex display="false">}}\frac{a_1 + a_2 + \cdots + a_{k+1}}{k+1}{{</latex>}}代表 k+1 项的平均数。
-2. {{<latex display="false">}}\frac{a_1 + a_2 + \cdots + a_{k}}{k}{{</latex>}}代表前 k 项的平均数。
-
-观察两平均数的差值，我们可以得到
-
-{{<latex display="true">}}
-\begin{align}
-a_{k+1}^{-}-a_{k}^{-}&=\frac{a_{1}+a_{2}+\cdots+a_{k}+a_{k+1}}{k+1}-\frac{a_{1}+a_{2}+\cdots+a_{k}}{k}\\
-&=\frac{ka_{k+1}-(a_1+a_2+\cdots+a_k)}{k(k+1)}
-\end{align}
-{{</latex>}}
-
-很显然，它就是（1.2）式中的右侧第二项。因此（1.2）式的分解动机就非常明显了，即：{{<latex display="false">}}a_{k+1}^{-}= a_{k}^{-}+(a_{k+1}^{-}-a_{k}^{-}){{</latex>}}
-
-然后将上述式右边的两项分别记为 {{<latex display="false">}}A{{</latex>}} 和 {{<latex display="false">}}B{{</latex>}}。这时条件 {{<latex display="false">}}A > 0{{</latex>}}，{{<latex display="false">}}A + B > 0{{</latex>}} 满足，因此就可以应用 Bernoulli 不等式中双参形式作以下计算：
-
-{{<latex display="true">}}
-\left( \frac{a_1 + a_2 + \cdots + a_k + a_{k+1}}{k+1} \right)^{k+1} 
-= (A + B)^{k+1} \geq A^{k+1} + (k+1) A^k B 
-= A^k (A + (k+1) B) 
-= \left( \frac{a_1 + a_2 + \cdots + a_k}{k} \right)^k \cdot a_{k+1} 
-\geq a_1 a_2 \cdots a_k a_{k+1}.
-{{</latex>}}
-
+> 因此，二维流形在三维空间中的“外观”并不意味着它变成了三维物体，而是它依然是二维的，但是由于其在空间中是弯曲的，或者有拓扑结构，它会在视觉上显得有一定的复杂性。我们可以通过其 **局部坐标系** 和 **全局形状** 来区分它是二维的。
