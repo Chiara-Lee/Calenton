@@ -34,7 +34,7 @@ toc: true
 
 笛卡尔积：
 
-{{<latex display="true">}}A \times B = \mathbb{R}^2{{</latex>}}。
+{{<latex display="true">}}A \times B = \mathbb{R}^2{{</latex>}}
 
 几何解释：
 
@@ -46,13 +46,13 @@ toc: true
 
 笛卡尔积：
 
-{{<latex display="true">}}A \times B = \mathbb{R} \times S^1{{</latex>}}。
+{{<latex display="true">}}A \times B = \mathbb{R} \times S^1{{</latex>}}
 
 几何解释：
 
 直线和圆周的笛卡尔积在三维空间中形成了一个圆柱面。圆周 {{<latex display="false">}}S^1{{</latex>}} 提供了一个循环的二维几何结构，直线 {{<latex display="false">}}\mathbb{R}{{</latex>}} 沿该圆周的每个点延伸，因此形成了一个圆柱面。圆柱面每一“层”都是一个圆周。
 
-当我们将圆周{{<latex display="false">}}S^1{{</latex>}}中的点用极坐标表示时，通常会使用坐标对{{<latex display="false">}}(r\,theta){{</latex>}}，由于{{<latex display="false">}}S^1{{</latex>}}形成的圆周是一个单位圆，因此{{<latex display="false">}}r=1{{</latex>}}。
+当我们将圆周{{<latex display="false">}}S^1{{</latex>}}中的点用极坐标表示时，通常会使用坐标对{{<latex display="false">}}(r,\theta){{</latex>}}，由于{{<latex display="false">}}S^1{{</latex>}}形成的圆周是一个单位圆，因此{{<latex display="false">}}r=1{{</latex>}}。
 
 - {{<latex display="false">}}A=\mathbb{R}{{</latex>}}表示一条直线（即 x 轴）。
 - {{<latex display="false">}}B=S^1{{</latex>}}表示单位圆周，圆周上的任意一个点的极坐标表示为{{<latex display="false">}}(r,\theta)=(1,\theta){{</latex>}}
@@ -87,7 +87,7 @@ toc: true
 
 笛卡尔积：
 
-{{<latex display="true">}}A \times B = \mathbb{R} \times \mathbb{R}^2{{</latex>}}。
+{{<latex display="true">}}A \times B = \mathbb{R} \times \mathbb{R}^2{{</latex>}}
 
 几何解释：
 
@@ -106,7 +106,7 @@ toc: true
 
 笛卡尔积：
 
-{{<latex display="true">}}A \times B = S^1 \times S^1{{</latex>}}。
+{{<latex display="true">}}A \times B = S^1 \times S^1{{</latex>}}
 
 几何解释：
 
@@ -160,7 +160,7 @@ S^1=\{(x,y)|x^2+y^2=1^2\}
 
 笛卡尔积：
 
-{{<latex display="true">}}A \times B = S^1 \times \mathbb{R}^2{{</latex>}}。
+{{<latex display="true">}}A \times B = S^1 \times \mathbb{R}^2{{</latex>}}
 
 几何解释：
 
@@ -181,6 +181,7 @@ S^1=\{(x,y)|x^2+y^2=1^2\}
 首先，**流形（manifold）**是一个具有局部欧几里得空间结构的几何对象。对于 二维流形 来说，它在局部看起来就像一个二维平面，即在每个点附近都有一个局部坐标系统（通常是二维坐标）。但全局结构可能更复杂，具有弯曲或扭曲的特性。
 >
 > 例如，地球表面是一个二维流形，它局部看上去是平面的（如地图上的小区域），但全局却是球形的。
+>
 > **2. 二维流形嵌入到三维空间**
 当我们说一个 二维流形 嵌入到 三维空间 中时，实际上是指流形的每个点都通过一个嵌入函数与三维空间中的一个点一一对应。这个嵌入的意义是，流形可以通过一些连续函数与三维空间的点相对应，使得流形在局部看起来和欧几里得平面一致，但可能具有全局的弯曲或曲率。
 > 常见的二维流形嵌入三维空间的例子：
@@ -191,7 +192,7 @@ S^1=\{(x,y)|x^2+y^2=1^2\}
 > **3. 流形看上去是否是三维的？**
 > 当二维流形嵌入三维空间时，它 **在整体上** 不会显现出三维的结构，因为它只有 **二维**。然而，二维流形的形状和性质可能会因为其弯曲、扭曲等特性而使得它的几何体积在视觉上更为复杂，从而给人一种“近似三维”的感觉。
 例如：
-- 一个 **圆柱面** 是一个二维流形，在三维空间中表现为一个有曲率的表面，尽管它是二维的，但由于其延伸在三维空间中，它看上去很像三维物体。
+- 一个 **圆柱面** 是一个二维流形，在三维空间中表现为一个有曲率的表面，尽管它是二维的，但由于其延伸在三维空间中，它看上去很像三维物体。(实际上，它的对应物体就是一张无限薄的，位于三维空间的，弯曲的矩形纸张。)
 - **球面** 是二维流形，但它在三维空间中的嵌入是弯曲的，从几何学上看，它显然是一个弯曲的三维物体，尽管它本质上是二维流形。
 >
 > 因此，二维流形在三维空间中的“外观”并不意味着它变成了三维物体，而是它依然是二维的，但是由于其在空间中是弯曲的，或者有拓扑结构，它会在视觉上显得有一定的复杂性。我们可以通过其 **局部坐标系** 和 **全局形状** 来区分它是二维的。
