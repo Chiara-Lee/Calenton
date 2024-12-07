@@ -191,9 +191,9 @@ toc: true
 假设当{{<latex display="false">}}n=n{{</latex>}}时结论成立，也就是说，我们有{{<latex display="false">}}0\le r<q{{</latex>}}和{{<latex display="false">}}n=mq+r{{</latex>}}，那么
 
 {{<latex display="true">}}(n++)=(mq+r)++=mq+(r++){{</latex>}}
-{{<latex display="true">}}r<q\rightarrow (r++)\le q\rightarrow ((r++)<q)\vee((r++)=q){{</latex>}}
+{{<latex display="true">}}r< q\Rightarrow (r++)\le q\rightarrow ((r++)<q)\vee((r++)=q){{</latex>}}
 
-其中，{{<latex display="false">}}r<q\rightarrow (r++)\le q{{</latex>}}是因为{{<latex display="false">}}r,q{{</latex>}}都是自然数，因此，若{{<latex display="false">}}r<q{{</latex>}}则{{<latex display="false">}}(r++){{</latex>}}不可能大于{{<latex display="false">}}q{{</latex>}}。
+其中，{{<latex display="false">}}r< q\Rightarrow (r++)\le q{{</latex>}}是因为{{<latex display="false">}}r,q{{</latex>}}都是自然数，因此，若{{<latex display="false">}}r<q{{</latex>}}则{{<latex display="false">}}(r++){{</latex>}}不可能大于{{<latex display="false">}}q{{</latex>}}。
 
 若情况一成立，那么结论就成立。若情况二成立，那么
 
