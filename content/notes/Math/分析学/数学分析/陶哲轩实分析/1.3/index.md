@@ -72,7 +72,7 @@ toc: true
 
 **引理 2.3.3（正自然数没有零因子）**  令 n 和 m 表示任意两个自然数，那么{{<latex display="false">}}n\times m=0{{</latex>}}当且仅当{{<latex display="false">}}n{{</latex>}}和{{<latex display="false">}}m{{</latex>}}中至少有一个为{{<latex display="false">}}0{{</latex>}}.
 
-**证明：** 设{{<latex display="false">}}n、m{{</latex>}}均为正自然数，并且满足{{<latex display="false">}}n=c++、m=d++{{</latex>}}，其中{{<latex display="false">}}c、d{{</latex>}}均为自然数。
+**证明：**  设{{<latex display="false">}}n、m{{</latex>}}均为正自然数，并且满足{{<latex display="false">}}n=c++、m=d++{{</latex>}}，其中{{<latex display="false">}}c、d{{</latex>}}均为自然数。
 
 {{<latex display="true">}}
 \begin{aligned}
@@ -96,7 +96,7 @@ toc: true
 
 均成立
 
-**证明：**由于乘法是可交换的，因此只需要证明第一个等式{{<latex display="false">}}a(b+c)=ab+ac{{</latex>}}成立即可。
+**证明：**  由于乘法是可交换的，因此只需要证明第一个等式{{<latex display="false">}}a(b+c)=ab+ac{{</latex>}}成立即可。
 
 对{{<latex display="false">}}c{{</latex>}}进行数学归纳。当{{<latex display="false">}}c=0{{</latex>}}时，
 
@@ -149,7 +149,7 @@ toc: true
 
 {{<latex display="true">}}ac<bc{{</latex>}}
 
-**证明：**因为{{<latex display="false">}}a<b{{</latex>}}，因此存在某个正自然数{{<latex display="false">}}d{{</latex>}}使得
+**证明：**  因为{{<latex display="false">}}a<b{{</latex>}}，因此存在某个正自然数{{<latex display="false">}}d{{</latex>}}使得
 
 {{<latex display="true">}}b=a+d{{</latex>}}
 
@@ -165,9 +165,9 @@ toc: true
 
 {{<latex display="true">}}a=b{{</latex>}}
 
-**证明：**利用序的三歧性（命题 2.2.13），我们有如下三种情况：
+**证明：**  利用序的三歧性（命题 2.2.13），我们有如下三种情况：
 
-{{<latex display="true">}}a<b,a=b,a>b{{</latex>}}
+{{<latex display="true">}}a< b,a=b,a >b{{</latex>}}
 
 若{{<latex display="false">}}a<b{{</latex>}}，那么{{<latex display="false">}}ac<bc{{</latex>}}与题述条件相悖。{{<latex display="false">}}a>b{{</latex>}}情况相同，因此只有{{<latex display="false">}}a=b{{</latex>}}是对的。
 
@@ -210,7 +210,7 @@ toc: true
 
 **例 2.3.12**  
 于是譬如  
-{{<latex display="true">}} x^1 = x^0 \times x = 1 \times x = x {{</latex>}}，  
-{{<latex display="true">}} x^2 = x^1 \times x = x \times x \{{</latex>}}，  
-{{<latex display="true">}} x^3 = x^2 \times x = x \times x \times x {{</latex>}}，  
+{{<latex display="true">}} x^1 = x^0 \times x = 1 \times x = x {{</latex>}}  
+{{<latex display="true">}} x^2 = x^1 \times x = x \times x \{{</latex>}}  
+{{<latex display="true">}} x^3 = x^2 \times x = x \times x \times x {{</latex>}}  
 以此类推。根据归纳法可知，这种递归的定义把所有自然数{{<latex display="false">}} n {{</latex>}}所对应的{{<latex display="false">}} x^n {{</latex>}}都定义了。
