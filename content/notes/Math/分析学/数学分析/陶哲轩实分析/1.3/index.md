@@ -182,7 +182,7 @@ toc: true
 **证明：**
 
 固定{{<latex display="false">}}q{{</latex>}}，对{{<latex display="false">}}n{{</latex>}}进行数学归纳。
-对{{<latex display="false">}}n=0{{</latex>}时，
+对{{<latex display="false">}}n=0{{</latex>}}时，
 
 {{<latex display="true">}}0=0\times q+0{{</latex>}}}
 
