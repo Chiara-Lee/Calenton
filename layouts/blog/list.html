@@ -43,8 +43,8 @@
                                 
                                 <!-- 递归调用子页面 -->
                                 {{ range .Pages }}
-                                    {{ .Scratch.Set "parentTotalReadingTime" .Scratch.Get "currentTotalReadingTime" }}
-                                    {{ .Scratch.Set "parentTotalWordCount" .Scratch.Get "currentTotalWordCount" }}
+                                    {{ .Scratch.Set "parentTotalReadingTime" (.Scratch.Get "currentTotalReadingTime") }}
+                                    {{ .Scratch.Set "parentTotalWordCount" (.Scratch.Get "currentTotalWordCount") }}
                                 {{ end }}
                             {{- end }}
                         {{- end }}
