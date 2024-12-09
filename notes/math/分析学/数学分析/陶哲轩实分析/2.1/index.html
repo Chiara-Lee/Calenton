@@ -1,7 +1,157 @@
-<!doctype html><html lang=zh><head><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel=stylesheet><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>3.1 基础知识</title>
+<!doctype html><html lang=zh><head><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel=stylesheet><meta charset=UTF-8><meta name=description content="定义 3.1.1（非正式的）（集合）
+我们把 集合 A 定义为任意的一堆没有次序的对象。例如， \{3,8,5,2\} 是一个集合。如果 x 是这堆对象中的一个，那么我们称 x 是 A 中的一个元素 ，记作 x\in A ，否则，记作 x\notin A 。
+这个定义相当直观，但是它无法回答诸如下面这些问题：什么样的一堆对象可以被看作集合？什么样的集合与另外的集合相等？如何定义集合上的运算，比如并集、交集等？同时，我们还没有给出关于集合或者集合中元素的公理。本节剩余内容的主要目的就是给出这些公理并定义集合上的运算。
+首先阐明一个观点：我们把集合本身看作一类对象。
+公理 3.1（集合是对象） 如果 A 是一个集合，那么 A 也是一个对象。特别地，给定两个集合 A 和 B ，问 A 是不是 B 中的元素是有意义的。
+到目前为止，总的来说，在数学里学到的所有对象当中，有些对象恰好是集合。而且如果 x 是一个对象， A 是一个集合，那么 x \in A 要么为真，要么为假。（如果 A 不是集合，则我们认为 x \in A 是无定义的。例如， 3 \in 4 既非真也非假，该命题是无意义的，因为 4 不是一个集合。）
+接下来我们定义相等的概念：什么情况下可以认为两个集合是相等的？我们认为一个集合中元素的次序并不重要，因此我们把集合 \{3, 8, 5, 2\} 与 \{2, 3, 5, 8\} 看作同一个集合。另外， \{3, 8, 5, 2\} 与 \{3, 8, 5, 2, 1\} 是两个不同的集合，这是因为后者中的一个元素不包含在前者里，即元素 1 。基于类似的原因， \{3, 8, 5, 2\} 与 \{3, 8, 5\} 也是不同的集合。我们把这部分内容作为一个定义。"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>3.1 基础知识</title>
 <script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
 Caleton Academy
-</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/computer-science-and-technology/>Cst</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>3.1 基础知识</h1><h2>Table of Contents</h2><nav id=TableOfContents></nav><div class=content-wrapper><div class=content></div><aside class=sidebar><div class=card><h2>摘要</h2><p></p></div><div class=card><h2>阅读时长</h2><p>0 min</p></div><div class=card><h2>总字数</h2><p>≈ 0</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
+</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/computer-science-and-technology/>Cst</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>3.1 基础知识</h1><h2>Table of Contents</h2><nav id=TableOfContents></nav><div class=content-wrapper><div class=content><p><strong>定义 3.1.1（非正式的）</strong>（集合）</p><p>我们把 <strong>集合 A</strong> 定义为任意的一堆没有次序的对象。例如，
+<span class=fallback-latex>\{3,8,5,2\}
+</span>是一个集合。如果
+<span class=fallback-latex>x
+</span>是这堆对象中的一个，那么我们称 <strong><span class=fallback-latex>x
+</span>是
+<span class=fallback-latex>A
+</span>中的一个元素</strong> ，记作
+<span class=fallback-latex>x\in A
+</span>，否则，记作
+<span class=fallback-latex>x\notin A
+</span>。</p><p>这个定义相当直观，但是它无法回答诸如下面这些问题：什么样的一堆对象可以被看作集合？什么样的集合与另外的集合相等？如何定义集合上的运算，比如并集、交集等？同时，我们还没有给出关于集合或者集合中元素的公理。本节剩余内容的主要目的就是给出这些公理并定义集合上的运算。</p><p>首先阐明一个观点：我们把集合本身看作一类对象。</p><p><strong>公理 3.1（集合是对象）</strong> 如果
+<span class=fallback-latex>A
+</span>是一个集合，那么
+<span class=fallback-latex>A
+</span>也是一个对象。特别地，给定两个集合
+<span class=fallback-latex>A
+</span>和
+<span class=fallback-latex>B
+</span>，问
+<span class=fallback-latex>A
+</span>是不是
+<span class=fallback-latex>B
+</span>中的元素是有意义的。</p><p>到目前为止，总的来说，在数学里学到的所有对象当中，有些对象恰好是集合。而且如果
+<span class=fallback-latex>x
+</span>是一个对象，
+<span class=fallback-latex>A
+</span>是一个集合，那么
+<span class=fallback-latex>x \in A
+</span>要么为真，要么为假。（如果
+<span class=fallback-latex>A
+</span>不是集合，则我们认为
+<span class=fallback-latex>x \in A
+</span>是无定义的。例如，
+<span class=fallback-latex>3 \in 4
+</span>既非真也非假，该命题是无意义的，因为
+<span class=fallback-latex>4
+</span>不是一个集合。）</p><p>接下来我们定义相等的概念：什么情况下可以认为两个集合是相等的？我们认为一个集合中元素的次序并不重要，因此我们把集合
+<span class=fallback-latex>\{3, 8, 5, 2\}
+</span>与
+<span class=fallback-latex>\{2, 3, 5, 8\}
+</span>看作同一个集合。另外，
+<span class=fallback-latex>\{3, 8, 5, 2\}
+</span>与
+<span class=fallback-latex>\{3, 8, 5, 2, 1\}
+</span>是两个不同的集合，这是因为后者中的一个元素不包含在前者里，即元素
+<span class=fallback-latex>1
+</span>。基于类似的原因，
+<span class=fallback-latex>\{3, 8, 5, 2\}
+</span>与
+<span class=fallback-latex>\{3, 8, 5\}
+</span>也是不同的集合。我们把这部分内容作为一个定义。</p><p><strong>定义 3.1.4（集合的相等）</strong> 称两个集合
+<span class=fallback-latex>A
+</span>和
+<span class=fallback-latex>B
+</span>是相等的，即
+<span class=fallback-latex>A = B
+</span>，当且仅当
+<span class=fallback-latex>A
+</span>中的每个元素都是
+<span class=fallback-latex>B
+</span>中的元素并且
+<span class=fallback-latex>B
+</span>中的每一个元素也都是
+<span class=fallback-latex>A
+</span>中的元素。也就是说，
+<span class=fallback-latex>A = B
+</span>，当且仅当
+<span class=fallback-latex>A
+</span>中的任一元素
+<span class=fallback-latex>x
+</span>属于
+<span class=fallback-latex>B
+</span>，同时
+<span class=fallback-latex>B
+</span>中的任一元素
+<span class=fallback-latex>y
+</span>也属于
+<span class=fallback-latex>A
+</span>，这记为
+<span class=fallback-latex>(\forall x \in A, x \in B),(\forall y \in B, y \in A)</span></p><p>相等是如何定义的取决于所考察对象的类型，而且从某种程度上来说，这只不过是一个关于下定义的问题而已。然而，从逻辑学的角度来说，我们要求相等遵守下面四条 <strong>相等公理</strong> ：</p><ul><li><strong>（自反公理）</strong> 给定任意的对象
+<span class=fallback-latex>x
+</span>，我们有
+<span class=fallback-latex>x = x
+</span>。</li><li><strong>（对称公理）</strong> 给定任意两个同类型的对象
+<span class=fallback-latex>x
+</span>和
+<span class=fallback-latex>y
+</span>，如果
+<span class=fallback-latex>x = y
+</span>，那么
+<span class=fallback-latex>y = x
+</span>。</li><li><strong>（传递公理）</strong> 给定任意三个同类型的对象
+<span class=fallback-latex>x
+</span>、
+<span class=fallback-latex>y
+</span>和
+<span class=fallback-latex>z
+</span>，若
+<span class=fallback-latex>x = y
+</span>且
+<span class=fallback-latex>y = z
+</span>，则
+<span class=fallback-latex>x = z
+</span>。</li><li><strong>（替换公理）</strong> 给定任意两个同类型的对象
+<span class=fallback-latex>x
+</span>和
+<span class=fallback-latex>y
+</span>，如果
+<span class=fallback-latex>x = y
+</span>，那么对任意一个函数或者运算
+<span class=fallback-latex>f
+</span>都有
+<span class=fallback-latex>f(x) = f(y)
+</span>。类似地，对任意一个关于
+<span class=fallback-latex>x
+</span>的性质
+<span class=fallback-latex>P(x)
+</span>，如果
+<span class=fallback-latex>x = y
+</span>，那么
+<span class=fallback-latex>P(x)
+</span>和
+<span class=fallback-latex>P(y)
+</span>就是等价的命题。</li></ul><p>容易验证，定义3.1.4满足自反、对称、传递三个性质。</p><p><strong>自反性（Reflexive）:</strong>
+<span class=fallback-latex>(\forall x \in A, x \in A) \Rightarrow A = A</span></p><p><strong>对称性（Symmetric）:</strong>
+<span class=fallback-latex>(A = B) \Rightarrow (\forall x \in A, x \in B) \land (\forall x \in B, x \in A) \Rightarrow B = A</span></p><p><strong>传递性（Transitive）:</strong>
+<span class=fallback-latex>(A = B) \land (B = C) \Rightarrow (\forall x \in A, x \in B) \land (\forall x \in B, x \in C) \Rightarrow (\forall x \in A, x \in C)
+</span><span class=fallback-latex>(A = B) \land (B = C) \Rightarrow (\forall x \in B, x \in A) \land (\forall x \in C, x \in B) \Rightarrow (\forall x \in C, x \in A)
+</span><span class=fallback-latex>\text{以上两种情况同时成立，这意味着 } A = C</span></p><p>根据定义 3.1.4 观察可知，如果
+<span class=fallback-latex>x \in A
+</span>并且
+<span class=fallback-latex>A = B
+</span>，那么
+<span class=fallback-latex>x \in B
+</span>。于是 “是……的元素” 这种
+<span class=fallback-latex>\in
+</span>关系遵守替换公理。正因如此，只要我们能够把定义在集合上的新运算仅用
+<span class=fallback-latex>\in
+</span>的语言来描述，这个新运算就会遵守替换公理。例如，对于本节中剩下的定义，情况就是这样。（另外，在良好的定义方式中，我们不能使用集合中 “第一个” 或者 “最后一个” 元素这样的概念，因为这将违背替换公理。例如，虽然集合
+<span class=fallback-latex>\{1, 2, 3, 4, 5\}
+</span>与
+<span class=fallback-latex>\{3, 4, 2, 1, 5\}
+</span>表示同一个集合，但是它们的第一个元素是不一样的。）</p></div><aside class=sidebar><div class=card><h2>摘要</h2><p>定义 3.1.1（非正式的）（集合）
+我们把 集合 A 定义为任意的一堆没有次序的对象。例如， \{3,8,5,2\} 是一个集合。如果 x 是这堆对象中的一个，那么我们称 x 是 A …</p></div><div class=card><h2>阅读时长</h2><p>2 min</p></div><div class=card><h2>总字数</h2><p>≈ 355</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
 数学分析</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/1.3/><h2>2.3 乘法</h2><article>在上一节中，我们已经证明了所知道的所有关于加法和序的基本事实。为了节省篇幅以及避免赘述那些显然的事情，接下来我们将允许使用所熟悉的关于加法和序的代数法则，而不加进一步的说明。于是我们可以写出 a+b+c=c+b+a 这样的内容，不需要进一步解释说明。现在我们引入乘法。正如加法是重复的增量运算一样，乘法是重复的加法运算。
 定义 2.3.1（自然数的乘法）
 令 m 表示任意一个自然数，
