@@ -49,8 +49,7 @@
                         <span><i class="icon-time"></i> 预计阅读总时长{{ .Scratch.Get "totalReadingTime_parent" }}分钟</span>
                         <span><i class="icon-text-width"></i> 总字数约{{ .Scratch.Get "totalWordCount_parent" }}字</span>                        
                     {{- end }}
-                </div>
-                               
+                </div>        
                 <p>{{ .Summary | plainify | truncate 100 "..." }}</p>
                 <a href="{{ .Permalink }}" class="read-more">→ 进来看看</a>
                 <div class="tags">
