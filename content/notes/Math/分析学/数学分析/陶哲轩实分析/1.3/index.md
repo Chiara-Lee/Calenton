@@ -1,7 +1,7 @@
 ---
 title: 2.3  乘法 
-date: 2024-12-7
-lastmod: 2024-12-7
+date: 2024-12-07
+lastmod: 2024-12-07
 tags: [数学分析]
 toc: true
 ---
