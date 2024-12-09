@@ -44,9 +44,11 @@
                         
                                     {{- range .Pages }}
                                         {{- if .IsPage }}
+                                            <!-- 累加字数和阅读时长 -->
                                             {{ $subPageTotalReadingTime = add $subPageTotalReadingTime .ReadingTime }}
                                             {{ $subPageTotalWordCount = add $subPageTotalWordCount .WordCount }}
                                         {{- else }}
+                                            <!-- 如果是更深层次的列表页，继续递归计算 -->
                                             {{ $nestedReadingTime := .Params.totalReadingTime | default 0 }}
                                             {{ $nestedWordCount := .Params.totalWordCount | default 0 }}
                                             {{ $subPageTotalReadingTime = add $subPageTotalReadingTime $nestedReadingTime }}
@@ -68,7 +70,7 @@
                         <!-- 页面显示统计结果 -->
                         <span><i class="icon-time"></i> 预计阅读总时长 {{ .Scratch.Get "totalReadingTime_parent" }} 分钟</span>
                         <span><i class="icon-text-width"></i> 总字数约 {{ .Scratch.Get "totalWordCount_parent" }} 字</span>
-                                                  
+                                                           
                     {{- end }}
                 </div>        
                 <p>{{ .Summary | plainify | truncate 100 "..." }}</p>
