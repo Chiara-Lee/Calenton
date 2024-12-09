@@ -11,25 +11,46 @@
             {{ range $paginator.Pages }}
             <div class="post-card"> <!-- 确保每篇文章都有独立的 .post-card -->
                 <h2>{{ .Title }}</h2>
+
                 <div class="post-meta">
                     <span><i class="icon-calendar"></i> 创建于{{ .Date.Format "2006-01-02" }}</span>
                     <span><i class="icon-edit"></i> 更新于{{ .Lastmod.Format "2006年01月02日" }}</span>
+                
                     {{- if .IsPage }}
-                        <!-- 用.Ispage判断是否为单一页面，如果是单一页面，显示当前文章的字数和阅读时长 -->
+                        <!-- 如果是单一页面，显示当前文章的字数和阅读时长 -->
                         <span><i class="icon-time"></i> 预计阅读{{ .ReadingTime }}分钟</span>
                         <span><i class="icon-text-width"></i> 全文约{{ .WordCount }}字</span>
                     {{- else }}
                         <!-- 如果是列表页面，统计所有子页面的字数和阅读时长 -->
                         {{ $totalReadingTime := 0 }}
                         {{ $totalWordCount := 0 }}
+                        
                         {{- range .Pages }}
-                            {{ $totalReadingTime = add $totalReadingTime .ReadingTime }}
-                            {{ $totalWordCount = add $totalWordCount .WordCount }}
+                            {{- if .IsPage }}
+                                <!-- 如果子页面是一个单页面，直接累加字数和阅读时长 -->
+                                {{ $currentPageReadingTime := .ReadingTime }}
+                                {{ $currentPageWordCount := .WordCount }}
+                                {{ $totalReadingTime = add $totalReadingTime $currentPageReadingTime }}
+                                {{ $totalWordCount = add $totalWordCount $currentPageWordCount }}
+                            {{- else }}
+                                <!-- 如果子页面是一个列表页面，递归调用来统计该列表页的字数和阅读时长 -->
+                                {{ $subPageTotalReadingTime := .Params.totalReadingTime | default 0 }}
+                                {{ $subPageTotalWordCount := .Params.totalWordCount | default 0 }}
+                                {{ $totalReadingTime = add $totalReadingTime $subPageTotalReadingTime }}
+                                {{ $totalWordCount = add $totalWordCount $subPageTotalWordCount }}
+                            {{- end }}
                         {{- end }}
-                        <span><i class="icon-time"></i> 预计阅读总时长{{ $totalReadingTime }}分钟</span>
-                        <span><i class="icon-text-width"></i> 总字数约{{ $totalWordCount }}字</span>
+                        <!-- totalReadingTime 和 totalWordCount 在以上代码中的含义是一致的，它们始终意味着 post 的总阅读时长和总字数，因此变量名称应当保持一致-->                        
+                        <!-- 在列表页面的 front matter 中动态设置 totalReadingTime 和 totalWordCount -->
+                        {{ .Scratch.Set "totalReadingTime" $totalReadingTime }}
+                        {{ .Scratch.Set "totalWordCount" $totalWordCount }}
+                        
+                        <!-- 之后用 .Scratch.Get 提取数据，以在页面中访问这些值 -->
+                        <span><i class="icon-time"></i> 预计阅读总时长{{ .Scratch.Get "totalReadingTime" }}分钟</span>
+                        <span><i class="icon-text-width"></i> 总字数约{{ .Scratch.Get "totalWordCount" }}字</span>                        
                     {{- end }}
-                </div>                
+                </div>
+                               
                 <p>{{ .Summary | plainify | truncate 100 "..." }}</p>
                 <a href="{{ .Permalink }}" class="read-more">→ 进来看看</a>
                 <div class="tags">
