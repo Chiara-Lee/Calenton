@@ -27,27 +27,48 @@
                         
                         {{- range .Pages }}
                             {{- if .IsPage }}
-                                <!-- 如果子页面是一个单页面，直接累加字数和阅读时长 -->
+                                <!-- 如果是单页面，直接获取字数和阅读时长 -->
                                 {{ $currentPageReadingTime := .ReadingTime }}
                                 {{ $currentPageWordCount := .WordCount }}
                                 {{ $totalReadingTime = add $totalReadingTime $currentPageReadingTime }}
                                 {{ $totalWordCount = add $totalWordCount $currentPageWordCount }}
                             {{- else }}
-                                <!-- 如果子页面是一个列表页面，递归调用来统计该列表页的字数和阅读时长 -->
+                                <!-- 如果是列表页面，尝试从其 front matter 获取统计值 -->
                                 {{ $subPageTotalReadingTime := .Params.totalReadingTime | default 0 }}
                                 {{ $subPageTotalWordCount := .Params.totalWordCount | default 0 }}
+                        
+                                <!-- 如果列表页没有统计值，递归遍历其子页面 -->
+                                {{ if eq $subPageTotalReadingTime 0 }}
+                                    {{ $subPageTotalReadingTime = 0 }}
+                                    {{ $subPageTotalWordCount = 0 }}
+                        
+                                    {{- range .Pages }}
+                                        {{- if .IsPage }}
+                                            {{ $subPageTotalReadingTime = add $subPageTotalReadingTime .ReadingTime }}
+                                            {{ $subPageTotalWordCount = add $subPageTotalWordCount .WordCount }}
+                                        {{- else }}
+                                            {{ $nestedReadingTime := .Params.totalReadingTime | default 0 }}
+                                            {{ $nestedWordCount := .Params.totalWordCount | default 0 }}
+                                            {{ $subPageTotalReadingTime = add $subPageTotalReadingTime $nestedReadingTime }}
+                                            {{ $subPageTotalWordCount = add $subPageTotalWordCount $nestedWordCount }}
+                                        {{- end }}
+                                    {{- end }}
+                                {{ end }}
+                        
+                                <!-- 将子页面的统计值累加到当前页面 -->
                                 {{ $totalReadingTime = add $totalReadingTime $subPageTotalReadingTime }}
                                 {{ $totalWordCount = add $totalWordCount $subPageTotalWordCount }}
                             {{- end }}
                         {{- end }}
-                        <!-- totalReadingTime 和 totalWordCount 在以上代码中的含义是一致的，它们始终意味着 post 的总阅读时长和总字数，因此变量名称应当保持一致-->                        
-                        <!-- 在列表页面的 front matter 中动态设置 totalReadingTime 和 totalWordCount -->
+                        
+                        <!-- 将统计结果存储到当前页面的 Scratch 中 -->
                         {{ .Scratch.Set "totalReadingTime_parent" $totalReadingTime }}
                         {{ .Scratch.Set "totalWordCount_parent" $totalWordCount }}
                         
-                        <!-- 之后用 .Scratch.Get 提取数据，以在页面中访问这些值 -->
-                        <span><i class="icon-time"></i> 预计阅读总时长{{ .Scratch.Get "totalReadingTime_parent" }}分钟</span>
-                        <span><i class="icon-text-width"></i> 总字数约{{ .Scratch.Get "totalWordCount_parent" }}字</span>                        
+                        <!-- 页面显示统计结果 -->
+                        <span><i class="icon-time"></i> 预计阅读总时长 {{ .Scratch.Get "totalReadingTime_parent" }} 分钟</span>
+                        <span><i class="icon-text-width"></i> 总字数约 {{ .Scratch.Get "totalWordCount_parent" }} 字</span>
+                                              
                     {{- end }}
                 </div>        
                 <p>{{ .Summary | plainify | truncate 100 "..." }}</p>
