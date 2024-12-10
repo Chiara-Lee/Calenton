@@ -3,7 +3,10 @@ title:  1.3.2 泛函导数的操作定义
 date: 2024-11-27
 lastmod: 2024-11-27
 tags: [经典力学]
+toc: true
 ---
+
+##  1.3.2 泛函导数的操作定义
 
 根据上面的讨论，泛函导数归结于计算泛函{{<latex display="false">}}S[f]{{</latex>}}的变分。
 
@@ -185,3 +188,142 @@ S_1\simeq S_2\Leftrightarrow S_1=S_2+\left.L\right|_{t_1}^{t_2}
 {{<latex display="true">}}
 S=\int\limits dtL
 {{</latex>}}
+
+##  1.3.3 计算一阶泛函的标准手续
+
+变分原理是整个分析力学的第一原理，而变分法的核心就是计算一阶泛函导数。
+
+对于
+
+{{<latex display="true">}}
+S[f] = \int_{t_1}^{t_2} dt L(t, f(t), f'(t), \cdots)
+{{</latex>}}
+
+这种形式的泛函，可以总结一下关于一阶泛函导数的计算手续。
+
+(1) 将变分符号 “{{<latex display="false">}}\delta{{</latex>}}” 移到积分号内
+
+{{<latex display="true">}}
+\delta S[f] = \int_{t_1}^{t_2} dt \delta L(t, f(t), f'(t), \cdots)
+{{</latex>}}
+
+(2) 按照类似复合函数求导的规则来计算 {{<latex display="false">}}\delta L{{</latex>}}
+{{<latex display="true">}}
+\delta S[f] = \int_{t_1}^{t_2} dt \left( \frac{\partial L}{\partial f} \delta f + \frac{\partial L}{\partial f'} \delta f' + \frac{\partial L}{\partial f''} \delta f'' + \cdots \right)
+{{</latex>}}
+
+这里变分和微分的形式全同，只是微分被换成了变分。
+
+(3) 做分部积分，将{{<latex display="false">}}\delta f{{</latex>}}的导数移除，这是计算一阶泛函导数的最关键的一步。 **在实际操作中，只需要不断地将{{<latex display="false">}}\delta f{{</latex>}}的导数移除，并不需要关注全导数项的具体形式。**
+
+(4) 提取{{<latex display="false">}}\delta f{{</latex>}}前的系数，即为一阶泛函导数。
+
+根据以上的手续，经过分部积分，式子
+
+{{<latex display="true">}}
+\delta S[f] = \int_{t_1}^{t_2} dt \left( \frac{\partial L}{\partial f} \delta f + \frac{\partial L}{\partial f'} \delta f' + \frac{\partial L}{\partial f''} \delta f'' + \cdots \right)
+{{</latex>}}
+
+成为
+
+{{<latex display="true">}}
+\delta S \simeq \int_{t_1}^{t_2} dt \left[ \frac{\partial L}{\partial f} - \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) + \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right) + \cdots \right] \delta f
+{{</latex>}}
+
+从中得到一阶泛函导数
+
+{{<latex display="true">}}
+\boxed{\frac{\delta S}{\delta f} = \frac{\partial L}{\partial f} - \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) + \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right) + \cdots}
+{{</latex>}}
+
+需要强调的是，虽然上式在形式上绝对正确， **但是最好不要将偏导数{{<latex display="false">}}\frac{\partial L}{\partial f}{{</latex>}}、{{<latex display="false">}}\frac{\partial L}{\partial f'}{{</latex>}}、{{<latex display="false">}}\frac{\partial L}{\partial f''}{{</latex>}}……先计算出来再代入式子中，而应该按照上面的“变分—分部积分”操作步骤。**
+
+**例 1.1 一阶泛函导数**
+
+考虑泛函{{<latex display="false">}}S[f] = \int dt \left[ (f'(t))^2 - (f(t))^2 \right]{{</latex>}}，有
+
+{{<latex display="true">}}
+\begin{align}
+\delta S[f] &= \int dt \, \delta \left( f'^2 - f^2 \right) \\
+            &= \int dt \left( 2 f' \delta f' - 2 f \delta f \right) \\
+            &= \int dt \left( 2 f' \delta f' \right) - \int dt \left( 2 f \delta f \right) \\
+\int dt \, f' \delta f' &= \left[ f' \delta f \right] - \int dt \, f'' \delta f \\
+\Rightarrow\int dt \, f' \delta f' &= - \int dt \, f'' \delta f \\
+\delta S[f] &= - \int dt \, 2 f'' \delta f - \int dt \, 2 f \delta f \\
+\delta S[f] &\approx \int dt \left( - 2 f'' - 2 f \right) \delta f(t)
+\end{align}
+{{</latex>}}
+
+因此一阶泛函导数为
+
+{{<latex display="true">}}
+\frac{\delta S}{\delta f(t)} = -2 f''(t) - 2 f(t).
+{{</latex>}}
+
+**例 1.2 一阶泛函导数与全导数**
+
+考虑泛函{{<latex display="false">}}S[f] = \int dt \left[ f(t) f'(t) + f'(t) f''(t) \right]{{</latex>}}，有
+
+{{<latex display="true">}}
+\begin{align}
+\delta S[f] &= \int dt \, \delta \left( f f' + f' f'' \right) \\
+            &= \int dt \left( \delta f f' + f \delta f' + \delta f' f'' + f' \delta f'' \right) \\
+            &= \int dt \left( \delta f f' \right) + \int dt \left( f \delta f' \right) + \int dt \left( \delta f' f'' \right) + \int dt \left( f' \delta f'' \right) \\
+\end{align}
+{{</latex>}}
+
+{{<latex display="true">}}
+\int dt \, f \delta f' &= \left[ f \delta f \right] - \int dt \, f' \delta f \\
+{{</latex>}}
+
+{{<latex display="true">}}
+\begin{align}
+\int dt \, \delta f' f'' &= \left[ \delta f' f' \right] - \int dt \, f' \delta f'' \\
+&= - \int dt \, f' \delta f'' \\
+\int dt \, f' \delta f'' &= \left[ f' \delta f' \right] - \int dt \, f'' \delta f' \\
+&= - \int dt \, f'' \delta f' \\
+\int dt \, f'' \delta f' &= \left[ f'' \delta f \right] - \int dt \, f''' \delta f \\
+&= - \int dt \, f''' \delta f
+\end{align}
+{{</latex>}}
+
+{{<latex display="true">}}
+\begin{align}
+\int dt \, f' \delta f'' &= \left[ f' \delta f' \right] - \int dt \, f'' \delta f' \\
+&= - \int dt \, f'' \delta f' \\
+\int dt \, f'' \delta f' &= \left[ f'' \delta f \right] - \int dt \, f''' \delta f \\
+&= - \int dt \, f''' \delta f
+\end{align}
+{{</latex>}}
+
+最终
+{{<latex display="true">}}
+\delta S[f] &= \int dt \left( f' \delta f - f' \delta f - f''' \delta f + f''' \delta f \right) \\
+            &= 0
+{{</latex>}}
+
+其中，在此例的推导过程中，第一项
+
+{{<latex display="true">}}
+\int dt \delta f f'
+{{</latex>}}
+
+这一项可以选择直接处理，不需要分部积分，主要是因为{{<latex display="false">}}\delta f{{</latex>}}只是一个变分项，而{{<latex display="false">}}f'{{</latex>}}是一个普通的导数函数，这里没有更高阶的导数存在，所以我们没有对其进行分部积分。
+
+第二项
+
+{{<latex display="true">}}
+\int dt f\delta f'
+{{</latex>}}
+
+这一项需要分部积分，目的是将{{<latex display="false">}}\delta f'{{</latex>}}变分项中的导数和变分分离开来，通过分部积分后得到
+
+{{<latex display="true">}}
+\int dt \, f \delta f' &= \left[ f \delta f \right] - \int dt \, f' \delta f 
+{{</latex>}}
+
+这里我们将{{<latex display="false">}}\delta{{</latex>}}和{{<latex display="false">}}f'{{</latex>}}分离，避免处理变分的导数项。同时丢弃了边界项。{{<latex display="false">}}\left[ f \delta f \right]{{</latex>}}。
+
+基于同样的理由，第三项和第四项都进行了分部积分丢弃全导数项的过程。因此一阶泛函导数为零。
+
+在这个例子中，出现了泛函导数为零的情况。实际上，观察泛函中的被积函数，{{<latex display="false">}}f f' + f' f'' = \frac{d}{dt} \left( \frac{1}{2} f^2 + \frac{1}{2} f'^2 \right) \equiv \frac{dF}{dt}{{</latex>}}，其自身就是个全导数。而根据上面的讨论，被积函数中的全导数可以自然舍去，所以{{<latex display="false">}}f f' + f' f'' \approx 0{{</latex>}}，难怪其对应的泛函导数为零了。
