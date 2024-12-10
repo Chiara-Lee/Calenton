@@ -1,11 +1,10 @@
-<!doctype html><html lang=zh><head><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel=stylesheet><meta charset=UTF-8><meta name=description content="根据上面的讨论，泛函导数归结于计算泛函 S[f] 的变分。
+<!doctype html><html lang=zh><head><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel=stylesheet><meta charset=UTF-8><meta name=description content="1.3.2 泛函导数的操作定义 根据上面的讨论，泛函导数归结于计算泛函 S[f] 的变分。
 换个角度，在泛函 S[f + \epsilon \delta f] 中， \epsilon 是一个参数，而泛函 S 是一个数，其值依赖于 \epsilon 。所以，泛函 S[f + \epsilon \delta f] 可以被看作是 \epsilon 的普通函数，于是公式：
 S[f + \epsilon \delta f] = S[f] + \epsilon \left. \frac{d}{d\epsilon} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \frac{\epsilon^2}{2!} \left. \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \cdots 可以视为 S[f + \epsilon \delta f] 相对于 \epsilon 的普通泰勒展开。
-一般函数在 x_0 处以及 x_0 = 0 的泰勒展开
-f(x) = f(x_0) + \frac{f'(x_0)}{1!"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>1.3.2 泛函导数的操作定义</title>
+一般函数在 x_0 处以及 x_0 = 0 的泰勒展开"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>1.3.2 泛函导数的操作定义</title>
 <script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
 Caleton Academy
-</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/computer-science-and-technology/>Cst</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>1.3.2 泛函导数的操作定义</h1><div class=content-wrapper><div class=content><p>根据上面的讨论，泛函导数归结于计算泛函
+</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/computer-science-and-technology/>Cst</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>1.3.2 泛函导数的操作定义</h1><h2>Table of Contents</h2><nav id=TableOfContents><ul><li><a href=#132-泛函导数的操作定义>1.3.2 泛函导数的操作定义</a></li><li><a href=#133-计算一阶泛函的标准手续>1.3.3 计算一阶泛函的标准手续</a></li></ul></nav><div class=content-wrapper><div class=content><h2 id=132-泛函导数的操作定义>1.3.2 泛函导数的操作定义</h2><p>根据上面的讨论，泛函导数归结于计算泛函
 <span class=fallback-latex>S[f]
 </span>的变分。</p><p>换个角度，在泛函
 <span class=fallback-latex>S[f + \epsilon \delta f]
@@ -107,8 +106,75 @@ Caleton Academy
 <span class=fallback-latex>s[f+\epsilon \delta f]
 </span>，则可被视为是
 <span class=fallback-latex>\epsilon
-</span>的函数。</p><p>以及</p><span class=fallback-latex>S_1\simeq S_2\Leftrightarrow S_1=S_2+\left.L\right|_{t_1}^{t_2}</span><p>基于以上假设，对于泛函导数的计算来说，边界项不重要。在实际计算中，都是直接丢掉边界项，而无需写出其具体形式的。例如</p><span class=fallback-latex>\frac{\partial L}{\partial f^{\prime}} \delta f^{\prime} \simeq-\frac{\mathrm{d}}{\mathrm{d} t}\left(\frac{\partial L}{\partial f^{\prime}}\right) \delta f, \quad \frac{\partial L}{\partial f^{\prime \prime}} \delta f^{\prime \prime} \simeq \frac{\mathrm{d}^{2}}{\mathrm{d} t^{2}}\left(\frac{\partial L}{\partial f^{\prime \prime}}\right) \delta f</span><p>基于同样的理由，泛函积分的上下限也经常被省略，即</p><span class=fallback-latex>S=\int\limits dtL</span></div><aside class=sidebar><div class=card><h2>摘要</h2><p>根据上面的讨论，泛函导数归结于计算泛函 S[f] 的变分。
-换个角度，在泛函 S[f + \epsilon \delta f] 中， \epsilon 是一个参数，而泛函 S 是一个数， …</p></div><div class=card><h2>阅读时长</h2><p>3 min</p></div><div class=card><h2>总字数</h2><p>≈ 439</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
+</span>的函数。</p><p>以及</p><span class=fallback-latex>S_1\simeq S_2\Leftrightarrow S_1=S_2+\left.L\right|_{t_1}^{t_2}</span><p>基于以上假设，对于泛函导数的计算来说，边界项不重要。在实际计算中，都是直接丢掉边界项，而无需写出其具体形式的。例如</p><span class=fallback-latex>\frac{\partial L}{\partial f^{\prime}} \delta f^{\prime} \simeq-\frac{\mathrm{d}}{\mathrm{d} t}\left(\frac{\partial L}{\partial f^{\prime}}\right) \delta f, \quad \frac{\partial L}{\partial f^{\prime \prime}} \delta f^{\prime \prime} \simeq \frac{\mathrm{d}^{2}}{\mathrm{d} t^{2}}\left(\frac{\partial L}{\partial f^{\prime \prime}}\right) \delta f</span><p>基于同样的理由，泛函积分的上下限也经常被省略，即</p><span class=fallback-latex>S=\int\limits dtL</span><h2 id=133-计算一阶泛函的标准手续>1.3.3 计算一阶泛函的标准手续</h2><p>变分原理是整个分析力学的第一原理，而变分法的核心就是计算一阶泛函导数。</p><p>对于</p><span class=fallback-latex>S[f] = \int_{t_1}^{t_2} dt L(t, f(t), f'(t), \cdots)</span><p>这种形式的泛函，可以总结一下关于一阶泛函导数的计算手续。</p><p>(1) 将变分符号 “
+<span class=fallback-latex>\delta
+</span>” 移到积分号内</p><span class=fallback-latex>\delta S[f] = \int_{t_1}^{t_2} dt \delta L(t, f(t), f'(t), \cdots)</span><p>(2) 按照类似复合函数求导的规则来计算
+<span class=fallback-latex>\delta L
+</span><span class=fallback-latex>\delta S[f] = \int_{t_1}^{t_2} dt \left( \frac{\partial L}{\partial f} \delta f + \frac{\partial L}{\partial f'} \delta f' + \frac{\partial L}{\partial f''} \delta f'' + \cdots \right)</span></p><p>这里变分和微分的形式全同，只是微分被换成了变分。</p><p>(3) 做分部积分，将
+<span class=fallback-latex>\delta f
+</span>的导数移除，这是计算一阶泛函导数的最关键的一步。 <strong>在实际操作中，只需要不断地将
+<span class=fallback-latex>\delta f
+</span>的导数移除，并不需要关注全导数项的具体形式。</strong></p><p>(4) 提取
+<span class=fallback-latex>\delta f
+</span>前的系数，即为一阶泛函导数。</p><p>根据以上的手续，经过分部积分，式子</p><span class=fallback-latex>\delta S[f] = \int_{t_1}^{t_2} dt \left( \frac{\partial L}{\partial f} \delta f + \frac{\partial L}{\partial f'} \delta f' + \frac{\partial L}{\partial f''} \delta f'' + \cdots \right)</span><p>成为</p><span class=fallback-latex>\delta S \simeq \int_{t_1}^{t_2} dt \left[ \frac{\partial L}{\partial f} - \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) + \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right) + \cdots \right] \delta f</span><p>从中得到一阶泛函导数</p><span class=fallback-latex>\boxed{\frac{\delta S}{\delta f} = \frac{\partial L}{\partial f} - \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) + \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial f''} \right) + \cdots}</span><p>需要强调的是，虽然上式在形式上绝对正确， <strong>但是最好不要将偏导数
+<span class=fallback-latex>\frac{\partial L}{\partial f}
+</span>、
+<span class=fallback-latex>\frac{\partial L}{\partial f'}
+</span>、
+<span class=fallback-latex>\frac{\partial L}{\partial f''}
+</span>……先计算出来再代入式子中，而应该按照上面的“变分—分部积分”操作步骤。</strong></p><p><strong>例 1.1 一阶泛函导数</strong></p><p>考虑泛函
+<span class=fallback-latex>S[f] = \int dt \left[ (f'(t))^2 - (f(t))^2 \right]
+</span>，有</p><span class=fallback-latex>\begin{align}
+\delta S[f] &= \int dt \, \delta \left( f'^2 - f^2 \right) \\
+&= \int dt \left( 2 f' \delta f' - 2 f \delta f \right) \\
+&= \int dt \left( 2 f' \delta f' \right) - \int dt \left( 2 f \delta f \right) \\
+\int dt \, f' \delta f' &= \left[ f' \delta f \right] - \int dt \, f'' \delta f \\
+\Rightarrow\int dt \, f' \delta f' &= - \int dt \, f'' \delta f \\
+\delta S[f] &= - \int dt \, 2 f'' \delta f - \int dt \, 2 f \delta f \\
+\delta S[f] &\approx \int dt \left( - 2 f'' - 2 f \right) \delta f(t)
+\end{align}</span><p>因此一阶泛函导数为</p><span class=fallback-latex>\frac{\delta S}{\delta f(t)} = -2 f''(t) - 2 f(t).</span><p><strong>例 1.2 一阶泛函导数与全导数</strong></p><p>考虑泛函
+<span class=fallback-latex>S[f] = \int dt \left[ f(t) f'(t) + f'(t) f''(t) \right]
+</span>，有</p><span class=fallback-latex>\begin{align}
+\delta S[f] &= \int dt \, \delta \left( f f' + f' f'' \right) \\
+&= \int dt \left( \delta f f' + f \delta f' + \delta f' f'' + f' \delta f'' \right) \\
+&= \int dt \left( \delta f f' \right) + \int dt \left( f \delta f' \right) + \int dt \left( \delta f' f'' \right) + \int dt \left( f' \delta f'' \right) \\
+\end{align}
+</span><span class=fallback-latex>\int dt \, f \delta f' &= \left[ f \delta f \right] - \int dt \, f' \delta f \\
+</span><span class=fallback-latex>\begin{align}
+\int dt \, \delta f' f'' &= \left[ \delta f' f' \right] - \int dt \, f' \delta f'' \\
+&= - \int dt \, f' \delta f'' \\
+\int dt \, f' \delta f'' &= \left[ f' \delta f' \right] - \int dt \, f'' \delta f' \\
+&= - \int dt \, f'' \delta f' \\
+\int dt \, f'' \delta f' &= \left[ f'' \delta f \right] - \int dt \, f''' \delta f \\
+&= - \int dt \, f''' \delta f
+\end{align}
+</span><span class=fallback-latex>\begin{align}
+\int dt \, f' \delta f'' &= \left[ f' \delta f' \right] - \int dt \, f'' \delta f' \\
+&= - \int dt \, f'' \delta f' \\
+\int dt \, f'' \delta f' &= \left[ f'' \delta f \right] - \int dt \, f''' \delta f \\
+&= - \int dt \, f''' \delta f
+\end{align}</span><p>最终
+<span class=fallback-latex>\delta S[f] &= \int dt \left( f' \delta f - f' \delta f - f''' \delta f + f''' \delta f \right) \\
+&= 0
+
+      </span></p><p>其中，在此例的推导过程中，第一项</p><span class=fallback-latex>\int dt \delta f f'</span><p>这一项可以选择直接处理，不需要分部积分，主要是因为
+<span class=fallback-latex>\delta f
+</span>只是一个变分项，而
+<span class=fallback-latex>f'
+</span>是一个普通的导数函数，这里没有更高阶的导数存在，所以我们没有对其进行分部积分。</p><p>第二项</p><span class=fallback-latex>\int dt f\delta f'</span><p>这一项需要分部积分，目的是将
+<span class=fallback-latex>\delta f'
+</span>变分项中的导数和变分分离开来，通过分部积分后得到</p><span class=fallback-latex>\int dt \, f \delta f' &= \left[ f \delta f \right] - \int dt \, f' \delta f</span><p>这里我们将
+<span class=fallback-latex>\delta
+</span>和
+<span class=fallback-latex>f'
+</span>分离，避免处理变分的导数项。同时丢弃了边界项。
+<span class=fallback-latex>\left[ f \delta f \right]
+</span>。</p><p>基于同样的理由，第三项和第四项都进行了分部积分丢弃全导数项的过程。因此一阶泛函导数为零。</p><p>在这个例子中，出现了泛函导数为零的情况。实际上，观察泛函中的被积函数，
+<span class=fallback-latex>f f' + f' f'' = \frac{d}{dt} \left( \frac{1}{2} f^2 + \frac{1}{2} f'^2 \right) \equiv \frac{dF}{dt}
+</span>，其自身就是个全导数。而根据上面的讨论，被积函数中的全导数可以自然舍去，所以
+<span class=fallback-latex>f f' + f' f'' \approx 0
+</span>，难怪其对应的泛函导数为零了。</p></div><aside class=sidebar><div class=card><h2>摘要</h2><p>1.3.2 泛函导数的操作定义 根据上面的讨论，泛函导数归结于计算泛函 S[f] 的变分。
+换个角度，在泛函 S[f + \epsilon \delta f] 中， \epsilon 是一个参数，而泛 …</p></div><div class=card><h2>阅读时长</h2><p>6 min</p></div><div class=card><h2>总字数</h2><p>≈ 1110</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
 经典力学</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/physcis/classical-mechnics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.3/><h2>1.3 泛函导数</h2><article>1.3.1 泛函导数的概念 对于普通函数的导数，函数的微分是由自变量的微分引起的：
 \begin{align} f(t) \xrightarrow{t \to t+\epsilon} f(\tilde{t}) &= f(t+ \epsilon) \\ &= f(t) + \epsilon df(t) + \frac{\epsilon^2}{2!} d^2 f(t) + \frac{\epsilon^3}{3!} d^3 f(t) + \cdots \end{align} 其中 \epsilon 是无穷小参数， \epsilon^n 项即为函数的 n 阶微分，函数的 n 阶导数则由函数的 n 阶微分与 dt 的关系给出。对于一阶导数：
 df(t) = \frac{df(t)}{dt} dt 高阶导数则为：
