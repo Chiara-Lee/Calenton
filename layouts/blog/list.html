@@ -13,6 +13,7 @@
                 <h2>{{ .Title }}</h2>
 
                 <div class="post-meta">
+                    <!-- 显示创建和更新时间 -->
                     <span><i class="icon-calendar"></i> 创建于{{ .Date.Format "2006-01-02" }}</span>
                     <span><i class="icon-edit"></i> 更新于{{ .Lastmod.Format "2006年01月02日" }}</span>
                 
@@ -24,55 +25,44 @@
                         <!-- 如果是列表页面，统计所有子页面的字数和阅读时长 -->
                         {{ $totalReadingTime := 0 }}
                         {{ $totalWordCount := 0 }}
-                        
+                
                         {{- range .Pages }}
                             {{- if .IsPage }}
-                                <!-- 如果是单页面，直接获取字数和阅读时长 -->
-                                {{ $currentPageReadingTime := .ReadingTime }}
-                                {{ $currentPageWordCount := .WordCount }}
-                                {{ $totalReadingTime = add $totalReadingTime $currentPageReadingTime }}
-                                {{ $totalWordCount = add $totalWordCount $currentPageWordCount }}
+                                <!-- 如果是单页面，直接累加字数和阅读时长 -->
+                                {{ $totalReadingTime = add $totalReadingTime .ReadingTime }}
+                                {{ $totalWordCount = add $totalWordCount .WordCount }}
                             {{- else }}
-                                <!-- 如果是列表页面，尝试递归遍历子页面 -->
-                                {{ $subPageTotalReadingTime := 0 }}
-                                {{ $subPageTotalWordCount := 0 }}
-                                
-                                <!-- 递归遍历列表页的子页面 -->
+                                <!-- 如果是列表页面，递归调用获取字数和阅读时长 -->
+                                {{- $subTotalReadingTime := 0 }}
+                                {{- $subTotalWordCount := 0 }}
+                
                                 {{- range .Pages }}
                                     {{- if .IsPage }}
-                                        {{ $subPageTotalReadingTime = add $subPageTotalReadingTime .ReadingTime }}
-                                        {{ $subPageTotalWordCount = add $subPageTotalWordCount .WordCount }}
+                                        {{- $subTotalReadingTime = add $subTotalReadingTime .ReadingTime }}
+                                        {{- $subTotalWordCount = add $subTotalWordCount .WordCount }}
                                     {{- else }}
-                                        {{- $nestedReadingTime := 0 }}
-                                        {{- $nestedWordCount := 0 }}
-                                        {{- range .Pages }}
-                                        <!-- 如果是更深层次的列表页，继续递归计算 -->
-                                            {{- if .IsPage }}
-                                                {{ $nestedReadingTime = add $nestedReadingTime .ReadingTime }}
-                                                {{ $nestedWordCount = add $nestedWordCount .WordCount }}
-                                            {{- end }}
-                                        {{- end }}
-                                        {{ $subPageTotalReadingTime = add $subPageTotalReadingTime $nestedReadingTime }}
-                                        {{ $subPageTotalWordCount = add $subPageTotalWordCount $nestedWordCount }}
+                                        {{- $nestedReadingTime, $nestedWordCount := partial "calculate-total" . }}
+                                        {{- $subTotalReadingTime = add $subTotalReadingTime $nestedReadingTime }}
+                                        {{- $subTotalWordCount = add $subTotalWordCount $nestedWordCount }}
                                     {{- end }}
                                 {{- end }}
-                        
-                                <!-- 将子页面的统计值累加到当前页面 -->
-                                {{ $totalReadingTime = add $totalReadingTime $subPageTotalReadingTime }}
-                                {{ $totalWordCount = add $totalWordCount $subPageTotalWordCount }}
+                
+                                <!-- 将子页面的统计结果累加到当前页面 -->
+                                {{ $totalReadingTime = add $totalReadingTime $subTotalReadingTime }}
+                                {{ $totalWordCount = add $totalWordCount $subTotalWordCount }}
                             {{- end }}
                         {{- end }}
-                        
+                
                         <!-- 将统计结果存储到当前页面的 Scratch 中 -->
                         {{ .Scratch.Set "totalReadingTime_parent" $totalReadingTime }}
                         {{ .Scratch.Set "totalWordCount_parent" $totalWordCount }}
-                        
+                
                         <!-- 页面显示统计结果 -->
                         <span><i class="icon-time"></i> 预计阅读总时长 {{ .Scratch.Get "totalReadingTime_parent" }} 分钟</span>
                         <span><i class="icon-text-width"></i> 总字数约 {{ .Scratch.Get "totalWordCount_parent" }} 字</span>
-                                                             
                     {{- end }}
-                </div>        
+                </div>
+                      
                 <p>{{ .Summary | plainify | truncate 100 "..." }}</p>
                 <a href="{{ .Permalink }}" class="read-more">→ 进来看看</a>
                 <div class="tags">

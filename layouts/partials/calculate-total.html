@@ -1,0 +1,16 @@
+<!-- calculate-total.html -->
+{{ $totalReadingTime := 0 }}
+{{ $totalWordCount := 0 }}
+
+{{- range .Pages }}
+    {{- if .IsPage }}
+        {{- $totalReadingTime = add $totalReadingTime .ReadingTime }}
+        {{- $totalWordCount = add $totalWordCount .WordCount }}
+    {{- else }}
+        {{- $nestedReadingTime, $nestedWordCount := partial "calculate-total" . }}
+        {{- $totalReadingTime = add $totalReadingTime $nestedReadingTime }}
+        {{- $totalWordCount = add $totalWordCount $nestedWordCount }}
+    {{- end }}
+{{- end }}
+
+{{ $totalReadingTime, $totalWordCount }}
