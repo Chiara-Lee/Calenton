@@ -273,33 +273,26 @@ S[f] = \int_{t_1}^{t_2} dt L(t, f(t), f'(t), \cdots)
 {{</latex>}}
 
 {{<latex display="true">}}
-\int dt \, f \delta f' &= \left[ f \delta f \right] - \int dt \, f' \delta f \\
+\int dt \, f \delta f' = \left[ f \delta f \right] - \int dt \, f' \delta f 
 {{</latex>}}
 
 {{<latex display="true">}}
-\begin{align}
-\int dt \, \delta f' f'' &= \left[ \delta f' f' \right] - \int dt \, f' \delta f'' \\
-&= - \int dt \, f' \delta f'' \\
-\int dt \, f' \delta f'' &= \left[ f' \delta f' \right] - \int dt \, f'' \delta f' \\
-&= - \int dt \, f'' \delta f' \\
-\int dt \, f'' \delta f' &= \left[ f'' \delta f \right] - \int dt \, f''' \delta f \\
-&= - \int dt \, f''' \delta f
-\end{align}
+\int dt \, \delta f' f'' = \left[ \delta f' f' \right] - \int dt \, f' \delta f'' = - \int dt \, f' \delta f'' \\
+\int dt \, f' \delta f'' = \left[ f' \delta f' \right] - \int dt \, f'' \delta f' = - \int dt \, f'' \delta f' \\
+\int dt \, f'' \delta f' = \left[ f'' \delta f \right] - \int dt \, f''' \delta f = - \int dt \, f''' \delta f
 {{</latex>}}
 
 {{<latex display="true">}}
-\begin{align}
-\int dt \, f' \delta f'' &= \left[ f' \delta f' \right] - \int dt \, f'' \delta f' \\
-&= - \int dt \, f'' \delta f' \\
-\int dt \, f'' \delta f' &= \left[ f'' \delta f \right] - \int dt \, f''' \delta f \\
-&= - \int dt \, f''' \delta f
-\end{align}
+\int dt \, f' \delta f'' = \left[ f' \delta f' \right] - \int dt \, f'' \delta f' = - \int dt \, f'' \delta f' \\
+\int dt \, f'' \delta f' = \left[ f'' \delta f \right] - \int dt \, f''' \delta f = - \int dt \, f''' \delta f
 {{</latex>}}
 
 最终
 {{<latex display="true">}}
+\begin{align}
 \delta S[f] &= \int dt \left( f' \delta f - f' \delta f - f''' \delta f + f''' \delta f \right) \\
             &= 0
+\end{align}
 {{</latex>}}
 
 其中，在此例的推导过程中，第一项
@@ -319,7 +312,7 @@ S[f] = \int_{t_1}^{t_2} dt L(t, f(t), f'(t), \cdots)
 这一项需要分部积分，目的是将{{<latex display="false">}}\delta f'{{</latex>}}变分项中的导数和变分分离开来，通过分部积分后得到
 
 {{<latex display="true">}}
-\int dt \, f \delta f' &= \left[ f \delta f \right] - \int dt \, f' \delta f 
+\int dt \, f \delta f' = \left[ f \delta f \right] - \int dt \, f' \delta f 
 {{</latex>}}
 
 这里我们将{{<latex display="false">}}\delta{{</latex>}}和{{<latex display="false">}}f'{{</latex>}}分离，避免处理变分的导数项。同时丢弃了边界项。{{<latex display="false">}}\left[ f \delta f \right]{{</latex>}}。
