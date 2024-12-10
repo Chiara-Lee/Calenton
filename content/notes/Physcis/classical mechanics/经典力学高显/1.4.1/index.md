@@ -36,7 +36,7 @@ toc: true
 
 作为变分法到目前的小结，可将多元函数与泛函做一个对比：
 
-![](/content/notes/Physcis/classical%20mechnics/经典力学高显/1.4.1/1.png)
+![](/1.png)
 
 ##  1.4.2 欧拉—拉格朗日方程
 
@@ -49,7 +49,7 @@ S[f]=\int dt L(t,f(t),f'(t))
 其特点是，泛函的被积函数 {{<latex display="false">}}L{{</latex>}} 最高包含 {{<latex display="false">}}f{{</latex>}} 的一阶导数。物理中大多数感兴趣的系统都是类似这样的形式。根据上一节的讨论，泛函取极值的必要条件是
 
 {{<latex display="true">}}
-\box{- \frac{\delta S}{\delta f} \equiv \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) - \frac{\partial L}{\partial f} = 0}
+\boxed{- \frac{\delta S}{\delta f} \equiv \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) - \frac{\partial L}{\partial f} = 0}
 {{</latex>}}
 
 上式是关于 {{<latex display="false">}}f(t){{</latex>}} 的二阶微分方程，被称为变分问题的 **欧拉—拉格朗日方程（Euler-Lagrange equation）** 。其意义是，泛函式
@@ -75,7 +75,7 @@ S[f] = \int dt L(t, f(t), f'(t))
 因此，当欧拉—拉格朗日方程*满足时，下式也成立
 
 {{<latex display="true">}}
-\box{\frac{d}{dt} \left( \frac{\partial L}{\partial f'} f' - L \right) + \frac{\partial L}{\partial t} = 0}
+\boxed{\frac{d}{dt} \left( \frac{\partial L}{\partial f'} f' - L \right) + \frac{\partial L}{\partial t} = 0}
 {{</latex>}}
 
 一个立即的推论是，若 {{<latex display="false">}}L{{</latex>}} 不显含变量 {{<latex display="false">}}t{{</latex>}}
