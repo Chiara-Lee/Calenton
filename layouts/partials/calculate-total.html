@@ -18,7 +18,6 @@
     {{- end }}
 {{- end }}
 
-<!-- 输出总阅读时长和总字数 -->
-{{ $totalReadingTime }} 分钟
-{{ $totalWordCount }} 字
+<!-- 返回一个包含两个值的切片 -->
+{{ slice $totalReadingTime $totalWordCount }}
 

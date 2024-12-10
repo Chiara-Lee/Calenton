@@ -41,7 +41,10 @@
                                         {{- $subTotalReadingTime = add $subTotalReadingTime .ReadingTime }}
                                         {{- $subTotalWordCount = add $subTotalWordCount .WordCount }}
                                     {{- else }}
-                                        {{- $nestedReadingTime, $nestedWordCount := partial "calculate-total" . }}
+                                        {{- $nestedValues := partial "calculate-total" . }}
+                                        {{- $nestedReadingTime := index $nestedValues 0 }}
+                                        {{- $nestedWordCount := index $nestedValues 1 }}
+                                    
                                         {{- $subTotalReadingTime = add $subTotalReadingTime $nestedReadingTime }}
                                         {{- $subTotalWordCount = add $subTotalWordCount $nestedWordCount }}
                                     {{- end }}
