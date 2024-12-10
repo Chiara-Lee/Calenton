@@ -1,16 +1,24 @@
-{{ $totalReadingTime := 0 }}
-{{ $totalWordCount := 0 }}
+{{- $totalReadingTime := 0 }}
+{{- $totalWordCount := 0 }}
 
 {{- range .Pages }}
     {{- if .IsPage }}
+        <!-- 如果是单页面，直接累加字数和阅读时长 -->
         {{- $totalReadingTime = add $totalReadingTime .ReadingTime }}
         {{- $totalWordCount = add $totalWordCount .WordCount }}
     {{- else }}
+        <!-- 如果是列表页面，递归调用获取字数和阅读时长 -->
         {{- $nestedValues := partial "calculate-total" . }}
-        {{- $totalReadingTime = add $totalReadingTime (index $nestedValues 0) }}
-        {{- $totalWordCount = add $totalWordCount (index $nestedValues 1) }}
+        {{- $nestedReadingTime := index $nestedValues 0 }}
+        {{- $nestedWordCount := index $nestedValues 1 }}
+
+        <!-- 将子页面的统计结果累加到当前页面 -->
+        {{- $totalReadingTime = add $totalReadingTime $nestedReadingTime }}
+        {{- $totalWordCount = add $totalWordCount $nestedWordCount }}
     {{- end }}
 {{- end }}
 
-<!-- 返回一个包含两个值的切片 -->
-{{ slice $totalReadingTime $totalWordCount }}
+<!-- 输出总阅读时长和总字数 -->
+{{ $totalReadingTime }} 分钟
+{{ $totalWordCount }} 字
+
