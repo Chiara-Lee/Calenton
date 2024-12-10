@@ -4,6 +4,7 @@
   Access-Control-Allow-Origin = "*"
 [build]
   publish = "public"
+  base = "/"
   command = "npm install && hugo --minify --baseURL $DEPLOY_PRIME_URL"
   ignoreLogs = ["error-remote-getjson"]
 
