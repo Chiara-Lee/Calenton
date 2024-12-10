@@ -277,13 +277,21 @@ S[f] = \int_{t_1}^{t_2} dt L(t, f(t), f'(t), \cdots)
 {{</latex>}}
 
 {{<latex display="true">}}
-\int dt \, \delta f' f'' = \left[ \delta f' f' \right] - \int dt \, f' \delta f'' = - \int dt \, f' \delta f'' \\
-\int dt \, f' \delta f'' = \left[ f' \delta f' \right] - \int dt \, f'' \delta f' = - \int dt \, f'' \delta f' \\
+\int dt \, \delta f' f'' = \left[ \delta f' f' \right] - \int dt \, f' \delta f'' = - \int dt \, f' \delta f'' 
+{{</latex>}}
+
+{{<latex display="true">}}
+\int dt \, f' \delta f'' = \left[ f' \delta f' \right] - \int dt \, f'' \delta f' = - \int dt \, f'' \delta f' 
+{{</latex>}}
+
+{{<latex display="true">}}
 \int dt \, f'' \delta f' = \left[ f'' \delta f \right] - \int dt \, f''' \delta f = - \int dt \, f''' \delta f
 {{</latex>}}
 
 {{<latex display="true">}}
-\int dt \, f' \delta f'' = \left[ f' \delta f' \right] - \int dt \, f'' \delta f' = - \int dt \, f'' \delta f' \\
+\int dt \, f' \delta f'' = \left[ f' \delta f' \right] - \int dt \, f'' \delta f' = - \int dt \, f'' \delta f' 
+{{</latex>}}
+{{<latex display="true">}}
 \int dt \, f'' \delta f' = \left[ f'' \delta f \right] - \int dt \, f''' \delta f = - \int dt \, f''' \delta f
 {{</latex>}}
 
