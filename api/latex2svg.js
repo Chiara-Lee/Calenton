@@ -42,7 +42,10 @@ module.exports = {
 
     return {
       statusCode: 200,
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "https://chiara-lee.netlify.app",  // 设置为你的前端域名
+      },
       body: JSON.stringify({
         data: MathJax.startup.adaptor.outerHTML(svg),
       }),
