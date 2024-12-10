@@ -328,3 +328,63 @@ S[f] = \int_{t_1}^{t_2} dt L(t, f(t), f'(t), \cdots)
 基于同样的理由，第三项和第四项都进行了分部积分丢弃全导数项的过程。因此一阶泛函导数为零。
 
 在这个例子中，出现了泛函导数为零的情况。实际上，观察泛函中的被积函数，{{<latex display="false">}}f f' + f' f'' = \frac{d}{dt} \left( \frac{1}{2} f^2 + \frac{1}{2} f'^2 \right) \equiv \frac{dF}{dt}{{</latex>}}，其自身就是个全导数。而根据上面的讨论，被积函数中的全导数可以自然舍去，所以{{<latex display="false">}}f f' + f' f'' \approx 0{{</latex>}}，难怪其对应的泛函导数为零了。
+
+另外，通过以上两个例子的分析我们可以发现：
+
+1. 我们分部积分的根本目的就是为了分离变分号{{<latex display="false">}}\delta{{</latex>}}和导数{{<latex display="false">}}f'{{</latex>}}，因此，对于任何被变分和求导同时操作的函数项{{<latex display="false">}}f{{</latex>}}，我们都需要对它进行分部积分。
+2. 由于分部积分的性质
+
+{{<latex display="true">}}
+(uv)'=u'v+uv'
+{{</latex>}}
+
+{{<latex display="true">}}
+\int u'v=[uv]-\int uv'
+{{</latex>}}
+
+因此，我们可以注意要有这样一种便捷的记忆方式，例如对于
+
+{{<latex display="true">}}
+f\delta f'
+{{</latex>}}
+
+变分和求导同时作用于{{<latex display="false">}}f{{</latex>}}，因此我们需要对此项进行分部积分。而我们可以将该项视为{{<latex display="false">}}u'v{{</latex>}}或者{{<latex display="false">}}uv'{{</latex>}}中的任意一项（它们的区别仅仅只是两个乘数互换一下位置而已），一旦确定好了，那么最终的{{<latex display="false">}}\simeq{{</latex>}}结果就是另外一项。
+
+而事实上，不管我们选择哪个形式，根据两者的形式差异，我们就可以断定，{{<latex display="false">}}\simeq{{</latex>}}结果一定是
+
+{{<latex display="true">}}
+f'\detal f
+{{</latex>}}
+
+利用这种视角我们来看，
+
+{{<latex display="true">}}
+f''\delta f'
+{{</latex>}}
+
+另一项的形式一定是两个乘数的导数次数一赠一减，并且由于我们是分离变分和求导，因此变分号里的导数次数一定是减少的，所以最终的结果就是
+
+{{<latex display="true">}}
+f'''\delta f
+{{</latex>}}
+
+事实上，这相对于是我们将{{<latex display="false">}}f''\delta f'{{</latex>}}看成是{{<latex display="false">}}uv'{{</latex>}}，实际上，我们我们将之看成{{<latex display="false">}}u‘v{{</latex>}}的话，我们就需要经历以下的过程：
+
+{{<latex display="true">}}
+f''\delta f'\Rightarrow f'\delta f''
+{{</latex>}}
+
+很显然它是需要继续分部积分的，因此
+
+{{<latex display="true">}}
+f''\delta f'\Rightarrow f'\delta f''\Rightarrow f''\delta f'
+{{</latex>}}
+
+最后再进行一次分部积分得到，
+
+{{<latex display="true">}}
+f''\delta f'\Rightarrow f'\delta f''\Rightarrow f''\delta f'\Rightarrow f'''\delta f'
+{{</latex>}}
+
+这也就是我们在上面的做法，很显然结果是一样的，而且这样是多此一举。
+3. 以及最后，很显然的我们可以发现，每次分部积分的结果都是负的，因此进行奇数次分部积分的结果是负的，偶数次是正的。
