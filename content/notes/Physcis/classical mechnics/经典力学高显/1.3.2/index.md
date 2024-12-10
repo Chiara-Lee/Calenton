@@ -353,7 +353,7 @@ f\delta f'
 而事实上，不管我们选择哪个形式，根据两者的形式差异，我们就可以断定，{{<latex display="false">}}\simeq{{</latex>}}结果一定是
 
 {{<latex display="true">}}
-f'\detal f
+f'\delta f
 {{</latex>}}
 
 利用这种视角我们来看，
@@ -387,4 +387,5 @@ f''\delta f'\Rightarrow f'\delta f''\Rightarrow f''\delta f'\Rightarrow f'''\del
 {{</latex>}}
 
 这也就是我们在上面的做法，很显然结果是一样的，而且这样是多此一举。
+
 3. 以及最后，很显然的我们可以发现，每次分部积分的结果都是负的，因此进行奇数次分部积分的结果是负的，偶数次是正的。
