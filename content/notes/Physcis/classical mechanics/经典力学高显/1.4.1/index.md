@@ -49,6 +49,10 @@ S[f]=\int dt L(t,f(t),f'(t))
 其特点是，泛函的被积函数 {{<latex display="false">}}L{{</latex>}} 最高包含 {{<latex display="false">}}f{{</latex>}} 的一阶导数。物理中大多数感兴趣的系统都是类似这样的形式。根据上一节的讨论，泛函取极值的必要条件是
 
 {{<latex display="true">}}
+\begin{aligned} \delta S[q(t)] & =\int_{t_{1}}^{t_{2}} \mathrm{~d} t\left(\frac{\partial L}{\partial q} \delta q+\frac{\partial L}{\partial \dot{q}} \delta \dot{q}\right) \\ & =\int_{t_{1}}^{t_{2}} \mathrm{~d} t\left(\frac{\partial L}{\partial q} \delta q+\frac{\partial L}{\partial \dot{q}} \frac{\mathrm{d}}{\mathrm{d} t} \delta q\right) \\ & =\left.\frac{\partial L}{\partial \dot{q}} \delta q\right|_{t_{1}} ^{t_{2}}+\int_{t_{1}}^{t_{2}} \mathrm{~d} t\left(\frac{\partial L}{\partial q}-\frac{\mathrm{d}}{\mathrm{d} t} \frac{\partial L}{\partial \dot{q}}\right) \delta q\\ &\simeq \int_{t_{1}}^{t_{2}} \mathrm{~d} t\left(\frac{\partial L}{\partial q}-\frac{\mathrm{d}}{\mathrm{d} t} \frac{\partial L}{\partial \dot{q}}\right) \delta q\\ \end{aligned}\\
+{{</latex>}}
+
+{{<latex display="true">}}
 \boxed{- \frac{\delta S}{\delta f} \equiv \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) - \frac{\partial L}{\partial f} = 0}
 {{</latex>}}
 
@@ -70,6 +74,26 @@ S[f] = \int dt L(t, f(t), f'(t))
 &= \frac{\partial L}{\partial t} + \frac{\partial L}{\partial f} f' + \frac{d}{dt} \left( \frac{\partial L}{\partial f'} f' \right) - \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) f' \\
 &= \frac{\partial L}{\partial t} + \underbrace{\left[ \frac{\partial L}{\partial f} - \frac{d}{dt} \left( \frac{\partial L}{\partial f'} \right) \right] f'}_{=0} + \frac{d}{dt} \left( \frac{\partial L}{\partial f'} f' \right)
 \end{aligned}
+{{</latex>}}
+
+{{<latex display="true">}}
+\frac{dL}{dt} = \frac{\partial L}{\partial t} + \frac{d}{dt} \left( \frac{\partial L}{\partial f'} f' \right).
+{{</latex>}}
+
+{{<latex display="true">}}
+\frac{d}{dt} \left( \frac{\partial L}{\partial f'} f' \right) - \frac{dL}{dt} = - \frac{\partial L}{\partial t}.
+{{</latex>}}
+
+注意到 {{<latex display="false">}}\frac{d}{dt} \left( \frac{\partial L}{\partial f'} f' - L \right) = \frac{d}{dt} \left( \frac{\partial L}{\partial f'} f' \right) - \frac{dL}{dt}{{</latex>}}，因此有
+
+{{<latex display="true">}}
+\frac{d}{dt} \left( \frac{\partial L}{\partial f'} f' - L \right) = - \frac{\partial L}{\partial t}.
+{{</latex>}}
+
+将 {{<latex display="false">}}- \frac{\partial L}{\partial t}{{</latex>}} 移到左侧，就得到
+
+{{<latex display="true">}}
+\frac{d}{dt} \left( \frac{\partial L}{\partial f'} f' - L \right) + \frac{\partial L}{\partial t} = 0.
 {{</latex>}}
 
 因此，当欧拉—拉格朗日方程*满足时，下式也成立
