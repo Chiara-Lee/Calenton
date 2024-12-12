@@ -78,7 +78,7 @@ toc: true
 
 目前为止，我们构造的每一个集合所包含的元素个数都不超过两个。接下来这个公理将让我们能够构造出比之前稍大一些的集合。
 
-**公理 3.4（两集合并集）**给定任意两个集合 {{<latex display="false">}}A{{</latex>}} 和 {{<latex display="false">}}B{{</latex>}}，存在一个集合 {{<latex display="false">}}A \cup B{{</latex>}} 被称为 {{<latex display="false">}}A{{</latex>}} 和 {{<latex display="false">}}B{{</latex>}} 的 **并集**，该集合的元素由属于 {{<latex display="false">}}A{{</latex>}} 的或者属于 {{<latex display="false">}}B{{</latex>}} 的或者同时属于 {{<latex display="false">}}A{{</latex>}} 和 {{<latex display="false">}}B{{</latex>}} 的所有元素共同构成。换言之，对任意的对象 {{<latex display="false">}}x{{</latex>}}，
+**公理 3.4（两集合并集）**  给定任意两个集合 {{<latex display="false">}}A{{</latex>}} 和 {{<latex display="false">}}B{{</latex>}}，存在一个集合 {{<latex display="false">}}A \cup B{{</latex>}} 被称为 {{<latex display="false">}}A{{</latex>}} 和 {{<latex display="false">}}B{{</latex>}} 的 **并集**，该集合的元素由属于 {{<latex display="false">}}A{{</latex>}} 的或者属于 {{<latex display="false">}}B{{</latex>}} 的或者同时属于 {{<latex display="false">}}A{{</latex>}} 和 {{<latex display="false">}}B{{</latex>}} 的所有元素共同构成。换言之，对任意的对象 {{<latex display="false">}}x{{</latex>}}，
 
 {{<latex display="true">}}
 x \in A \cup B \iff (x \in A \text{ 或 } x \in B)
@@ -92,27 +92,27 @@ x \in A \cup B \iff (x \in A \text{ 或 } x \in B)
 
 **证明：**
 
-步骤 1: 证明 {{<latex display="false">}}A \cup B \subseteq A' \cup B{{</latex>}}
-
-假设 {{<latex display="false">}}x \in A \cup B{{</latex>}}。根据并集的定义，{{<latex display="false">}}x \in A \cup B{{</latex>}} 意味着 {{<latex display="false">}}x \in A{{</latex>}} 或者 {{<latex display="false">}}x \in B{{</latex>}}。
-
-- 如果 {{<latex display="false">}}x \in A{{</latex>}}，由于 {{<latex display="false">}}A = A'{{</latex>}}，因此 {{<latex display="false">}}x \in A'{{</latex>}}，所以 {{<latex display="false">}}x \in A' \cup B{{</latex>}}。
-- 如果 {{<latex display="false">}}x \in B{{</latex>}}，显然 {{<latex display="false">}}x \in A' \cup B{{</latex>}}（因为 {{<latex display="false">}}x \in B{{</latex>}}）。
-
-因此，{{<latex display="false">}}x \in A' \cup B{{</latex>}}。从而，我们得出 {{<latex display="false">}}A \cup B \subseteq A' \cup B{{</latex>}}。
-
-步骤 2: 证明 {{<latex display="false">}}A' \cup B \subseteq A \cup B{{</latex>}}
-
-假设 {{<latex display="false">}}x \in A' \cup B{{</latex>}}。根据并集的定义，{{<latex display="false">}}x \in A' \cup B{{</latex>}} 意味着 {{<latex display="false">}}x \in A'{{</latex>}} 或者 {{<latex display="false">}}x \in B{{</latex>}}。
-
-- 如果 {{<latex display="false">}}x \in A'{{</latex>}}，由于 {{<latex display="false">}}A = A'{{</latex>}}，因此 {{<latex display="false">}}x \in A{{</latex>}}，所以 {{<latex display="false">}}x \in A \cup B{{</latex>}}。
+> 步骤 1: 证明 {{<latex display="false">}}A \cup B \subseteq A' \cup B{{</latex>}}
+>
+> 假设 {{<latex display="false">}}x \in A \cup B{{</latex>}}。根据并集的定义，{{<latex display="false">}}x \in A \cup B{{</latex>}} 意味着 {{<latex display="false">}}x \in A{{</latex>}} 或者 {{<latex display="false">}}x \in B{{</latex>}}。
+>
+> - 如果 {{<latex display="false">}}x \in A{{</latex>}}，由于 {{<latex display="false">}}A = A'{{</latex>}}，因此 {{<latex display="false">}}x \in A'{{</latex>}}，所以 {{<latex display="false">}}x \in A' \cup B{{</latex>}}。
+> - 如果 {{<latex display="false">}}x \in B{{</latex>}}，显然 {{<latex display="false">}}x \in A' \cup B{{</latex>}}（因为 {{<latex display="false">}}x \in B{{</latex>}}）。
+>
+> 因此，{{<latex display="false">}}x \in A' \cup B{{</latex>}}。从而，我们得出 {{<latex display="false">}}A \cup B \subseteq A' \cup B{{</latex>}}。
+>
+> 步骤 2: 证明 {{<latex display="false">}}A' \cup B \subseteq A \cup B{{</latex>}}
+>
+> 假设 {{<latex display="false">}}x \in A' \cup B{{</latex>}}。根据并集的定义，{{<latex display="false">}}x \in A' \cup B{{</latex>}} 意味着 {{<latex display="false">}}x \in A'{{</latex>}} 或者 {{<latex display="false">}}x \in B{{</latex>}}。
+>
+> - 如果 {{<latex display="false">}}x \in A'{{</latex>}}，由于 {{<latex display="false">}}A = A'{{</latex>}}，因此 {{<latex display="false">}}x \in A{{</latex>}}，所以 {{<latex display="false">}}x \in A \cup B{{</latex>}}。
 - 如果 {{<latex display="false">}}x \in B{{</latex>}}，显然 {{<latex display="false">}}x \in A \cup B{{</latex>}}（因为 {{<latex display="false">}}x \in B{{</latex>}}）。
-
-因此，{{<latex display="false">}}x \in A \cup B{{</latex>}}。从而，我们得出 {{<latex display="false">}}A' \cup B \subseteq A \cup B{{</latex>}}。
-
-结论:
-
-由步骤 1 和步骤 2，我们得出 {{<latex display="false">}}A \cup B = A' \cup B{{</latex>}}。{{<latex display="false">}}\square{{</latex>}}
+>
+> 因此，{{<latex display="false">}}x \in A \cup B{{</latex>}}。从而，我们得出 {{<latex display="false">}}A' \cup B \subseteq A \cup B{{</latex>}}。
+>
+> 结论:
+>
+> 由步骤 1 和步骤 2，我们得出 {{<latex display="false">}}A \cup B = A' \cup B{{</latex>}}。{{<latex display="false">}}\square{{</latex>}}
 
 虽然以上证明显式的写出了尚未定义的集合之间的属于关系，但实际上，我们完全可以删掉这些属于号，而只使用{{<latex display="false">}}(\forall x \in A, x \in B),(\forall y \in B, y \in A){{</latex>}}这种写法，上述证明过程仍然成立，因此，该证明过程使用到的只有集合相等定义和并集公理。
 
