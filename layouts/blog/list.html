@@ -28,30 +28,38 @@
                 
                         {{ range .Pages }}
                             {{- if .IsPage }}
-                                <!-- 如果是单页面，直接累加字数和阅读时长 -->
+                                <!-- 如果是子页面，直接累加字数和阅读时长 -->
                                 {{ $totalReadingTime = add $totalReadingTime .ReadingTime }}
                                 {{ $totalWordCount = add $totalWordCount .WordCount }}
                             {{- else }}
                                 <!-- 如果是列表页面，递归调用获取字数和阅读时长 -->
                                 {{- $subTotalReadingTime := 0 }}
                                 {{- $subTotalWordCount := 0 }}
+                                
+                                {{- $depth := .Scratch.Get "depth" | default 0 }}
+                                {{- $processedPages := .Scratch.Get "processedPages" | default (slice) }}
                 
-                                {{ range .Pages }}
-                                    {{- if .IsPage }}
-                                        {{- $subTotalReadingTime = add $subTotalReadingTime .ReadingTime }}
-                                        {{- $subTotalWordCount = add $subTotalWordCount .WordCount }}
-                                    {{- else }}
-                                        {{- $scratch := .Scratch }}
-                                        {{- $scratch.Set "depth" 0 }}
-                                        {{- $scratch.Set "processedPages" (slice) }}
-
-                                        {{- $nestedValues := partial "calculate-total" . }}
-                                        {{- $nestedReadingTime := index $nestedValues 0 }}
-                                        {{- $nestedWordCount := index $nestedValues 1 }}
-                                    
-                                        {{- $subTotalReadingTime = add $subTotalReadingTime $nestedReadingTime }}
-                                        {{- $subTotalWordCount = add $subTotalWordCount $nestedWordCount }}
+                                <!-- 控制递归深度，避免递归过深 -->
+                                {{- if lt $depth 5 }} <!-- 递归到深度为5层，如果需要更多层次，可以修改这个值 -->
+                                    {{- .Scratch.Set "depth" (add $depth 1) }} <!-- 增加递归深度 -->
+                
+                                    {{ range .Pages }}
+                                        {{- if .IsPage }}
+                                            <!-- 如果是单页面，直接累加字数和阅读时长 -->
+                                            {{- $subTotalReadingTime = add $subTotalReadingTime .ReadingTime }}
+                                            {{- $subTotalWordCount = add $subTotalWordCount .WordCount }}
+                                        {{- else }}
+                                            <!-- 如果是列表页面，递归获取子页面字数 -->
+                                            {{- $nestedValues := partial "calculate-total" . }}
+                                            {{- $nestedReadingTime := index $nestedValues 0 }}
+                                            {{- $nestedWordCount := index $nestedValues 1 }}
+                
+                                            {{- $subTotalReadingTime = add $subTotalReadingTime $nestedReadingTime }}
+                                            {{- $subTotalWordCount = add $subTotalWordCount $nestedWordCount }}
+                                        {{- end }}
                                     {{- end }}
+                
+                                    {{- .Scratch.Set "depth" $depth }} <!-- 恢复深度计数 -->
                                 {{- end }}
                 
                                 <!-- 将子页面的统计结果累加到当前页面 -->
@@ -65,6 +73,7 @@
                         <span><i class="icon-text-width"></i> 总字数约 {{ $totalWordCount }} 字</span>
                     {{- end }}
                 </div>
+                
                       
                 <p>{{ .Summary | plainify | truncate 100 "..." }}</p>
                 <a href="{{ .Permalink }}" class="read-more">→ 进来看看</a>
