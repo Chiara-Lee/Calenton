@@ -1,13 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     try {
       const footnoteRefs = document.querySelectorAll('.footnote-ref');
+  
+      // 如果没有脚注引用，直接退出
+      if (footnoteRefs.length === 0) {
+        console.warn('未找到任何脚注引用，脚本终止执行。');
+        return;
+      }
+  
       console.log(`找到 ${footnoteRefs.length} 个脚注引用`);
   
       footnoteRefs.forEach((footnoteRef) => {
         const footnoteId = footnoteRef.getAttribute('href').substring(1); // 获取目标脚注 ID
+        console.log(`处理脚注引用: ${footnoteRef.outerHTML}, 指向: ${footnoteId}`);
         const footnote = document.getElementById(footnoteId);
   
         if (footnote) {
+          console.log(`找到对应脚注内容: ${footnote.outerHTML}`);
           // 创建脚注容器
           const container = document.createElement('div');
           container.className = 'footnote-container';
@@ -39,6 +48,5 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('脚本执行出错：', error);
     }
   });
-  
   
   
