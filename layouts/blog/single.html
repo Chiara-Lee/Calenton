@@ -67,27 +67,4 @@
 ) }}
 {{end}}
 
-/* JavaScript 自动生成注脚容器和绑定鼠标移动事件 */
-<script>
-  // 自动生成注脚容器
-  document.addEventListener('DOMContentLoaded', () => {
-    const footnotes = document.querySelectorAll('.footnote-ref');
-    footnotes.forEach((footnote, index) => {
-      const container = document.createElement('div');
-      container.className = 'footnote-container';
-      container.textContent = `注脚内容 ${index + 1}`; // 示例内容，可根据需要动态调整
-      document.body.appendChild(container);
-
-      // 绑定鼠标移动事件
-      footnote.addEventListener('mousemove', (event) => {
-        container.style.display = 'block';
-        container.style.left = `${event.pageX + 10}px`; // 鼠标右侧 10px
-        container.style.top = `${event.pageY + 10}px`;  // 鼠标下方 10px
-      });
-
-      footnote.addEventListener('mouseleave', () => {
-        container.style.display = 'none';
-      });
-    });
-  });
-</script>
+<script src="/js/footnotes.js"></script>
