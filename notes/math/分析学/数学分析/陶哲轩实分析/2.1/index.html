@@ -1,13 +1,13 @@
-<!doctype html><html lang=zh><head><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel=stylesheet><meta charset=UTF-8><meta name=description content="定义 3.1.1（非正式的）（集合）
+<!doctype html><html lang=zh><head><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel=stylesheet><meta charset=UTF-8><meta name=description content="1.摘要 本文公理一览：
+公理 3.1（集合是对象） 相等公理、替换公理 公理 3.2 (空集) 公理 3.3（单元素集与双元素集） 公理 3.4（两集合并集） 公理 3.5（分类公理） 公理 3.6 (替代) 公理 3.7 (无穷大) 2.正文 定义 3.1.1（非正式的）（集合）
 我们把 集合 A 定义为任意的一堆没有次序的对象。例如， \{3,8,5,2\} 是一个集合。如果 x 是这堆对象中的一个，那么我们称 x 是 A 中的一个元素 ，记作 x\in A ，否则，记作 x\notin A 。
 这个定义相当直观，但是它无法回答诸如下面这些问题：什么样的一堆对象可以被看作集合？什么样的集合与另外的集合相等？如何定义集合上的运算，比如并集、交集等？同时，我们还没有给出关于集合或者集合中元素的公理。本节剩余内容的主要目的就是给出这些公理并定义集合上的运算。
 首先阐明一个观点：我们把集合本身看作一类对象。
 公理 3.1（集合是对象） 如果 A 是一个集合，那么 A 也是一个对象。特别地，给定两个集合 A 和 B ，问 A 是不是 B 中的元素是有意义的。
-到目前为止，总的来说，在数学里学到的所有对象当中，有些对象恰好是集合。而且如果 x 是一个对象， A 是一个集合，那么 x \in A 要么为真，要么为假。（如果 A 不是集合，则我们认为 x \in A 是无定义的。例如， 3 \in 4 既非真也非假，该命题是无意义的，因为 4 不是一个集合。）
-接下来我们定义相等的概念：什么情况下可以认为两个集合是相等的？我们认为一个集合中元素的次序并不重要，因此我们把集合 \{3, 8, 5, 2\} 与 \{2, 3, 5, 8\} 看作同一个集合。另外， \{3, 8, 5, 2\} 与 \{3, 8, 5, 2, 1\} 是两个不同的集合，这是因为后者中的一个元素不包含在前者里，即元素 1 。基于类似的原因， \{3, 8, 5, 2\} 与 \{3, 8, 5\} 也是不同的集合。我们把这部分内容作为一个定义。"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>3.1 基础知识</title>
+到目前为止，总的来说，在数学里学到的所有对象当中，有些对象恰好是集合。而且如果 x 是一个对象， A 是一个集合，那么 x \in A 要么为真，要么为假。（如果 A 不是集合，则我们认为 x \in A 是无定义的。例如， 3 \in 4 既非真也非假，该命题是无意义的，因为 4 不是一个集合。）"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>3.1 基础知识</title>
 <script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
 Caleton Academy
-</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/computer-science-and-technology/>Cst</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>3.1 基础知识</h1><h2>Table of Contents</h2><nav id=TableOfContents><ul><li><a href=#习题>习题</a></li></ul></nav><div class=content-wrapper><div class=content><p><strong>定义 3.1.1（非正式的）</strong>（集合）</p><p>我们把 <strong>集合 A</strong> 定义为任意的一堆没有次序的对象。例如，
+</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/computer-science-and-technology/>Cst</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>3.1 基础知识</h1><h2>Table of Contents</h2><nav id=TableOfContents><ul><li><a href=#1摘要>1.摘要</a></li><li><a href=#2正文>2.正文</a></li><li><a href=#3习题>3.习题</a></li></ul></nav><div class=content-wrapper><div class=content><h2 id=1摘要>1.摘要</h2><p>本文公理一览：</p><ul><li>公理 3.1（集合是对象）</li><li>相等公理、替换公理</li><li>公理 3.2 (空集)</li><li>公理 3.3（单元素集与双元素集）</li><li>公理 3.4（两集合并集）</li><li>公理 3.5（分类公理）</li><li>公理 3.6 (替代)</li><li>公理 3.7 (无穷大)</li></ul><h2 id=2正文>2.正文</h2><p><strong>定义 3.1.1（非正式的）</strong>（集合）</p><p>我们把 <strong>集合 A</strong> 定义为任意的一堆没有次序的对象。例如，
 <span class=fallback-latex>\{3,8,5,2\}
 </span>是一个集合。如果
 <span class=fallback-latex>x
@@ -514,7 +514,7 @@ Caleton Academy
 <span class=fallback-latex>A
 </span>的每一个元素都是
 <span class=fallback-latex>B
-</span>中的元素，即</p><span class=fallback-latex>对任意的对象 x ， x \in A \implies x \in B</span><p>如果
+</span>中的元素，即</p><span class=fallback-latex>\text{对任意的对象} x，x \in A \implies x \in B</span><p>如果
 <span class=fallback-latex>A \subseteq B
 </span>并且
 <span class=fallback-latex>A \neq B
@@ -1136,7 +1136,7 @@ Caleton Academy
 <span class=fallback-latex>m
 </span>（或在集合里的元素都能通过一个合适的
 <span class=fallback-latex>n
-</span>）来匹配上。换句话说，改变了字母作为变量之后，变量不会误地将两侧的集合混为一谈，而能顺利理解两个集合事实上是不同的参数化得到的元集合。</p><h2 id=习题>习题</h2><ol><li>设
+</span>）来匹配上。换句话说，改变了字母作为变量之后，变量不会误地将两侧的集合混为一谈，而能顺利理解两个集合事实上是不同的参数化得到的元集合。</p><h2 id=3习题>3.习题</h2><ol><li>设
 <span class=fallback-latex>A
 </span>和
 <span class=fallback-latex>B
@@ -1261,8 +1261,8 @@ Caleton Academy
 <span class=fallback-latex>B
 </span>的角色对调：</p><ol><li><span class=fallback-latex>x \in B \Rightarrow x \in X \text{ 且 } x \notin A, \text{ 故 } B \subseteq X \setminus A.</span></li><li><span class=fallback-latex>x \in X \setminus A \Rightarrow x \in X \text{ 且 } x \notin A, \text{ 由 } X = A \cup B \text{ 且 } x \notin A, \text{ 得 } x \in B, \text{ 故 } X \setminus A \subseteq B.</span></li></ol><p>综上可得
 <span class=fallback-latex>B = X \setminus A
-</span>。</p><p>其余习题已于正文中给出。</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>策梅洛-弗兰克尔集合论（英语：Zermelo-Fraenkel Set Theory），是数学基础中最常用的一阶公理化集合论。含选择公理时常简写为ZFC，不含选择公理的则简写为ZF。它是二十世纪早期为了建构一个不会导致类似罗素悖论的矛盾的集合理论所提出的一个公理系统。&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><aside class=sidebar><div class=card><h2>摘要</h2><p>定义 3.1.1（非正式的）（集合）
-我们把 集合 A 定义为任意的一堆没有次序的对象。例如， \{3,8,5,2\} 是一个集合。如果 x 是这堆对象中的一个，那么我们称 x 是 A …</p></div><div class=card><h2>阅读时长</h2><p>18 min</p></div><div class=card><h2>总字数</h2><p>≈ 3670</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
+</span>。</p><p>其余习题已于正文中给出。</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>策梅洛-弗兰克尔集合论（英语：Zermelo-Fraenkel Set Theory），是数学基础中最常用的一阶公理化集合论。含选择公理时常简写为ZFC，不含选择公理的则简写为ZF。它是二十世纪早期为了建构一个不会导致类似罗素悖论的矛盾的集合理论所提出的一个公理系统。&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><aside class=sidebar><div class=card><h2>摘要</h2><p>1.摘要 本文公理一览：
+公理 3.1（集合是对象） 相等公理、替换公理 公理 3.2 (空集) 公理 3.3（单元素集与双元素集） 公理 3.4（两集合并集） 公理 3.5（分类公理） 公理 3.6 …</p></div><div class=card><h2>阅读时长</h2><p>18 min</p></div><div class=card><h2>总字数</h2><p>≈ 3689</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
 数学分析</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/1.3/><h2>2.3 乘法</h2><article>在上一节中，我们已经证明了所知道的所有关于加法和序的基本事实。为了节省篇幅以及避免赘述那些显然的事情，接下来我们将允许使用所熟悉的关于加法和序的代数法则，而不加进一步的说明。于是我们可以写出 a+b+c=c+b+a 这样的内容，不需要进一步解释说明。现在我们引入乘法。正如加法是重复的增量运算一样，乘法是重复的加法运算。
 定义 2.3.1（自然数的乘法）
 令 m 表示任意一个自然数，
