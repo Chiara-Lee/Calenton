@@ -56,13 +56,9 @@
                             {{- end }}
                         {{- end }}
                 
-                        <!-- 将统计结果存储到当前页面的 Scratch 中 -->
-                        {{ .Scratch.Set "totalReadingTime_parent" $totalReadingTime }}
-                        {{ .Scratch.Set "totalWordCount_parent" $totalWordCount }}
-                
                         <!-- 页面显示统计结果 -->
-                        <span><i class="icon-time"></i> 预计阅读总时长 {{ .Scratch.Get "totalReadingTime_parent" }} 分钟</span>
-                        <span><i class="icon-text-width"></i> 总字数约 {{ .Scratch.Get "totalWordCount_parent" }} 字</span>
+                        <span><i class="icon-time"></i> 预计阅读总时长 {{ $totalReadingTime }} 分钟</span>
+                        <span><i class="icon-text-width"></i> 总字数约 {{ $totalWordCount }} 字</span>
                     {{- end }}
                 </div>
                       
