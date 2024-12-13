@@ -1,23 +1,29 @@
-{{- $totalReadingTime := 0 }}
-{{- $totalWordCount := 0 }}
+{{- $depth := .Scratch.Get "depth" | default 0 }}
+{{- if lt $depth 5 }} <!-- 设置递归深度限制为 5 -->
+    {{- .Scratch.Set "depth" (add $depth 1) }}
 
-{{- range .Pages }}
-    {{- if .IsPage }}
-        <!-- 如果是单页面，直接累加字数和阅读时长 -->
-        {{- $totalReadingTime = add $totalReadingTime .ReadingTime }}
-        {{- $totalWordCount = add $totalWordCount .WordCount }}
-    {{- else }}
-        <!-- 如果是列表页面，递归调用获取字数和阅读时长 -->
-        {{- $nestedValues := partial "calculate-total" . }}
-        {{- $nestedReadingTime := index $nestedValues 0 }}
-        {{- $nestedWordCount := index $nestedValues 1 }}
+    {{- $totalReadingTime := 0 }}
+    {{- $totalWordCount := 0 }}
 
-        <!-- 将子页面的统计结果累加到当前页面 -->
-        {{- $totalReadingTime = add $totalReadingTime $nestedReadingTime }}
-        {{- $totalWordCount = add $totalWordCount $nestedWordCount }}
+    {{- range .Pages }}
+        {{- if .IsPage }}
+            {{- $totalReadingTime = add $totalReadingTime .ReadingTime }}
+            {{- $totalWordCount = add $totalWordCount .WordCount }}
+        {{- else }}
+            {{- $nestedValues := partial "calculate-total" (dict "Pages" .Pages "Scratch" .Scratch) }}
+            {{- $nestedReadingTime := index $nestedValues 0 }}
+            {{- $nestedWordCount := index $nestedValues 1 }}
+
+            {{- $totalReadingTime = add $totalReadingTime $nestedReadingTime }}
+            {{- $totalWordCount = add $totalWordCount $nestedWordCount }}
+        {{- end }}
     {{- end }}
+
+    {{- .Scratch.Set "depth" $depth }} <!-- 恢复深度值 -->
+    {{ slice $totalReadingTime $totalWordCount }}
+{{- else }}
+    <!-- 返回默认值，避免无限递归 -->
+    {{ slice 0 0 }}
 {{- end }}
 
-<!-- 返回一个包含两个值的切片 -->
-{{ slice $totalReadingTime $totalWordCount }}
 
