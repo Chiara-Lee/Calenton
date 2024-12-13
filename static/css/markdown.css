@@ -121,6 +121,9 @@
   transform: translate(0, 0); /* 默认无偏移 */
   transition: transform 0.2s ease-out; /* 平滑移动效果 */
   z-index: 1000; /* 确保层级足够高 */
+  max-width: 300px; /* 限制最大宽度 */
+  max-height: 200px; /* 限制最大高度 */
+  overflow: auto; /* 超出部分可滚动 */
 }
 
 /* 鼠标悬浮显示注脚内容容器 */
