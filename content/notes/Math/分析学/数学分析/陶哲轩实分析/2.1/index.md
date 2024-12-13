@@ -6,6 +6,20 @@ tags: [数学分析]
 toc: true
 ---
 
+##  1.摘要
+
+本文公理一览：
+- 公理 3.1（集合是对象）
+- 相等公理、替换公理
+- 公理 3.2 (空集) 
+- 公理 3.3（单元素集与双元素集）
+- 公理 3.4（两集合并集）
+- 公理 3.5（分类公理）
+- 公理 3.6 (替代) 
+- 公理 3.7 (无穷大) 
+
+##  2.正文
+
 **定义 3.1.1（非正式的）**（集合）
 
 我们把  **集合 A**  定义为任意的一堆没有次序的对象。例如，{{<latex display="false">}}\{3,8,5,2\}{{</latex>}}是一个集合。如果{{<latex display="false">}}x{{</latex>}}是这堆对象中的一个，那么我们称  **{{<latex display="false">}}x{{</latex>}}是{{<latex display="false">}}A{{</latex>}}中的一个元素** ，记作{{<latex display="false">}}x\in A{{</latex>}}，否则，记作{{<latex display="false">}}x\notin A{{</latex>}}。
@@ -183,7 +197,7 @@ A \cup B = B \cup A
 **定义 3.1.15（子集）** 设 {{<latex display="false">}}A{{</latex>}} 和 {{<latex display="false">}}B{{</latex>}} 都是集合，我们称 {{<latex display="false">}}A{{</latex>}} 是 {{<latex display="false">}}B{{</latex>}} 的子集，并记作 {{<latex display="false">}}A \subseteq B{{</latex>}}，当且仅当 {{<latex display="false">}}A{{</latex>}} 的每一个元素都是 {{<latex display="false">}}B{{</latex>}} 中的元素，即
 
 {{<latex display="true">}}
-对任意的对象 {{<latex display="false">}}x{{</latex>}}，{{<latex display="false">}}x \in A \implies x \in B{{</latex>}}
+\text{对任意的对象} x，x \in A \implies x \in B
 {{</latex>}}
 
 如果 {{<latex display="false">}}A \subseteq B{{</latex>}} 并且 {{<latex display="false">}}A \neq B{{</latex>}}，那么我们称 {{<latex display="false">}}A{{</latex>}} 是 {{<latex display="false">}}B{{</latex>}} 的真子集，记作 {{<latex display="false">}}A \subsetneq B{{</latex>}}。
@@ -391,7 +405,7 @@ A \cup B = B \cup A
 
 在我们的许多例子中，都隐含地假设了自然数实际上就是对象。对此我们给出下面的正式叙述。
 
-**公理 3.7 (无穷大)** 存在一个集合 {{<latex display="true">}} \mathbb{N} {{</latex>}}，它的元素被称为自然数。对象 0 在 {{<latex display="false">}} \mathbb{N} {{</latex>}} 中，且每一个自然数 {{<latex display="false">}} n \in \mathbb{N} {{</latex>}} 所指定的满足皮亚诺公理（公理 2.1～2.5）的对象 {{<latex display="false">}} n++ {{</latex>}} 也在 {{<latex display="false">}} \mathbb{N} {{</latex>}} 中。
+**公理 3.7 (无穷大)** 存在一个集合 {{<latex display="false">}} \mathbb{N} {{</latex>}}，它的元素被称为自然数。对象 0 在 {{<latex display="false">}} \mathbb{N} {{</latex>}} 中，且每一个自然数 {{<latex display="false">}} n \in \mathbb{N} {{</latex>}} 所指定的满足皮亚诺公理（公理 2.1～2.5）的对象 {{<latex display="false">}} n++ {{</latex>}} 也在 {{<latex display="false">}} \mathbb{N} {{</latex>}} 中。
 
 这是假设 2.6 更加正式的表达。它被称为无穷大公理，因为它引入了无穷大集合一个最基本的例子，也就是自然数集 {{<latex display="false">}} \mathbb{N} {{</latex>}}（我们将在 3.6 节正式阐述有穷大和无穷大的意思）。我们从无穷大公理中能够看到，像 3, 5, 7 等这样的数确实是集合论中的对象，从而（根据双元素集合公理和两集合并集公理）我们的确可以合法构造如 {{<latex display="false">}} \{ 3, 5, 9 \} {{</latex>}} 这样的集合，就像在之前的例子中我们做过的那样。
 
@@ -427,7 +441,7 @@ A \cup B = B \cup A
 
 现在，这看一眼就能看出：左边用 {{<latex display="false">}} n {{</latex>}} 来构造集合，右边用 {{<latex display="false">}} m {{</latex>}} 来构造集合，它们是两个独立的参数，各自有独立定义的集合。这样就可以清晰地观察到，左边集合里的每个元素都能通过一个适当的 {{<latex display="false">}} m {{</latex>}}（或在集合里的元素都能通过一个合适的 {{<latex display="false">}} n {{</latex>}}）来匹配上。换句话说，改变了字母作为变量之后，变量不会误地将两侧的集合混为一谈，而能顺利理解两个集合事实上是不同的参数化得到的元集合。
 
-##  习题
+##  3.习题
 
 1. 设 {{<latex display="false">}} A {{</latex>}} 和 {{<latex display="false">}} B {{</latex>}} 是集合，证明 **吸收率**  {{<latex display="false">}} A \cap (A \cup B) = A \quad \text{和} \quad A \cup (A \cap B) = A. {{</latex>}}
 
@@ -449,19 +463,19 @@ A \cup B = B \cup A
 
 证明 {{<latex display="true">}} A \cup (A \cap B) = A {{</latex>}}
 
-1. 证明 {{<latex display="true">}} A \cup (A \cap B) \subseteq A {{</latex>}}:  
+1. 证明 {{<latex display="false">}} A \cup (A \cap B) \subseteq A {{</latex>}}:  
 设 {{<latex display="false">}} x \in A \cup (A \cap B) {{</latex>}}。  
 根据并集定义，{{<latex display="false">}} x \in A {{</latex>}} 或 {{<latex display="false">}} x \in A \cap B {{</latex>}}。  
 若 {{<latex display="false">}} x \in A {{</latex>}}，则显然 {{<latex display="false">}} x \in A {{</latex>}} 成立。  
 若 {{<latex display="false">}} x \in A \cap B {{</latex>}}，根据交集定义，{{<latex display="false">}} x \in A {{</latex>}} 且 {{<latex display="false">}} x \in B {{</latex>}}。此时依然有 {{<latex display="false">}} x \in A {{</latex>}}。  
 故 {{<latex display="false">}} A \cup (A \cap B) \subseteq A {{</latex>}}。
 
-2. 证明 {{<latex display="true">}} A \subseteq (A \cup (A \cap B)) {{</latex>}}:  
+2. 证明 {{<latex display="false">}} A \subseteq (A \cup (A \cap B)) {{</latex>}}:  
 设 {{<latex display="false">}} x \in A {{</latex>}}。  
 由于 {{<latex display="false">}} x \in A {{</latex>}}，显然有 {{<latex display="false">}} x \in A \cup (A \cap B) {{</latex>}}。  
 故 {{<latex display="false">}} A \subseteq (A \cup (A \cap B)) {{</latex>}}。
 
-综上，两方面的包涵都得证，故有 {{<latex display="true">}} A \cup (A \cap B) = A {{</latex>}}。
+综上，两方面的包涵都得证，故有 {{<latex display="false">}} A \cup (A \cap B) = A {{</latex>}}。
 
 2. 令 {{<latex display="false">}} A, B, X {{</latex>}} 表示集合，并且它们满足 {{<latex display="false">}} A \cup B = X {{</latex>}} 和 {{<latex display="false">}} A \cap B = \emptyset {{</latex>}}。证明 {{<latex display="false">}} A = X \setminus B {{</latex>}}和{{<latex display="false">}} B = X \setminus A {{</latex>}}
 
@@ -470,13 +484,13 @@ A \cup B = B \cup A
 1. 证明 {{<latex display="false">}} A \subseteq X \setminus B {{</latex>}}:  
 
 任取 {{<latex display="false">}} x \in A {{</latex>}}，因为 {{<latex display="false">}} A \subseteq A \cup B = X {{</latex>}}，可知 {{<latex display="false">}} x \in X {{</latex>}}。  
-又因为 {{<latex display="true">}} A \cap B = \emptyset {{</latex>}}，所以 {{<latex display="false">}} x \notin B {{</latex>}}。  
+又因为 {{<latex display="false">}} A \cap B = \emptyset {{</latex>}}，所以 {{<latex display="false">}} x \notin B {{</latex>}}。  
 因此 {{<latex display="false">}} x \in X \setminus B {{</latex>}}，故 {{<latex display="false">}} A \subseteq X \setminus B {{</latex>}}。
 
 2. 证明 {{<latex display="false">}} X \setminus B \subseteq A {{</latex>}}:  
 
 任取 {{<latex display="false">}} x \in X \setminus B {{</latex>}}，则 {{<latex display="false">}} x \in X {{</latex>}} 且 {{<latex display="false">}} x \notin B {{</latex>}}。  
-已知 {{<latex display="true">}} X = A \cup B {{</latex>}}，且 {{<latex display="false">}} x \in A \cup B {{</latex>}}，则 {{<latex display="false">}} x \in A {{</latex>}} 或 {{<latex display="false">}} x \in B {{</latex>}}。  
+已知 {{<latex display="false">}} X = A \cup B {{</latex>}}，且 {{<latex display="false">}} x \in A \cup B {{</latex>}}，则 {{<latex display="false">}} x \in A {{</latex>}} 或 {{<latex display="false">}} x \in B {{</latex>}}。  
 由于 {{<latex display="false">}} x \notin B {{</latex>}}，则只能有 {{<latex display="false">}} x \in A {{</latex>}}，故 {{<latex display="false">}} X \setminus B \subseteq A {{</latex>}}。
 
 综上，两方面的包涵都得证，故有 {{<latex display="false">}} A = X \setminus B {{</latex>}}。
