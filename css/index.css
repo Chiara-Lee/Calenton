@@ -54,6 +54,7 @@ body {
   width: 100vw;
   font-family: 'Noto Sans SC', sans-serif; /* For Simplified Chinese *//* Apply Noto Sans font to Chinese text */
   background: url('/image/background.webp') no-repeat center center / cover;
+  background-attachment: fixed; /* 固定背景 */
   min-height: 100vh;
 }
 
