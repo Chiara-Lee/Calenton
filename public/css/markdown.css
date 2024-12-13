@@ -115,11 +115,12 @@
   padding: 1em;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  opacity: 0;
+  opacity: 0; 
   visibility: hidden;
+  position: absolute;
   transition: opacity 0.2s ease, transform 0.2s ease;
   backdrop-filter: blur(2px); /* 对背景应用模糊效果 */
-  z-index: 1000;
+  z-index: 9999;
   border: 1px solid rgba(255, 255, 255, 0.3); /* 半透明的白色边框 */
   /* 限制最大宽度和内容溢出 */
   max-width: 700px; /* 设置弹出框的最大宽度 */
@@ -131,6 +132,15 @@
   opacity: 1;
   visibility: visible;
 }
+
+.footnote-ref {
+  display: inline-block;
+  padding: 5px; /* 增加点击区域 */
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+}
+
 
 
 
