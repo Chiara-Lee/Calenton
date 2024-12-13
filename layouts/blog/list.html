@@ -26,7 +26,8 @@
                         {{ $totalReadingTime := 0 }}
                         {{ $totalWordCount := 0 }}
                 
-                        {{- range .Pages }}
+                        {{ range where .Pages "Type" "post" }}
+                        {{ /* 仅处理类型为 "post" 的页面 */ }}
                             {{- if .IsPage }}
                                 <!-- 如果是单页面，直接累加字数和阅读时长 -->
                                 {{ $totalReadingTime = add $totalReadingTime .ReadingTime }}

@@ -1,5 +1,5 @@
 {{- $depth := .Scratch.Get "depth" | default 0 }}
-{{- if lt $depth 5 }} <!-- 设置递归深度限制为 5 -->
+{{- if lt $depth 5 }} <!-- 深度限制为 5 -->
     {{- .Scratch.Set "depth" (add $depth 1) }}
 
     {{- $totalReadingTime := 0 }}
@@ -9,11 +9,12 @@
         {{- if .IsPage }}
             {{- $totalReadingTime = add $totalReadingTime .ReadingTime }}
             {{- $totalWordCount = add $totalWordCount .WordCount }}
-        {{- else }}
-            {{- $nestedValues := partial "calculate-total" (dict "Pages" .Pages "Scratch" .Scratch) }}
+        {{- else if not .Scratch.Get \"already-calculated\" }}
+            <!-- 防止重复计算 -->
+            {{- .Scratch.Set \"already-calculated\" true }}
+            {{- $nestedValues := partial \"calculate-total\" (dict \"Pages\" .Pages \"Scratch\" .Scratch) }}
             {{- $nestedReadingTime := index $nestedValues 0 }}
             {{- $nestedWordCount := index $nestedValues 1 }}
-
             {{- $totalReadingTime = add $totalReadingTime $nestedReadingTime }}
             {{- $totalWordCount = add $totalWordCount $nestedWordCount }}
         {{- end }}
@@ -22,8 +23,7 @@
     {{- .Scratch.Set "depth" $depth }} <!-- 恢复深度值 -->
     {{ slice $totalReadingTime $totalWordCount }}
 {{- else }}
-    <!-- 返回默认值，避免无限递归 -->
-    {{ slice 0 0 }}
+    {{ slice 0 0 }} <!-- 超过深度返回默认值 -->
 {{- end }}
 
 
