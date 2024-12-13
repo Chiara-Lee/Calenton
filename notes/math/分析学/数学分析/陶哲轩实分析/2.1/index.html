@@ -7,7 +7,7 @@
 接下来我们定义相等的概念：什么情况下可以认为两个集合是相等的？我们认为一个集合中元素的次序并不重要，因此我们把集合 \{3, 8, 5, 2\} 与 \{2, 3, 5, 8\} 看作同一个集合。另外， \{3, 8, 5, 2\} 与 \{3, 8, 5, 2, 1\} 是两个不同的集合，这是因为后者中的一个元素不包含在前者里，即元素 1 。基于类似的原因， \{3, 8, 5, 2\} 与 \{3, 8, 5\} 也是不同的集合。我们把这部分内容作为一个定义。"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>3.1 基础知识</title>
 <script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
 Caleton Academy
-</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/computer-science-and-technology/>Cst</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>3.1 基础知识</h1><h2>Table of Contents</h2><nav id=TableOfContents></nav><div class=content-wrapper><div class=content><p><strong>定义 3.1.1（非正式的）</strong>（集合）</p><p>我们把 <strong>集合 A</strong> 定义为任意的一堆没有次序的对象。例如，
+</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/computer-science-and-technology/>Cst</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/physcis/>Physics</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>3.1 基础知识</h1><h2>Table of Contents</h2><nav id=TableOfContents><ul><li><a href=#习题>习题</a></li></ul></nav><div class=content-wrapper><div class=content><p><strong>定义 3.1.1（非正式的）</strong>（集合）</p><p>我们把 <strong>集合 A</strong> 定义为任意的一堆没有次序的对象。例如，
 <span class=fallback-latex>\{3,8,5,2\}
 </span>是一个集合。如果
 <span class=fallback-latex>x
@@ -351,13 +351,13 @@ Caleton Academy
 <span class=fallback-latex>x \in A
 </span>，所以
 <span class=fallback-latex>x \in A \cup B
-</span>。</li></ul></blockquote><ul><li>如果
+</span>。</li><li>如果
 <span class=fallback-latex>x \in B
 </span>，显然
 <span class=fallback-latex>x \in A \cup B
 </span>（因为
 <span class=fallback-latex>x \in B
-</span>）。</li></ul><blockquote><p>因此，
+</span>）。</li></ul><p>因此，
 <span class=fallback-latex>x \in A \cup B
 </span>。从而，我们得出
 <span class=fallback-latex>A' \cup B \subseteq A \cup B
@@ -374,7 +374,7 @@ Caleton Academy
 <span class=fallback-latex>A \cup B
 </span>等于
 <span class=fallback-latex>A \cup B'
-</span>。因此，求并运算遵守替换公理，从而该运算在集合上是定义明确的。</p><p>现在我们给出并集的一些基本性质。</p><p>引理 3.1.13 如果
+</span>。因此，求并运算遵守替换公理，从而该运算在集合上是定义明确的。</p><p>现在我们给出并集的一些基本性质。</p><p><strong>引理 3.1.13</strong> 如果
 <span class=fallback-latex>a
 </span>和
 <span class=fallback-latex>b
@@ -392,8 +392,877 @@ Caleton Academy
 <span class=fallback-latex>(A \cup B) \cup C = A \cup (B \cup C)
 </span>）。另外，我们有
 <span class=fallback-latex>A \cup A = A \cup \emptyset = \emptyset \cup A = A
-</span>。</p></div><aside class=sidebar><div class=card><h2>摘要</h2><p>定义 3.1.1（非正式的）（集合）
-我们把 集合 A 定义为任意的一堆没有次序的对象。例如， \{3,8,5,2\} 是一个集合。如果 x 是这堆对象中的一个，那么我们称 x 是 A …</p></div><div class=card><h2>阅读时长</h2><p>5 min</p></div><div class=card><h2>总字数</h2><p>≈ 896</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
+</span>。</p><p><strong>证明：</strong> 首先证明 <strong>结合律
+<span class=fallback-latex>(A \cup B) \cup C = A \cup (B \cup C)
+</span></strong>。</p><p>根据定义 3.1.4 （集合的相等）可知，我们需要证明
+<span class=fallback-latex>(A \cup B) \cup C
+</span>中的任意一个元素
+<span class=fallback-latex>x
+</span>都是集合
+<span class=fallback-latex>A \cup (B \cup C)
+</span>中的元素，反之亦然。</p><p>于是，首先假设
+<span class=fallback-latex>x
+</span>是
+<span class=fallback-latex>(A \cup B) \cup C
+</span>中的一个元素，那么根据公理 3.4 （两集合并集）可知，这意味着
+<span class=fallback-latex>x \in A \cup B
+</span>和
+<span class=fallback-latex>x \in C
+</span>中至少有一个为真。现在我们分两种情况来讨论。</p><p>如果
+<span class=fallback-latex>x \in C
+</span>，则根据公理 3.4 可知
+<span class=fallback-latex>x \in B \cup C
+</span>，进而再次利用公理 3.4 可得，
+<span class=fallback-latex>x \in A \cup (B \cup C)
+</span>。</p><p>现在假设
+<span class=fallback-latex>x \in A \cup B
+</span>，那么由公理 3.4 可知
+<span class=fallback-latex>x \in A
+</span>或
+<span class=fallback-latex>x \in B
+</span>。一方面，如果
+<span class=fallback-latex>x \in A
+</span>，从公理 3.4 中可得
+<span class=fallback-latex>x \in A \cup (B \cup C)
+</span>；另一方面，如果
+<span class=fallback-latex>x \in B
+</span>，通过连续应用公理 3.4 可得
+<span class=fallback-latex>x \in B \cup C
+</span>，进而有
+<span class=fallback-latex>x \in A \cup (B \cup C)
+</span>。</p><p>因此我们得到，在所有可能的情况中，
+<span class=fallback-latex>(A \cup B) \cup C
+</span>中的每一个元素均包含在
+<span class=fallback-latex>A \cup (B \cup C)
+</span>中。同理可以推出
+<span class=fallback-latex>A \cup (B \cup C)
+</span>中的每一个元素也都包含在
+<span class=fallback-latex>(A \cup B) \cup C
+</span>中，于是我们证明了
+<span class=fallback-latex>(A \cup B) \cup C = A \cup (B \cup C)
+</span>。□</p><p>第二，对于求并运算的可交换性，<strong>
+<span class=fallback-latex>A \cup B=B \cup A
+</span></strong>.</p><ol><li>证明
+<span class=fallback-latex>A \cup B \subseteq B \cup A
+</span>:</li></ol><p>假设
+<span class=fallback-latex>x \in A \cup B
+</span>。根据并集的定义，此时存在两种可能：</p><ul><li><span class=fallback-latex>x \in A</span></li><li><span class=fallback-latex>x \in B</span></li></ul><p>无论是上述哪种情况，都意味着
+<span class=fallback-latex>x \in B \cup A
+</span>（因为
+<span class=fallback-latex>B \cup A
+</span>定义与
+<span class=fallback-latex>A \cup B
+</span>相同，只是
+<span class=fallback-latex>A
+</span>和
+<span class=fallback-latex>B
+</span>的位置对调，不影响“或”的逻辑关系）。</p><p>因此，当
+<span class=fallback-latex>x \in A \cup B
+</span>时，必有
+<span class=fallback-latex>x \in B \cup A
+</span>。由此得到
+<span class=fallback-latex>A \cup B \subseteq B \cup A
+</span>。</p><ol start=2><li>证明
+<span class=fallback-latex>B \cup A \subseteq A \cup B
+</span>:</li></ol><p>该部分的证明与上面完全对称。</p><p>假设
+<span class=fallback-latex>x \in B \cup A
+</span>。根据并集的定义，这意味着：</p><ul><li><span class=fallback-latex>x \in B</span></li><li>或者
+<span class=fallback-latex>x \in A</span></li></ul><p>无论是哪种情况，都必然有
+<span class=fallback-latex>x \in A \cup B
+</span>。</p><p>因此，当
+<span class=fallback-latex>x \in B \cup A
+</span>时，必有
+<span class=fallback-latex>x \in A \cup B
+</span>。由此得到
+<span class=fallback-latex>B \cup A \subseteq A \cup B
+</span>。</p><ol start=4><li>合并结果：</li></ol><p>综合上述两个包含关系，我们有：</p><span class=fallback-latex>A \cup B \subseteq B \cup A \quad \text{且} \quad B \cup A \subseteq A \cup B</span><p>根据集合相等的判定标准（互相包含），得到：</p><span class=fallback-latex>A \cup B = B \cup A</span><p>第三，对于 <strong><span class=fallback-latex>A \cup A = A \cup \emptyset = \emptyset \cup A = A.
+</span></strong>，使用与上两式同样的证明思路易得。</p><p>因为有了上面这个引理，我们就不需要利用括号来表示多个并集运算了。例如，我们可以用
+<span class=fallback-latex>A \cup B \cup C
+</span>来代替
+<span class=fallback-latex>(A \cup B) \cup C
+</span>和
+<span class=fallback-latex>A \cup (B \cup C)
+</span>。类似地，对于四个集合求并，我们可以写成
+<span class=fallback-latex>A \cup B \cup C \cup D
+</span>，等等。</p><p>这个公理使得我们可以定义三元素集、四元素集，以此类推。如果
+<span class=fallback-latex>a, b, c
+</span>是三个对象，那么定义
+<span class=fallback-latex>\{a, b, c\} := \{a\} \cup \{b\} \cup \{c\}
+</span>；如果
+<span class=fallback-latex>a, b, c, d
+</span>是四个对象，那么定义
+<span class=fallback-latex>\{a, b, c, d\} := \{a\} \cup \{b\} \cup \{c\} \cup \{d\}
+</span>，以此类推。另外，对任意给定的自然数
+<span class=fallback-latex>n
+</span>，我们目前尚无法定义由
+<span class=fallback-latex>n
+</span>个对象构成的集合；这需要把上述结构迭代 “
+<span class=fallback-latex>n
+</span>次”，然而
+<span class=fallback-latex>n
+</span>次迭代的概念还没有被严格定义。基于类似的原因，我们还无法定义由无穷多个对象所构成的集合概念，因为这需要对两集合并集公理迭代无穷多次，而且目前能否确保整个过程的严谨性尚不清楚。后面我们会介绍集合论的一些其他公理，这些公理将使我们能够构造出任意大甚至是无穷大的集合。</p><p>显然，某些集合看起来比其他集合要大。正式建立这种概念的一种方法是引入子集的概念。</p><p><strong>定义 3.1.15（子集）</strong> 设
+<span class=fallback-latex>A
+</span>和
+<span class=fallback-latex>B
+</span>都是集合，我们称
+<span class=fallback-latex>A
+</span>是
+<span class=fallback-latex>B
+</span>的子集，并记作
+<span class=fallback-latex>A \subseteq B
+</span>，当且仅当
+<span class=fallback-latex>A
+</span>的每一个元素都是
+<span class=fallback-latex>B
+</span>中的元素，即</p><span class=fallback-latex>对任意的对象 x ， x \in A \implies x \in B</span><p>如果
+<span class=fallback-latex>A \subseteq B
+</span>并且
+<span class=fallback-latex>A \neq B
+</span>，那么我们称
+<span class=fallback-latex>A
+</span>是
+<span class=fallback-latex>B
+</span>的真子集，记作
+<span class=fallback-latex>A \subsetneq B
+</span>。</p><p>注 3.1.16 因为上面的定义中只包含了相等的概念以及“是……的元素”的关系，而这两者都遵守替换公理，所以子集的概念也自动地遵守替换公理。于是，譬如若
+<span class=fallback-latex>A \subseteq B
+</span>并且
+<span class=fallback-latex>A = A'
+</span>，那么
+<span class=fallback-latex>A' \subseteq B
+</span>。</p><p>例 3.1.17 我们有
+<span class=fallback-latex>\{1, 2, 4\} \subseteq \{1, 2, 3, 4, 5\}
+</span>，这是因为
+<span class=fallback-latex>\{1, 2, 4\}
+</span>中的每一个元素都是
+<span class=fallback-latex>\{1, 2, 3, 4, 5\}
+</span>中的元素。事实上，我们也可以得到
+<span class=fallback-latex>\{1, 2, 4\} \subsetneq \{1, 2, 3, 4, 5\}
+</span>，因为集合
+<span class=fallback-latex>\{1, 2, 4\}
+</span>与
+<span class=fallback-latex>\{1, 2, 3, 4, 5\}
+</span>不相等。给定任意一个集合
+<span class=fallback-latex>A
+</span>，我们总有
+<span class=fallback-latex>A \subseteq A
+</span>和
+<span class=fallback-latex>\varnothing \subseteq A
+</span>。</p><p>正如下面这个命题所描述的那样，集合论中的子集概念类似于数系中“小于或等于”的概念（更精确的表述参见定义 8.5.1）。</p><p><strong>命题 3.1.18（集合的包含关系使集合是偏序的）</strong> 设
+<span class=fallback-latex>A
+</span>、
+<span class=fallback-latex>B
+</span>、
+<span class=fallback-latex>C
+</span>是集合。如果
+<span class=fallback-latex>A \subseteq B
+</span>并且
+<span class=fallback-latex>B \subseteq C
+</span>，那么
+<span class=fallback-latex>A \subseteq C
+</span>。如果
+<span class=fallback-latex>A \subseteq B
+</span>并且
+<span class=fallback-latex>B \subseteq A
+</span>，那么
+<span class=fallback-latex>A = B
+</span>。最后，如果
+<span class=fallback-latex>A \subsetneq B
+</span>并且
+<span class=fallback-latex>B \subsetneq C
+</span>，那么
+<span class=fallback-latex>A \subsetneq C
+</span>。</p><p><strong>证明：</strong></p><p><strong>第一个结论</strong>。假设
+<span class=fallback-latex>A \subseteq B
+</span>并且
+<span class=fallback-latex>B \subseteq C
+</span>。为了证明
+<span class=fallback-latex>A \subseteq C
+</span>，我们必须证明
+<span class=fallback-latex>A
+</span>中的每一个元素都是
+<span class=fallback-latex>C
+</span>中的元素。那么取
+<span class=fallback-latex>A
+</span>中任意一个元素
+<span class=fallback-latex>x
+</span>，因为
+<span class=fallback-latex>A \subseteq B
+</span>，所以
+<span class=fallback-latex>x
+</span>一定是
+<span class=fallback-latex>B
+</span>中的元素。又因为
+<span class=fallback-latex>B \subseteq C
+</span>，所以
+<span class=fallback-latex>x
+</span>是
+<span class=fallback-latex>C
+</span>中的元素。因此
+<span class=fallback-latex>A
+</span>中的每一个元素实际上都是
+<span class=fallback-latex>C
+</span>中的元素，结论得证。</p><p><strong>第二结论</strong> 证明显然。</p><p><strong>第三结论</strong> 其证明过程和第一结论的证明是完全相同的。</p><p><strong>习题</strong>： 设
+<span class=fallback-latex>A
+</span>,
+<span class=fallback-latex>B
+</span>,
+<span class=fallback-latex>C
+</span>都是集合，</p><ol><li>证明
+<span class=fallback-latex>A \cap B \subseteq A
+</span>和
+<span class=fallback-latex>A \cap B \subseteq B
+</span>。</li><li>更进一步地，证明
+<span class=fallback-latex>C \subseteq A
+</span>且
+<span class=fallback-latex>C \subseteq B
+</span>，当且仅当
+<span class=fallback-latex>C \subseteq A \cap B
+</span>。</li><li>类似地，证明
+<span class=fallback-latex>A \subseteq A \cup B
+</span>和
+<span class=fallback-latex>B \subseteq A \cup B
+</span>，</li><li>且进一步证明
+<span class=fallback-latex>A \subseteq C
+</span>且
+<span class=fallback-latex>B \subseteq C
+</span>，当且仅当
+<span class=fallback-latex>A \cup B \subseteq C
+</span>。</li></ol><p><strong>证明</strong>：</p><ol><li>证明
+<span class=fallback-latex>A \cap B \subseteq A
+</span>和
+<span class=fallback-latex>A \cap B \subseteq B</span></li></ol><p>(1)
+<span class=fallback-latex>A \cap B \subseteq A</span></p><p>证明：设任意
+<span class=fallback-latex>x \in A \cap B
+</span>。则根据交集的定义，
+<span class=fallback-latex>x \in A
+</span>且
+<span class=fallback-latex>x \in B
+</span>。由此可见，
+<span class=fallback-latex>x \in A
+</span>，故
+<span class=fallback-latex>A \cap B \subseteq A
+</span>。</p><p>(2)
+<span class=fallback-latex>A \cap B \subseteq B</span></p><p>证明与上面类似：设
+<span class=fallback-latex>x \in A \cap B
+</span>，则
+<span class=fallback-latex>x \in A
+</span>且
+<span class=fallback-latex>x \in B
+</span>，因此
+<span class=fallback-latex>x \in B
+</span>，故
+<span class=fallback-latex>A \cap B \subseteq B
+</span>。</p><ol start=2><li>当且仅当条件：
+<span class=fallback-latex>C \subseteq A \cap B \iff C \subseteq A \text{ 且 } C \subseteq B</span></li></ol><p>(1) 若
+<span class=fallback-latex>C \subseteq A \cap B
+</span>，则对任意
+<span class=fallback-latex>x \in C
+</span>，有
+<span class=fallback-latex>x \in A \cap B
+</span>。由交集定义，
+<span class=fallback-latex>x \in A
+</span>且
+<span class=fallback-latex>x \in B
+</span>。由于
+<span class=fallback-latex>x
+</span>是
+<span class=fallback-latex>C
+</span>的任意元素，这意味着
+<span class=fallback-latex>C \subseteq A
+</span>且
+<span class=fallback-latex>C \subseteq B
+</span>。</p><p>(2) 反之，若
+<span class=fallback-latex>C \subseteq A
+</span>且
+<span class=fallback-latex>C \subseteq B
+</span>，则对于任意
+<span class=fallback-latex>x \in C
+</span>，有
+<span class=fallback-latex>x \in A
+</span>且
+<span class=fallback-latex>x \in B
+</span>。由此可得
+<span class=fallback-latex>x \in A \cap B
+</span>。因为
+<span class=fallback-latex>x
+</span>是
+<span class=fallback-latex>C
+</span>的任意元素，所以
+<span class=fallback-latex>C \subseteq A \cap B
+</span>。</p><p>结合(1)和(2)，可得</p><p><span class=fallback-latex>C \subseteq A \cap B \iff C \subseteq A \text{ 且 } C \subseteq B
+</span>.</p><ol start=3><li>证明
+<span class=fallback-latex>A \subseteq A \cup B
+</span>和
+<span class=fallback-latex>B \subseteq A \cup B</span></li></ol><p>(1)
+<span class=fallback-latex>A \subseteq A \cup B</span></p><p>证明：若任意
+<span class=fallback-latex>x \in A
+</span>，则根据并集定义
+<span class=fallback-latex>x \in A \cup B
+</span>（因为
+<span class=fallback-latex>x \in A
+</span>即满足“或”条件）。由此
+<span class=fallback-latex>A \subseteq A \cup B
+</span>。</p><p>(2)
+<span class=fallback-latex>B \subseteq A \cup B</span></p><p>证明与上类似：若
+<span class=fallback-latex>x \in B
+</span>，则
+<span class=fallback-latex>x \in A \cup B
+</span>，故
+<span class=fallback-latex>B \subseteq A \cup B
+</span>。</p><ol start=4><li>当且仅当条件：
+<span class=fallback-latex>A \cup B \subseteq C \iff A \subseteq C \text{ 且 } B \subseteq C</span></li></ol><p>(1) 若
+<span class=fallback-latex>A \cup B \subseteq C
+</span>，则对任意
+<span class=fallback-latex>x \in A
+</span>，因为
+<span class=fallback-latex>A \subseteq A \cup B
+</span>，所以
+<span class=fallback-latex>x \in A \cup B \subseteq C
+</span>，故
+<span class=fallback-latex>A \subseteq C
+</span>。同理，对任意
+<span class=fallback-latex>x \in B
+</span>，有
+<span class=fallback-latex>x \in A \cup B \subseteq C
+</span>，故
+<span class=fallback-latex>B \subseteq C
+</span>。综合得到
+<span class=fallback-latex>A \subseteq C \text{ 且 } B \subseteq C
+</span>。</p><p>(2) 反之，若
+<span class=fallback-latex>A \subseteq C \text{ 且 } B \subseteq C
+</span>，则对任意
+<span class=fallback-latex>x \in A \cup B
+</span>，必然
+<span class=fallback-latex>x \in A \text{ 或 } x \in B
+</span>，进而
+<span class=fallback-latex>x \in C
+</span>，因此
+<span class=fallback-latex>A \cup B \subseteq C
+</span>。</p><p>综上，</p><p><span class=fallback-latex>A \cup B \subseteq C \iff A \subseteq C \text{ 且 } B \subseteq C
+</span>.</p><p>注 3.1.20 子集关系
+<span class=fallback-latex>\subsetneq
+</span>和小于关系
+<span class=fallback-latex><
+</span>之间存在一个重要的区别。给定任意两个不同的自然数
+<span class=fallback-latex>n
+</span>和
+<span class=fallback-latex>m
+</span>，我们知道其中一个会比另外一个小（命题2.2.13 自然数的序的三歧性）；但是给定两个不同的集合，说其中一个是另外一个集合的子集这种命题通常不为真。例如，令
+<span class=fallback-latex>A := \{2n : n \in \mathbb{N}\}
+</span>是由所有偶自然数构成的集合，令
+<span class=fallback-latex>B := \{2n + 1 : n \in \mathbb{N}\}
+</span>是由所有奇自然数构成的集合，那么
+<span class=fallback-latex>A
+</span>和
+<span class=fallback-latex>B
+</span>彼此互不为对方的子集。这就是我们为什么说集合仅仅是 <strong>偏序</strong> 的，而自然数却是 <strong>全序</strong> 的（参见定义8.5.1和定义8.5.3）。</p><p>注 3.1.21 我们也应该注意到子集关系
+<span class=fallback-latex>\subseteq
+</span>与元素的属于关系
+<span class=fallback-latex>\in
+</span>是不一样的。数字
+<span class=fallback-latex>2
+</span>是集合
+<span class=fallback-latex>\{1, 2, 3\}
+</span>中的一个元素，而不是它的一个子集，因此
+<span class=fallback-latex>2 \in \{1, 2, 3\}
+</span>，但是
+<span class=fallback-latex>2 \nsubseteq \{1, 2, 3\}
+</span>。事实上，
+<span class=fallback-latex>2
+</span>本身就不是一个集合。反过来，
+<span class=fallback-latex>\{2\}
+</span>是集合
+<span class=fallback-latex>\{1, 2, 3\}
+</span>的一个子集，而不是元素，所以
+<span class=fallback-latex>\{2\} \subseteq \{1, 2, 3\}
+</span>，但是
+<span class=fallback-latex>\{2\} \notin \{1, 2, 3\}
+</span>。这里的关键在于数字
+<span class=fallback-latex>2
+</span>和集合
+<span class=fallback-latex>\{2\}
+</span>是不同的对象。</p><p>把集合与集合中的元素区分开来非常重要，因为 <strong>集合和元素具有不同的性质</strong>。譬如，能够找到一个含有无穷多个元素的集合，其中每一个元素都是有穷数字（自然数集
+<span class=fallback-latex>\mathbb{N}
+</span>就是这样的例子），也能够找到这样一个集合，它的元素个数是有限的，但是每个元素都是由无穷多个元素构成的集合（例如，考虑集合
+<span class=fallback-latex>\{\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}\}
+</span>，该集合共有四个元素且每一个元素都是由无穷多个元素构成的集合）。</p><p>现在我们给出一个公理，它能够让我们轻松地构造出一个较大集合的子集。</p><p><strong>公理 3.5（分类公理）</strong> 设
+<span class=fallback-latex>A
+</span>是一个集合，对任意的
+<span class=fallback-latex>x \in A
+</span>，令
+<span class=fallback-latex>P(x)
+</span>表示关于
+<span class=fallback-latex>x
+</span>的一个性质（即
+<span class=fallback-latex>P(x)
+</span>要么是真命题，要么是假命题）。那么存在一个集合，记作
+<span class=fallback-latex>\{x \in A : P(x) \text{ 为真}\}
+</span>（或者简记为
+<span class=fallback-latex>\{x \in A : P(x)\}
+</span>），该集合恰好是由
+<span class=fallback-latex>A
+</span>中那些使得
+<span class=fallback-latex>P(x)
+</span>为真的元素
+<span class=fallback-latex>x
+</span>构成的。换言之，对任意的对象
+<span class=fallback-latex>y
+</span>，</p><span class=fallback-latex>y \in \{x \in A : P(x) \text{ 为真}\} \iff (y \in A \text{ 并且 } P(y) \text{ 为真})</span><p>这个公理也被称为 <strong>分离公理</strong>。注意，
+<span class=fallback-latex>\{x \in A : P(x) \text{ 为真}\}
+</span>一定是集合
+<span class=fallback-latex>A
+</span>的一个子集，尽管它可能与
+<span class=fallback-latex>A
+</span>一样大，也可能与空集一样小。我们能够证明替换公理适用于分类，所以如果
+<span class=fallback-latex>A = A'
+</span>，则有
+<span class=fallback-latex>\{x \in A : P(x)\} = \{x \in A' : P(x)\}
+</span>。（因为，替换公理保证若
+<span class=fallback-latex>A = A'
+</span>，则我们可以在任意公式中将
+<span class=fallback-latex>A
+</span>替换为
+<span class=fallback-latex>A'
+</span>而不改变命题的真值，因此分离公理满足替换公理）</p><blockquote><p>另外，我们在此处所述的替换公理，实际上是一阶逻辑中的替换性。</p><p>逻辑中的替换原则（等式替代性）：</p><p>在一阶逻辑中，如果我们知道
+<span class=fallback-latex>x = y
+</span>，那么无论在什么性质
+<span class=fallback-latex>P(x)
+</span>或函数
+<span class=fallback-latex>f(x)
+</span>中，都可以把
+<span class=fallback-latex>x
+</span>换成
+<span class=fallback-latex>y
+</span>而不会改变陈述的真值或函数的值。这是逻辑本身的一个基本定律，也常被翻译为“替换规则”或“替代律”。有时，有些教材或笔记中也会将其称为“替换公理”或“替换规律”，这是在逻辑层面上的用法。这种替换不涉及集合的构造，只是逻辑上允许你将相等的对象互相替代。</p><p>而在 ZF<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> 公理系统中也存在一个替换公理，其表述为</p><p><strong>替换公理模式（Replacement Schema）</strong> 是 ZF 集合论的一组 <strong>公理模式</strong>，用以保证由函数式定义的类从集合中“替换”元素形成的新类依然是集合。其一般形式如下：</p><p>给定一个公式
+<span class=fallback-latex>\phi(x, y, \vec{p})
+</span>，其中
+<span class=fallback-latex>\vec{p}
+</span>是若干参数，
+<span class=fallback-latex>\phi
+</span>在集合论语言中构成一个谓词。如果满足下列条件：</p><ol><li><p>对任意集合
+<span class=fallback-latex>x
+</span>和
+<span class=fallback-latex>x'
+</span>，如果对某个
+<span class=fallback-latex>\vec{p}
+</span>有
+<span class=fallback-latex>\phi(x, y, \vec{p})
+</span>且
+<span class=fallback-latex>\phi(x', y', \vec{p})
+</span>成立，那么若
+<span class=fallback-latex>x = x'
+</span>则必定
+<span class=fallback-latex>y = y'
+</span>。也就是说，对于固定的参数
+<span class=fallback-latex>\vec{p}
+</span>和每个集合
+<span class=fallback-latex>x
+</span>，
+<span class=fallback-latex>\phi
+</span>充当一个定义良好的“类函数”——从
+<span class=fallback-latex>x
+</span>唯一确定一个
+<span class=fallback-latex>y
+</span>。</p></li><li><p>对任意集合
+<span class=fallback-latex>A
+</span>，定义
+<span class=fallback-latex>B = \{y : \exists x \in A, \phi(x, y, \vec{p})\}
+</span>。那么替换公理断言：
+<span class=fallback-latex>B
+</span>也是一个集合。</p></li></ol><p>简而言之，替换公理模式可以表述为：</p><p>如果
+<span class=fallback-latex>\phi
+</span>定义了从任意集合
+<span class=fallback-latex>A
+</span>到集合的一个类函数（即对
+<span class=fallback-latex>A
+</span>中每个元素
+<span class=fallback-latex>x
+</span>唯一定义一个
+<span class=fallback-latex>y
+</span>使
+<span class=fallback-latex>\phi(x, y)
+</span>成立），那么
+<span class=fallback-latex>\{y : \exists x \in A, \phi(x, y)\}
+</span>也是一个集合。</p></blockquote><blockquote><p>两者的根本区别在于：替换性保证在逻辑推理中，可自由地在公式中用相等的对象互代，以维持公式的真值不变。这是一种语义上的逻辑规则，用来 <strong>确保逻辑推理的正确性和一致性</strong>。替换公理保证给定某种定义良好的类函数，可以“替换”集合中的每个元素为其对应像值，从而产生新集合的存在性。这是关于 <strong>从集合理论中已有的集合构造出新集合的存在性命题</strong>。因此，在平常的使用中，我们必须区别两者。</p></blockquote><p>有时我们用
+<span class=fallback-latex>\{x \in A | P(x)\}
+</span>来代替
+<span class=fallback-latex>\{x \in A : P(x)\}
+</span>，当用冒号 “:” 表示其他含义时，这种新写法就有用了。例如，用冒号来表示一个函数
+<span class=fallback-latex>f : X \to Y
+</span>的值域和定义域。</p><p>我们可以利用分类公理去进一步定义集合上的一些运算，即求交集和差集。</p><p><strong>定义 3.1.23（交集）</strong> 两个集合的交集
+<span class=fallback-latex>S_1 \cap S_2
+</span>被定义为下面这样一个集合：</p><span class=fallback-latex>S_1 \cap S_2 := \{x \in S_1 : x \in S_2\}</span><p>即
+<span class=fallback-latex>S_1 \cap S_2
+</span>是由所有同时属于
+<span class=fallback-latex>S_1
+</span>和
+<span class=fallback-latex>S_2
+</span>的元素构成的。于是对任意的对象
+<span class=fallback-latex>x
+</span>，</p><span class=fallback-latex>x \in S_1 \cap S_2 \iff x \in S_1 \text{ 且 } x \in S_2</span><p>注 3.1.24 注意，这个定义是明确的（也就是说，该定义遵守替换公理）因为定义中仅仅使用到了属于关系以及更为原始的“满足..的性质”这一概念，因此它是遵循替换公理（替换性）的。</p><p>注 3.1.26 顺便提一下，对于词语中的“和”我们要小心使用。根据上下文，它有时候表示并集，而有时候表示交集，非常容易混淆。例如，如果有人谈到“男孩和女孩”的集合，那么他的意思是男孩组成的集合与女孩组成的集合的并集，但是如果有人提到同时满足单身和男性这两个条件的人组成的集合，那么他的意思就是单身人士组成的集合与男性组成的集合的交集。另一个问题是“和”也表示相加，例如，我们可以说“2 与 3 的和是 5”，也可以说“集合 {2} 的元素和集合 {3} 的元素构成了集合 {2, 3}”，还有“在 {2} 和 {3} 中的元素构成了集合 ∅”。这确实容易混淆！原因之一在于我们用数学符号来代替像“和”这样的词语。数学符号总是能够准确清晰地表述意思，而想要真正了解某个词语所表达的涵义，我们必须非常仔细地阅读上下文才行。</p><p><strong>定义 3.1.27（差集）</strong> 给定两个集合
+<span class=fallback-latex>A
+</span>和
+<span class=fallback-latex>B
+</span>，我们定义集合
+<span class=fallback-latex>A - B
+</span>或
+<span class=fallback-latex>A \setminus B
+</span>是由
+<span class=fallback-latex>A
+</span>中所有不属于
+<span class=fallback-latex>B
+</span>的元素组成的集合。</p><span class=fallback-latex>A \setminus B := \{ x \in A : x \notin B \}</span><p>例如，
+<span class=fallback-latex>\{1, 2, 3, 4\} \setminus \{2, 4, 6\} = \{1, 3\}
+</span>。在很多情况下，
+<span class=fallback-latex>B
+</span>是
+<span class=fallback-latex>A
+</span>的一个子集，但并非必须如此。</p><p>现在我们给出并集、交集和差集的一些基本性质。</p><p><strong>命题 3.1.28（集合构成布尔代数）</strong> 设
+<span class=fallback-latex>A
+</span>、
+<span class=fallback-latex>B
+</span>、
+<span class=fallback-latex>C
+</span>都是集合，令
+<span class=fallback-latex>X
+</span>表示包含
+<span class=fallback-latex>A
+</span>、
+<span class=fallback-latex>B
+</span>、
+<span class=fallback-latex>C
+</span>作为其子集的集合。</p><p>(a)（最小元）我们有
+<span class=fallback-latex>A \cup \emptyset = A
+</span>和
+<span class=fallback-latex>A \cap \emptyset = \emptyset
+</span>。</p><p>(b)（最大元）我们有
+<span class=fallback-latex>A \cup X = X
+</span>和
+<span class=fallback-latex>A \cap X = A
+</span>。</p><p>(c)（恒等式）我们有
+<span class=fallback-latex>A \cap A = A
+</span>和
+<span class=fallback-latex>A \cup A = A
+</span>。</p><p>(d)（交换律）我们有
+<span class=fallback-latex>A \cup B = B \cup A
+</span>和
+<span class=fallback-latex>A \cap B = B \cap A
+</span>。</p><p>(e)（结合律）我们有
+<span class=fallback-latex>(A \cup B) \cup C = A \cup (B \cup C)
+</span>和
+<span class=fallback-latex>(A \cap B) \cap C = A \cap (B \cap C)
+</span>。</p><p>(f)（分配律）我们有
+<span class=fallback-latex>A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+</span>和
+<span class=fallback-latex>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
+</span>。</p><p>(g)（分拆法）我们有
+<span class=fallback-latex>A \cup (X \setminus A) = X
+</span>和
+<span class=fallback-latex>A \cap (X \setminus A) = \emptyset
+</span>。</p><p>(h)（德摩根定律）我们有
+<span class=fallback-latex>X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)
+</span>和
+<span class=fallback-latex>X \setminus (A \cap B) = (X \setminus A) \cup (X \setminus B)
+</span>。</p><p>注 3.1.29 德摩根定律是以逻辑学家奥古斯塔斯·德摩根（1806—1871）的名字来命名的，他把这些定律确定为集合论的基本定律之一。</p><blockquote><ol><li>什么是布尔代数 (Boolean Algebra)?</li></ol><p>布尔代数是一种抽象代数结构，用来刻画经典逻辑以及集合运算的代数性质。它由一个带有两个二元运算（通常记为
+<span class=fallback-latex>\land
+</span>和
+<span class=fallback-latex>\lor
+</span>或者
+<span class=fallback-latex>\cap
+</span>和
+<span class=fallback-latex>\cup
+</span>）、一个一元运算（补操作），以及特定恒等元所组成的代数系统。满足布尔代数的结构必须符合以下公理特性：</p><ul><li><p><strong>交换律 (Commutativity)</strong>：</p></li><li><span class=fallback-latex>a \land b = b \land a</span></li><li><span class=fallback-latex>a \lor b = b \lor a</span></li><li><p><strong>结合律 (Associativity)</strong>：</p></li><li><span class=fallback-latex>(a \land b) \land c = a \land (b \land c)</span></li><li><span class=fallback-latex>(a \lor b) \lor c = a \lor (b \lor c)</span></li><li><p><strong>分配律 (Distributivity)</strong>：</p></li><li><span class=fallback-latex>a \land (b \lor c) = (a \land b) \lor (a \land c)</span></li><li><span class=fallback-latex>a \lor (b \land c) = (a \lor b) \land (a \lor c)</span></li></ul><p><strong>恒等元存在 (Identity Elements)</strong>：
+存在两个特殊元素：</p><ul><li>单位元 1 以及零元 0，满足：</li><li><span class=fallback-latex>a \land 1 = a</span></li><li><span class=fallback-latex>a \lor 0 = a</span></li></ul><p><strong>补元存在 (Complements)</strong>：
+对每个 a 存在补元 a&rsquo; 使：</p><ul><li><span class=fallback-latex>a \land a' = 0</span></li><li><span class=fallback-latex>a \lor a' = 1</span></li></ul><p>典型的布尔代数例子包括：</p><ul><li>真值代数：{true, false} 构成的代数结构</li><li>任一集合的幂集（其子集组成的集合），在并集、交集和补集下形成的结构</li></ul><ol start=2><li>为什么“集合构成布尔代数”这个命题重要到成为集合论的基本定律？</li></ol><p>集合论在很大程度上被视为现代数学的基础框架。当我们发现任意集合的幂集在并、交和补这三种操作下构成了一个布尔代数时，这意味着经典命题逻辑的代数结构（逻辑运算：与、或、非）有了一个精确而自然的集合论刻画。换言之，<strong>逻辑命题间的真值结构与集合之间的包含关系及运算结构完全同构</strong>。这种对应为数学基础的统一提供了坚实的理论支撑，让我们能够在集合论基础上讨论逻辑系统的性质，从而使得集合论不仅仅是“描述数学对象的语言”，还是“描述逻辑结构和推理过程的语言”。</p></blockquote><p>虽然现在我们已经积累了有关集合的大量公理和结果，但是还有许多事情没办法做到。关于集合，我们想要做的一件最基本的事就是取出集合中的每一个元素，并按照某种方式把每一个元素都转换成另外的新对象。例如，我们希望从一个数集
+<span class=fallback-latex>\{3, 5, 9\}
+</span>开始，把该集合中的每个元素进行增长，从而构造出一个新集合
+<span class=fallback-latex>\{4, 6, 10\}
+</span>。直接利用之前学过的公理是无法做到这件事的，因此我们需要一个新公理。</p><p><strong>公理 3.6 (替代)</strong> 设
+<span class=fallback-latex>A
+</span>是一个集合，对任意的
+<span class=fallback-latex>x\in A
+</span>和任意的一个对象
+<span class=fallback-latex>y
+</span>，假设存在一个关于
+<span class=fallback-latex>x
+</span>和
+<span class=fallback-latex>y
+</span>的命题
+<span class=fallback-latex>P(x,y)
+</span>使得对任意的
+<span class=fallback-latex>x\in A
+</span>，最多能够找到一个
+<span class=fallback-latex>y
+</span>使得
+<span class=fallback-latex>P(x,y)
+</span>为真。那么存在一个集合
+<span class=fallback-latex>\{y:P(x,y)对某x\in A为真\}
+</span>使得对任意的对象
+<span class=fallback-latex>z
+</span>，</p><span class=fallback-latex>z\in\{y:P(x,y)对某x\in A为真\}\iff 对某x\in A,P(x,z)为真</span><p>例 3.1.31 令
+<span class=fallback-latex>A:=\{3,5,9\}
+</span>，并且设
+<span class=fallback-latex>P(x,y)
+</span>表示命题
+<span class=fallback-latex>y=x++
+</span>，即
+<span class=fallback-latex>y
+</span>是紧跟在
+<span class=fallback-latex>x
+</span>之后的那个数。观察可知，对任意一个
+<span class=fallback-latex>x\in A
+</span>，只有一个
+<span class=fallback-latex>y
+</span>使得
+<span class=fallback-latex>P(x,y)
+</span>为真。具体地，就是紧跟在
+<span class=fallback-latex>x
+</span>之后的那个数。于是，上面的公理断定集合
+<span class=fallback-latex>\{y:y=x++对某x\in\{3,5,9\}为真\}
+</span>是存在的。此时，上述集合显然就是
+<span class=fallback-latex>\{4,6,10\}
+</span>。</p><p>例 3.1.32 令
+<span class=fallback-latex>A:=\{3,5,9\}
+</span>，设
+<span class=fallback-latex>P(x,y)
+</span>表示命题
+<span class=fallback-latex>y=1
+</span>。那么同样，对任意的
+<span class=fallback-latex>x\in A
+</span>，只有一个
+<span class=fallback-latex>y
+</span>使得
+<span class=fallback-latex>P(x,y)
+</span>为真。具体地，就是数字1。此时，
+<span class=fallback-latex>\{y:y=1对某x\in\{3,5,9\}为真\}
+</span>就是单元素集
+<span class=fallback-latex>\{1\}
+</span>，我们已经把原始集合
+<span class=fallback-latex>A
+</span>中的每一个元素3、5、9都用同一个元素1来代替。因此，这个相当无聊的例子告诉我们，通过上述公理得到的集合可以比原始集合更"小"。</p><p>我们经常把形式如<br><span class=fallback-latex>\{ y : \text{ 对某些 } x \in A \text{ 有 } y = f(x) \}</span><br>的集合简写为
+<span class=fallback-latex>\{ f(x) : x \in A \}
+</span>或者
+<span class=fallback-latex>\{ f(x) | x \in A \}
+</span>。例如，若
+<span class=fallback-latex>A = \{3, 5, 9\}
+</span>，那么<br><span class=fallback-latex>\{ x++ : x \in A \}
+</span>就是集合
+<span class=fallback-latex>\{4, 6, 10\}
+</span>。我们当然可以把代数和分类公理合并在一起使用。例如，按照下面的过程构造类似<br><span class=fallback-latex>\{ f(x) : x \in A \text{ 且 } P(x) \text{ 为真} \}
+</span>的集合。<br>从集合 A 开始，利用分类公理构造集合
+<span class=fallback-latex>\{ x \in A : P(x) \text{ 为真} \}
+</span>，然后使用替代公理构造集合<br><span class=fallback-latex>\{ f(x) : x \in A \text{ 且 } P(x) \text{ 为真} \}
+</span>。于是可以有<br><span class=fallback-latex>\{ n++ : n \in \{3, 5, 9\} \text{ 且 } n < 6\}=\{4,6\}
+</span>。</p><p>在我们的许多例子中，都隐含地假设了自然数实际上就是对象。对此我们给出下面的正式叙述。</p><p><strong>公理 3.7 (无穷大)</strong> 存在一个集合
+<span class=fallback-latex>\mathbb{N}
+</span>，它的元素被称为自然数。对象 0 在
+<span class=fallback-latex>\mathbb{N}
+</span>中，且每一个自然数
+<span class=fallback-latex>n \in \mathbb{N}
+</span>所指定的满足皮亚诺公理（公理 2.1～2.5）的对象
+<span class=fallback-latex>n++
+</span>也在
+<span class=fallback-latex>\mathbb{N}
+</span>中。</p><p>这是假设 2.6 更加正式的表达。它被称为无穷大公理，因为它引入了无穷大集合一个最基本的例子，也就是自然数集
+<span class=fallback-latex>\mathbb{N}
+</span>（我们将在 3.6 节正式阐述有穷大和无穷大的意思）。我们从无穷大公理中能够看到，像 3, 5, 7 等这样的数确实是集合论中的对象，从而（根据双元素集合公理和两集合并集公理）我们的确可以合法构造如
+<span class=fallback-latex>\{ 3, 5, 9 \}
+</span>这样的集合，就像在之前的例子中我们做过的那样。</p><p>我们必须区分清楚“集合”的概念以及“集合中元素”的概念。例如，集合
+<span class=fallback-latex>\{ n + 3 : n \in \mathbb{N}, 0 \leq n \leq 5 \}
+</span>与表达式或函数
+<span class=fallback-latex>n + 3
+</span>并不相同。我们通过下面的例子来强调这一点。</p><p>例 3.1.33 （非正式的）这个例子需要用到减法的概念，但是目前我们还没有正式介绍减法。下面两个命题<br><span class=fallback-latex>\{ n + 3 : n \in \mathbb{N}, 0 \leq n \leq 5 \} = \{ 8 - n : n \in \mathbb{N}, 0 \leq n \leq 5 \} \tag{3.1}</span><br>成立（见下文），尽管对任意的自然数
+<span class=fallback-latex>n
+</span>，表达式
+<span class=fallback-latex>n + 3
+</span>和
+<span class=fallback-latex>8 - n
+</span>都绝对不可能相等。<br>所以当你谈论集合时，记得要使用大括号
+<span class=fallback-latex>\{ \}
+</span>，这样可以避免你偶然地把集合与其元素混淆。<br>这种看似简单的原因之一是字符
+<span class=fallback-latex>n
+</span>在式 (3.1) 的两端是以两种不同的方式使用的。为了阐明这种情况，我们把字符
+<span class=fallback-latex>n
+</span>替换成字母
+<span class=fallback-latex>m
+</span>来重新书写集合<br><span class=fallback-latex>\{ 8 - n : n \in \mathbb{N}, 0 \leq n \leq 5 \}
+</span>，于是我们得到<br><span class=fallback-latex>\{ 8 - m : m \in \mathbb{N}, 0 \leq m \leq 5 \}
+</span>。它与之前的集合完全相等。因此我们能够把式 (3.1) 重新写成：</p><span class=fallback-latex>\{ n + 3 : n \in \mathbb{N}, 0 \leq n \leq 5 \} = \{ 8 - m : m \in \mathbb{N}, 0 \leq m \leq 5 \}</span><p>现在很容易看出（利用定义 3.1.4）为什么该等式为真：每一个形式如
+<span class=fallback-latex>n + 3
+</span>的数（其中
+<span class=fallback-latex>n
+</span>表示 0 与 5 之间的自然数）也可以写成
+<span class=fallback-latex>8 - m
+</span>的形式，其中
+<span class=fallback-latex>m := 5 - n
+</span>（注意
+<span class=fallback-latex>m
+</span>也是 0 到 5 之间的自然数）。反过来，每一个形式
+<span class=fallback-latex>8 - m
+</span>的数（其中
+<span class=fallback-latex>m
+</span>表示 0 到 5 之间的自然数）也可以写成
+<span class=fallback-latex>n + 3
+</span>的形式，其中
+<span class=fallback-latex>n := 5 - m
+</span>（注意
+<span class=fallback-latex>n
+</span>也是 0 到 5 之间的自然数）。观察一下，如果我们没有事先把
+<span class=fallback-latex>n
+</span>替换成
+<span class=fallback-latex>m
+</span>，那么上面对式 (3.1) 的解释将会让人困惑！</p><p><strong>原因与分析：</strong></p><p>在最初的写法中，集合通通过类似的表达式构造，例如<br><span class=fallback-latex>\{ n + 3 : n \in \mathbb{N}, 0 \leq n \leq 5 \} = \{ 8 - n : n \in \mathbb{N}, 0 \leq n \leq 5 \}
+</span>。</p><p>这里两边都使用了相同的记号
+<span class=fallback-latex>n
+</span>，但在左侧和右侧实际上是两次独立引入的【哑变量】（dummy variable）。从逻辑上讲，这些变量在各自的集合构造中是局部的，不应该相互混淆。然而，当两侧同时使用同一个字母
+<span class=fallback-latex>n
+</span>时，该符号可能会被误认为是一个全局的变量，从而产生误解，以为这两个定义式右边一层正用同一个值描述元素。因此会让人困惑：为什么
+<span class=fallback-latex>n+3
+</span>的元素集会等于
+<span class=fallback-latex>8-n
+</span>的元素集，难道左边两个表达式中
+<span class=fallback-latex>n
+</span>是同一回事吗？</p><p><strong>如何解决混淆：</strong></p><p>通过将右侧的
+<span class=fallback-latex>n
+</span>改成
+<span class=fallback-latex>m
+</span>，得到<br><span class=fallback-latex>\{ n + 3 : n \in \mathbb{N}, 0 \leq n \leq 5 \} = \{ 8 - m : m \in \mathbb{N}, 0 \leq m \leq 5 \}
+</span>。</p><p>现在，这看一眼就能看出：左边用
+<span class=fallback-latex>n
+</span>来构造集合，右边用
+<span class=fallback-latex>m
+</span>来构造集合，它们是两个独立的参数，各自有独立定义的集合。这样就可以清晰地观察到，左边集合里的每个元素都能通过一个适当的
+<span class=fallback-latex>m
+</span>（或在集合里的元素都能通过一个合适的
+<span class=fallback-latex>n
+</span>）来匹配上。换句话说，改变了字母作为变量之后，变量不会误地将两侧的集合混为一谈，而能顺利理解两个集合事实上是不同的参数化得到的元集合。</p><h2 id=习题>习题</h2><ol><li>设
+<span class=fallback-latex>A
+</span>和
+<span class=fallback-latex>B
+</span>是集合，证明 <strong>吸收率</strong>
+<span class=fallback-latex>A \cap (A \cup B) = A \quad \text{和} \quad A \cup (A \cap B) = A.</span></li></ol><p>证明
+<span class=fallback-latex>A \cap (A \cup B) = A</span></p><ol><li>证明
+<span class=fallback-latex>A \cap (A \cup B) \subseteq A
+</span>:</li></ol><p>设
+<span class=fallback-latex>x \in A \cap (A \cup B)
+</span>。<br>根据集合定义：
+<span class=fallback-latex>x \in A
+</span>且
+<span class=fallback-latex>x \in A \cup B
+</span>。<br>由于
+<span class=fallback-latex>x \in A
+</span>，故有
+<span class=fallback-latex>x \in A \cap (A \cup B) \subseteq A
+</span>。</p><ol start=2><li>证明
+<span class=fallback-latex>A \subseteq (A \cap (A \cup B))
+</span>:</li></ol><p>设
+<span class=fallback-latex>x \in A
+</span>。<br>因为
+<span class=fallback-latex>x \in A
+</span>所以显然
+<span class=fallback-latex>x \in A \cup B
+</span>（因为
+<span class=fallback-latex>x \in A
+</span>即满足“或”条件）。<br>因此
+<span class=fallback-latex>x \in A \cap (A \cup B)
+</span>。</p><p>综上，两方面的包涵都得证，故有
+<span class=fallback-latex>A \cap (A \cup B) = A
+</span>。</p><p>证明
+<span class=fallback-latex>A \cup (A \cap B) = A</span></p><ol><li><p>证明
+<span class=fallback-latex>A \cup (A \cap B) \subseteq A
+</span>:<br>设
+<span class=fallback-latex>x \in A \cup (A \cap B)
+</span>。<br>根据并集定义，
+<span class=fallback-latex>x \in A
+</span>或
+<span class=fallback-latex>x \in A \cap B
+</span>。<br>若
+<span class=fallback-latex>x \in A
+</span>，则显然
+<span class=fallback-latex>x \in A
+</span>成立。<br>若
+<span class=fallback-latex>x \in A \cap B
+</span>，根据交集定义，
+<span class=fallback-latex>x \in A
+</span>且
+<span class=fallback-latex>x \in B
+</span>。此时依然有
+<span class=fallback-latex>x \in A
+</span>。<br>故
+<span class=fallback-latex>A \cup (A \cap B) \subseteq A
+</span>。</p></li><li><p>证明
+<span class=fallback-latex>A \subseteq (A \cup (A \cap B))
+</span>:<br>设
+<span class=fallback-latex>x \in A
+</span>。<br>由于
+<span class=fallback-latex>x \in A
+</span>，显然有
+<span class=fallback-latex>x \in A \cup (A \cap B)
+</span>。<br>故
+<span class=fallback-latex>A \subseteq (A \cup (A \cap B))
+</span>。</p></li></ol><p>综上，两方面的包涵都得证，故有
+<span class=fallback-latex>A \cup (A \cap B) = A
+</span>。</p><ol start=2><li>令
+<span class=fallback-latex>A, B, X
+</span>表示集合，并且它们满足
+<span class=fallback-latex>A \cup B = X
+</span>和
+<span class=fallback-latex>A \cap B = \emptyset
+</span>。证明
+<span class=fallback-latex>A = X \setminus B
+</span>和
+<span class=fallback-latex>B = X \setminus A</span></li></ol><p>证明
+<span class=fallback-latex>A = X \setminus B</span></p><ol><li>证明
+<span class=fallback-latex>A \subseteq X \setminus B
+</span>:</li></ol><p>任取
+<span class=fallback-latex>x \in A
+</span>，因为
+<span class=fallback-latex>A \subseteq A \cup B = X
+</span>，可知
+<span class=fallback-latex>x \in X
+</span>。<br>又因为
+<span class=fallback-latex>A \cap B = \emptyset
+</span>，所以
+<span class=fallback-latex>x \notin B
+</span>。<br>因此
+<span class=fallback-latex>x \in X \setminus B
+</span>，故
+<span class=fallback-latex>A \subseteq X \setminus B
+</span>。</p><ol start=2><li>证明
+<span class=fallback-latex>X \setminus B \subseteq A
+</span>:</li></ol><p>任取
+<span class=fallback-latex>x \in X \setminus B
+</span>，则
+<span class=fallback-latex>x \in X
+</span>且
+<span class=fallback-latex>x \notin B
+</span>。<br>已知
+<span class=fallback-latex>X = A \cup B
+</span>，且
+<span class=fallback-latex>x \in A \cup B
+</span>，则
+<span class=fallback-latex>x \in A
+</span>或
+<span class=fallback-latex>x \in B
+</span>。<br>由于
+<span class=fallback-latex>x \notin B
+</span>，则只能有
+<span class=fallback-latex>x \in A
+</span>，故
+<span class=fallback-latex>X \setminus B \subseteq A
+</span>。</p><p>综上，两方面的包涵都得证，故有
+<span class=fallback-latex>A = X \setminus B
+</span>。</p><p>证明
+<span class=fallback-latex>B = X \setminus A
+</span>的过程与上完全相同，只需将
+<span class=fallback-latex>A
+</span>和
+<span class=fallback-latex>B
+</span>的角色对调：</p><ol><li><span class=fallback-latex>x \in B \Rightarrow x \in X \text{ 且 } x \notin A, \text{ 故 } B \subseteq X \setminus A.</span></li><li><span class=fallback-latex>x \in X \setminus A \Rightarrow x \in X \text{ 且 } x \notin A, \text{ 由 } X = A \cup B \text{ 且 } x \notin A, \text{ 得 } x \in B, \text{ 故 } X \setminus A \subseteq B.</span></li></ol><p>综上可得
+<span class=fallback-latex>B = X \setminus A
+</span>。</p><p>其余习题已于正文中给出。</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>策梅洛-弗兰克尔集合论（英语：Zermelo-Fraenkel Set Theory），是数学基础中最常用的一阶公理化集合论。含选择公理时常简写为ZFC，不含选择公理的则简写为ZF。它是二十世纪早期为了建构一个不会导致类似罗素悖论的矛盾的集合理论所提出的一个公理系统。&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><aside class=sidebar><div class=card><h2>摘要</h2><p>定义 3.1.1（非正式的）（集合）
+我们把 集合 A 定义为任意的一堆没有次序的对象。例如， \{3,8,5,2\} 是一个集合。如果 x 是这堆对象中的一个，那么我们称 x 是 A …</p></div><div class=card><h2>阅读时长</h2><p>18 min</p></div><div class=card><h2>总字数</h2><p>≈ 3670</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
 数学分析</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/1.3/><h2>2.3 乘法</h2><article>在上一节中，我们已经证明了所知道的所有关于加法和序的基本事实。为了节省篇幅以及避免赘述那些显然的事情，接下来我们将允许使用所熟悉的关于加法和序的代数法则，而不加进一步的说明。于是我们可以写出 a+b+c=c+b+a 这样的内容，不需要进一步解释说明。现在我们引入乘法。正如加法是重复的增量运算一样，乘法是重复的加法运算。
 定义 2.3.1（自然数的乘法）
 令 m 表示任意一个自然数，
