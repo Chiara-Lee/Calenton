@@ -1,29 +1,31 @@
-{{- $depth := .Scratch.Get "depth" | default 0 }}
-{{- if lt $depth 5 }} <!-- 深度限制为 5 -->
-    {{- .Scratch.Set "depth" (add $depth 1) }}
+{{- $totalReadingTime := 0 }}
+{{- $totalWordCount := 0 }}
 
-    {{- $totalReadingTime := 0 }}
-    {{- $totalWordCount := 0 }}
+{{- $processedPages := .Scratch.Get "processedPages" | default (slice) }}
+{{- if not (in $processedPages .RelPermalink) }}
+    {{- .Scratch.Add "processedPages" .RelPermalink }}
 
-    {{- range .Pages }}
-        {{- if .IsPage }}
-            {{- $totalReadingTime = add $totalReadingTime .ReadingTime }}
-            {{- $totalWordCount = add $totalWordCount .WordCount }}
-        {{- else if not .Scratch.Get "already-calculated" }}
-            <!-- 防止重复计算 -->
-            {{- .Scratch.Set "already-calculated" true }}
-            {{- $nestedValues := partial "calculate-total" (dict "Pages" .Pages "Scratch" .Scratch) }}
-            {{- $nestedReadingTime := index $nestedValues 0 }}
-            {{- $nestedWordCount := index $nestedValues 1 }}
-            {{- $totalReadingTime = add $totalReadingTime $nestedReadingTime }}
-            {{- $totalWordCount = add $totalWordCount $nestedWordCount }}
+    {{- if .IsPage }}
+        <!-- 统计当前页面的字数和阅读时间 -->
+        {{- $totalReadingTime = add $totalReadingTime .ReadingTime }}
+        {{- $totalWordCount = add $totalWordCount .WordCount }}
+    {{- else }}
+        <!-- 遍历子页面 -->
+        {{- $depth := .Scratch.Get "depth" | default 0 }}
+        {{- if lt $depth 5 }} <!-- 限制递归深度为5 -->
+            {{- .Scratch.Set "depth" (add $depth 1) }}
+            {{- range .Pages }}
+                {{- $nestedValues := partial "calculate-total" . }}
+                {{- $nestedReadingTime := index $nestedValues 0 }}
+                {{- $nestedWordCount := index $nestedValues 1 }}
+                {{- $totalReadingTime = add $totalReadingTime $nestedReadingTime }}
+                {{- $totalWordCount = add $totalWordCount $nestedWordCount }}
+            {{- end }}
+            {{- .Scratch.Set "depth" $depth }} <!-- 恢复深度计数 -->
         {{- end }}
     {{- end }}
-
-    {{- .Scratch.Set "depth" $depth }} <!-- 恢复深度值 -->
-    {{ slice $totalReadingTime $totalWordCount }}
-{{- else }}
-    {{ slice 0 0 }} <!-- 超过深度返回默认值 -->
 {{- end }}
+
+{{ slice $totalReadingTime $totalWordCount }}
 
 

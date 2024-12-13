@@ -37,11 +37,15 @@
                                 {{- $subTotalReadingTime := 0 }}
                                 {{- $subTotalWordCount := 0 }}
                 
-                                {{- range .Pages }}
+                                {{ range where .Pages "Type" "post" }}
                                     {{- if .IsPage }}
                                         {{- $subTotalReadingTime = add $subTotalReadingTime .ReadingTime }}
                                         {{- $subTotalWordCount = add $subTotalWordCount .WordCount }}
                                     {{- else }}
+                                        {{- $scratch := .Scratch }}
+                                        {{- $scratch.Set "depth" 0 }}
+                                        {{- $scratch.Set "processedPages" (slice) }}
+                                        
                                         {{- $nestedValues := partial "calculate-total" . }}
                                         {{- $nestedReadingTime := index $nestedValues 0 }}
                                         {{- $nestedWordCount := index $nestedValues 1 }}
