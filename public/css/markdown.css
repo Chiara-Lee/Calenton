@@ -119,7 +119,7 @@
   visibility: hidden;
   position: absolute;
   transition: opacity 0.2s ease, transform 0.2s ease;
-  backdrop-filter: blur(2px); /* 对背景应用模糊效果 */
+  backdrop-filter: blur(4px); /* 对背景应用模糊效果 */
   z-index: 9999;
   border: 1px solid rgba(255, 255, 255, 0.3); /* 半透明的白色边框 */
   /* 限制最大宽度和内容溢出 */
