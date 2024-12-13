@@ -106,56 +106,31 @@
     padding-left: 6rem;
   }
 
-/*注脚css样式*/
+/*脚注css样式*/
 
-/* 注脚内容容器的基础样式 */
-.footnote-container {
+.footnote-popup {
   position: absolute;
-  display: none; /* 默认隐藏 */
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.6); /* 半透明背景 */
-  color: #fff;
-  border-radius: 0.5rem;
-  backdrop-filter: blur(5px); /* 模糊背景效果 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
-  transform: translate(0, 0); /* 默认无偏移 */
-  transition: transform 0.2s ease-out; /* 平滑移动效果 */
-  z-index: 1000; /* 确保层级足够高 */
-  max-width: 300px; /* 限制最大宽度 */
-  max-height: 200px; /* 限制最大高度 */
-  overflow: auto; /* 超出部分可滚动 */
+  background: transparent;
+  color: black;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(2px); /* 对背景应用模糊效果 */
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* 半透明的白色边框 */
+  /* 限制最大宽度和内容溢出 */
+  max-width: 700px; /* 设置弹出框的最大宽度 */
+  word-wrap: break-word; /* 如果单词太长，则换行 */
+  overflow: hidden; /* 防止内容溢出 */
 }
 
-/* 鼠标悬浮显示注脚内容容器 */
-.footnote-ref:hover + .footnote-container,
-.footnote-container:hover {
-  display: block;
+.footnote-popup.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-/* 注脚文字样式 */
-.footnote-ref {
-  cursor: pointer;
-  color: #007bff;
-  text-decoration: underline;
-  position: relative;
-}
 
-/* 鼠标移动时容器随之微动 */
-body {
-  position: relative;
-}
 
-body:hover .footnote-container {
-  animation: followCursor 0.2s ease-in-out;
-}
-
-@keyframes followCursor {
-  from {
-    transform: translate(-5px, -5px); /* 微量偏移初始 */
-  }
-  to {
-    transform: translate(5px, 5px); /* 微量偏移结束 */
-  }
-}
-
-/* JS 绑定事件处理鼠标移动 */

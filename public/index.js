@@ -1432,11 +1432,14 @@
       const result = document.querySelector("#search div");
       if (searchBox.value.length > 0) {
         const results = index.search(searchBox.value);
-        result.innerHTML = results.slice(0, MAX_SEARCH_RESULTS).map((x) => `<a href="${x.item.url}">
-          <img src="${x.item.cover || ""}" width="40" height="40">
-          <h3>${x.item.title}</h3>
-          <span>${x.item.content.substr(0, 40)}</span>
-        </a>`).join("");
+        result.innerHTML = results.slice(0, MAX_SEARCH_RESULTS).map((x) => {
+          const coverImage = x.item.cover ? x.item.cover : "default-image.jpg";
+          return `<a href="${x.item.url}">
+            <img src="${coverImage}" width="40" height="40">
+            <h3>${x.item.title}</h3>
+            <span>${x.item.content.substr(0, 40)}</span>
+          </a>`;
+        }).join("");
       } else {
         result.innerHTML = "";
       }

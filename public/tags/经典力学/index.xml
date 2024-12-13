@@ -8,20 +8,41 @@
     <language>en</language>
     <managingEditor>chiaralee953@foxmail.com (Caleton Academy of Magic)</managingEditor>
     <webMaster>chiaralee953@foxmail.com (Caleton Academy of Magic)</webMaster>
-    <lastBuildDate>Mon, 18 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>1.4.1 泛函极值的必要条件</title>
+      <link>http://localhost:1313/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.4.1/</link>
+      <pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
+      <guid>http://localhost:1313/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.4.1/</guid>
+      <description>1.4.1 泛函极值的必要条件 为什么两点之间直线最短？如何使得平面上固定长度曲线所围区域面积最大？什么循环过程效率最高？轨道形状如何小球下落时间最短？&#xA;有了泛函的概念，这些问题可以归结为当函数（输入）取什么形式时，泛函的值（输出）取极值。在变分法中，这被称为泛函极值问题。在实际问题中，我们关心的并不是泛函的全部信息，而往往是泛函的极值。&#xA;假设泛函 S[f] 在 f(t) = \bar{f}(t) 时取到极大（小）值，这意味着，任何对 \bar{f} 的小偏离 \bar{f} + \epsilon \delta f ，都会使得 S[\bar{f} + \epsilon \delta f] 的值比 S[\bar{f}] 小（大）。只有当不发生偏离，即 \delta f = 0 时取到极值。从另一个角度，这等价于 S[\bar{f} + \epsilon \delta f] 作为 \epsilon 参量的普通函数，在 \epsilon = 0 时取到极值。&#xA;这样就将泛函极值问题转化为普通函数的极值问题。而我们已经知道，普通函数的极值即要求其一阶导数为零。结合泛函导数的定义，我们有&#xA;\delta S[\bar{f}] = \int dt \left. \frac{\delta S[f]}{\delta f} \right|_{\bar{f}} \delta f(t) = \left. \frac{d S[\bar{f} + \epsilon \delta f]}{d \epsilon} \right|_{\epsilon=0} = 0&#xD;由此得到，泛函在 f(t) = \bar{f}(t) 时取到极值，即要求泛函的一阶变分*为零</description>
+    </item>
+    <item>
+      <title>1.3 泛函导数</title>
+      <link>http://localhost:1313/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.3/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
+      <guid>http://localhost:1313/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.3/</guid>
+      <description>1.3.1 泛函导数的概念 对于普通函数的导数，函数的微分是由自变量的微分引起的：&#xA;\begin{align}&#xD;f(t) \xrightarrow{t \to t+\epsilon} f(\tilde{t}) &amp;= f(t+ \epsilon) \\&#xD;&amp;= f(t) + \epsilon df(t) + \frac{\epsilon^2}{2!} d^2 f(t) + \frac{\epsilon^3}{3!} d^3 f(t) + \cdots&#xD;\end{align}&#xD;其中 \epsilon 是无穷小参数， \epsilon^n 项即为函数的 n 阶微分，函数的 n 阶导数则由函数的 n 阶微分与 dt 的关系给出。对于一阶导数：&#xA;df(t) = \frac{df(t)}{dt} dt&#xD;高阶导数则为：&#xA;d^{(n)} f(t) = \frac{d^{(n)}f(t)}{dt^n} dt&#xD;只要计算出函数的各阶微分，就可以给出相应的各阶导数。&#xA;泛函导数从形式上完全是对普通函数导数的类比。对于泛函 S[f] ，其变分是由函数的变分引起的：&#xA;\begin{align}&#xD;S[f] \xrightarrow{f \to \tilde{f}} S[\tilde{f}] &amp;= S[f + \epsilon f] \\ &amp;= S[f] + \epsilon \delta S[f] + \frac{\epsilon^2}{2!</description>
+    </item>
+    <item>
+      <title>1.3.2 泛函导数的操作定义</title>
+      <link>http://localhost:1313/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.3.2/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
+      <guid>http://localhost:1313/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.3.2/</guid>
+      <description>1.3.2 泛函导数的操作定义 根据上面的讨论，泛函导数归结于计算泛函 S[f] 的变分。&#xA;换个角度，在泛函 S[f + \epsilon \delta f] 中， \epsilon 是一个参数，而泛函 S 是一个数，其值依赖于 \epsilon 。所以，泛函 S[f + \epsilon \delta f] 可以被看作是 \epsilon 的普通函数，于是公式：&#xA;S[f + \epsilon \delta f] = S[f] + \epsilon \left. \frac{d}{d\epsilon} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \frac{\epsilon^2}{2!} \left. \frac{d^2}{d\epsilon^2} S[f + \epsilon \delta f] \right|_{\epsilon=0} + \cdots&#xD;可以视为 S[f + \epsilon \delta f] 相对于 \epsilon 的普通泰勒展开。&#xA;一般函数在 x_0 处以及 x_0 = 0 的泰勒展开</description>
+    </item>
+    <item>
       <title>1.2 变分</title>
-      <link>http://localhost:1313/notes/physcis/classical-mechnics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.2/</link>
+      <link>http://localhost:1313/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.2/</link>
       <pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
-      <guid>http://localhost:1313/notes/physcis/classical-mechnics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.2/</guid>
+      <guid>http://localhost:1313/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.2/</guid>
       <description>函数和泛函同为映射。”输入/输出“的无穷小变化，对函数而言就是微分，对泛函而言即是变分（variation）。简而言之，泛函是函数到数的映射，函数本身的无穷小变化，以及由此引出的泛函的变化即为变分。&#xA;若函数 f(t) 变成了另一个函数 f(t)\longrightarrow \tilde{f(t)} ，且假设两者相差无穷小。则函数 f(t) 的变分 \delta f 被定义为&#xA;\delta f(t):=\tilde{f(t)}-f(t)\\ 上式中的变分符号&amp;quot; \delta &amp;quot;代表变分运算这种操作。即对函数本身进行无穷小的变化。变分运算的结果，亦即上式的右侧仍然是一个函数（只不过是无穷小的），变分 \delta f 是作为另一个函数存在的。&#xA;函数的变分 \delta f 和微分 df 同为无穷小变化，但是具有本质上的区别 函数的微分 df(t) 是由自变量 t 的变化引起的，函数本身固定不变&#xA;f(t)\xrightarrow{t\rightarrow t+dt}f(t+dt) =f(t)+df(t)+\cdots\\ 而函数的变分 \delta f(t) 是因为函数本身发生了无穷小变化，而与自变量 t 无关&#xA;f(t)\rightarrow\tilde{f(t)}\equiv(f+\delta f)(t)=f(t)+\delta f(t)\\ 1.2.2 变分的运算规则 函数的变分其实和微分运算形式相似，比如&#xA;\delta (f^n)=nf^{n-1}\delta f\\ 对于函数 f_1 和 f_2 以及常数 a,b， 我们有&#xA;\begin{align}&#xD;\delta(af_1+bf_2)=a\delta f_1+b\delta f_2\\ \delta(f_1f_2)=(\delta f_1)f_2+f_1(\delta f_2)&#xD;\end{align}\\&#xD;另一个重要且非常有用的性质是，变分和微分可以交换顺序，即”微分的变分”=“变分的微分“&#xA;d(\delta f)=\delta(df)\\ 如图，此性质可以被直观证明。考虑 f 的值在 A 点和 B&#39; 点的差，即</description>
     </item>
     <item>
       <title>1.1 泛函</title>
-      <link>http://localhost:1313/notes/physcis/classical-mechnics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.1/</link>
+      <link>http://localhost:1313/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.1/</link>
       <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
-      <guid>http://localhost:1313/notes/physcis/classical-mechnics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.1/</guid>
+      <guid>http://localhost:1313/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.1/</guid>
       <description>我们首先来回顾一下函数的概念。&#xA;一个形象的解释是，函数是一个机器，我们把一个数输入到函数中，函数就会按照其描述来给出一个数。换成一个稍微数学的点的说法就是：&#xA;函数是一个具体的映射关系，给定两个集合 X 和 Y ，在两个集合的元素 x\in X 和 y\in Y 之间建立的一个对应关系即为映射。&#xA;f:x\rightarrow y=f(x) \\ 1.1.1 泛函的概念 从映射的角度，很多时候普通函数的概念显的不太够用。&#xA;例如，空间（平面、球面等）中两点用任一曲线连接，给定曲线的形状，就可以计算出曲线的长度，又比如，平面上的封闭曲线和空间中的封闭曲面，给定曲线和曲面的形状，就可以计算出所包围的面积和体积。&#xA;上面的例子有个共同的特点，“输入”——曲线的形状、曲面的形状等等，不是一般意义上的数。而”输出“却都是数。由此可见，为了描述并解决这些问题，普通函数的概念需要被推广，需要引入新的数学概念来描述这种”不是数的输入“。&#xA;这些例子还有一个共同的特点，这些输入都可以用”函数“来刻画。&#xA;至此，**&amp;ldquo;泛函&amp;rdquo;**的概念已经呼之欲出了。用数学语言来说，泛函就是函数到数的映射。两个集合之间的映射有很多种，也就是，存在很多的函数 f_1(x),f_2(x),\cdots,f_n(x) ，所有这些函数自然也构成集合 \mathcal{F}=\{f_1,f_2,\cdots,f_n\} ,把函数 f 的泛函记为 s[f] ，即&#xA;S:f\longmapsto S=S[f],\quad\mathcal{F}\longmapsto \mathcal{C}\\ 其中， \mathcal{C} 代表复数集合。&#xA;泛函既然也是一种映射，那么如果把泛函输入的函数当成是某种”广义的数“，则泛函也可以视为是一种函数。只不过函数是数的函数，泛函是函数的函数。&#xA;1.1.2 泛函的具体形式 根据泛函的定义——输入函数，输出数。我们可以举出很多泛函的例子，比如&#xA;平面上曲线方程记为 y=f(x) ，则两点之间的曲线长度 S 为曲线方程 f(x) 的泛函&#xA;S(曲线长度)=S[f](曲线方程f的泛函)=\int\limits_{曲线}dx\sqrt{1+(f&#39;(x))^2}\\ 理想气体准静态过程对外做功 W 即是过程方程 p=p(V) 的泛函&#xA;W=W[p]=\int\limits_{过程}p(V)dV\\ 三维空间曲线方程记为 z=\phi(x,y) ，则曲面面积 A 为二元函数 z=\phi(x,y) 的泛函&#xA;A=A[\phi]=\iint_{\text {区域 }} \mathrm{d} x \mathrm{~d} y \sqrt{1+\left(\frac{\partial \phi}{\partial x}\right)^{2}+\left(\frac{\partial \phi}{\partial y}\right)^{2}} \\ 经典力学中的遇见的泛函，通常为以下形式</description>
     </item>
   </channel>

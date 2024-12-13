@@ -105,3 +105,32 @@
   .page main dl dd {
     padding-left: 6rem;
   }
+
+/*脚注css样式*/
+
+.footnote-popup {
+  position: absolute;
+  background: transparent;
+  color: black;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(2px); /* 对背景应用模糊效果 */
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* 半透明的白色边框 */
+  /* 限制最大宽度和内容溢出 */
+  max-width: 700px; /* 设置弹出框的最大宽度 */
+  word-wrap: break-word; /* 如果单词太长，则换行 */
+  overflow: hidden; /* 防止内容溢出 */
+}
+
+.footnote-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+

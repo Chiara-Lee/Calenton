@@ -36,7 +36,6 @@ toc: true
 | ------------------------ | ---------------------------------------------- |
 | 表格 (Table)             | \| Syntax \| Description \| <br> \| -------- \| ----------- \| <br> \| Header \| Title \| <br> \| Paragraph \| Text \| |
 | 代码块 (Fenced Code Block) | ``` <br> { <br> "firstName": "John", <br> "lastName": "Smith", <br> "age": 25 <br> } <br> ``` |
-| 脚注 (Footnote)          | Here's a sentence with a footnote. [^1] <br> [^1]: This is the footnote. |
 | 标题编号 (Heading ID)    | ### My Great Heading {#custom-id}             |
 | 定义列表 (Definition List) | term <br> : definition                       |
 | 删除线 (Strikethrough)   | ~~The world is flat.~~                        |
@@ -119,5 +118,13 @@ S[f+\epsilon\delta f]=\int\limits_{t_1}^{t_2}dtL(t_,f+\epsilon\delta f,f'+\epsil
 6. Markdown 加粗语法可以包裹 LaTeX 代码。
 
 > 有序列表、无序列表都需要在文本和序号之间加一个空格符。
+
+### 4.脚注样式测试
+
+The Einstein field equations (EFE) may be written in the form:[^1]
+
+where {{<latex display="false">}} G_{\mu\nu} {{</latex>}} is the Einstein tensor, {{<latex display="false">}} g_{\mu\nu} {{</latex>}} is the metric tensor,{{<latex display="false">}} T_{\mu\nu} {{</latex>}} is the stress–energy tensor, {{<latex display="false">}} \Lambda {{</latex>}}is the cosmological constant and{{<latex display="false">}} \kappa {{</latex>}}is the Einstein gravitational constant.
+
+[^1]:Footnote 1.<br>爱因斯坦场方程（EFE）可以写成：{{<latex display="true">}}G_{\mu \nu}+\Lambda g_{\mu \nu}=\kappa T_{\mu \nu}{{</latex>}}where {{<latex display="false">}} G_{\mu\nu} {{</latex>}} is the Einstein tensor, {{<latex display="false">}} g_{\mu\nu} {{</latex>}} is the metric tensor,{{<latex display="false">}} T_{\mu\nu} {{</latex>}} is the stress–energy tensor, {{<latex display="false">}} \Lambda {{</latex>}}is the cosmological constant and{{<latex display="false">}} \kappa {{</latex>}}is the Einstein gravitational constant.
 
 
