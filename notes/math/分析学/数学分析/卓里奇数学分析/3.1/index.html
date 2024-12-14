@@ -1,0 +1,289 @@
+<!doctype html><html lang=zh><head><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel=stylesheet><meta charset=UTF-8><meta name=description content="定义 1.（序列） 定义域为自然数集的函数 f : \mathbb{N} \to X 称为序列。
+函数 f(n) 的值 f(n) 称为 序列的项。通常用集合 X 的元素所对应的符号来表示序列的项，并让自变量对应的符号作为其下标： x_n := f(n) 。因此，我们用符号 \{ x_n \} 来表示序列本身，有时也把它写为 x_1, x_2, \dots, x_n, \dots 的形式，并称之为 集合 X 中的序列 或 集合 X 的元素序列。
+元素 x_n 称为序列的第 n 项。
+在下面几节中，我们只讨论实数列 f : \mathbb{N} \to \mathbb{R} 。
+定义 2.（序列的极限） 数 A\in \mathbb{R} 数列 \{ x_n \} 的极限，如果对于点 A 的任何一个领域 V(A) ，都存在序号 N （其选取与 V(A) 有关），使得数列中所有序号大于 N 的项都包含在点 A 的上述邻域 V(A) 中。"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>3.1 序列的极限</title>
+<script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
+Caleton Academy
+</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/physcis/>Physics</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/computer-science-and-technology/>Cst</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>3.1 序列的极限</h1><h2>Table of Contents</h2><nav id=TableOfContents></nav><div class=content-wrapper><div class=content><p><strong>定义 1.（序列）</strong> 定义域为自然数集的函数
+<span class=fallback-latex>f : \mathbb{N} \to X
+</span>称为序列。</p><p>函数
+<span class=fallback-latex>f(n)
+</span>的值
+<span class=fallback-latex>f(n)
+</span>称为 <strong>序列的项</strong>。通常用集合
+<span class=fallback-latex>X
+</span>的元素所对应的符号来表示序列的项，并让自变量对应的符号作为其下标：
+<span class=fallback-latex>x_n := f(n)
+</span>。因此，我们用符号
+<span class=fallback-latex>\{ x_n \}
+</span>来表示序列本身，有时也把它写为
+<span class=fallback-latex>x_1, x_2, \dots, x_n, \dots
+</span>的形式，并称之为 <strong>集合
+<span class=fallback-latex>X
+</span>中的序列</strong> 或 <strong>集合
+<span class=fallback-latex>X
+</span>的元素序列</strong>。</p><p><strong>元素
+<span class=fallback-latex>x_n
+</span>称为序列的第
+<span class=fallback-latex>n
+</span>项。</strong></p><p>在下面几节中，我们只讨论实数列
+<span class=fallback-latex>f : \mathbb{N} \to \mathbb{R}
+</span>。</p><p><strong>定义 2.（序列的极限）</strong> 数
+<span class=fallback-latex>A\in \mathbb{R}
+</span>数列
+<span class=fallback-latex>\{ x_n \}
+</span>的极限，如果对于点
+<span class=fallback-latex>A
+</span>的任何一个领域
+<span class=fallback-latex>V(A)
+</span>，都存在序号
+<span class=fallback-latex>N
+</span>（其选取与
+<span class=fallback-latex>V(A)
+</span>有关），使得数列中所有序号大于
+<span class=fallback-latex>N
+</span>的项都包含在点
+<span class=fallback-latex>A
+</span>的上述邻域
+<span class=fallback-latex>V(A)
+</span>中。</p><p>我们将在下面给出这个定义的形式逻辑写法，这里首先指出数列极限定义的另一种常见的表达。</p><p><strong>数列
+<span class=fallback-latex>A \in \mathbb{R}
+</span>称为数列
+<span class=fallback-latex>\{ x_n \}
+</span>的极限，如果对于任何
+<span class=fallback-latex>\epsilon > 0
+</span>，都存在序号
+<span class=fallback-latex>N
+</span>，使得对于一切
+<span class=fallback-latex>n > N
+</span>，都有
+<span class=fallback-latex>| x_n - A | < \epsilon
+</span>。</strong></p><p>如果注意到点
+<span class=fallback-latex>A
+</span>的任何一个领域
+<span class=fallback-latex>V(A)
+</span>都包含该点的某个
+<span class=fallback-latex>\epsilon
+</span>邻域，就容易验证这两种表达的等价性。</p><p>现在我们来验证以上两种说法的等价性：</p><p><strong>1.“领域”定义的极限和
+<span class=fallback-latex>\varepsilon -\delta
+</span>定义的极限的等价性证明</strong></p><p>这种定义的本质在于，实数系
+<span class=fallback-latex>\mathbb{R}
+</span>上的拓扑是由度量诱导的，每个点
+<span class=fallback-latex>A
+</span>的邻域可以用适当的
+<span class=fallback-latex>\epsilon
+</span>邻域来描述。这意味着“对于每个邻域
+<span class=fallback-latex>V(A)
+</span>”与“对于任意
+<span class=fallback-latex>\epsilon > 0
+</span>”在实数轴上是等价的表达方式。证明的关键在于：</p><ol><li><p>任意给定的
+<span class=fallback-latex>\epsilon
+</span>-邻域
+<span class=fallback-latex>(A - \epsilon, A + \epsilon)
+</span>都是
+<span class=fallback-latex>A
+</span>的一个邻域。</p></li><li><p>对于给定的任一邻域
+<span class=fallback-latex>V(A)
+</span>，都可以找到一个
+<span class=fallback-latex>\epsilon
+</span>-邻域
+<span class=fallback-latex>(A - \epsilon, A + \epsilon)
+</span>使得该
+<span class=fallback-latex>\epsilon
+</span>邻域包含在所给的
+<span class=fallback-latex>V(A)
+</span>中。</p></li></ol><p>通过这两个事实，可以从“邻域”定义的极限转换为“
+<span class=fallback-latex>\epsilon - \delta
+</span>”定义的极限，反之亦然，从而证明三者等价。</p><p>详细证明过程：</p><blockquote><p>(1) 从邻域定义推得
+<span class=fallback-latex>\epsilon
+</span>-定义：</p><p>设
+<span class=fallback-latex>A
+</span>是数列
+<span class=fallback-latex>(x_n)
+</span>的极限，满足邻域版本的定义：</p><blockquote><p>对于点
+<span class=fallback-latex>A
+</span>的任意一个邻域
+<span class=fallback-latex>V(A)
+</span>，存在在
+<span class=fallback-latex>n > N
+</span>时，
+<span class=fallback-latex>x_n \in V(A)
+</span>。</p></blockquote><p>现在取任意
+<span class=fallback-latex>\epsilon > 0
+</span>。考虑
+<span class=fallback-latex>\epsilon
+</span>-邻域
+<span class=fallback-latex>(A - \epsilon, A + \epsilon)
+</span>作为
+<span class=fallback-latex>V(A)
+</span>的一个具体选择。由邻域定义的极限性质可知，存在
+<span class=fallback-latex>N
+</span>使得当
+<span class=fallback-latex>n > N
+</span>时，
+<span class=fallback-latex>x_n \in (A - \epsilon, A + \epsilon)
+</span>。</p><p>这等价于
+<span class=fallback-latex>| x_n - A | < \epsilon
+</span>。这样就由邻域定义得到了标准的
+<span class=fallback-latex>\epsilon - \delta
+</span>定义。</p><p>(2) 从
+<span class=fallback-latex>\epsilon
+</span>-定义推得邻域定义：</p><p>现在假设
+<span class=fallback-latex>A
+</span>是数列
+<span class=fallback-latex>(x_n)
+</span>的极限，满足
+<span class=fallback-latex>\epsilon
+</span>-定义：</p><blockquote><p>对于任意
+<span class=fallback-latex>\epsilon > 0
+</span>，存在在
+<span class=fallback-latex>n > N
+</span>时
+<span class=fallback-latex>| x_n - A | < \epsilon
+</span>。</p></blockquote></blockquote><p>? 给定任意邻域
+<span class=fallback-latex>V(A)
+</span>，由于在实数轴上邻域都可以用开区间描述，即对于点
+<span class=fallback-latex>A
+</span>存在
+<span class=fallback-latex>\delta > 0
+</span>使得
+<span class=fallback-latex>(A - \delta, A + \delta) \subset V(A)
+</span>。</p><blockquote><p>依据于
+<span class=fallback-latex>\epsilon
+</span>-定义的极限定义，取
+<span class=fallback-latex>\delta = \epsilon
+</span>，便存在在
+<span class=fallback-latex>n > N
+</span>时
+<span class=fallback-latex>| x_n - A | < \delta
+</span>，即
+<span class=fallback-latex>x_n \in (A - \delta, A + \delta) \subset V(A)
+</span>。这样就从
+<span class=fallback-latex>\epsilon
+</span>-定义的极限转换为邻域定义的极限。</p></blockquote><p>极限定义的后一种表达的意思是，在用数列
+<span class=fallback-latex>(x_n)
+</span>去逼近数
+<span class=fallback-latex>A
+</span>时，无论我们给出怎样的精度
+<span class=fallback-latex>\epsilon > 0
+</span>，总能够找到序号
+<span class=fallback-latex>N
+</span>，使得绝对误差在
+<span class=fallback-latex>n > N
+</span>时小于
+<span class=fallback-latex>\epsilon
+</span>。</p><p>现在用逻辑符号写出极限定义的以上表达，并约定用符号
+<span class=fallback-latex>\lim_{n \to \infty} x_n = A
+</span>表示数列
+<span class=fallback-latex>(x_n)
+</span>的极限。于是，</p><span class=fallback-latex>\boxed{\left( \lim_{n \to \infty} x_n = A \right) := \forall V(A) \exists N \in \mathbb{N} \forall n > N ( x_n \in V(A) )}</span><p>相应地，</p><span class=fallback-latex>\boxed{\left( \lim_{n \to \infty} x_n = A \right) := \forall \epsilon > 0 \exists N \in \mathbb{N} \forall n > N ( | x_n - A | < \epsilon )}.</span><p><strong>定义 3.（收敛、发散数列）</strong> 如果
+<span class=fallback-latex>\lim_{n \to \infty} x_n = A
+</span>，我们就说数列
+<span class=fallback-latex>\{ x_n \}
+</span>收敛于
+<span class=fallback-latex>A
+</span>或趋近于
+<span class=fallback-latex>A
+</span>，并记作：</p><p>当
+<span class=fallback-latex>n \to \infty
+</span>时
+<span class=fallback-latex>x_n \to A
+</span>。</p><p>有极限的数列称为收敛数列，没有极限的数列称为发散数列。</p><p>讨论一些例子。</p><p>例 1.
+<span class=fallback-latex>\lim_{n \to \infty} \frac{1}{n} = 0
+</span>，因为当
+<span class=fallback-latex>n > N=\left[\frac{1}{\varepsilon}\right]
+</span><sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> 时：</p><p><span class=fallback-latex>\left| \frac{1}{n} - 0 \right| = \frac{1}{n} < \epsilon
+</span>。</p><p>例 2.
+<span class=fallback-latex>\lim_{n \to \infty} \frac{n + 1}{n} = 1
+</span>，因为当
+<span class=fallback-latex>n > N=\left[\frac{1}{\varepsilon}\right]
+</span>时：</p><p><span class=fallback-latex>\left| \frac{n + 1}{n} - 1 \right| = \frac{1}{n} < \epsilon
+</span>。</p><p>例 3.
+<span class=fallback-latex>\lim_{n \to \infty} \left( 1 + \frac{(-1)^n}{n} \right) = 1
+</span>，因为当
+<span class=fallback-latex>n > N=\left[\frac{1}{\varepsilon}\right]
+</span>时，</p><p><span class=fallback-latex>\left| \left( 1 + \frac{(-1)^n}{n} \right) - 1 \right| = \frac{1}{n} < \epsilon
+</span>。</p><p>例 4.
+<span class=fallback-latex>\lim_{n \to \infty} \frac{\sin n}{n} = 0
+</span>，因为当
+<span class=fallback-latex>n > N=\left[\frac{1}{\varepsilon}\right]
+</span>时，</p><p><span class=fallback-latex>\left| \frac{\sin n}{n} - 0 \right| \leq \frac{1}{n} < \epsilon
+</span>。</p><p>例 5.
+<span class=fallback-latex>\lim_{n \to \infty} \frac{1}{q^n} = 0
+</span>，如果
+<span class=fallback-latex>|q| > 1
+</span>。</p><p>我们根据极限的定义进行验证。对于任意
+<span class=fallback-latex>\epsilon > 0
+</span>，可以找到一个数
+<span class=fallback-latex>N \in \mathbb{N}
+</span>，使得
+<span class=fallback-latex>\frac{1}{|q|^N} < \epsilon
+</span>。因为
+<span class=fallback-latex>|q| > 1
+</span>，所以对于任意
+<span class=fallback-latex>n > N
+</span>都有：</p><p><span class=fallback-latex>\left| \frac{1}{q^n} - 0 \right| = \frac{1}{|q|^n} < \frac{1}{|q|^N} < \epsilon
+</span>。</p><p>从而使极限的定义得到满足。</p><p>例 6. 第
+<span class=fallback-latex>n
+</span>项为
+<span class=fallback-latex>x_n = n^{(-1)^n}
+</span>（
+<span class=fallback-latex>n \in \mathbb{N}
+</span>）的数列
+<span class=fallback-latex>1, 2, \frac{1}{3}, 4, \frac{1}{5}, 6, \frac{1}{7}, \dots
+</span>是发散的。</p><p>其实，如果
+<span class=fallback-latex>A
+</span>是数列的极限，则根据极限的定义，在
+<span class=fallback-latex>A
+</span>的任何一个邻域以外只可能有有限的项。</p><p>数列
+<span class=fallback-latex>A \neq 0
+</span>不可能是该数列的极限，因为当
+<span class=fallback-latex>\epsilon = \frac{|A|}{2}
+</span>时，数列中形如
+<span class=fallback-latex>\frac{1}{2k + 1}
+</span>的项在
+<span class=fallback-latex>\frac{1}{2k + 1} < \frac{|A|}{2}
+</span>时位于
+<span class=fallback-latex>A
+</span>的
+<span class=fallback-latex>\varepsilon
+</span>邻域之外。</p><p>数列
+<span class=fallback-latex>0
+</span>也不可能是这个数列的极限，因为，例如，在以 0 为中心的单位邻域之外，显然也有该数列的无穷多项。</p><p>例 7. 可以类比地验证，数列
+<span class=fallback-latex>1, -1, 1, -1, \dots
+</span>（
+<span class=fallback-latex>x_n = (-1)^n
+</span>）没有极限。</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p><span class=fallback-latex>[x]
+</span>表示数
+<span class=fallback-latex>x
+</span>的整数部分。&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><aside class=sidebar><div class=card><h2>摘要</h2><p>定义 1.（序列） 定义域为自然数集的函数 f : \mathbb{N} \to X 称为序列。
+函数 f(n) 的值 f(n) 称为 序列的项。通常用集合 X 的元素所对应的符号来表示序列的项，并让 …</p></div><div class=card><h2>阅读时长</h2><p>4 min</p></div><div class=card><h2>总字数</h2><p>≈ 643</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
+数学分析</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/1.3/><h2>2.3 乘法</h2><article>在上一节中，我们已经证明了所知道的所有关于加法和序的基本事实。为了节省篇幅以及避免赘述那些显然的事情，接下来我们将允许使用所熟悉的关于加法和序的代数法则，而不加进一步的说明。于是我们可以写出 a+b+c=c+b+a 这样的内容，不需要进一步解释说明。现在我们引入乘法。正如加法是重复的增量运算一样，乘法是重复的加法运算。
+定义 2.3.1（自然数的乘法）
+令 m 表示任意一个自然数，
+我们定义 0\times m:= 0 来表示将 0 乘到 m 上。现在归纳假设我们已经定义了 n\times m （即把 n 乘到 m 上）。
+那么，我们可以定义
+(n++)\times m:= (n\times m)+m 以上，我们就定义好了自然数的乘法规则。
+引理 2.3.2 （乘法是可交换的） 令 n 和 m 表示任意两个自然数，那么有 n\times m=m\times n 成立。
+证明： 使用数学归纳法。
+首先我们需要证明 m\times 0= 0 。当 m=0 时，我们有
+0\times 0:= 0 归纳假设当 m=m 时 m\times 0= 0 是成立的，那么现在我们来证明 m=m++ 时等式成立。
+\begin{align} (m++)\times 0&=(m\times 0)+0[(n++)\times m:= (n\times m)+m]\\ &=0 \end{align} 以上，我们就得到了基础情况 0\times m=m\times 0 。</article><div>Read More</div></a></li><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/2.1/><h2>3.1 基础知识</h2><article>1.摘要 本文公理一览：
+公理 3.1（集合是对象） 相等公理、替换公理 公理 3.2 (空集) 公理 3.3（单元素集与双元素集） 公理 3.4（两集合并集） 公理 3.5（分类公理） 公理 3.6 (替代) 公理 3.7 (无穷大) 2.正文 定义 3.1.1（非正式的）（集合）
+我们把 集合 A 定义为任意的一堆没有次序的对象。例如， \{3,8,5,2\} 是一个集合。如果 x 是这堆对象中的一个，那么我们称 x 是 A 中的一个元素 ，记作 x\in A ，否则，记作 x\notin A 。
+这个定义相当直观，但是它无法回答诸如下面这些问题：什么样的一堆对象可以被看作集合？什么样的集合与另外的集合相等？如何定义集合上的运算，比如并集、交集等？同时，我们还没有给出关于集合或者集合中元素的公理。本节剩余内容的主要目的就是给出这些公理并定义集合上的运算。
+首先阐明一个观点：我们把集合本身看作一类对象。
+公理 3.1（集合是对象） 如果 A 是一个集合，那么 A 也是一个对象。特别地，给定两个集合 A 和 B ，问 A 是不是 B 中的元素是有意义的。
+到目前为止，总的来说，在数学里学到的所有对象当中，有些对象恰好是集合。而且如果 x 是一个对象， A 是一个集合，那么 x \in A 要么为真，要么为假。（如果 A 不是集合，则我们认为 x \in A 是无定义的。例如， 3 \in 4 既非真也非假，该命题是无意义的，因为 4 不是一个集合。）</article><div>Read More</div></a></li></ul></div><div class=comments data-articleurl=/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/3.1/><h2>Comments</h2><div class=comment data-depth=0 style=margin-left:0!important data-parent data-custom=1731832040899-795 data-articleurl=/notes/test-page/><div class=comment-content style=border-radius:10px;padding:10px><img src="https://www.gravatar.com/avatar/d9dab474cfdb4e177b10b36e239d6fb2?s=100&d=wavatar" alt="Chiara-lee Avatar" style=border-radius:50%;width:50px;height:50px;margin-right:15px><div class=comment-text style=flex:1><div style=display:flex;align-items:center><div class=author style=font-weight:700>Chiara-lee</div><span class=time style=margin-left:10px;color:#888>2024-11-17 08:27:23</span></div><div class=message>评论测试</div><button class=reply-button data-parent data-name=Chiara-lee data-custom=1731832040899-795>Reply</button></div></div><div class=child-comment data-depth=1 style=margin-left:50px!important data-parent=1731832040899-795 data-custom=1731832122014-150 data-articleurl=/notes/test-page/><div class=comment-content style=border-radius:10px;padding:10px><img src="https://www.gravatar.com/avatar/d9dab474cfdb4e177b10b36e239d6fb2?s=100&d=wavatar" alt="Chiara-lee Avatar" style=border-radius:50%;width:50px;height:50px;margin-right:15px><div class=comment-text style=flex:1><div style=display:flex;align-items:center><div class=author style=font-weight:700>Chiara-lee</div><span class=time style=margin-left:10px;color:#888>2024-11-17 08:28:45</span></div><div class=message>子评论测试</div><button class=reply-button data-parent=1731832040899-795 data-name=Chiara-lee data-custom=1731832122014-150>Reply</button></div></div><div style=clear:both></div><div class=comment data-depth=0 style=margin-left:0!important data-parent data-custom=1731832210679-902 data-articleurl=/notes/test-page/><div class=comment-content style=border-radius:10px;padding:10px><img src="https://www.gravatar.com/avatar/d9dab474cfdb4e177b10b36e239d6fb2?s=100&d=wavatar" alt="Chiara-lee Avatar" style=border-radius:50%;width:50px;height:50px;margin-right:15px><div class=comment-text style=flex:1><div style=display:flex;align-items:center><div class=author style=font-weight:700>Chiara-lee</div><span class=time style=margin-left:10px;color:#888>2024-11-17 08:30:13</span></div><div class=message>评论测试 2.0</div><button class=reply-button data-parent data-name=Chiara-lee data-custom=1731832210679-902>Reply</button></div></div><template id=comment-success><div class=success>您的评论已成功提交审核。(´｡• ᵕ •｡`)</div></template><template id=comment-error><div class=error>啊，好像出了些问题，请您调整后重试。(；′⌒`)</div></template><form id=comment-form data-dynamic-form data-success=#comment-success data-error=#comment-error netlify=true name=Comments method=POST style=margin-top:20px><div id=reply-to style=display:none;color:#6c757d;margin-bottom:10px></div><input type=hidden name=url value=/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/3.1/>
+<input type=hidden name=parent id=parent>
+<input type=hidden name=custom id=custom>
+<input type=hidden name=depth id=depth value=0>
+<input type=hidden name=articleurl value=/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/3.1/>
+<label class=comment-label for=name>Name:</label>
+<input class=comment-input type=text id=name name=name required autocomplete=name>
+<label class=comment-label for=email>Email:</label>
+<input class=comment-input type=email id=email name=email required autocomplete=email>
+<label class=comment-label for=comment>Comment:</label>
+<textarea class=comment-textarea id=comment name=comment rows=5 required autocomplete=off></textarea>
+<button class=comment-button type=submit>Send</button></form></div><script>function generateUniqueId(){return`${Date.now()}-${Math.floor(Math.random()*1e3)}`}document.querySelectorAll(".reply-button").forEach(e=>{e.addEventListener("click",function(){const n=this.closest(".comment"),e=this.getAttribute("data-custom"),s=this.getAttribute("data-name"),o=parseInt(n.getAttribute("data-depth"))||0;document.getElementById("parent").value=e||"",console.log("Parent ID set to:",e);const i=o+1;document.getElementById("depth").value=i;const t=document.getElementById("reply-to");t.style.display="block",t.innerText=`回复 @${s}`,document.querySelectorAll(".comment").forEach(e=>{e.classList.remove("highlight")}),this.closest(".comment").classList.add("highlight")}),document.getElementById("comment-form").scrollIntoView({behavior:"smooth"})}),document.getElementById("comment-form").addEventListener("submit",function(){const t=document.getElementById("custom");t.value||(t.value=generateUniqueId(),console.log("Custom ID set to:",t.value))}),window.onload=function(){const e=document.querySelector(".comments"),n=e.dataset.articleurl.replace(/\/$/,"").toLowerCase(),s=document.querySelector("#comment-form"),o=document.querySelector("footer"),i=Array.from(document.querySelectorAll(".comment, .child-comment")),t=i.filter(e=>{const t=e.dataset.articleurl.replace(/\/$/,"").toLowerCase();return t===n});e.innerHTML="";const a=t.filter(e=>e.dataset.depth==="0");a.forEach(n=>{e.appendChild(n);const s=t.filter(e=>e.dataset.parent===n.dataset.custom);s.forEach(t=>{t.classList.add("child-comment"),e.appendChild(t)})}),e.appendChild(s),e.appendChild(o),e.style.display="none",e.offsetHeight,e.style.display=""}</script><script src=/js/footnotes.js></script><footer class=dark><nav><ul><li><a href=/reference>引用资料列表</a></li><li><a href=/categories>教材索引</a></li><li><a href></a></li></ul></nav><ul><li><a href=https://facebook.com/example aria-label=Facebook><i class=icon-facebook></i></a></li><li><a href=https://x.com/i/flow/login aria-label=Twitter><i class=icon-twitter></i></a></li><li><a href=mailto:chiaralee953@foxmail.com aria-label=email><i class=icon-email></i></a></li></ul><div>Copyright © 2024 Caleton Academy of Magic.</div></footer></body></html>
