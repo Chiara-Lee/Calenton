@@ -178,8 +178,14 @@ To C, or not to C: that is the question.
 <p>编译和链接所需的命令因编译器和操作系统而异。在UNIX系统下，C编译器通常命名为cc。要编译和链接pun.c程序，在终端或命令行窗口中输入以下命令：</p>
 <p><code>/* % cc pun.c */</code></p>
 <p>（%字符是UNIX的提示符，不是需要输入的内容。）在使用cc时，链接是自动进行的；无需单独的链接命令。</p>
-<p>编译和链接程序后，cc默认会将可执行程序保存在一个名为a.out的文件中。cc有很多选项，其中一个选项（-o选项）允许我们选择包含可执行程序的文件名称。例如，如果我们希望pun.c的可执行版本命名为pun，我们可以输入以下命令：</p>
+<p>编译和链接程序后，cc默认会将可执行程序保存在一个名为a.out的文件中。cc有很多选项，其中一个选项（-o选项）是一个编译器选项，用来指定生成的输出文件的文件名。它后面跟着的是输出文件的名称。例如，如果我们希望pun.c的可执行版本命名为pun，我们可以输入以下命令：</p>
 <p><code>/* % cc -o pun pun.c */</code></p>
+<ul>
+<li><strong>cc</strong>：表示调用 C 编译器（通常是 <code>gcc</code> 或其他编译器）。</li>
+<li><strong>-o</strong>：指定输出文件的名称。</li>
+<li><strong>pun</strong>：这是编译后的输出文件的名称，即生成的可执行文件。</li>
+<li><strong>pun.c</strong>：这是输入的源代码文件，即将要编译的 C 文件。</li>
+</ul>
 <p>最流行的C编译器之一是GCC编译器，它随Linux一起提供，但也可用于许多其他平台。使用这个编译器与使用传统的UNIX cc 编译器类似。例如，要编译 pun.c 程序，我们可以使用以下命令：</p>
 <p><code>/* % gcc -o pun pun.c */</code></p>
 <p><strong>集成开发环境</strong></p>
@@ -199,7 +205,7 @@ To C, or not to C: that is the question.
         </div>
         <div class="card">
           <h2>总字数</h2>
-          <p>≈ 130</p> 
+          <p>≈ 140</p> 
         </div>
         <div class="card">
           <h2>标签</h2>

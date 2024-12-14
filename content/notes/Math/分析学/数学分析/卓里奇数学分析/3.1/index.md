@@ -52,7 +52,7 @@ toc: true
 >
 >> 对于任意 {{<latex display="false">}} \epsilon > 0 {{</latex>}}，存在在 {{<latex display="false">}} n > N {{</latex>}} 时 {{<latex display="false">}} | x_n - A | < \epsilon {{</latex>}}。
 >
-? 给定任意邻域 {{<latex display="false">}} V(A) {{</latex>}}，由于在实数轴上邻域都可以用开区间描述，即对于点 {{<latex display="false">}} A {{</latex>}} 存在 {{<latex display="false">}} \delta > 0 {{</latex>}} 使得 {{<latex display="false">}} (A - \delta, A + \delta) \subset V(A) {{</latex>}}。
+> 给定任意邻域 {{<latex display="false">}} V(A) {{</latex>}}，由于在实数轴上邻域都可以用开区间描述，即对于点 {{<latex display="false">}} A {{</latex>}} 存在 {{<latex display="false">}} \delta > 0 {{</latex>}} 使得 {{<latex display="false">}} (A - \delta, A + \delta) \subset V(A) {{</latex>}}。
 >
 > 依据于 {{<latex display="false">}} \epsilon {{</latex>}} -定义的极限定义，取 {{<latex display="false">}} \delta = \epsilon {{</latex>}}，便存在在 {{<latex display="false">}} n > N {{</latex>}} 时 {{<latex display="false">}} | x_n - A | < \delta {{</latex>}}，即 {{<latex display="false">}} x_n \in (A - \delta, A + \delta) \subset V(A) {{</latex>}}。这样就从 {{<latex display="false">}} \epsilon {{</latex>}} -定义的极限转换为邻域定义的极限。
 

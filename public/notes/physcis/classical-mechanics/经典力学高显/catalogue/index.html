@@ -193,6 +193,31 @@
     
       <li class="post">
   
+  <a href="http://localhost:1313/notes/computer-science-and-technology/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/c/c&#43;&#43;%E7%BC%96%E7%A8%8B/c-programming-a-modern-approach/2.1/">
+    <h2>
+      2.1  写一个简单的程序
+    </h2>
+    <article>
+      本章将介绍几个基本概念，包括预处理指令、函数、变量和语句，这些概念是编写即使是最简单程序所必需的。后续章节将对这些主题进行更详细的讲解。
+首先，第2.1节展示了一个简单的C程序，并介绍了如何编译和链接它。接着，第2.2节讨论了如何将该程序进行泛化，第2.3节展示了如何添加解释性注释。第2.4节介绍了变量，它们存储在程序执行过程中可能会改变的数据，第2.5节展示了如何使用scanf函数将数据读入变量中。常量——在程序执行过程中不会改变的数据——可以被命名，第2.6节对此进行了说明。最后，第2.7节解释了C语言创建名称（标识符）的规则，第2.8节给出了程序布局的规则。
+2.1 写一个简单的程序 与某些编程语言编写的程序不同，C语言程序需要的“样板代码”很少——一个完整的程序可以短到只有几行。
+程序：打印一个双关语
+Kernighan和Ritchie的经典著作《C程序设计语言》中的第一个程序非常简短：它什么也不做，只是输出信息“hello, world”。与其他C语言作者不同，我不会使用这个程序作为我的第一个例子。然而，我会遵循另一个C语言传统：一个坏的双关语。这里是这个双关语：
+To C, or not to C: that is the question.
+以下程序，我们将其命名为 pun.c，每次运行时都会显示该消息：
+1 2 3 4 5 6 7 8 9 /* #include &lt;stdio.h&gt; int main(void) { printf(&#34;To C, or not to C: that is the question.\n&#34;); return 0; } */ 第2.2节会详细解释这个程序的结构。现在，我将简要做几点观察。该行
+/* #include &lt;stdio.h&gt; */
+是为了“包含”有关 C语言标准I/O（输入/输出）库 的信息。程序的可执行代码放在 main 函数内，它代表了 “主”程序。main 函数内的唯一一行是一个显示所需消息的命令。printf 是标准I/O库中的一个函数，可以生成格式良好的输出。\n 代码告诉 printf 在打印消息后跳到下一行。
+/* return 0; */
+表示当程序终止时，它将“返回”值 0 给操作系统。 
+    </article>
+    <div>Read More</div>
+  </a>
+</li>
+
+    
+      <li class="post">
+  
   <a href="http://localhost:1313/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/3.1/">
     <h2>
       3.1  序列的极限
@@ -203,24 +228,6 @@
 元素 x_n 称为序列的第 n 项。
 在下面几节中，我们只讨论实数列 f : \mathbb{N} \to \mathbb{R} 。
 定义 2.（序列的极限） 数 A\in \mathbb{R} 数列 \{ x_n \} 的极限，如果对于点 A 的任何一个领域 V(A) ，都存在序号 N （其选取与 V(A) 有关），使得数列中所有序号大于 N 的项都包含在点 A 的上述邻域 V(A) 中。 
-    </article>
-    <div>Read More</div>
-  </a>
-</li>
-
-    
-      <li class="post">
-  
-  <a href="http://localhost:1313/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.4.1/">
-    <h2>
-      1.4.1 泛函极值的必要条件
-    </h2>
-    <article>
-      1.4.1 泛函极值的必要条件 为什么两点之间直线最短？如何使得平面上固定长度曲线所围区域面积最大？什么循环过程效率最高？轨道形状如何小球下落时间最短？
-有了泛函的概念，这些问题可以归结为当函数（输入）取什么形式时，泛函的值（输出）取极值。在变分法中，这被称为泛函极值问题。在实际问题中，我们关心的并不是泛函的全部信息，而往往是泛函的极值。
-假设泛函 S[f] 在 f(t) = \bar{f}(t) 时取到极大（小）值，这意味着，任何对 \bar{f} 的小偏离 \bar{f} + \epsilon \delta f ，都会使得 S[\bar{f} + \epsilon \delta f] 的值比 S[\bar{f}] 小（大）。只有当不发生偏离，即 \delta f = 0 时取到极值。从另一个角度，这等价于 S[\bar{f} + \epsilon \delta f] 作为 \epsilon 参量的普通函数，在 \epsilon = 0 时取到极值。
-这样就将泛函极值问题转化为普通函数的极值问题。而我们已经知道，普通函数的极值即要求其一阶导数为零。结合泛函导数的定义，我们有
-\delta S[\bar{f}] = \int dt \left. \frac{\delta S[f]}{\delta f} \right|_{\bar{f}} \delta f(t) = \left. \frac{d S[\bar{f} + \epsilon \delta f]}{d \epsilon} \right|_{\epsilon=0} = 0由此得到，泛函在 f(t) = \bar{f}(t) 时取到极值，即要求泛函的一阶变分*为零 
     </article>
     <div>Read More</div>
   </a>

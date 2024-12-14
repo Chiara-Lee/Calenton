@@ -41,15 +41,24 @@
   }
 /*为行内代码和预格式文本（如代码块）设置了背景色、圆角和字体：*/
   .page main code {
-    background-color: #272822;
+    background-color: #f3f4f6 !important;
     border-radius: .25rem;
     padding: .25rem;
-    color: #f3f4f6;
+    color: #272822 !important;
   }
+
+  .page main div.highlight, 
+  .page main div.highlight code, 
+  .page main div.highlight pre {
+      background-color: #f3f4f6 !important;
+  }
+  
+
+
 .page main pre {
   display: block;
-  background-color: #272822; /* 背景色 */
-  color: #f3f4f6; /* 文字颜色 */
+  background-color: #f3f4f6; /* 背景色 */
+  color: #272822; /* 文字颜色 */
   padding: 0.5rem; /* 内边距 */
   margin: 0; /* 外边距 */
   line-height: 1.5; /* 行高 */
