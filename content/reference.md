@@ -19,7 +19,7 @@ layout: single
 - [Atishay Jain](https://github.com/atishay) 书作者 Github 账号
 
 2.网站图片及文本
-- [圆角方](https://www.xiaohongshu.com/explore/6644b471000000001e03ad54?xsec_token=ABxa2OzvyNEb3gMDjc8DNRu8QiswxE384OD34_iJbTmE4=&xsec_source=pc_user&source=web_user_page) 网站壁纸
+- [重返未来1999](https://re.bluepoch.com/home/detail.html#wallpaper) 网站壁纸
 - [Fontawesome](https://fontawesome.com/icons) 网站图标
 - [重返未来1999](https://re.bluepoch.com/home/) 友人帐背景
 - [Georgia](https://zh.fonts2u.com/georgia.%E5%AD%97%E4%BD%93) 网站字体

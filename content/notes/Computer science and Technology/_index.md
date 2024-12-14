@@ -5,4 +5,5 @@ menu:
     name: CST
     parent: notes
 layout: list
+weight: 3
 ---

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C Programming A Modern Approach on Caleton Academy of Magic</title>
+    <link>http://localhost:1313/notes/computer-science-and-technology/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/c/c&#43;&#43;%E7%BC%96%E7%A8%8B/c-programming-a-modern-approach/</link>
+    <description>Recent content in C Programming A Modern Approach on Caleton Academy of Magic</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>chiaralee953@foxmail.com (Caleton Academy of Magic)</managingEditor>
+    <webMaster>chiaralee953@foxmail.com (Caleton Academy of Magic)</webMaster>
+    <lastBuildDate>Fri, 13 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/notes/computer-science-and-technology/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/c/c++%E7%BC%96%E7%A8%8B/c-programming-a-modern-approach/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.1  写一个简单的程序</title>
+      <link>http://localhost:1313/notes/computer-science-and-technology/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/c/c&#43;&#43;%E7%BC%96%E7%A8%8B/c-programming-a-modern-approach/2.1/</link>
+      <pubDate>Fri, 13 Dec 2024 00:00:00 +0000</pubDate><author>chiaralee953@foxmail.com (Caleton Academy of Magic)</author>
+      <guid>http://localhost:1313/notes/computer-science-and-technology/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/c/c&#43;&#43;%E7%BC%96%E7%A8%8B/c-programming-a-modern-approach/2.1/</guid>
+      <description>本章将介绍几个基本概念，包括预处理指令、函数、变量和语句，这些概念是编写即使是最简单程序所必需的。后续章节将对这些主题进行更详细的讲解。&#xA;首先，第2.1节展示了一个简单的C程序，并介绍了如何编译和链接它。接着，第2.2节讨论了如何将该程序进行泛化，第2.3节展示了如何添加解释性注释。第2.4节介绍了变量，它们存储在程序执行过程中可能会改变的数据，第2.5节展示了如何使用scanf函数将数据读入变量中。常量——在程序执行过程中不会改变的数据——可以被命名，第2.6节对此进行了说明。最后，第2.7节解释了C语言创建名称（标识符）的规则，第2.8节给出了程序布局的规则。&#xA;2.1 写一个简单的程序 与某些编程语言编写的程序不同，C语言程序需要的“样板代码”很少——一个完整的程序可以短到只有几行。&#xA;程序：打印一个双关语&#xA;Kernighan和Ritchie的经典著作《C程序设计语言》中的第一个程序非常简短：它什么也不做，只是输出信息“hello, world”。与其他C语言作者不同，我不会使用这个程序作为我的第一个例子。然而，我会遵循另一个C语言传统：一个坏的双关语。这里是这个双关语：&#xA;To C, or not to C: that is the question.&#xA;以下程序，我们将其命名为 pun.c，每次运行时都会显示该消息：&#xA;1 2 3 4 5 6 7 8 9 /* #include &amp;lt;stdio.h&amp;gt; int main(void) { printf(&amp;#34;To C, or not to C: that is the question.\n&amp;#34;); return 0; } */ 第2.2节会详细解释这个程序的结构。现在，我将简要做几点观察。该行&#xA;/* #include &amp;lt;stdio.h&amp;gt; */&#xA;是为了“包含”有关 C语言标准I/O（输入/输出）库 的信息。程序的可执行代码放在 main 函数内，它代表了 “主”程序。main 函数内的唯一一行是一个显示所需消息的命令。printf 是标准I/O库中的一个函数，可以生成格式良好的输出。\n 代码告诉 printf 在打印消息后跳到下一行。&#xA;/* return 0; */&#xA;表示当程序终止时，它将“返回”值 0 给操作系统。</description>
+    </item>
+  </channel>
+</rss>

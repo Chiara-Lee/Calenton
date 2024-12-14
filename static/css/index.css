@@ -11,7 +11,7 @@ html {
   /* 移除 max-height 和 scroll-snap-type */
 }
 .home {
-  background-image: url('/image/background.webp');
+  background-image: url('/image/犬哲主义.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -53,7 +53,7 @@ body {
   justify-content: center;
   width: 100vw;
   font-family: 'Noto Sans SC', sans-serif; /* For Simplified Chinese *//* Apply Noto Sans font to Chinese text */
-  background: url('/image/background.webp') no-repeat center center / cover;
+  background: url('/image/犬哲主义.jpg') no-repeat center center / cover;
   background-attachment: fixed; /* 固定背景 */
   min-height: 100vh;
 }
