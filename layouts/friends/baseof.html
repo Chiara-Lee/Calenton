@@ -20,7 +20,7 @@
     {{ $js := resources.Get "index.js" | js.Build (dict "minify" hugo.IsProduction) }}
     <script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
   </head>
-  <body class="{{block "bodyClass" .}}{{end}}">
+  <body id="custom-bg" class="{{block "bodyClass" .}}{{end}}">
     {{block "header" .}}
       <header>
       <a href="{{ site.BaseURL | relLangURL }}">
@@ -31,18 +31,11 @@
       {{ partialCached "menu.html" (dict "Menu" site.Menus.main "Button" true) "main" }}
       </header>
       {{ end }}
-    {{block "body" .}}
-      <main>
-        {{with .Title}}
-          <h1>
-            {{.}}
-          </h1>
-        {{end}}
-        <div class="content">
-          {{.Content}}
-        </div>
-      </main>
-    {{end}}
+
+      <div class="background">
+        {{block "body" .}}{{end}}
+      </div>
+
     {{block "footer" .}}
       <footer class="dark">
         {{ partialCached "menu.html" (dict "Menu" site.Menus.footer) "footer" }}

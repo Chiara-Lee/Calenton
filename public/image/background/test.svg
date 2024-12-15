@@ -1,0 +1,30 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- 添加噪点纹理滤镜 -->
+  <defs>
+    <filter id="paper-texture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="desaturatedNoise"/>
+      <feBlend in="SourceGraphic" in2="desaturatedNoise" mode="multiply" result="texturedImage"/>
+    </filter>
+
+    <!-- 淡灰色区域的渐变 -->
+    <linearGradient id="grayGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8E8E8"/>
+      <stop offset="100%" stop-color="#F2F2F2"/>
+    </linearGradient>
+
+    <!-- 淡黄色区域的渐变 -->
+    <linearGradient id="yellowGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFF8DC"/>
+      <stop offset="100%" stop-color="#FAFAD2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景淡灰色区域 -->
+  <path d="M0,0 L400,0 L400,300 L0,300 Z" fill="url(#grayGradient)" filter="url(#paper-texture)"/>
+  
+  <!-- 前景淡黄色区域，使用贝塞尔曲线创建有机的形状 -->
+  <path d="M0,220 C100,200 300,240 400,220 L400,300 L0,300 Z" 
+        fill="url(#yellowGradient)" 
+        filter="url(#paper-texture)"/>
+</svg>
