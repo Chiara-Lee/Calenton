@@ -1,0 +1,398 @@
+<!doctype html><html lang=zh><head><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel=stylesheet><meta charset=UTF-8><meta name=description content="a.一般性质 我们在这里总结数列的一组性质，但将来可以看到，这些性质并非数列所独有。只取一个值的数列称为常数列。
+定义 4. 数列 \{x_n\} 称为 最终常数列，如果存在数 A 与序号 N ，使得对于任意 n > N ，均有 x_n = A 。
+1. ε-接近性 (ε-approximation)：
+定义 4.3.4 中表述的是：给定 \epsilon > 0 ，两个实数 x, y 当 |x - y| \leq \epsilon 时称为 ε-接近的。
+这一层面只有两点之间的距离概念，是最基本的“接近”定义。
+2. ε-稳定性 (ε-stability)：
+定义 5.1.3 中谈到序列 (a_n)_{n=0}^\infty 的 ε-稳定。序列是 ε-稳定的，意味着该序列中的任意两个元素 a_j, a_k （无论下标多大），都有 |a_j - a_k| \leq \epsilon 。
+换句话说，一个 ε-稳定的序列整体上“被压缩在一个 ε-宽度的间隔中”。不仅仅是相邻项或者后期的项接近，而是整数序列的任意两项都足够接近。这是一个很强的条件，通常只有非常特殊的序列才能全局达到这一点（例如常数序列）。
+注意：ε-稳定性并没有提及“从某项开始”或“最终”这种概念，它是对整个序列的要求。
+3. 最终ε-稳定性 (eventual ε-stability)：
+定义 5.1.6 提到了最终 ε-稳定的概念。一个序列最终 ε-稳定是指：存在某个 N 使得序列从第 N 项开始（即尾部子序列 a_N, a_{N+1}, a_{N+2}, \dots ）是 ε-稳定的。"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>3.1.2 序列极限的性质</title>
+<script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
+Caleton Academy
+</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/physcis/>Physics</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/computer-science-and-technology/>Cst</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>3.1.2 序列极限的性质</h1><h2>Table of Contents</h2><nav id=TableOfContents><ul><li><a href=#a一般性质>a.一般性质</a></li><li><a href=#b极限过程和算术运算>b.极限过程和算术运算</a></li></ul></nav><div class=content-wrapper><div class=content><h2 id=a一般性质>a.一般性质</h2><p>我们在这里总结数列的一组性质，但将来可以看到，这些性质并非数列所独有。只取一个值的数列称为常数列。</p><p><strong>定义 4.</strong> 数列
+<span class=fallback-latex>\{x_n\}
+</span>称为 <strong>最终常数列</strong>，如果存在数
+<span class=fallback-latex>A
+</span>与序号
+<span class=fallback-latex>N
+</span>，使得对于任意
+<span class=fallback-latex>n > N
+</span>，均有
+<span class=fallback-latex>x_n = A
+</span>。</p><blockquote><p><strong>1. ε-接近性 (ε-approximation)：</strong><br>定义 4.3.4 中表述的是：给定
+<span class=fallback-latex>\epsilon > 0
+</span>，两个实数
+<span class=fallback-latex>x, y
+</span>当
+<span class=fallback-latex>|x - y| \leq \epsilon
+</span>时称为 ε-接近的。<br>这一层面只有两点之间的距离概念，是最基本的“接近”定义。</p><p><strong>2. ε-稳定性 (ε-stability)：</strong><br>定义 5.1.3 中谈到序列
+<span class=fallback-latex>(a_n)_{n=0}^\infty
+</span>的 ε-稳定。序列是 ε-稳定的，意味着该序列中的任意两个元素
+<span class=fallback-latex>a_j, a_k
+</span>（无论下标多大），都有
+<span class=fallback-latex>|a_j - a_k| \leq \epsilon
+</span>。<br>换句话说，一个 ε-稳定的序列整体上“被压缩在一个 ε-宽度的间隔中”。不仅仅是相邻项或者后期的项接近，而是<strong>整数序列的任意两项</strong>都足够接近。这是一个很强的条件，通常只有非常特殊的序列才能全局达到这一点（例如常数序列）。<br>注意：ε-稳定性并没有提及“从某项开始”或“最终”这种概念，它是对整个序列的要求。</p><p><strong>3. 最终ε-稳定性 (eventual ε-stability)：</strong><br>定义 5.1.6 提到了最终 ε-稳定的概念。一个序列最终 ε-稳定是指：存在某个
+<span class=fallback-latex>N
+</span>使得序列从第
+<span class=fallback-latex>N
+</span>项开始（即尾部子序列
+<span class=fallback-latex>a_N, a_{N+1}, a_{N+2}, \dots
+</span>）是 ε-稳定的。<br>这和上一个定义的差别在于，上一个定义要求整数序列对任意两项都接近，这里则放宽为：前面几项不管，但从某一个固定起点之后，序列的尾部内部达到 ε-稳定。<br>换言之，“最终ε-稳定”说的是：虽然序列开始可能比较散，但在序列走得够远之后，其任意两项都挤在一条宽度为
+<span class=fallback-latex>\epsilon
+</span>的间隔中。这个概念实际上与 <strong>Cauchy 序列</strong> 的定义很接近：Cauchy 序列要求对任意
+<span class=fallback-latex>\epsilon
+</span>，都有这样一个
+<span class=fallback-latex>N
+</span>，使得
+<span class=fallback-latex>N
+</span>后的所有两项都很接近。</p><p><strong>Tao 的逻辑梯度：</strong></p><ul><li>首先定义点与点之间的 ε-接近性，从而获得一个度量空间中的基本接近概念。</li><li>接着将该概念推广到序列上，看序列全局是否 ε-稳定，这是一个强烈的条件，但有助于理解“接近”是如何在无限集合（序列的值集）中推广。</li><li>最后放宽要求到“最终 ε-稳定”，这里接近序列逼近某个值的本质概念，虽然这里还没有直接引入一个具体的极限点
+<span class=fallback-latex>A
+</span>，但是要求从某项之后序列内部各项间越来越接近，已经为 <strong>Cauchy 序列</strong> 与极限定义铺平了道路。</li></ul></blockquote><p><strong>最终常数列 vs. 最终ε-稳定：</strong></p><ul><li>最终ε-稳定性 (eventual ε-stability) 要求的是，从某个
+<span class=fallback-latex>N
+</span>开始，序列中任意两项的差都不超过
+<span class=fallback-latex>\epsilon
+</span>。换句话说，序列的尾部所有项都挤在一个
+<span class=fallback-latex>\epsilon
+</span>-长度的区间中，但它们不一定是完全相等的。</li><li>最终常数列要求从某个
+<span class=fallback-latex>N
+</span>开始，序列中所有后继项都完全等于某个固定数
+<span class=fallback-latex>A
+</span>，也就是尾部部分不但靠得很近，而是完全重合在一个点上。</li></ul><p>最终常数列是一种特别强的最终ε-稳定性：如果从
+<span class=fallback-latex>N
+</span>开始所有项都等于
+<span class=fallback-latex>A
+</span>，那么显然它们任意两项之间的距离为 0，不管
+<span class=fallback-latex>\epsilon
+</span>多小，都轻松满足最终ε-稳定性。这说明最终常数列是最终ε-稳定序列的一种特殊情况，且是最强的一种，因为你不用控制
+<span class=fallback-latex>\epsilon
+</span>的大小，序列尾部都已经缩成了一个点。</p><p><strong>与极限的关系：</strong></p><p>一个最终常数列对任何给定的
+<span class=fallback-latex>A
+</span>来说，都显然有极限
+<span class=fallback-latex>A
+</span>。而且它比有极限还要强烈：从某项以后，序列根本没有变化。</p><p>而最终ε-稳定性只是保证了序列后半段的内部紧凑性，但不一定指向某个固定的极限值，也不要求序列像常数列那样凝固在一个点上。最终ε-稳定性是走向极限存在的中间概念之一，<strong>如果在收敛序列的定义中引入一个候选极限值，那么最终ε-稳定性加上序列接近该值才能给出极限定义。</strong></p><p>而前文开头给出的数列极限定义（邻域版）就满足了以上的这些条件：数列中所有序号大于
+<span class=fallback-latex>N
+</span>的项都包含在点
+<span class=fallback-latex>A
+</span>的邻域
+<span class=fallback-latex>V(A)
+</span>中。</p><ol><li><span class=fallback-latex>n>N
+</span>时所有项都落在邻域内，这保证了后半段内部的紧凑性。</li><li>包含在点
+<span class=fallback-latex>A
+</span>的邻域
+<span class=fallback-latex>V(A)
+</span>中，这表明存在一个确定的极限值。</li></ol><p>因此，这就是我们需要的极限定义。</p><p>但是请注意，一个数列收敛到极限
+<span class=fallback-latex>A
+</span>的定义并没有要求数列的项只在
+<span class=fallback-latex>A
+</span>的一侧趋近
+<span class=fallback-latex>A
+</span>，也没有要求数列的项永远不会“越过”
+<span class=fallback-latex>A
+</span>所在的位置。在数轴上，接近
+<span class=fallback-latex>A
+</span>是一个关于<strong>距离</strong>的概念，而不是关于<strong>朝向</strong>的概念。也就是说，当我们谈论
+<span class=fallback-latex>|x_n - A| < \epsilon
+</span>时，我们指的是
+<span class=fallback-latex>x_n
+</span>距离
+<span class=fallback-latex>A
+</span>很小，而不管
+<span class=fallback-latex>x_n
+</span>比
+<span class=fallback-latex>A
+</span>大还是小。</p><p>让我们更系统地来看：</p><p><strong>1. 极限定义的中立性（不关心方向）：</strong></p><p>定义中说：“对于点
+<span class=fallback-latex>A
+</span>的任意邻域
+<span class=fallback-latex>V(A)
+</span>——如果我们在实数轴上用
+<span class=fallback-latex>\epsilon
+</span>-邻域来表达它，那么是对于任意
+<span class=fallback-latex>\epsilon > 0
+</span>，存在
+<span class=fallback-latex>N
+</span>使得当
+<span class=fallback-latex>n > N
+</span>时，
+<span class=fallback-latex>|x_n - A| < \epsilon
+</span>。”<br>这个不等式对
+<span class=fallback-latex>x_n
+</span>是<strong>对称</strong>的，它只要求
+<span class=fallback-latex>x_n
+</span>距离
+<span class=fallback-latex>A
+</span>的绝对值小于
+<span class=fallback-latex>\epsilon
+</span>，并没有要求
+<span class=fallback-latex>x_n \leq A
+</span>或
+<span class=fallback-latex>x_n \geq A
+</span>。</p><p>因此，
+<span class=fallback-latex>x_n
+</span>可以在
+<span class=fallback-latex>A
+</span>左右两侧来回晃动，只要它最终都进入那个越来越小的区间，就满足极限定义。</p><p><strong>2. 越过极限值的直观解释：</strong></p><p>当你想到“越过
+<span class=fallback-latex>A
+</span>”时，你可能有一种单方向的想法：数列像是朝着
+<span class=fallback-latex>A
+</span>前进，然后“超越”了
+<span class=fallback-latex>A
+</span>再从另一边逼近。实际上，这非常正常。例如，考虑数列
+<span class=fallback-latex>x_n = A + \frac{(-1)^n}{n}
+</span>。</p><ul><li>当
+<span class=fallback-latex>n
+</span>是偶数时，
+<span class=fallback-latex>x_n
+</span>在
+<span class=fallback-latex>A
+</span>的左侧稍微高于
+<span class=fallback-latex>A
+</span>。</li><li>当
+<span class=fallback-latex>n
+</span>是奇数时，
+<span class=fallback-latex>x_n
+</span>在
+<span class=fallback-latex>A
+</span>的左侧稍微低于
+<span class=fallback-latex>A
+</span>。</li></ul><p>随着
+<span class=fallback-latex>n
+</span>增大，这个数列的项逐渐围绕
+<span class=fallback-latex>A
+</span>摆动，但振幅变得越来越小。<br>虽然它不断“越过”
+<span class=fallback-latex>A
+</span>，一会儿比
+<span class=fallback-latex>A
+</span>大，一会儿比
+<span class=fallback-latex>A
+</span>小，但最终所有项都会在任意小的区间内围绕
+<span class=fallback-latex>A
+</span>摆动。这没有违背极限定义，反而很好地体现了极限定义的宽泛性：极限只在乎最终距离是否足够小，而不在乎你是从左逼近还是从右逼近，或是否“越过”。</p><p><strong>3. 极限的内涵</strong></p><p>极限的哲学内涵是关于潜在无穷性的：“可以无限接近而不一定要真正等于”。数列本身也不要求最终停在
+<span class=fallback-latex>A
+</span>上。实际上，数列项可以有无数次穿过
+<span class=fallback-latex>A
+</span>的点，也可以一次都不等于
+<span class=fallback-latex>A
+</span>——极限只管当
+<span class=fallback-latex>n
+</span>越来越大时，
+<span class=fallback-latex>x_n
+</span>与
+<span class=fallback-latex>A
+</span>的距离能否变得任意小。</p><p>在极限定义中，关键是对于任意的
+<span class=fallback-latex>\epsilon
+</span>都能在足够大的
+<span class=fallback-latex>N
+</span>后实现
+<span class=fallback-latex>|x_n - A| < \epsilon
+</span>。“越过”只是表示数列的项出现在
+<span class=fallback-latex>A
+</span>的上方，有时在下方，但足够大的
+<span class=fallback-latex>n
+</span>，无论在上方还是下方，数列始终被压缩在任意小的间隔内（两边都接近
+<span class=fallback-latex>A
+</span>）。这种逻辑上完全成立，而不需要数列保持单调或不超越。</p><p>实际上，当数列项越过极限的时候，即使确实发生了“触碰”，那也是完全不违背极限的定义的，因为，这只是表明数列项与极限之间的距离为零，二者发生了重合，它们的距离仍然是任意小的（事实上，它们之间没有距离），因此，最终常数列是有极限的。</p><p><strong>定义 5.</strong> 数列
+<span class=fallback-latex>\{x_n\}
+</span>称为 <strong>有界数列</strong>，如果存在数
+<span class=fallback-latex>M
+</span>，使得对于任意
+<span class=fallback-latex>n \in \mathbb{N}
+</span>，均有
+<span class=fallback-latex>|x_n| < M
+</span>。</p><p><strong>定理 1.</strong></p><ul><li>a) 最终常数列收敛。</li><li>b) 数列极限的任何一个邻域都包含数列中为数有限的项之外的所有项。</li><li>c) 数列不可能有两个不同的极限。</li><li>d) 收敛数列有界。</li></ul><p><strong>证明：</strong></p><p>a) 如果当
+<span class=fallback-latex>n > N
+</span>时
+<span class=fallback-latex>x_n = A
+</span>，则对于点
+<span class=fallback-latex>A
+</span>的任何一个邻域
+<span class=fallback-latex>V(A)
+</span>，当
+<span class=fallback-latex>n > N
+</span>时
+<span class=fallback-latex>x_n \in V(A)
+</span>，即
+<span class=fallback-latex>\lim_{n \to \infty} x_n = A
+</span>。</p><p>b) 此结论直接得自数列极限的定义。</p><p>c) 这是定理的重点。设
+<span class=fallback-latex>\lim_{n \to \infty} x_n = A_1
+</span>，
+<span class=fallback-latex>\lim_{n \to \infty} x_n = A_2
+</span>。假如
+<span class=fallback-latex>A_1 \neq A_2
+</span>，我们就选定点
+<span class=fallback-latex>A_1, A_2
+</span>的两个不相交的邻域
+<span class=fallback-latex>V(A_1), V(A_2)
+</span>。</p><p>例如，可以在
+<span class=fallback-latex>\delta < |A_1 - A_2| / 2
+</span>时取这两个点的
+<span class=fallback-latex>\delta
+</span>邻域。根据极限的定义，可以求出序号
+<span class=fallback-latex>N_1
+</span>和
+<span class=fallback-latex>N_2
+</span>，使得
+<span class=fallback-latex>\forall n > N_1 (x_n \in V(A_1))
+</span>且
+<span class=fallback-latex>\forall n > N_2 (x_n \in V(A_2))
+</span>。于是，当
+<span class=fallback-latex>n > \max{N_1, N_2}
+</span>时，我们得到
+<span class=fallback-latex>x_n \in V(A_1) \cap V(A_2)
+</span>。但这是不可能的，因为
+<span class=fallback-latex>V(A_1) \cap V(A_2) = \varnothing
+</span>。</p><p>d) 设
+<span class=fallback-latex>\lim_{n \to \infty} x_n = A
+</span>。如果在极限的定义中取
+<span class=fallback-latex>\epsilon = 1
+</span>，就可以求出
+<span class=fallback-latex>N
+</span>，使得
+<span class=fallback-latex>\forall n > N (|x_n - A| < 1)
+</span>。这意味着，当
+<span class=fallback-latex>n > N
+</span>时有
+<span class=fallback-latex>|x_n| < |A| + 1
+</span>。如果现在取
+<span class=fallback-latex>M > \max {|x_1|, |x_2|, \dots, |x_n|, |A| + 1},
+</span>就得到
+<span class=fallback-latex>\forall n (x_n < M)
+</span>。</p><h2 id=b极限过程和算术运算>b.极限过程和算术运算</h2><p><strong>定义 6.(数列的算术运算)</strong> 如果数列
+<span class=fallback-latex>\{x_n\}, \{y_n\}
+</span>是两个数列，则数列<br><span class=fallback-latex>\{(x_n + y_n)\}, \{(x_n y_n)\}, \left\{\frac{x_n}{y_n}\right\}</span><br>分别称为这两个数列的和、积与商（与函数的和、积与商的一般定义一致）。</p><p>当然，商仅在
+<span class=fallback-latex>y_n \neq 0, \ n \in \mathbb{N}
+</span>时才有定义。</p><p><strong>定理 2.</strong> 设
+<span class=fallback-latex>\{x_n\}, \{y_n\}
+</span>是数列。如果
+<span class=fallback-latex>\lim_{n \to \infty} x_n = A
+</span>，
+<span class=fallback-latex>\lim_{n \to \infty} y_n = B
+</span>，则</p><ul><li>a)
+<span class=fallback-latex>\lim_{n \to \infty} (x_n + y_n) = A + B
+</span>；</li><li>b)
+<span class=fallback-latex>\lim_{n \to \infty} x_n \cdot y_n = A \cdot B
+</span>；</li><li>c) 当
+<span class=fallback-latex>y_n \neq 0 \ (n = 1, 2, \cdots)
+</span>且
+<span class=fallback-latex>B \neq 0
+</span>时
+<span class=fallback-latex>\lim_{n \to \infty} \frac{x_n}{y_n} = \frac{A}{B}
+</span>。</li></ul><p><strong>证明：</strong></p><p>我们已经知道如何在近似值的算术运算中估计绝对误差（见第二章 §2 第 4 小节）。作为练习，我们来运用这些估计。</p><p>令
+<span class=fallback-latex>|A - x_n| = \Delta(x_n), \ |B - y_n| = \Delta(y_n)</span></p><p><strong>则对于 a)</strong>，我们有：</p><span class=fallback-latex>|(A + B) - (x_n + y_n)| \leq \Delta(x_n) + \Delta(y_n).</span><blockquote><p>此处使用了 <strong>三角不等式</strong> （Triangle Inequality）的性质：</p><p>对于实数（或更一般的度量空间）中的任意两个数
+<span class=fallback-latex>u
+</span>和
+<span class=fallback-latex>v
+</span>，有：</p><span class=fallback-latex>> |u + v| \leq |u| + |v|. ></span><p>在这个例子中，将
+<span class=fallback-latex>u = (A - x_n)
+</span>和
+<span class=fallback-latex>v = (B - y_n)
+</span>，则有：</p><span class=fallback-latex>> |(A - x_n) + (B - y_n)| \leq |A - x_n| + |B - y_n|. ></span><p>因此得到不等式：</p><span class=fallback-latex>> |(A + B) - (x_n + y_n)| \leq |A - x_n| + |B - y_n|. ></span><p>之所以是“小于等于”而非“等于”，是因为三角不等式的典型形式就是不等式，而不等式只有在特定的情况下（例如
+<span class=fallback-latex>u
+</span>和
+<span class=fallback-latex>v
+</span>同向且为非负实数时）才会退化为等式。对于绝大多数情况，这仅能保证一个“不超过”的关系，而不是严格的等价关系。</p></blockquote><p>设数
+<span class=fallback-latex>\varepsilon > 0
+</span>是给定的。因为
+<span class=fallback-latex>\lim_{n \to \infty} x_n = A
+</span>，所以可以找到序号
+<span class=fallback-latex>N'
+</span>，使得
+<span class=fallback-latex>\forall n > N' \ (\Delta(x_n) < \varepsilon / 2)
+</span>。类似地，因为
+<span class=fallback-latex>\lim_{n \to \infty} y_n = B
+</span>，所以可以找到序号
+<span class=fallback-latex>N''
+</span>，使得
+<span class=fallback-latex>\forall n > N'' \ (\Delta(y_n) < \varepsilon / 2)
+</span>。</p><p>于是，当
+<span class=fallback-latex>n > \max\{N', N''\}
+</span>时，我们有：</p><span class=fallback-latex>|(A + B) - (x_n + y_n)| < \varepsilon.</span><p>根据极限的定义，这就证明了命题 a)。</p><p><strong>b) 我们知道，</strong></p><span class=fallback-latex>|A \cdot B - x_n \cdot y_n| \leq |x_n| \Delta(y_n) + |y_n| \Delta(x_n) + \Delta(x_n) \cdot \Delta(y_n).</span><blockquote><p><strong>推导过程：</strong></p><p><strong>1. 开始表达式：</strong><br>我们想要给出
+<span class=fallback-latex>|A \cdot B - x_n \cdot y_n|
+</span>的上界。</p><p><strong>2. 因式分解：</strong><br>将
+<span class=fallback-latex>A \cdot B - x_n \cdot y_n
+</span>分解为易于处理的多项式形式。可以写成：<br><span class=fallback-latex>> A \cdot B - x_n \cdot y_n = (A - x_n)(B - y_n) + x_n(B - y_n) + y_n(A - x_n). ></span><br>这一步是关键，它使得后续应用三角不等式更为直接。</p><p><strong>3. 应用三角不等式：</strong><br>对上述取绝对值，并使用三角不等式
+<span class=fallback-latex>|u + v + w| \leq |u| + |v| + |w|
+</span>：<br><span class=fallback-latex>> |A \cdot B - x_n \cdot y_n| \leq |(A - x_n)(B - y_n)| + |x_n(B - y_n)| + |y_n(A - x_n)|. ></span></p><p><strong>4. 替换记号与进一步估计：</strong><br>已知
+<span class=fallback-latex>|A - x_n| = \Delta(x_n)
+</span>且
+<span class=fallback-latex>|B - y_n| = \Delta(y_n)
+</span>。因此：<br><span class=fallback-latex>> |(A - x_n)(B - y_n)| = |A - x_n||B - y_n| = \Delta(x_n)\Delta(y_n). ></span></p><p>同时：<br><span class=fallback-latex>> |x_n(B - y_n)| = |x_n|\Delta(y_n), \quad |y_n(A - x_n)| = |y_n|\Delta(x_n). ></span></p><p>将这些代入上式得到：<br><span class=fallback-latex>> |A \cdot B - x_n \cdot y_n| \leq |x_n|\Delta(y_n) + |y_n|\Delta(x_n) + \Delta(x_n)\Delta(y_n). ></span></p></blockquote><p>对于给定的
+<span class=fallback-latex>\varepsilon > 0
+</span>，可以求出序号
+<span class=fallback-latex>N'
+</span>和
+<span class=fallback-latex>N''
+</span>，使得</p><span class=fallback-latex>\forall n > N' \quad \left( \Delta(x_n) < \min \left{ 1, \frac{\varepsilon}{3(|B| + 1)} \right} \right),
+</span><span class=fallback-latex>\forall n > N'' \quad \left( \Delta(y_n) < \min \left{ 1, \frac{\varepsilon}{3(|A| + 1)} \right} \right).</span><p>于是，当
+<span class=fallback-latex>n > N = \max{N', N''}
+</span>时，我们有</p><span class=fallback-latex>|x_n| < |A| + \Delta(x_n) < |A| + 1,
+</span><span class=fallback-latex>|y_n| < |B| + \Delta(y_n) < |B| + 1,
+</span><span class=fallback-latex>\Delta(x_n) \cdot \Delta(y_n) < \min \left{ 1, \frac{\varepsilon}{3} \right} \cdot \min \left{ 1, \frac{\varepsilon}{3} \right} < \frac{\varepsilon}{3}.</span><p>因此，当
+<span class=fallback-latex>n > N
+</span>时，</p><span class=fallback-latex>|x_n| \Delta(y_n) < (|A| + 1) \cdot \frac{\varepsilon}{3(|A| + 1)} = \frac{\varepsilon}{3},
+</span><span class=fallback-latex>|y_n| \Delta(x_n) < (|B| + 1) \cdot \frac{\varepsilon}{3(|B| + 1)} = \frac{\varepsilon}{3},
+</span><span class=fallback-latex>\Delta(x_n) \cdot \Delta(y_n) < \frac{\varepsilon}{3},</span><p>所以，当
+<span class=fallback-latex>n > N
+</span>时，
+<span class=fallback-latex>|AB - x_n y_n| < \varepsilon.</span></p><blockquote><p>可见最初设定
+<span class=fallback-latex>\frac{\varepsilon}{3(|B| + 1)}
+</span>时，就是为了分母能与
+<span class=fallback-latex>|B| + 1
+</span>粤曲，以凑出
+<span class=fallback-latex>\frac{\varepsilon}{3}
+</span>，而在
+<span class=fallback-latex>\Delta(x_n) \cdot \Delta(y_n)
+</span>中直接取其小于
+<span class=fallback-latex>\min \left{ 1, \frac{\varepsilon}{3} \right} \cdot \min \left{ 1, \frac{\varepsilon}{3} \right}
+</span>而忽略之前的复杂分母，也是为了凑出
+<span class=fallback-latex>\frac{\varepsilon}{3}
+</span>。</p></blockquote><p><strong>c) 我们利用估计</strong></p><span class=fallback-latex>\left| \frac{A}{B} - \frac{x_n}{y_n} \right| \leq \frac{|x_n| \Delta(y_n) + |y_n| \cdot \Delta(x_n)}{y_n^2} \cdot \frac{1}{1 - \delta(y_n)},</span><p>其中
+<span class=fallback-latex>\delta(y_n) = \Delta(y_n)/|y_n|
+</span>。</p><blockquote><p><strong>过程</strong></p><p>设
+<span class=fallback-latex>x = \tilde{x} + \alpha, y = \tilde{y} + \beta
+</span>，则<br><span class=fallback-latex>> \Delta \left( \frac{\tilde{x}}{\tilde{y}} \right) = \left| \frac{x}{y} - \frac{\tilde{x}}{\tilde{y}} \right| = \left| \frac{x \tilde{y} - y \tilde{x}}{y \tilde{y}} \right| = \left| \frac{(\tilde{x} + \alpha)\tilde{y} - (\tilde{y} + \beta)\tilde{x}}{\tilde{y}^2} \right| \cdot \left| \frac{1}{1 + \beta / \tilde{y}} \right| >
+</span><span class=fallback-latex>> \leq \frac{|\tilde{x}||\beta| + |\tilde{y}||\alpha|}{\tilde{y}^2} \cdot \frac{1}{1 - \delta(\tilde{y})} = \frac{|\tilde{x}|\Delta(\tilde{y}) + |\tilde{y}|\Delta(\tilde{x})}{\tilde{y}^2} \cdot \frac{1}{1 - \delta(\tilde{y})}. ></span></p></blockquote><p>对于给定的
+<span class=fallback-latex>\varepsilon > 0
+</span>，可以求出序号
+<span class=fallback-latex>N'
+</span>和
+<span class=fallback-latex>N''
+</span>，使得</p><span class=fallback-latex>\forall n > N' \quad \left( \Delta(x_n) < \min \left\{ 1, \frac{\varepsilon |B|}{8} \right\} \right),
+</span><span class=fallback-latex>\forall n > N'' \quad \left( \Delta(y_n) < \min \left\{ \frac{|B|}{4}, \frac{\varepsilon \cdot B^2}{16(|A| + 1)} \right\} \right).</span><p>于是，当
+<span class=fallback-latex>n > N = \max\{N', N''\}
+</span>时，我们有</p><span class=fallback-latex>|x_n| < |A| + \Delta(x_n) < |A| + 1,
+</span><span class=fallback-latex>|y_n| > |B| - \Delta(y_n) > |B| - \frac{|B|}{4} > \frac{|B|}{2},
+</span><span class=fallback-latex>\frac{1}{|y_n|} < \frac{2}{|B|}, \quad 0 < \delta(y_n) = \frac{\Delta(y_n)}{|y_n|} < \frac{|B|/4}{|B|/2} = \frac{1}{2},
+</span><span class=fallback-latex>1 - \delta(y_n) > \frac{1}{2}.</span><p>所以，</p><span class=fallback-latex>|x_n| \cdot \frac{1}{y_n^2} \Delta(y_n) < (|A| + 1) \cdot \frac{4}{B^2} \cdot \frac{\varepsilon B^2}{16(|A| + 1)} = \frac{\varepsilon}{4},
+</span><span class=fallback-latex>\left| \frac{1}{y_n} \right| \cdot \Delta(x_n) < \frac{2}{|B|} \cdot \frac{\varepsilon |B|}{8} = \frac{\varepsilon}{4},
+</span><span class=fallback-latex>0 < \frac{1}{1 - \delta(y_n)} < 2.</span><p>从而，当
+<span class=fallback-latex>n > N
+</span>时，</p><span class=fallback-latex>\left| \frac{A}{B} - \frac{x_n}{y_n} \right| < \varepsilon.</span></div><aside class=sidebar><div class=card><h2>摘要</h2><p>a.一般性质 我们在这里总结数列的一组性质，但将来可以看到，这些性质并非数列所独有。只取一个值的数列称为常数列。
+定义 4. 数列 \{x_n\} 称为 最终常数列，如果存在数 A 与序号 N ，使得 …</p></div><div class=card><h2>阅读时长</h2><p>7 min</p></div><div class=card><h2>总字数</h2><p>≈ 1304</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
+数学分析</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/3.1/><h2>3.1 序列的极限</h2><article>定义 1.（序列） 定义域为自然数集的函数 f : \mathbb{N} \to X 称为序列。
+函数 f(n) 的值 f(n) 称为 序列的项。通常用集合 X 的元素所对应的符号来表示序列的项，并让自变量对应的符号作为其下标： x_n := f(n) 。因此，我们用符号 \{ x_n \} 来表示序列本身，有时也把它写为 x_1, x_2, \dots, x_n, \dots 的形式，并称之为 集合 X 中的序列 或 集合 X 的元素序列。
+元素 x_n 称为序列的第 n 项。
+在下面几节中，我们只讨论实数列 f : \mathbb{N} \to \mathbb{R} 。
+定义 2.（序列的极限） 数 A\in \mathbb{R} 数列 \{ x_n \} 的极限，如果对于点 A 的任何一个领域 V(A) ，都存在序号 N （其选取与 V(A) 有关），使得数列中所有序号大于 N 的项都包含在点 A 的上述邻域 V(A) 中。</article><div>Read More</div></a></li><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/1.3/><h2>2.3 乘法</h2><article>在上一节中，我们已经证明了所知道的所有关于加法和序的基本事实。为了节省篇幅以及避免赘述那些显然的事情，接下来我们将允许使用所熟悉的关于加法和序的代数法则，而不加进一步的说明。于是我们可以写出 a+b+c=c+b+a 这样的内容，不需要进一步解释说明。现在我们引入乘法。正如加法是重复的增量运算一样，乘法是重复的加法运算。
+定义 2.3.1（自然数的乘法）
+令 m 表示任意一个自然数，
+我们定义 0\times m:= 0 来表示将 0 乘到 m 上。现在归纳假设我们已经定义了 n\times m （即把 n 乘到 m 上）。
+那么，我们可以定义
+(n++)\times m:= (n\times m)+m 以上，我们就定义好了自然数的乘法规则。
+引理 2.3.2 （乘法是可交换的） 令 n 和 m 表示任意两个自然数，那么有 n\times m=m\times n 成立。
+证明： 使用数学归纳法。
+首先我们需要证明 m\times 0= 0 。当 m=0 时，我们有
+0\times 0:= 0 归纳假设当 m=m 时 m\times 0= 0 是成立的，那么现在我们来证明 m=m++ 时等式成立。
+\begin{align} (m++)\times 0&=(m\times 0)+0[(n++)\times m:= (n\times m)+m]\\ &=0 \end{align} 以上，我们就得到了基础情况 0\times m=m\times 0 。</article><div>Read More</div></a></li></ul></div><div class=comments data-articleurl=/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/3.1.2/><h2>Comments</h2><div class=comment data-depth=0 style=margin-left:0!important data-parent data-custom=1731832040899-795 data-articleurl=/notes/test-page/><div class=comment-content style=border-radius:10px;padding:10px><img src="https://www.gravatar.com/avatar/d9dab474cfdb4e177b10b36e239d6fb2?s=100&d=wavatar" alt="Chiara-lee Avatar" style=border-radius:50%;width:50px;height:50px;margin-right:15px><div class=comment-text style=flex:1><div style=display:flex;align-items:center><div class=author style=font-weight:700>Chiara-lee</div><span class=time style=margin-left:10px;color:#888>2024-11-17 08:27:23</span></div><div class=message>评论测试</div><button class=reply-button data-parent data-name=Chiara-lee data-custom=1731832040899-795>Reply</button></div></div><div class=child-comment data-depth=1 style=margin-left:50px!important data-parent=1731832040899-795 data-custom=1731832122014-150 data-articleurl=/notes/test-page/><div class=comment-content style=border-radius:10px;padding:10px><img src="https://www.gravatar.com/avatar/d9dab474cfdb4e177b10b36e239d6fb2?s=100&d=wavatar" alt="Chiara-lee Avatar" style=border-radius:50%;width:50px;height:50px;margin-right:15px><div class=comment-text style=flex:1><div style=display:flex;align-items:center><div class=author style=font-weight:700>Chiara-lee</div><span class=time style=margin-left:10px;color:#888>2024-11-17 08:28:45</span></div><div class=message>子评论测试</div><button class=reply-button data-parent=1731832040899-795 data-name=Chiara-lee data-custom=1731832122014-150>Reply</button></div></div><div style=clear:both></div><div class=comment data-depth=0 style=margin-left:0!important data-parent data-custom=1731832210679-902 data-articleurl=/notes/test-page/><div class=comment-content style=border-radius:10px;padding:10px><img src="https://www.gravatar.com/avatar/d9dab474cfdb4e177b10b36e239d6fb2?s=100&d=wavatar" alt="Chiara-lee Avatar" style=border-radius:50%;width:50px;height:50px;margin-right:15px><div class=comment-text style=flex:1><div style=display:flex;align-items:center><div class=author style=font-weight:700>Chiara-lee</div><span class=time style=margin-left:10px;color:#888>2024-11-17 08:30:13</span></div><div class=message>评论测试 2.0</div><button class=reply-button data-parent data-name=Chiara-lee data-custom=1731832210679-902>Reply</button></div></div><template id=comment-success><div class=success>您的评论已成功提交审核。(´｡• ᵕ •｡`)</div></template><template id=comment-error><div class=error>啊，好像出了些问题，请您调整后重试。(；′⌒`)</div></template><form id=comment-form data-dynamic-form data-success=#comment-success data-error=#comment-error netlify=true name=Comments method=POST style=margin-top:20px><div id=reply-to style=display:none;color:#6c757d;margin-bottom:10px></div><input type=hidden name=url value=/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/3.1.2/>
+<input type=hidden name=parent id=parent>
+<input type=hidden name=custom id=custom>
+<input type=hidden name=depth id=depth value=0>
+<input type=hidden name=articleurl value=/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/3.1.2/>
+<label class=comment-label for=name>Name:</label>
+<input class=comment-input type=text id=name name=name required autocomplete=name>
+<label class=comment-label for=email>Email:</label>
+<input class=comment-input type=email id=email name=email required autocomplete=email>
+<label class=comment-label for=comment>Comment:</label>
+<textarea class=comment-textarea id=comment name=comment rows=5 required autocomplete=off></textarea>
+<button class=comment-button type=submit>Send</button></form></div><script>function generateUniqueId(){return`${Date.now()}-${Math.floor(Math.random()*1e3)}`}document.querySelectorAll(".reply-button").forEach(e=>{e.addEventListener("click",function(){const n=this.closest(".comment"),e=this.getAttribute("data-custom"),s=this.getAttribute("data-name"),o=parseInt(n.getAttribute("data-depth"))||0;document.getElementById("parent").value=e||"",console.log("Parent ID set to:",e);const i=o+1;document.getElementById("depth").value=i;const t=document.getElementById("reply-to");t.style.display="block",t.innerText=`回复 @${s}`,document.querySelectorAll(".comment").forEach(e=>{e.classList.remove("highlight")}),this.closest(".comment").classList.add("highlight")}),document.getElementById("comment-form").scrollIntoView({behavior:"smooth"})}),document.getElementById("comment-form").addEventListener("submit",function(){const t=document.getElementById("custom");t.value||(t.value=generateUniqueId(),console.log("Custom ID set to:",t.value))}),window.onload=function(){const e=document.querySelector(".comments"),n=e.dataset.articleurl.replace(/\/$/,"").toLowerCase(),s=document.querySelector("#comment-form"),o=document.querySelector("footer"),i=Array.from(document.querySelectorAll(".comment, .child-comment")),t=i.filter(e=>{const t=e.dataset.articleurl.replace(/\/$/,"").toLowerCase();return t===n});e.innerHTML="";const a=t.filter(e=>e.dataset.depth==="0");a.forEach(n=>{e.appendChild(n);const s=t.filter(e=>e.dataset.parent===n.dataset.custom);s.forEach(t=>{t.classList.add("child-comment"),e.appendChild(t)})}),e.appendChild(s),e.appendChild(o),e.style.display="none",e.offsetHeight,e.style.display=""}</script><script src=/js/footnotes.js></script><footer class=dark><nav><ul><li><a href=/reference>引用资料列表</a></li><li><a href=/categories>教材索引</a></li><li><a href></a></li></ul></nav><ul><li><a href=https://facebook.com/example aria-label=Facebook><i class=icon-facebook></i></a></li><li><a href=https://x.com/i/flow/login aria-label=Twitter><i class=icon-twitter></i></a></li><li><a href=mailto:chiaralee953@foxmail.com aria-label=email><i class=icon-email></i></a></li></ul><div>Copyright © 2024 Caleton Academy of Magic.</div></footer></body></html>
