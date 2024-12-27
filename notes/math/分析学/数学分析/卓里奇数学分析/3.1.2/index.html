@@ -8,10 +8,10 @@
 换句话说，一个 ε-稳定的序列整体上“被压缩在一个 ε-宽度的间隔中”。不仅仅是相邻项或者后期的项接近，而是整数序列的任意两项都足够接近。这是一个很强的条件，通常只有非常特殊的序列才能全局达到这一点（例如常数序列）。
 注意：ε-稳定性并没有提及“从某项开始”或“最终”这种概念，它是对整个序列的要求。
 3. 最终ε-稳定性 (eventual ε-stability)：
-定义 5.1.6 提到了最终 ε-稳定的概念。一个序列最终 ε-稳定是指：存在某个 N 使得序列从第 N 项开始（即尾部子序列 a_N, a_{N+1}, a_{N+2}, \dots ）是 ε-稳定的。"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>3.1.2 序列极限的性质</title>
+定义 5.1.6 提到了最终 ε-稳定的概念。一个序列最终 ε-稳定是指：存在某个 N 使得序列从第 N 项开始（即尾部子序列 a_N, a_{N+1}, a_{N+2}, \dots ）是 ε-稳定的。"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>3.1.2 数列极限的性质</title>
 <script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
 Caleton Academy
-</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/physcis/>Physics</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/computer-science-and-technology/>Cst</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>3.1.2 序列极限的性质</h1><h2>Table of Contents</h2><nav id=TableOfContents><ul><li><a href=#a一般性质>a.一般性质</a></li><li><a href=#b极限过程和算术运算>b.极限过程和算术运算</a></li></ul></nav><div class=content-wrapper><div class=content><h2 id=a一般性质>a.一般性质</h2><p>我们在这里总结数列的一组性质，但将来可以看到，这些性质并非数列所独有。只取一个值的数列称为常数列。</p><p><strong>定义 4.</strong> 数列
+</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/physcis/>Physics</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/computer-science-and-technology/>Cst</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1>3.1.2 数列极限的性质</h1><h2>Table of Contents</h2><nav id=TableOfContents><ul><li><a href=#a一般性质>a.一般性质</a></li><li><a href=#b极限过程和算术运算>b.极限过程和算术运算</a></li><li><a href=#c极限过程与不等式>c.极限过程与不等式</a></li></ul></nav><div class=content-wrapper><div class=content><h2 id=a一般性质>a.一般性质</h2><p>我们在这里总结数列的一组性质，但将来可以看到，这些性质并非数列所独有。只取一个值的数列称为常数列。</p><p><strong>定义 4.</strong> 数列
 <span class=fallback-latex>\{x_n\}
 </span>称为 <strong>最终常数列</strong>，如果存在数
 <span class=fallback-latex>A
@@ -368,8 +368,170 @@ Caleton Academy
 </span><span class=fallback-latex>\left| \frac{1}{y_n} \right| \cdot \Delta(x_n) < \frac{2}{|B|} \cdot \frac{\varepsilon |B|}{8} = \frac{\varepsilon}{4},
 </span><span class=fallback-latex>0 < \frac{1}{1 - \delta(y_n)} < 2.</span><p>从而，当
 <span class=fallback-latex>n > N
-</span>时，</p><span class=fallback-latex>\left| \frac{A}{B} - \frac{x_n}{y_n} \right| < \varepsilon.</span></div><aside class=sidebar><div class=card><h2>摘要</h2><p>a.一般性质 我们在这里总结数列的一组性质，但将来可以看到，这些性质并非数列所独有。只取一个值的数列称为常数列。
-定义 4. 数列 \{x_n\} 称为 最终常数列，如果存在数 A 与序号 N ，使得 …</p></div><div class=card><h2>阅读时长</h2><p>7 min</p></div><div class=card><h2>总字数</h2><p>≈ 1304</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
+</span>时，</p><span class=fallback-latex>\left| \frac{A}{B} - \frac{x_n}{y_n} \right| < \varepsilon.</span><p><strong>本节使用等式：</strong></p><p>设
+<span class=fallback-latex>x = \tilde{x} + \alpha, y = \tilde{y} + \beta
+</span>，则<br><span class=fallback-latex>\Delta(\tilde{x} + \tilde{y}) = |(x + y) - (\tilde{x} + \tilde{y})| = |\alpha + \beta| \leq |\alpha| + |\beta| = \Delta(\tilde{x}) + \Delta(\tilde{y}),</span><br><span class=fallback-latex>\Delta(\tilde{x} \cdot \tilde{y}) = |xy - \tilde{x} \tilde{y}| = |(\tilde{x} + \alpha)(\tilde{y} + \beta) - \tilde{x} \tilde{y}| = |\tilde{x} \beta + \tilde{y} \alpha + \alpha \beta|</span><br><span class=fallback-latex>\leq |\tilde{x}||\beta| + |\tilde{y}||\alpha| + |\alpha \beta| = |\tilde{x}|\Delta(\tilde{y}) + |\tilde{y}|\Delta(\tilde{x}) + \Delta(\tilde{x}) \cdot \Delta(\tilde{y}),</span><br><span class=fallback-latex>\Delta \left( \frac{\tilde{x}}{\tilde{y}} \right) = \left| \frac{x}{y} - \frac{\tilde{x}}{\tilde{y}} \right| = \left| \frac{x \tilde{y} - y \tilde{x}}{y \tilde{y}} \right| = \left| \frac{(\tilde{x} + \alpha)\tilde{y} - (\tilde{y} + \beta)\tilde{x}}{\tilde{y}^2} \right| \cdot \left| \frac{1}{1 + \beta / \tilde{y}} \right|
+\leq \frac{|\tilde{x}||\beta| + |\tilde{y}||\alpha|}{\tilde{y}^2} \cdot \frac{1}{1 - \delta(\tilde{y})} = \frac{|\tilde{x}|\Delta(\tilde{y}) + |\tilde{y}|\Delta(\tilde{x})}{\tilde{y}^2} \cdot \frac{1}{1 - \delta(\tilde{y})}.</span></p><h2 id=c极限过程与不等式>c.极限过程与不等式</h2><p><strong>定理 3.</strong></p><p>a) 设
+<span class=fallback-latex>\{x_n\}, \{y_n\}
+</span>是两个收敛数列，并且
+<span class=fallback-latex>\lim_{n \to \infty} x_n = A, \lim_{n \to \infty} y_n = B.
+</span>如果
+<span class=fallback-latex>A < B
+</span>，就可以求出序号
+<span class=fallback-latex>N \in \mathbb{N}
+</span>，使得对于任何
+<span class=fallback-latex>n > N
+</span>，不等式
+<span class=fallback-latex>x_n < y_n
+</span>成立。</p><p>b) 设数列
+<span class=fallback-latex>\{x_n\}, \{y_n\}, \{z_n\}
+</span>满足条件：对于任何
+<span class=fallback-latex>n > N \in \mathbb{N}
+</span>，关系式
+<span class=fallback-latex>x_n \leq y_n \leq z_n
+</span>成立。如果数列
+<span class=fallback-latex>\{x_n\}, \{z_n\}
+</span>这时收敛于同一个极限，则数列
+<span class=fallback-latex>\{y_n\}
+</span>也收敛于该极限。<strong>(迫敛定理)</strong></p><p><strong>a)</strong> 取数
+<span class=fallback-latex>C
+</span>，使得
+<span class=fallback-latex>A < C < B
+</span>。根据极限的定义，可以求出序号
+<span class=fallback-latex>N'
+</span>和
+<span class=fallback-latex>N''
+</span>，使得对任意
+<span class=fallback-latex>n > N'
+</span>都有
+<span class=fallback-latex>|x_n - A| < C - A
+</span>，并且对任意
+<span class=fallback-latex>n > N''
+</span>都有
+<span class=fallback-latex>|y_n - B| < B - C
+</span>。<br>于是，当
+<span class=fallback-latex>n > N = \max\{N', N''\}
+</span>时，就得到<br><span class=fallback-latex>x_n < A + (C - A) = C = B - (B - C) < y_n.</span></p><p><strong>详细展开：</strong></p><ol><li><p><strong>根据极限的定义：</strong></p><ul><li><p>数列
+<span class=fallback-latex>x_n \to A
+</span>，意味着：
+<span class=fallback-latex>\forall \epsilon > 0, \, \exists N' \in \mathbb{N}, \, \forall n > N', \, |x_n - A| < \epsilon.</span></p></li><li><p>同理，
+<span class=fallback-latex>y_n \to B
+</span>，意味着：
+<span class=fallback-latex>\forall \epsilon > 0, \, \exists N'' \in \mathbb{N}, \, \forall n > N'', \, |y_n - B| < \epsilon.</span></p></li></ul></li><li><p><strong>取中间值
+<span class=fallback-latex>C
+</span>，使得
+<span class=fallback-latex>A < C < B
+</span>：</strong></p><ul><li>设
+<span class=fallback-latex>\epsilon_1 = C - A
+</span>和
+<span class=fallback-latex>\epsilon_2 = B - C
+</span>。显然有
+<span class=fallback-latex>\epsilon_1 > 0
+</span>且
+<span class=fallback-latex>\epsilon_2 > 0
+</span>。</li><li>由极限定义，存在：
+<span class=fallback-latex>N' \in \mathbb{N}, \, \forall n > N', \, |x_n - A| < \epsilon_1.
+</span><span class=fallback-latex>N'' \in \mathbb{N}, \, \forall n > N'', \, |y_n - B| < \epsilon_2.</span></li></ul></li><li><p><strong>将绝对值不等式转换为上下界形式：</strong></p><ul><li><p><span class=fallback-latex>|x_n - A| < \epsilon_1
+</span>等价于：
+<span class=fallback-latex>A - \epsilon_1 < x_n < A + \epsilon_1.
+</span>其中
+<span class=fallback-latex>\epsilon_1 = C - A
+</span>，所以：
+<span class=fallback-latex>A - (C - A) < x_n < A + (C - A).
+</span>进一步化简为：
+<span class=fallback-latex>x_n < C \quad (\text{因为 } A + (C - A) = C).</span></p></li><li><p>同理，
+<span class=fallback-latex>|y_n - B| < \epsilon_2
+</span>等价于：
+<span class=fallback-latex>B - \epsilon_2 < y_n < B + \epsilon_2.
+</span>其中
+<span class=fallback-latex>\epsilon_2 = B - C
+</span>，所以：
+<span class=fallback-latex>B - (B - C) < y_n < B + (B - C).
+</span>进一步化简为：
+<span class=fallback-latex>y_n > C \quad (\text{因为 } B - (B - C) = C).</span></p></li></ul></li><li><p><strong>合并两个结果：</strong></p><ul><li><p>当
+<span class=fallback-latex>n > N = \max\{N', N''\}
+</span>时，
+<span class=fallback-latex>x_n
+</span>和
+<span class=fallback-latex>y_n
+</span>同时满足：
+<span class=fallback-latex>x_n < C \quad \text{且} \quad y_n > C.</span></p></li><li><p>因此：
+<span class=fallback-latex>x_n < C < y_n.</span></p></li></ul><p>这就严格证明了对于充分大的
+<span class=fallback-latex>n
+</span>，必然有
+<span class=fallback-latex>x_n < y_n
+</span>。</p></li></ol><p><strong>b)</strong> 设
+<span class=fallback-latex>\lim_{n \to \infty} x_n = \lim_{n \to \infty} z_n = A
+</span>。由
+<span class=fallback-latex>\varepsilon > 0
+</span>求出序号
+<span class=fallback-latex>N'
+</span>和
+<span class=fallback-latex>N''
+</span>，使得对于任意
+<span class=fallback-latex>n > N'
+</span>都有
+<span class=fallback-latex>A - \varepsilon < x_n
+</span>，对于任意
+<span class=fallback-latex>n > N''
+</span>都有
+<span class=fallback-latex>z_n < A + \varepsilon
+</span>。<br>于是，当
+<span class=fallback-latex>n > N = \max\{N', N''\}
+</span>时，我们得到<br><span class=fallback-latex>A - \varepsilon < x_n \leq y_n \leq z_n < A + \varepsilon,</span><br>即
+<span class=fallback-latex>|y_n - A| < \varepsilon
+</span>，从而
+<span class=fallback-latex>A = \lim_{n \to \infty} y_n
+</span>。</p><p><strong>详细展开：</strong></p><ol><li><p><strong>根据极限的定义：</strong></p><ul><li><p>数列
+<span class=fallback-latex>x_n \to A
+</span>意味着：<br><span class=fallback-latex>\forall \epsilon > 0, \, \exists N' \in \mathbb{N}, \, \forall n > N', \, |x_n - A| < \epsilon.</span></p><p>这等价于：<br><span class=fallback-latex>A - \epsilon < x_n < A + \epsilon.</span></p></li><li><p>数列
+<span class=fallback-latex>z_n \to A
+</span>意味着：<br><span class=fallback-latex>\forall \epsilon > 0, \, \exists N'' \in \mathbb{N}, \, \forall n > N'', \, |z_n - A| < \epsilon.</span></p><p>这等价于：<br><span class=fallback-latex>A - \epsilon < z_n < A + \epsilon.</span></p></li></ul></li><li><p><strong>结合夹逼条件：</strong></p><ul><li>由
+<span class=fallback-latex>x_n \leq y_n \leq z_n
+</span>，当
+<span class=fallback-latex>n > N = \max\{N', N''\}
+</span>时，有：<br><span class=fallback-latex>A - \epsilon < x_n \leq y_n \leq z_n < A + \epsilon.</span></li></ul></li><li><p><strong>推出
+<span class=fallback-latex>y_n
+</span>的极限：</strong></p><ul><li><p>由上述不等式可以看出：<br><span class=fallback-latex>A - \epsilon < y_n < A + \epsilon.</span></p><p>这等价于：<br><span class=fallback-latex>|y_n - A| < \epsilon.</span></p></li><li><p>由于
+<span class=fallback-latex>\epsilon > 0
+</span>是任意给定的，满足此条件的
+<span class=fallback-latex>y_n
+</span>必然收敛于
+<span class=fallback-latex>A
+</span>，即：<br><span class=fallback-latex>\lim_{n \to \infty} y_n = A.</span></p></li></ul></li></ol><hr><p><strong>推论</strong></p><p>设
+<span class=fallback-latex>\lim_{n \to \infty} x_n = A
+</span>，
+<span class=fallback-latex>\lim_{n \to \infty} y_n = B
+</span>。如果存在序号
+<span class=fallback-latex>N
+</span>，使得对于任何
+<span class=fallback-latex>n > N
+</span>都有<br><span class=fallback-latex>y_n = B
+</span>时的特殊情况。</p><ul><li><strong>a)</strong> 若
+<span class=fallback-latex>x_n > y_n
+</span>，则
+<span class=fallback-latex>A \geq B
+</span>；</li><li><strong>b)</strong> 若
+<span class=fallback-latex>x_n \geq y_n
+</span>，则
+<span class=fallback-latex>A \geq B
+</span>；</li><li><strong>c)</strong> 若
+<span class=fallback-latex>x_n > B
+</span>，则
+<span class=fallback-latex>A \geq B
+</span>；</li><li><strong>d)</strong> 若
+<span class=fallback-latex>x_n \geq B
+</span>，则
+<span class=fallback-latex>A \geq B
+</span>。</li></ul><hr><p><strong>说明：</strong> 用反证法，从定理 3 a) 立即得到推论 a) 和 b)。后两个推论是前两个推论在
+<span class=fallback-latex>y_n \equiv B
+</span>时的特殊情况。</p><p><strong>注：</strong> 应当指出，严格不等式在求极限后可能变成等式。例如，对于任何
+<span class=fallback-latex>n \in \mathbb{N}
+</span>都有
+<span class=fallback-latex>1 / n > 0
+</span>，但
+<span class=fallback-latex>\lim_{n \to \infty} 1 / n = 0.</span></p></div><aside class=sidebar><div class=card><h2>摘要</h2><p>a.一般性质 我们在这里总结数列的一组性质，但将来可以看到，这些性质并非数列所独有。只取一个值的数列称为常数列。
+定义 4. 数列 \{x_n\} 称为 最终常数列，如果存在数 A 与序号 N ，使得 …</p></div><div class=card><h2>阅读时长</h2><p>10 min</p></div><div class=card><h2>总字数</h2><p>≈ 2112</p></div><div class=card><h2>标签</h2><p><a href=#><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M3 2A1 1 0 002 3v4.586a1 1 0 00.293.707l7 7a1 1 0 001.414.0l4.586-4.586a1 1 0 000-1.414l-7-7A1 1 0 008.586 2H3zm1 1h4.586L14 8.414 9.414 13l-6-6V3z"/><path d="M5.5 5.5a1.5 1.5.0 11-3 0 1.5 1.5.0 013 0z"/></svg>
 数学分析</a></p></div></aside></div></div></main><div id=related><h2>Related Pages</h2><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/3.1/><h2>3.1 序列的极限</h2><article>定义 1.（序列） 定义域为自然数集的函数 f : \mathbb{N} \to X 称为序列。
 函数 f(n) 的值 f(n) 称为 序列的项。通常用集合 X 的元素所对应的符号来表示序列的项，并让自变量对应的符号作为其下标： x_n := f(n) 。因此，我们用符号 \{ x_n \} 来表示序列本身，有时也把它写为 x_1, x_2, \dots, x_n, \dots 的形式，并称之为 集合 X 中的序列 或 集合 X 的元素序列。
 元素 x_n 称为序列的第 n 项。

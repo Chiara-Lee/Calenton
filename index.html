@@ -7,25 +7,18 @@ Caleton Academy</a><nav><button class=hamburger>&#9776;</button><ul><li><a href=
 笔记</a></li><li><a href=/thoughts><i class=icon-thoughts></i>
 思考碎片</a></li><li><a href=/friends><i class=icon-friends></i>
 友人帐</a></li><li><a href=/about><i class=icon-about></i>
-关于</a></li></ul></section><section id=blog><h1>Recent push</h1><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/catalogue/><h2>经典力学-高显 目录</h2><article>前言 [第 1 章 变分法] 1.1 泛函 [1.1 泛函的概念] [1.1 泛函的具体形式] 1.2 变分 [1.2 变分的概念] [1.2 变分的运算规则] [1.3 泛函导数] 1.3 泛函导数的概念 1.3 泛函导数的操作定义 1.3 计算一阶泛函导数的标准手续 [1.4 泛函极值] 1.4 泛函极值的必要条件 [1.4 欧拉拉格朗日方程] [1.4 多个变量与多元函数] [习题] [第 2 章 位形空间] [2.1 位形与时间演化] [2.1 位形] [2.1 位形空间与流形] [2.1 世界线] [2.2 广义坐标] [2.2 广义坐标的概念] [2.2 广义坐标的变换]</article><div>Read More</div></a></li><li class=post><a href=https://chiara-lee.netlify.app/notes/math/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/%E5%8D%93%E9%87%8C%E5%A5%87%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/3.1.2/><h2>3.1.2 序列极限的性质</h2><article>a.一般性质 我们在这里总结数列的一组性质，但将来可以看到，这些性质并非数列所独有。只取一个值的数列称为常数列。
-定义 4. 数列 \{x_n\} 称为 最终常数列，如果存在数 A 与序号 N ，使得对于任意 n > N ，均有 x_n = A 。
-1. ε-接近性 (ε-approximation)：
-定义 4.3.4 中表述的是：给定 \epsilon > 0 ，两个实数 x, y 当 |x - y| \leq \epsilon 时称为 ε-接近的。
-这一层面只有两点之间的距离概念，是最基本的“接近”定义。
-2. ε-稳定性 (ε-stability)：
-定义 5.1.3 中谈到序列 (a_n)_{n=0}^\infty 的 ε-稳定。序列是 ε-稳定的，意味着该序列中的任意两个元素 a_j, a_k （无论下标多大），都有 |a_j - a_k| \leq \epsilon 。
-换句话说，一个 ε-稳定的序列整体上“被压缩在一个 ε-宽度的间隔中”。不仅仅是相邻项或者后期的项接近，而是整数序列的任意两项都足够接近。这是一个很强的条件，通常只有非常特殊的序列才能全局达到这一点（例如常数序列）。
-注意：ε-稳定性并没有提及“从某项开始”或“最终”这种概念，它是对整个序列的要求。
-3. 最终ε-稳定性 (eventual ε-stability)：
-定义 5.1.6 提到了最终 ε-稳定的概念。一个序列最终 ε-稳定是指：存在某个 N 使得序列从第 N 项开始（即尾部子序列 a_N, a_{N+1}, a_{N+2}, \dots ）是 ε-稳定的。</article><div>Read More</div></a></li><li class=post><a href=https://chiara-lee.netlify.app/notes/computer-science-and-technology/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/c/c++%E7%BC%96%E7%A8%8B/c-programming-a-modern-approach/2.1/><h2>2.1 写一个简单的程序</h2><article>本章将介绍几个基本概念，包括预处理指令、函数、变量和语句，这些概念是编写即使是最简单程序所必需的。后续章节将对这些主题进行更详细的讲解。
-首先，第2.1节展示了一个简单的C程序，并介绍了如何编译和链接它。接着，第2.2节讨论了如何将该程序进行泛化，第2.3节展示了如何添加解释性注释。第2.4节介绍了变量，它们存储在程序执行过程中可能会改变的数据，第2.5节展示了如何使用scanf函数将数据读入变量中。常量——在程序执行过程中不会改变的数据——可以被命名，第2.6节对此进行了说明。最后，第2.7节解释了C语言创建名称（标识符）的规则，第2.8节给出了程序布局的规则。
-2.1 写一个简单的程序 与某些编程语言编写的程序不同，C语言程序需要的“样板代码”很少——一个完整的程序可以短到只有几行。
-程序：打印一个双关语
-Kernighan和Ritchie的经典著作《C程序设计语言》中的第一个程序非常简短：它什么也不做，只是输出信息“hello, world”。与其他C语言作者不同，我不会使用这个程序作为我的第一个例子。然而，我会遵循另一个C语言传统：一个坏的双关语。这里是这个双关语：
-To C, or not to C: that is the question.
-以下程序，我们将其命名为 pun.c，每次运行时都会显示该消息：
-1 2 3 4 5 6 7 8 9 /* #include &lt;stdio.h> int main(void) { printf("To C, or not to C: that is the question.\n"); return 0; } */ 第2.2节会详细解释这个程序的结构。现在，我将简要做几点观察。该行
-/* #include &lt;stdio.h> */
-是为了“包含”有关 C语言标准I/O（输入/输出）库 的信息。程序的可执行代码放在 main 函数内，它代表了 “主”程序。main 函数内的唯一一行是一个显示所需消息的命令。printf 是标准I/O库中的一个函数，可以生成格式良好的输出。\n 代码告诉 printf 在打印消息后跳到下一行。
-/* return 0; */
-表示当程序终止时，它将“返回”值 0 给操作系统。</article><div>Read More</div></a></li></ul></section><footer class=dark><nav><ul><li><a href=/reference>引用资料列表</a></li><li><a href=/categories>教材索引</a></li><li><a href></a></li></ul></nav><ul><li><a href=https://facebook.com/example aria-label=Facebook><i class=icon-facebook></i></a></li><li><a href=https://x.com/i/flow/login aria-label=Twitter><i class=icon-twitter></i></a></li><li><a href=mailto:chiaralee953@foxmail.com aria-label=email><i class=icon-email></i></a></li></ul><div>Copyright © 2024 Caleton Academy of Magic.</div></footer></body></html>
+关于</a></li></ul></section><section id=blog><h1>Recent push</h1><ul class=posts><li class=post><a href=https://chiara-lee.netlify.app/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/catalogue/><h2>经典力学-高显 目录</h2><article>前言 [第 1 章 变分法] 1.1 泛函 [1.1 泛函的概念] [1.1 泛函的具体形式] 1.2 变分 [1.2 变分的概念] [1.2 变分的运算规则] [1.3 泛函导数] 1.3 泛函导数的概念 1.3 泛函导数的操作定义 1.3 计算一阶泛函导数的标准手续 [1.4 泛函极值] 1.4 泛函极值的必要条件 [1.4 欧拉拉格朗日方程] [1.4 多个变量与多元函数] [习题] [第 2 章 位形空间] [2.1 位形与时间演化] [2.1 位形] [2.1 位形空间与流形] [2.1 世界线] [2.2 广义坐标] [2.2 广义坐标的概念] [2.2 广义坐标的变换]</article><div>Read More</div></a></li><li class=post><a href=https://chiara-lee.netlify.app/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/2.1/><h2>2.1 位形和时间演化</h2><article>2.1.1 位形 力学研究的基本问题是物理系统的时间演化。具体而言，即是要研究物理系统的“位形”随时间的演化。位形是粒子在空间中的位置这一概念的推广。简单之，**位形（configuration）**即粒子系统中各个粒子的空间位置，或者更一般的物理系统在空间中的形状、分布。
+例如，考虑 N 个粒子构成的粒子系，给出 N 个粒子的空间坐标 {x_1, x_2, \dots, x_N} 即给出粒子系的一个位形。又例如，琴弦振动的形状，即是琴弦的位形；鼓面弯曲的形状，即是鼓面的位形。
+位形的概念可以推广至连续系统和非机械系统。例如，描述气体扩散，给出空间中每一点气体分子数密度 \rho(x) ，即给出气体的位形。描述热传导，给出空间中每一点的局域温度 T(x) ，即给出温度的位形。描述电磁场，给出空间中每一点的矢量 E(x) ，即给出电场的位形。
+2.1.2 位形空间与流形 系统所有可能位形的集合，就构成位形空间（configuration space）。位形空间中的一点，即代表系统的一种可能的位形。
+例如，在水平面上运动的粒子，其位形即水平面上的点，其位形空间即水平面；限制在圆环上运动的粒子，其位形即圆环上的点，其位形空间即整个圆环；限制在球面上运动的粒子，其位形即球面上的点，其位形空间就是整个球面。
+一般来说，物理系统的位形空间一般都不是平坦的线性空间（矢量空间）。例如，球面是一个二维空间，但显然不是平坦的。但是，球面局部的一个小块，看上去又和二维平面很像。数学上对于这种一般的空间的描述，即所谓流形（manifold）理论。简单之，流形即局部看起来像是平坦空间的东西，但是其一般是弯曲的，往往还是具有很复杂的结构。数学上“空间”一词经常特指线性空间，因此位形流形（configuration manifold）是更确切的称呼，不过本书一般仍然用物理上习惯的“位形空间”一词。
+2.1.3 世界线 现在考虑时间演化。随着时间参数 t 的变化，系统在位形空间中连续地由一点（某个位形）移动到另一点，所“扫出”的曲线即位形空间中的轨迹。把“时间”这一维加进来，可以认为“位形空间”和“时间轴”合在一起构成更大的空间。
+随着时间的演化，位形空间中的点在这个空间中也扫出一条连续的曲线，有时被称作世界线（world line），如图 2.1 所示。因为某一时刻的位形本身不能唯一决定此前或此后的位形，所以世界线是可以相交的，如图 2.1 中 A 点和 B 点。</article><div>Read More</div></a></li><li class=post><a href=https://chiara-lee.netlify.app/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/2.2/><h2>2.2 广义坐标</h2><article>2.2.1 广义坐标的概念 坐标无非是某种空间的参数化，即只要给定一组数，能够唯一确定空间中的一点，就可以称这组数为“坐标”。例如，通常的 3 维空间中的点粒子，我们可以采用直角坐标 \{x, y, z\} ，柱坐标 \{r, \phi, z\} ，球坐标 \{r, \theta, \phi\} 等来参数化其位置。点粒子在空间中的位置的参数化是普通坐标，而位形是点粒子位置概念的推广，自然而然，对位形空间的参数化即广义坐标（generalized coordinates），其是任何一组能够唯一确定系统某个位形的独立参数。这些概念的推广可以总结如下：
+物理系统 s 个独立的广义坐标：
+\boxed{\{q^1, \cdots, q^s\} \equiv \{q^a\}, \quad a = 1, 2, \cdots, s} \tag{2.1} 代表位形空间中的一点，即代表系统某个唯一确定的位形。因此，
+\text{位形空间的维数} = \text{独立广义坐标的个数}. \tag{2.2} 此处的重点在于，独立广义坐标 的个数即为位形空间的维数。
+广义坐标是用于描述系统状态的一组参数。独立的广义坐标指的是相互之间不受约束的那些参数。例如，在一个无约束的粒子系统中，每个粒子的三个位置坐标 (x,y,z) 都是独立的。然而，如果系统中有约束（如两粒子用一根固定长度的杆连接），那么它们的坐标之间会存在关系，使得一些坐标不再独立。
+位形空间的维数等于描述系统状态所需的独立广义坐标的个数。这是因为每个独立广义坐标提供一个自由度。如果一个系统有 n 个自由度，就意味着它的位形空间是 n 维的。例如：
+一个三维空间中的点粒子，其位形空间是三维（由 x, y, z 描述）。 一个三维刚体（不考虑形变）有 6 个自由度，其位形空间是六维（3 个平移 + 3 个旋转参数）。 我们在知乎上回答的问题 为什么广义坐标个数和自由度不一样? 则是将减少维数的约束类型具体的讨论的出来，但其实归根结底，位形空间的维数和广义坐标的关系就是上面这句简单的
+\text{位形空间的维数} = \text{独立广义坐标的个数}. 广义坐标只是位形空间的参数化，所以选择非常任意。原则上，广义坐标的选取有无限多种。广义坐标的量纲不一定是长度量纲，一般也不能三个（或者多个）一组合成一个矢量，这也是位形空间一般不是线性空间的反映。例如，球面不是平坦的线性空间，球面坐标 \{\theta, \phi\} 也不是任何矢量的分量。</article><div>Read More</div></a></li></ul></section><footer class=dark><nav><ul><li><a href=/reference>引用资料列表</a></li><li><a href=/categories>教材索引</a></li><li><a href></a></li></ul></nav><ul><li><a href=https://facebook.com/example aria-label=Facebook><i class=icon-facebook></i></a></li><li><a href=https://x.com/i/flow/login aria-label=Twitter><i class=icon-twitter></i></a></li><li><a href=mailto:chiaralee953@foxmail.com aria-label=email><i class=icon-email></i></a></li></ul><div>Copyright © 2024 Caleton Academy of Magic.</div></footer></body></html>
