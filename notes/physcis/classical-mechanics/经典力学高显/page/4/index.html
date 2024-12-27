@@ -1,0 +1,27 @@
+<!doctype html><html lang=zh><head><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel=stylesheet><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=https://chiara-lee.netlify.app/image/favicon_huf6346096f3d7b7acad7cedced168daa3_32661_e417e70d9bed0e84d471438e1d707785.png><link rel=stylesheet href=/css/index.css><link rel=stylesheet href=/css/categories.css><link rel=stylesheet href=/css/comment.css><link rel=stylesheet href=/css/page-main.css><link rel=stylesheet href=/css/pagination.css><link rel=stylesheet href=/css/profile-card.css><link rel=stylesheet href=/css/relative.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/about.css><link rel=stylesheet href=/css/post-card.css><link rel=stylesheet href=/css/markdown.css><link rel=stylesheet href=/css/friends.css><link rel=stylesheet href=/css/latex.css><title>《经典力学|高显》</title>
+<script type=text/javascript src=/index.js defer></script></head><body class=page><header><a href=/><img src=https://chiara-lee.netlify.app//image/logo.png alt="Calenton Logo" style=width:180px;height:160px>
+Caleton Academy
+</a><span id=search><input type=search placeholder=Search><div></div></span><nav><button class=hamburger>&#9776;</button><ul><li><a href=/notes>笔记</a><ul><li><a href=/notes/physcis/>Physics</a></li><li><a href=/notes/math/>Math</a></li><li><a href=/notes/computer-science-and-technology/>Cst</a></li></ul></li><li><a href=/thoughts>思考碎片</a></li><li><a href=/friends>友人帐</a></li><li><a href=/about>关于</a></li></ul></nav></header><main><h1 class=page-title>《经典力学|高显》</h1><section id=posts><p class=post-count>Number of pages found: 4</p><div class=post-container><div class=post-card><h2>1.1 泛函</h2><div class=post-meta><div class=post-meta><span><i class=icon-calendar></i> 创建于2024-11-17</span>
+<span><i class=icon-edit></i> 更新于2024年11月17日</span>
+<span><i class=icon-time></i> 预计阅读1分钟</span>
+<span><i class=icon-text-width></i> 全文约125字</span></div><p>我们首先来回顾一下函数的概念。
+一个形象的解释是，函数是一个机器，我们把一个数输入到函数中，函数就会按照其描述来给出一个数。换成一个稍微数学的点的说法就是：
+函数是一个具体的映射关系，给定两个集合 X 和 Y ，在两个集合的元素 x\in X 和 y\in Y 之间建立的一个对应关系即为映射。
+f:x\rightarrow y=f(x) \\ 1.1.1 泛函的概念 从映射的角度，很多时候普通函数的概念显的不太够用。
+例如，空间（平面、球面等）中两点用任一曲线连接，给定曲线的形状，就可以计算出曲线的长度，又比如，平面上的封闭曲线和空间中的封闭曲面，给定曲线和曲面的形状，就可以计算出所包围的面积和体积。
+上面的例子有个共同的特点，“输入”——曲线的形状、曲面的形状等等，不是一般意义上的数。而”输出“却都是数。由此可见，为了描述并解决这些问题，普通函数的概念需要被推广，需要引入新的数学概念来描述这种”不是数的输入“。
+这些例子还有一个共同的特点，这些输入都可以用”函数“来刻画。
+至此，**&ldquo;泛函&rdquo;**的概念已经呼之欲出了。用数学语言来说，泛函就是函数到数的映射。两个集合之间的映射有很多种，也就是，存在很多的函数 f_1(x),f_2(x),\cdots,f_n(x) ，所有这些函数自然也构成集合 \mathcal{F}=\{f_1,f_2,\cdots,f_n\} ,把函数 f 的泛函记为 s[f] ，即
+S:f\longmapsto S=S[f],\quad\mathcal{F}\longmapsto \mathcal{C}\\ 其中， \mathcal{C} 代表复数集合。
+泛函既然也是一种映射，那么如果把泛函输入的函数当成是某种”广义的数“，则泛函也可以视为是一种函数。只不过函数是数的函数，泛函是函数的函数。
+1.1.2 泛函的具体形式 根据泛函的定义——输入函数，输出数。我们可以举出很多泛函的例子，比如
+平面上曲线方程记为 y=f(x) ，则两点之间的曲线长度 S 为曲线方程 f(x) 的泛函
+S(曲线长度)=S[f](曲线方程f的泛函)=\int\limits_{曲线}dx\sqrt{1+(f'(x))^2}\\ 理想气体准静态过程对外做功 W 即是过程方程 p=p(V) 的泛函
+W=W[p]=\int\limits_{过程}p(V)dV\\ 三维空间曲线方程记为 z=\phi(x,y) ，则曲面面积 A 为二元函数 z=\phi(x,y) 的泛函
+A=A[\phi]=\iint_{\text {区域 }} \mathrm{d} x \mathrm{~d} y \sqrt{1+\left(\frac{\partial \phi}{\partial x}\right)^{2}+\left(\frac{\partial \phi}{\partial y}\right)^{2}} \\ 经典力学中的遇见的泛函，通常为以下形式</p><a href=https://chiara-lee.netlify.app/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.1/ class=read-more>→ 进来看看</a><div class=tags><span class=tag>#经典力学</span></div></div><p>我们首先来回顾一下函数的概念。
+一个形象的解释是，函数是一个机器，我们把一个数输入到函数中，函数就会按照其描述来给出一个数。换成一个稍微数学的点的说法就是：
+函数是一个具体的映射关系，给定两个集合 X...</p><a href=https://chiara-lee.netlify.app/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/1.1/ class=read-more>→ 进来看看</a><div class=tags><span class=tag>#经典力学</span></div></div></div></section><nav class=pagination><a class=prev href=/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/page/3/>Previous</a>
+<a href=/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/>1</a>
+<a href=/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/page/2/>2</a>
+<a href=/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/page/3/>3</a>
+<a href=/notes/physcis/classical-mechanics/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E9%AB%98%E6%98%BE/page/4/ class=current>4</a></nav></main><script src=/js/bundle.js></script><footer class=dark><nav><ul><li><a href=/reference>引用资料列表</a></li><li><a href=/categories>教材索引</a></li><li><a href></a></li></ul></nav><ul><li><a href=https://facebook.com/example aria-label=Facebook><i class=icon-facebook></i></a></li><li><a href=https://x.com/i/flow/login aria-label=Twitter><i class=icon-twitter></i></a></li><li><a href=mailto:chiaralee953@foxmail.com aria-label=email><i class=icon-email></i></a></li></ul><div>Copyright © 2024 Caleton Academy of Magic.</div></footer></body></html>
